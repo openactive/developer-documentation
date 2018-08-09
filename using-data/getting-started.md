@@ -1,4 +1,4 @@
-# Test page
+# Getting Started
 
 ## Getting Super Powers!
 

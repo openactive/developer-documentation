@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [OpenActive developer documentation](README.md)
 
 ## Publishing Data
 
@@ -26,5 +26,9 @@
 
 ## Using Data
 
-* [Test page](using-data/testpage.md)
+* [Getting Started](using-data/getting-started.md)
+
+## Useful links
+
+* [Non-technical Guidance](https://www.openactive.io/getting-started/)
 
