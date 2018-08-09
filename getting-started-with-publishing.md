@@ -40,7 +40,7 @@ echo 'You got to trust me on this, I saved the world'
 }
 ```
 
-{% embed data="{\"url\":\"https://gist.github.com/nickevansuk/b0de80f9627780c687d2a36c35d9fd43\",\"type\":\"rich\",\"title\":\"Test gist\",\"description\":\"Test gist · GitHub\",\"icon\":{\"type\":\"icon\",\"url\":\"https://gist.github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars2.githubusercontent.com/u/2616208?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1},\"embed\":{\"type\":\"reader\",\"html\":\"<script type=\\\"text/javascript\\\" src=\\\"https://gist.githubusercontent.com/nickevansuk/a39c788c6fa520376314ad3a8bf15708/raw/1198238f3992090a4a9bb043b44edc223d8fd23d/embed.js\\\"></script>\",\"aspectRatio\":0}}" %}
+{% embed data="{\"url\":\"https://gist.github.com/nickevansuk/b0de80f9627780c687d2a36c35d9fd43\",\"type\":\"rich\",\"title\":\"Test gist\",\"description\":\"Test gist · GitHub\",\"icon\":{\"type\":\"icon\",\"url\":\"https://gist.github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars2.githubusercontent.com/u/2616208?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1},\"embed\":{\"type\":\"reader\",\"html\":\"<script type=\\\"text/javascript\\\" src=\\\"https://www.openactive.io/temp-test/embed.js\\\"></script>\",\"aspectRatio\":0}}" %}
 
 [https://raw.githubusercontent.com/openactive/developer-microsite/master/app/examples/event\_example\_1.json](https://raw.githubusercontent.com/openactive/developer-microsite/master/app/examples/event_example_1.json)
 
