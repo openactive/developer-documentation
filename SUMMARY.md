@@ -1,6 +1,6 @@
 # Table of contents
 
-* [OpenActive developer documentation](README.md)
+* [Welcome to our community](README.md)
 
 ## Publishing Data
 

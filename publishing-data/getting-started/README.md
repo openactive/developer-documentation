@@ -16,7 +16,7 @@ There are three key principles to publishing via OpenActive which must be adhere
 
 ## Open Standards for you
 
-All of the 
+All of the standards described in these docs have been developed by the OpenActive W3C Community Group - and we very much welcome you to join, and welcome your input.
 
 ## Publishing Steps
 
