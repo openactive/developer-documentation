@@ -1,4 +1,4 @@
-# Getting Started with Publishing
+# Test page
 
 ## Getting Super Powers!
 
@@ -42,13 +42,9 @@ echo 'You got to trust me on this, I saved the world'
 
 {% embed data="{\"url\":\"https://gist.githubusercontent.com/nickevansuk/b0de80f9627780c687d2a36c35d9fd43/raw/1f45983699a36a08615fb7f36d8b7389078aee82/example.json\",\"type\":\"rich\",\"title\":\"Test gist\",\"description\":\"Test gist · GitHub\",\"icon\":{\"type\":\"icon\",\"url\":\"https://gist.github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars2.githubusercontent.com/u/2616208?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1},\"embed\":{\"type\":\"reader\",\"html\":\"<script type=\\\"text/javascript\\\" src=\\\"https://validator-embed-mvp.herokuapp.com/?url=https://gist.githubusercontent.com/nickevansuk/b0de80f9627780c687d2a36c35d9fd43/raw/1f45983699a36a08615fb7f36d8b7389078aee82/example.json\\\"></script>\",\"aspectRatio\":0}}" %}
 
-
-
 {% embed data="{\"url\":\"https://gist.githubusercontent.com/nickevansuk/b0de80f9627780c687d2a36c35d9fd43/raw/7c221cf334d586f6ad750e71e43557998528c66f/example.json\",\"type\":\"rich\",\"title\":\"Test gist\",\"description\":\"Test gist · GitHub\",\"icon\":{\"type\":\"icon\",\"url\":\"https://gist.github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars2.githubusercontent.com/u/2616208?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1},\"embed\":{\"type\":\"reader\",\"html\":\"<script type=\\\"text/javascript\\\" src=\\\"https://validator-embed-mvp.herokuapp.com/?url=https://gist.githubusercontent.com/nickevansuk/b0de80f9627780c687d2a36c35d9fd43/raw/7c221cf334d586f6ad750e71e43557998528c66f/example.json\\\"></script>\",\"aspectRatio\":0}}" %}
 
 {% embed data="{\"url\":\"https://gist.github.com/nickevansuk/b0de80f9627780c687d2a36c35d9fd43\",\"type\":\"rich\",\"title\":\"Test gist\",\"description\":\"Test gist · GitHub\",\"icon\":{\"type\":\"icon\",\"url\":\"https://gist.github.com/fluidicon.png\",\"aspectRatio\":0},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://avatars2.githubusercontent.com/u/2616208?s=400&v=4\",\"width\":400,\"height\":400,\"aspectRatio\":1},\"embed\":{\"type\":\"reader\",\"html\":\"<script type=\\\"text/javascript\\\" src=\\\"https://gist.github.com/b0de80f9627780c687d2a36c35d9fd43.js\\\"></script>\",\"aspectRatio\":0}}" %}
-
-
 
 [https://raw.githubusercontent.com/openactive/developer-microsite/master/app/examples/event\_example\_1.json](https://raw.githubusercontent.com/openactive/developer-microsite/master/app/examples/event_example_1.json)
 
