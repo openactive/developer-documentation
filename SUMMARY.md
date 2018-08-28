@@ -19,6 +19,7 @@
   * [Facilities](publishing-data/data-fields/facilities.md)
   * [Free events](publishing-data/data-fields/free-events.md)
   * [Images](publishing-data/data-fields/images.md)
+  * [Identifiers](publishing-data/data-fields/identifiers.md)
   * [Location](publishing-data/data-fields/location.md)
   * [Session Availability](publishing-data/data-fields/session-availability.md)
   * [Upselling Membership](publishing-data/data-fields/upselling-membership.md)
