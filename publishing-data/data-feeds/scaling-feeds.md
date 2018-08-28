@@ -6,6 +6,8 @@ description: >-
 
 # Scaling feeds
 
+## Approach to Scale
+
 A CDN such as [CloudFlare](https://www.cloudflare.com/) is recommended to allow your RPDE endpoint to scale to millions of requests inbound. 
 
 ## CDN Configuration
