@@ -12,7 +12,7 @@ A CDN such as [CloudFlare](https://www.cloudflare.com/) is recommended to allow 
 
 ## CDN Configuration
 
-A CDN is simple to configure and requires a small amount of additional code on the RPDE endpoint.
+A CDN is simple to configure and requires a small amount of additional code within the RPDE endpoint.
 
 #### Basic Configuration
 
