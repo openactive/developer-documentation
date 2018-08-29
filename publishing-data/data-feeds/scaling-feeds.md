@@ -32,7 +32,7 @@ The settings in the CDN Configuration section will create the behaviour describe
 #### Scenario
 
 * In this scenario, 200 data consumers are tracking the RPDE feed by polling at the end of the list \(the last `next` URL\).
-* Although each data consumer can choose a polling frequency arbitrarily, that frequency is not relevant to the calculations here, as it is the settings of the cache header that dictate the load on the origin server. It should also be noted that the number of data consumers also does not impact the load on the origin server, and that 200 is used illustratively.
+* Although each data consumer can choose a polling frequency arbitrarily, that frequency is not relevant to the calculations here, as it is the settings of the cache header that dictate the load on the origin server. It should also be noted that during normal operation the number of data consumers also does not impact the load on the origin server, and that 200 is used illustratively.
 * When the last page is requested, the first consumer would request the live page \(creating one hit on the origin server\), and the subsiquent 199 data consumers would receive a cached version. 
 
 **"Sleep" mode**
