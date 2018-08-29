@@ -6,7 +6,7 @@ description: A summary of the mechanics of an RPDE data feed
 
 ## RPDE feeds explained
 
-The following video is a sample explainer animation for Realtime Paged Data Exchange \(RPDE\) feeds. If you find this short video useful, please drop any feedback to hello@openactive.io.
+The following video is a sample explainer animation for Realtime Paged Data Exchange \(RPDE\) feeds. If you find this short video useful, please drop any feedback to hello@openactive.io, and we will extend it into a full explanation.
 
 For a full explanation of how to create an RPDE feed, please see the [specification](https://www.openactive.io/realtime-paged-data-exchange/#paging).
 
