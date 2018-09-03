@@ -8,7 +8,7 @@ The [OpenActive data model](https://developer.openactive.io/models) provides a s
 
 This guide includes details about how to use parts of the model that are more nuanced.
 
-## Extension fields
+## Extension properties
 
 **Publish as much data as possible** - include all events / facilities and all fields related to all events. Data fields which are not yet featured in one of the existing [OpenActive models](https://developer.openactive.io/models) should be included by using extension fields.
 
