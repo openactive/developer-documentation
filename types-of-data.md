@@ -50,3 +50,13 @@ Ringer opportunities are spaces available in teams already scheduled to play due
 
 Note that use cases for this data have are not yet fully defined, please join the discussion [here](https://github.com/openactive/modelling-opportunity-data/issues/144) if you have any ideas to contribute.
 
+#### Routes \([discussion ongoing](https://github.com/openactive/modelling-opportunity-data/issues/108)\)
+
+For self-directed activities like walking, running and cycling, where there is a detailed pre-defined route available for the activity.
+
+Note that use cases for this data have are not yet fully defined, please join the discussion [here](https://github.com/openactive/modelling-opportunity-data/issues/108) if you have any ideas to contribute.
+
+#### Personal Trainers \(discussion not yet started\)
+
+For activity instructors who are available to travel to different locations.
+
