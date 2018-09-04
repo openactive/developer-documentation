@@ -1,10 +1,10 @@
 # Table of contents
 
 * [Welcome to our community](README.md)
+* [Types of data](types-of-data.md)
 
 ## Publishing Data
 
-* [Types of data](publishing-data/types-of-data.md)
 * [Getting Started](publishing-data/getting-started/README.md)
   * [Bespoke Systems](publishing-data/getting-started/bespoke-systems.md)
   * [Multi-customer Systems](publishing-data/getting-started/multi-customer-systems.md)
