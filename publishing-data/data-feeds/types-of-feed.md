@@ -14,54 +14,7 @@ These are feeds which, at the top level, can contain a mixture of [`Event`](http
 
 Such types of event can be combined into a single feed or presented as separate feeds \(e.g. a feed for classes and a feed for courses\). 
 
-An example feed of Events is below:
-
-```text
-{ 
-   "next": "http://www.example.com/api/rpde/sessions?afterTimestamp=1453931925&afterId=%7Bd97f73fb-4718-48ee-a6a9-9c7d717ebd85%7D",
-   "items": [
-       {
-           "state": "updated",
-           "kind": "session",
-           "id": "{c15814e5-8931-470c-8a16-ef45afedaece}",
-           "modified": 1453931101,
-           "data": {
-               "@context": "https://www.openactive.io/ns/oa.jsonld",
-               "type": "Event",
-               "identifier": "session-01jz93i3k1p3",
-               "superEvent": {
-                   "identifier": "eventType-ak6zw8ntsiqq"
-               },
-               "startDate": "2016-05-09T18:15:00Z",
-               "endDate": "2016-05-09T19:15:00Z",
-               "remainingAttendeeCapacity": 3,
-               "url": "https://bookingsystem.com/hulahoop/e/ev-ssyp-20160509191500?r=oa",
-               "attendanceCount": 29,
-               "location": {
-                   "type": "Place",
-                   "identifier": "location-jbnentuhxsnp",
-                   "url": "https://leisurecentre.org.uk/leisure-centre/camden/kentish-town-sports-centre",
-                   "name": "Kentish Town Sports Centre",
-                   "address": {
-                       "type": "PostalAddress",
-                       "addressLocality": "Camden",
-                       "addressRegion": "London West",
-                       "postalCode": "NW5 3DU",
-                       "streetAddress": "Kentish Town Sports Centre"
-                   }
-               }
-           }
-       },
-       {
-           "state": "deleted",
-           "kind": "session",
-           "id": "{d97f73fb-4718-48ee-a6a9-9c7d717ebd85}",
-           "modified": 1453931925
-       }
-   ],
-   "license": "https://creativecommons.org/licenses/by/4.0/"
-}
-```
+An example feed of Events can be found [here](http://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fevent_example_1.json&version=2.0).
 
 ## Slot-based Events: FacilityUses
 
