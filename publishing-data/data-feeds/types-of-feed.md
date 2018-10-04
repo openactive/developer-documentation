@@ -10,7 +10,7 @@ description: >-
 
 These always have at least `activity`, `location` and `startDate` specified: so a Yoga class in Downtown Leisure Centre at 7pm on a Tuesday. This class may be part of a 10-week course.
 
-These are feeds which, at the top level, can contain a mixture of [`Event`](https://developer.openactive.io/models/event) , [`CourseInstance`](https://schema.org/CourseInstance), [`ext:VirtualEvent`](https://github.com/openactive/modelling-opportunity-data/issues/71) \([UC](https://github.com/openactive/modelling-opportunity-data/issues/71)\) or [`BroadcastEvent`](https://schema.org/BroadcastEvent) \([UC](https://github.com/openactive/modelling-opportunity-data/issues/71)\).
+These are feeds which, at the top level, can contain a mixture of [`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#regular-sessions-sessionseries-and-scheduledsession-), EventSeries, [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#headline-events-headlineevent-) , [`CourseInstance`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#courses-courseinstance-), [`ext:VirtualEvent`](https://github.com/openactive/modelling-opportunity-data/issues/71) \([UC](https://github.com/openactive/modelling-opportunity-data/issues/71)\) or [`BroadcastEvent`](https://schema.org/BroadcastEvent) \([UC](https://github.com/openactive/modelling-opportunity-data/issues/71)\).
 
 Such types of event can be combined into a single feed or presented as separate feeds \(e.g. a feed for classes and a feed for courses\). 
 
