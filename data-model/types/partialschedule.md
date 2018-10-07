@@ -49,7 +49,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/Time"><code>Time</code></a>
       </td>
       <td style="text-align:left">
-        The end time of the event.</br></br><b>Example</b></br></br><code>12:00:00</code>
+        <p>The end time of the event.</p><br/></br></br><b>Example</b></br></br><code>12:00:00</code>
       </td>
     </tr>
     <tr>
@@ -58,7 +58,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
       <td style="text-align:left">
-        Defines the frequency at which Events will occur according to a Schedule. The intervals between events should be defined as a Duration of time.</br></br><b>Example</b></br></br><code>P1D</code>
+        <p>Defines the frequency at which Events will occur according to a Schedule. The intervals between events should be defined as a Duration of time.</p><br/></br></br><b>Example</b></br></br><code>P1D</code>
       </td>
     </tr>
     <tr>
@@ -67,7 +67,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/Time"><code>Time</code></a>
       </td>
       <td style="text-align:left">
-        The start time of the event.</br></br><b>Example</b></br></br><code>12:00:00</code>
+        <p>The start time of the event.</p><br/></br></br><b>Example</b></br></br><code>12:00:00</code>
       </td>
     </tr>
   </tbody>
@@ -91,7 +91,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         Array of <a href="https://schema.org/DayOfWeek"><code>DayOfWeek</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Defines the day of the week upon which the Event takes place.</br></br>When using string values, this MUST conform to iCal BYDAY rule.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;&quot;https://schema.org/Monday&quot;<br/>]</code>
+        <p>Defines the day of the week upon which the Event takes place.</p><br/></br></br><p>When using string values, this MUST conform to iCal BYDAY rule.</p><br/></br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;&quot;https://schema.org/Monday&quot;<br/>]</code>
       </td>
     </tr>
     <tr>
@@ -100,7 +100,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        Defines the months of the year on which the Event takes place. Specified as an integer between 1 and 12, with 1 representing January.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;2<br/>]</code>
+        <p>Defines the months of the year on which the Event takes place. Specified as an integer between 1 and 12, with 1 representing January.</p><br/></br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;2<br/>]</code>
       </td>
     </tr>
     <tr>
@@ -109,7 +109,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        Defines the days of the month on which the Event takes place. Specified as an integer between 1 and 31</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;28<br/>]</code>
+        <p>Defines the days of the month on which the Event takes place. Specified as an integer between 1 and 31</p><br/></br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;28<br/>]</code>
       </td>
     </tr>
     <tr>
@@ -118,7 +118,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
       <td style="text-align:left">
-        The duration of the event given in [ISO8601] format.</br></br><b>Example</b></br></br><code>PT1H</code>
+        <p>The duration of the event given in [ISO8601] format.</p><br/></br></br><b>Example</b></br></br><code>PT1H</code>
       </td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
-        The end date of the schedule.</br></br><b>Example</b></br></br><code>2018-01-27</code>
+        <p>The end date of the schedule.</p><br/></br></br><b>Example</b></br></br><code>2018-01-27</code>
       </td>
     </tr>
     <tr>
@@ -136,7 +136,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         Array of <a href="https://schema.org/Date"><code>Date</code></a><br/> - or - <br/>Array of <a href="https://schema.org/DateTime"><code>DateTime</code></a>
       </td>
       <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>TODO</code>
+        <p>TODO</p><br/></br></br><b>Example</b></br></br><code>TODO</code>
       </td>
     </tr>
     <tr>
@@ -145,7 +145,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/urlTemplate"><code>urlTemplate</code></a>
       </td>
       <td style="text-align:left">
-        An RFC6570 compliant URI template that can be used to generate a unique identifier (@id) for every event described by the schedule (see below for more information). This property is required if the data provider is supporting third-party booking via the Open Booking API.</br></br><b>Example</b></br></br><code>https://example.com/event{/id}</code>
+        <p>An RFC6570 compliant URI template that can be used to generate a unique identifier (@id) for every event described by the schedule (see below for more information). This property is required if the data provider is supporting third-party booking via the Open Booking API.</p><br/></br></br><b>Example</b></br></br><code>https://example.com/event{/id}</code>
       </td>
     </tr>
     <tr>
@@ -154,7 +154,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        Defines the number of times a recurring Event will take place.</br></br><b>Example</b></br></br><code>3</code>
+        <p>Defines the number of times a recurring Event will take place.</p><br/></br></br><b>Example</b></br></br><code>3</code>
       </td>
     </tr>
     <tr>
@@ -163,7 +163,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        The type of event this schedule related to</br></br><b>Example</b></br></br><code>Event</code>
+        <p>The type of event this schedule related to</p><br/></br></br><b>Example</b></br></br><code>Event</code>
       </td>
     </tr>
     <tr>
@@ -172,7 +172,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
-        The start date of the event.</br></br><b>Example</b></br></br><code>2018-01-27</code>
+        <p>The start date of the event.</p><br/></br></br><b>Example</b></br></br><code>2018-01-27</code>
       </td>
     </tr>
     <tr>
@@ -181,7 +181,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/urlTemplate"><code>urlTemplate</code></a>
       </td>
       <td style="text-align:left">
-        An RFC6570 compliant URI template that can be used to generate a unique URL (schema:url) for every event described by the schedule (see below for more information). This property is required if the data provider wants to provide participants with a unique URL to book to attend an event.</br></br><b>Example</b></br></br><code>https://example.com/event{/id}</code>
+        <p>An RFC6570 compliant URI template that can be used to generate a unique URL (schema:url) for every event described by the schedule (see below for more information). This property is required if the data provider wants to provide participants with a unique URL to book to attend an event.</p><br/></br></br><b>Example</b></br></br><code>https://example.com/event{/id}</code>
       </td>
     </tr>
   </tbody>

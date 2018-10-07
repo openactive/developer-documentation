@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/GeoCoordinates](https://schema.org
         <a href="https://schema.org/Float"><code>Float</code></a>
       </td>
       <td style="text-align:left">
-        The latitude of a location. For example 51.522338 (WGS 84).</br></br><b>Example</b></br></br><code>51.522338</code>
+        <p>The latitude of a location. For example 51.522338 (WGS 84).</p><br/></br></br><b>Example</b></br></br><code>51.522338</code>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/GeoCoordinates](https://schema.org
         <a href="https://schema.org/Float"><code>Float</code></a>
       </td>
       <td style="text-align:left">
-        The longitude of a location. For example -0.083437 (WGS 84).</br></br><b>Example</b></br></br><code>-0.083437</code>
+        <p>The longitude of a location. For example -0.083437 (WGS 84).</p><br/></br></br><b>Example</b></br></br><code>-0.083437</code>
       </td>
     </tr>
   </tbody>

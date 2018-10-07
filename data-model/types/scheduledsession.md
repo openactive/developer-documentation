@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
-        Specifies the physical activity or activities that will take place during an event.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/activities#Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/activities&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+        <p>Specifies the physical activity or activities that will take place during an event.</p><br/></br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/activities#Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/activities&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
       </td>
       <td style="text-align:left">
-        The location at which the event will take place. Or, in the case of events that may span multiple locations, the initial meeting or starting point.</br></br>It is recommended that locations should be specified as a [Place](/models/place) complete with a fully described geographic location and/or address.<br/>If only an address is available then this should be described as a [PostalAddress](/models/postaladdress).</br></br>Applications may use [schema:Text](https://schema.org/Text) to provide a more general description of a location ("In Victoria Park, near the lake"), but this is not recommended: consuming applications will be unable to help users discover opportunities based on their location.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;address&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;PostalAddress&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;description&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&nbsp;in&nbsp;London&quot;,<br/>&nbsp;&nbsp;&quot;geo&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/locations/1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;&quot;1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&quot;,<br/>&nbsp;&nbsp;&quot;telephone&quot;:&nbsp;&quot;01253&nbsp;473934&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Place&quot;<br/>}</code>
+        <p>The location at which the event will take place. Or, in the case of events that may span multiple locations, the initial meeting or starting point.</p><br/></br></br><p>It is recommended that locations should be specified as a <a href="/models/place">Place</a> complete with a fully described geographic location and/or address.<br/>If only an address is available then this should be described as a <a href="/models/postaladdress">PostalAddress</a>.</p><br/></br></br><p>Applications may use <a href="https://schema.org/Text">schema:Text</a> to provide a more general description of a location (&quot;In Victoria Park, near the lake&quot;), but this is not recommended: consuming applications will be unable to help users discover opportunities based on their location.</p><br/></br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;address&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;PostalAddress&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;description&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&nbsp;in&nbsp;London&quot;,<br/>&nbsp;&nbsp;&quot;geo&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/locations/1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;&quot;1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&quot;,<br/>&nbsp;&nbsp;&quot;telephone&quot;:&nbsp;&quot;01253&nbsp;473934&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Place&quot;<br/>}</code>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        The name of the event</br></br><b>Example</b></br></br><code>Speedball</code>
+        <p>The name of the event</p><br/></br></br><b>Example</b></br></br><code>Speedball</code>
       </td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
-        The start date and time of the event. Can be specified as a schema:Date or schema:DateTime.</br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
+        <p>The start date and time of the event. Can be specified as a schema:Date or schema:DateTime.</p><br/></br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
       </td>
     </tr>
   </tbody>
@@ -85,7 +85,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        A unique url based identifier for the record</br></br><b>Example</b></br></br><code>https://example.com/event/1234</code>
+        <p>A unique url based identifier for the record</p><br/></br></br><b>Example</b></br></br><code>https://example.com/event/1234</code>
       </td>
     </tr>
     <tr>
@@ -94,7 +94,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
-        The end date and time of the event. Can be specified as a schema:Date or  schema:DateTime</br></br>It is recommended that publishers provide either an schema:endDate or a schema:duration for an event.</br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
+        <p>The end date and time of the event. Can be specified as a schema:Date or  schema:DateTime</p><br/></br></br><p>It is recommended that publishers provide either an schema:endDate or a schema:duration for an event.</p><br/></br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
       </td>
     </tr>
     <tr>
@@ -103,7 +103,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/EventStatusType"><code>EventStatusType</code></a>
       </td>
       <td style="text-align:left">
-        The status of an event. Can be used to indicate rescheduled or cancelled events</br></br><b>Example</b></br></br><code>https://schema.org/EventScheduled</code>
+        <p>The status of an event. Can be used to indicate rescheduled or cancelled events</p><br/></br></br><b>Example</b></br></br><code>https://schema.org/EventScheduled</code>
       </td>
     </tr>
     <tr>
@@ -112,7 +112,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         Array of <a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
       <td style="text-align:left">
-        Refers to people (schema:Person) or organizations (schema:Organization) who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor. The person will need to have given their consent for their personal information to be present in the Open Data.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;familyName&quot;:&nbsp;&quot;Smith&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;givenName&quot;:&nbsp;&quot;Nicole&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/locations/1234ABCD/leaders/89&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;89,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Person&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+        <p>Refers to people (schema:Person) or organizations (schema:Organization) who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor. The person will need to have given their consent for their personal information to be present in the Open Data.</p><br/></br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;familyName&quot;:&nbsp;&quot;Smith&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;givenName&quot;:&nbsp;&quot;Nicole&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/locations/1234ABCD/leaders/89&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;89,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Person&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
       </td>
     </tr>
     <tr>
@@ -121,7 +121,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        The maximum capacity of the Event.</br></br><b>Example</b></br></br><code>30</code>
+        <p>The maximum capacity of the Event.</p><br/></br></br><b>Example</b></br></br><code>30</code>
       </td>
     </tr>
     <tr>
@@ -130,7 +130,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         Array of <a href="https://docs.openactive.io/data-model/types/offer"><code>Offer</code></a>
       </td>
       <td style="text-align:left">
-        TODO
+        <p>TODO</p><br/>
       </td>
     </tr>
     <tr>
@@ -139,7 +139,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        The number of places that are still available for the Event.</br></br><b>Example</b></br></br><code>20</code>
+        <p>The number of places that are still available for the Event.</p><br/></br></br><b>Example</b></br></br><code>20</code>
       </td>
     </tr>
     <tr>
@@ -148,7 +148,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        A URL to a web page (or section of a page) that describes the event.</br></br><b>Example</b></br></br><code>https://example.com/event/1234</code>
+        <p>A URL to a web page (or section of a page) that describes the event.</p><br/></br></br><b>Example</b></br></br><code>https://example.com/event/1234</code>
       </td>
     </tr>
   </tbody>
@@ -172,7 +172,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/url"><code>url</code></a><br/> - or - <br/>Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>https://openactive.io/</code>
+        <p>TODO</p><br/></br></br><b>Example</b></br></br><code>https://openactive.io/</code>
       </td>
     </tr>
     <tr>
@@ -181,7 +181,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Provide additional, specific documentation for participants about how disabilities are, or can be supported at the Event.</br></br><b>Example</b></br></br><code>TODO</code>
+        <p>Provide additional, specific documentation for participants about how disabilities are, or can be supported at the Event.</p><br/></br></br><b>Example</b></br></br><code>TODO</code>
       </td>
     </tr>
     <tr>
@@ -190,7 +190,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         Array of <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
-        Used to specify the types of disabilities or impairments that are supported at an event.</br></br><b>Example</b></br></br><code>TODO</code>
+        <p>Used to specify the types of disabilities or impairments that are supported at an event.</p><br/></br></br><b>Example</b></br></br><code>TODO</code>
       </td>
     </tr>
     <tr>
@@ -199,7 +199,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://docs.openactive.io/data-model/types/quantitativevalue"><code>QuantitativeValue</code></a>
       </td>
       <td style="text-align:left">
-        Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;QuantitativeValue&quot;,<br/>&nbsp;&nbsp;&quot;minValue&quot;:&nbsp;15,<br/>&nbsp;&nbsp;&quot;maxValue&quot;:&nbsp;60<br/>}</code>
+        <p>Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30</p><br/></br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;QuantitativeValue&quot;,<br/>&nbsp;&nbsp;&quot;minValue&quot;:&nbsp;15,<br/>&nbsp;&nbsp;&quot;maxValue&quot;:&nbsp;60<br/>}</code>
       </td>
     </tr>
     <tr>
@@ -208,7 +208,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc.</br></br><b>Example</b></br></br><code>TODO</code>
+        <p>Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc.</p><br/></br></br><b>Example</b></br></br><code>TODO</code>
       </td>
     </tr>
     <tr>
@@ -217,7 +217,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/categories#Top%20Club%20Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/categories&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Top&nbsp;Club&nbsp;Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+        <p>Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc.</p><br/></br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/categories#Top%20Club%20Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/categories&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Top&nbsp;Club&nbsp;Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
       </td>
     </tr>
     <tr>
@@ -226,7 +226,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         Array of <a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
       <td style="text-align:left">
-        A Person who contributes to the facilitation of the Event.</br></br><b>Example</b></br></br><code>{}</code>
+        <p>A Person who contributes to the facilitation of the Event.</p><br/></br></br><b>Example</b></br></br><code>{}</code>
       </td>
     </tr>
     <tr>
@@ -235,7 +235,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        A free text description of the event</br></br><b>Example</b></br></br><code>An fast paced game that incorporates netball, handball and football.</code>
+        <p>A free text description of the event</p><br/></br></br><b>Example</b></br></br><code>An fast paced game that incorporates netball, handball and football.</code>
       </td>
     </tr>
     <tr>
@@ -244,7 +244,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
       <td style="text-align:left">
-        The duration of the event given in [ISO8601] format.</br></br><b>Example</b></br></br><code>PT1H</code>
+        <p>The duration of the event given in [ISO8601] format.</p><br/></br></br><b>Example</b></br></br><code>PT1H</code>
       </td>
     </tr>
     <tr>
@@ -253,7 +253,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://openactive.io/GenderRestrictionType"><code>GenderRestrictionType</code></a>
       </td>
       <td style="text-align:left">
-        Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience</br></br><b>Example</b></br></br><code>https://openactive.io/Female</code>
+        <p>Indicates that an event is restricted to male, female or a mixed audience. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience</p><br/></br></br><b>Example</b></br></br><code>https://openactive.io/Female</code>
       </td>
     </tr>
     <tr>
@@ -262,7 +262,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         
       </td>
       <td style="text-align:left">
-        A unique identifier for the record</br></br><b>Example</b></br></br><code>1234</code>
+        <p>A unique identifier for the record</p><br/></br></br><b>Example</b></br></br><code>1234</code>
       </td>
     </tr>
     <tr>
@@ -271,7 +271,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         Array of <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
-        An image or photo that depicts the event, e.g. a photo taken at a previous event.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;thumbnail&quot;:&nbsp;&quot;http://example.com/static/image/speedball_thumbnail.jpg&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+        <p>An image or photo that depicts the event, e.g. a photo taken at a previous event.</p><br/></br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;thumbnail&quot;:&nbsp;&quot;http://example.com/static/image/speedball_thumbnail.jpg&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
       </td>
     </tr>
     <tr>
@@ -280,7 +280,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
       <td style="text-align:left">
-        Whether the Event is accessible without charge.</br></br><b>Example</b></br></br><code>true</code>
+        <p>Whether the Event is accessible without charge.</p><br/></br></br><b>Example</b></br></br><code>true</code>
       </td>
     </tr>
     <tr>
@@ -289,7 +289,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
       <td style="text-align:left">
-        A boolean property that indicates whether an Event will be coached. This flag allows an Event to be marked as being coached without having to specify a named individual as a coach. This addresses both privacy concerns and also scenarios where the actual coach may only be decided on the day.</br></br><b>Example</b></br></br><code>true</code>
+        <p>A boolean property that indicates whether an Event will be coached. This flag allows an Event to be marked as being coached without having to specify a named individual as a coach. This addresses both privacy concerns and also scenarios where the actual coach may only be decided on the day.</p><br/></br></br><b>Example</b></br></br><code>true</code>
       </td>
     </tr>
     <tr>
@@ -298,7 +298,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         Array of <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
-        A general purpose property for specifying the suitability of an event for different participant “levels”. E.g. beginner/intermediate/advanced. Or in the case of martial arts, specific belt requirements. Values should ideally be drawn from a controlled vocabulary.</br></br><b>Example</b></br></br><code>TODO</code>
+        <p>A general purpose property for specifying the suitability of an event for different participant “levels”. E.g. beginner/intermediate/advanced. Or in the case of martial arts, specific belt requirements. Values should ideally be drawn from a controlled vocabulary.</p><br/></br></br><b>Example</b></br></br><code>TODO</code>
       </td>
     </tr>
     <tr>
@@ -307,7 +307,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions.</br></br><b>Example</b></br></br><code>At the entrance to the park</code>
+        <p>Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions.</p><br/></br></br><b>Example</b></br></br><code>At the entrance to the park</code>
       </td>
     </tr>
     <tr>
@@ -316,7 +316,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://docs.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
       <td style="text-align:left">
-        The person or organization ultimately responsible for an event. An organizer might be an  schema:Organization or a schema:Person.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+        <p>The person or organization ultimately responsible for an event. An organizer might be an  schema:Organization or a schema:Person.</p><br/></br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
       </td>
     </tr>
     <tr>
@@ -325,7 +325,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         Array of <a href="https://docs.openactive.io/data-model/types/action"><code>Action</code></a>
       </td>
       <td style="text-align:left">
-        The possible actions that a user may make. e.g. Book.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Book&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;target&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;encodingType&quot;:&nbsp;&quot;application/vnd.openactive.v1.0+json&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;httpMethod&quot;:&nbsp;&quot;POST&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;EntryPoint&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://example.com/orders&quot;<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Action&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+        <p>The possible actions that a user may make. e.g. Book.</p><br/></br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Book&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;target&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;encodingType&quot;:&nbsp;&quot;application/vnd.openactive.v1.0+json&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;httpMethod&quot;:&nbsp;&quot;POST&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;EntryPoint&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://example.com/orders&quot;<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Action&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
       </td>
     </tr>
     <tr>
@@ -334,7 +334,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://docs.openactive.io/data-model/types/brand"><code>Brand</code></a>
       </td>
       <td style="text-align:left">
-        Indicates that an event will be organised according to a specific Programme.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Brand&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Play&nbsp;Ball!&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.org/brand/play-ball&quot;<br/>}</code>
+        <p>Indicates that an event will be organised according to a specific Programme.</p><br/></br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Brand&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Play&nbsp;Ball!&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.org/brand/play-ball&quot;<br/>}</code>
       </td>
     </tr>
     <tr>
@@ -343,7 +343,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Provides a note from an organizer relating to how this Event is scheduled.</br></br><b>Example</b></br></br><code>This event doesn't run during school holidays</code>
+        <p>Provides a note from an organizer relating to how this Event is scheduled.</p><br/></br></br><b>Example</b></br></br><code>This event doesn't run during school holidays</code>
       </td>
     </tr>
     <tr>
@@ -352,7 +352,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <a href="https://docs.openactive.io/data-model/types/event"><code>Event</code></a>
       </td>
       <td style="text-align:left">
-        Relates a child event to a parent event. Properties describing the parent event can be assumed to apply to the child, unless otherwise specified. A parent event might specify a recurring schedule, of which the child event is one specific instance
+        <p>Relates a child event to a parent event. Properties describing the parent event can be assumed to apply to the child, unless otherwise specified. A parent event might specify a recurring schedule, of which the child event is one specific instance</p><br/>
       </td>
     </tr>
   </tbody>

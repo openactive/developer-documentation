@@ -49,7 +49,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>60</code>
+        <p>TODO</p><br/></br></br><b>Example</b></br></br><code>60</code>
       </td>
     </tr>
     <tr>
@@ -58,7 +58,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>16</code>
+        <p>TODO</p><br/></br></br><b>Example</b></br></br><code>16</code>
       </td>
     </tr>
   </tbody>

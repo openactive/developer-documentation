@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.</br></br><b>Example</b></br></br><code>POST</code>
+        <p>An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.</p><br/></br></br><b>Example</b></br></br><code>POST</code>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
         <a href="https://schema.org/urlTemplate"><code>urlTemplate</code></a>
       </td>
       <td style="text-align:left">
-        URL of the item</br></br><b>Example</b></br></br><code>https://example.com/orders{/var}</code>
+        <p>URL of the item</p><br/></br></br><b>Example</b></br></br><code>https://example.com/orders{/var}</code>
       </td>
     </tr>
   </tbody>

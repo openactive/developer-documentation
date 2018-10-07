@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        The URL for the display resolution image.</br></br><b>Example</b></br></br><code>http://example.com/static/image/speedball_large.jpg</code>
+        <p>The URL for the display resolution image.</p><br/></br></br><b>Example</b></br></br><code>http://example.com/static/image/speedball_large.jpg</code>
       </td>
     </tr>
   </tbody>
@@ -58,7 +58,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
         Array of <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
-        The URL for a thumbnail image for an image.
+        <p>The URL for a thumbnail image for an image.</p><br/>
       </td>
     </tr>
   </tbody>
