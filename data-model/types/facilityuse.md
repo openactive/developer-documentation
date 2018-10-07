@@ -20,7 +20,7 @@ description: This page describes the FacilityUse type.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left"><a name="type"></a><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>activity</b></td>
+      <td style="text-align:left"><a name="activity"></a><b>activity</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
@@ -38,7 +38,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>location</b></td>
+      <td style="text-align:left"><a name="location"></a><b>location</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
       </td>
@@ -47,7 +47,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left"><a name="name"></a><b>name</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -56,7 +56,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>provider</b></td>
+      <td style="text-align:left"><a name="provider"></a><b>provider</b></td>
       <td style="text-align:left">
         
       </td>
@@ -65,7 +65,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>url</b></td>
+      <td style="text-align:left"><a name="url"></a><b>url</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -89,7 +89,7 @@ description: This page describes the FacilityUse type.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>id</b></td>
+      <td style="text-align:left"><a name="id"></a><b>id</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -98,7 +98,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>description</b></td>
+      <td style="text-align:left"><a name="description"></a><b>description</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -107,7 +107,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>event</b></td>
+      <td style="text-align:left"><a name="event"></a><b>event</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/slot"><code>Slot</code></a>
       </td>
@@ -116,7 +116,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>hoursAvailable</b></td>
+      <td style="text-align:left"><a name="hoursAvailable"></a><b>hoursAvailable</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/openinghoursspecification"><code>OpeningHoursSpecification</code></a>
       </td>
@@ -125,7 +125,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>image</b></td>
+      <td style="text-align:left"><a name="image"></a><b>image</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
@@ -134,7 +134,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>offers</b></td>
+      <td style="text-align:left"><a name="offers"></a><b>offers</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/offer"><code>Offer</code></a>
       </td>
@@ -158,7 +158,7 @@ description: This page describes the FacilityUse type.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>@context</b></td>
+      <td style="text-align:left"><a name="@context"></a><b>@context</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a><br/> - or - <br/>Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -167,7 +167,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>accessibilityInformation</b></td>
+      <td style="text-align:left"><a name="accessibilityInformation"></a><b>accessibilityInformation</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -176,7 +176,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>accessibilitySupport</b></td>
+      <td style="text-align:left"><a name="accessibilitySupport"></a><b>accessibilitySupport</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
@@ -185,7 +185,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>attendeeInstructions</b></td>
+      <td style="text-align:left"><a name="attendeeInstructions"></a><b>attendeeInstructions</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -194,7 +194,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>category</b></td>
+      <td style="text-align:left"><a name="category"></a><b>category</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -203,7 +203,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>identifier</b></td>
+      <td style="text-align:left"><a name="identifier"></a><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -212,7 +212,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>individualFacilityUse</b></td>
+      <td style="text-align:left"><a name="individualFacilityUse"></a><b>individualFacilityUse</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/individualfacilityuse"><code>IndividualFacilityUse</code></a>
       </td>
@@ -221,7 +221,7 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>potentialAction</b></td>
+      <td style="text-align:left"><a name="potentialAction"></a><b>potentialAction</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/action"><code>Action</code></a>
       </td>

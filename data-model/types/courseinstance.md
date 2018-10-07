@@ -20,7 +20,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left"><a name="type"></a><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>id</b></td>
+      <td style="text-align:left"><a name="id"></a><b>id</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -38,7 +38,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>@context</b></td>
+      <td style="text-align:left"><a name="@context"></a><b>@context</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a><br/> - or - <br/>Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -47,7 +47,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>accessibilityInformation</b></td>
+      <td style="text-align:left"><a name="accessibilityInformation"></a><b>accessibilityInformation</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -56,7 +56,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>accessibilitySupport</b></td>
+      <td style="text-align:left"><a name="accessibilitySupport"></a><b>accessibilitySupport</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
@@ -65,7 +65,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>activity</b></td>
+      <td style="text-align:left"><a name="activity"></a><b>activity</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
@@ -74,7 +74,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>ageRange</b></td>
+      <td style="text-align:left"><a name="ageRange"></a><b>ageRange</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/quantitativevalue"><code>QuantitativeValue</code></a>
       </td>
@@ -83,7 +83,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>attendeeInstructions</b></td>
+      <td style="text-align:left"><a name="attendeeInstructions"></a><b>attendeeInstructions</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -92,7 +92,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>category</b></td>
+      <td style="text-align:left"><a name="category"></a><b>category</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -101,7 +101,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>contributor</b></td>
+      <td style="text-align:left"><a name="contributor"></a><b>contributor</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
@@ -110,7 +110,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>description</b></td>
+      <td style="text-align:left"><a name="description"></a><b>description</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -119,7 +119,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>duration</b></td>
+      <td style="text-align:left"><a name="duration"></a><b>duration</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
@@ -128,7 +128,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>endDate</b></td>
+      <td style="text-align:left"><a name="endDate"></a><b>endDate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
@@ -137,7 +137,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>eventSchedule</b></td>
+      <td style="text-align:left"><a name="eventSchedule"></a><b>eventSchedule</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/schedule"><code>Schedule</code></a>
       </td>
@@ -146,7 +146,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>eventStatus</b></td>
+      <td style="text-align:left"><a name="eventStatus"></a><b>eventStatus</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/EventStatusType"><code>EventStatusType</code></a>
       </td>
@@ -155,7 +155,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>genderRestriction</b></td>
+      <td style="text-align:left"><a name="genderRestriction"></a><b>genderRestriction</b></td>
       <td style="text-align:left">
         <a href="https://openactive.io/GenderRestrictionType"><code>GenderRestrictionType</code></a>
       </td>
@@ -164,7 +164,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>identifier</b></td>
+      <td style="text-align:left"><a name="identifier"></a><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -173,7 +173,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>image</b></td>
+      <td style="text-align:left"><a name="image"></a><b>image</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
@@ -182,7 +182,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>isAccessibleForFree</b></td>
+      <td style="text-align:left"><a name="isAccessibleForFree"></a><b>isAccessibleForFree</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
@@ -191,7 +191,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>isCoached</b></td>
+      <td style="text-align:left"><a name="isCoached"></a><b>isCoached</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
@@ -200,7 +200,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>leader</b></td>
+      <td style="text-align:left"><a name="leader"></a><b>leader</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
@@ -209,7 +209,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>level</b></td>
+      <td style="text-align:left"><a name="level"></a><b>level</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
@@ -218,7 +218,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>location</b></td>
+      <td style="text-align:left"><a name="location"></a><b>location</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
       </td>
@@ -227,7 +227,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>maximumAttendeeCapacity</b></td>
+      <td style="text-align:left"><a name="maximumAttendeeCapacity"></a><b>maximumAttendeeCapacity</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -236,7 +236,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>meetingPoint</b></td>
+      <td style="text-align:left"><a name="meetingPoint"></a><b>meetingPoint</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -245,7 +245,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left"><a name="name"></a><b>name</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -254,7 +254,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>offers</b></td>
+      <td style="text-align:left"><a name="offers"></a><b>offers</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/offer"><code>Offer</code></a>
       </td>
@@ -263,7 +263,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>organizer</b></td>
+      <td style="text-align:left"><a name="organizer"></a><b>organizer</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
@@ -272,7 +272,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>potentialAction</b></td>
+      <td style="text-align:left"><a name="potentialAction"></a><b>potentialAction</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/action"><code>Action</code></a>
       </td>
@@ -281,7 +281,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>programme</b></td>
+      <td style="text-align:left"><a name="programme"></a><b>programme</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/brand"><code>Brand</code></a>
       </td>
@@ -290,7 +290,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>remainingAttendeeCapacity</b></td>
+      <td style="text-align:left"><a name="remainingAttendeeCapacity"></a><b>remainingAttendeeCapacity</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -299,7 +299,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>schedulingNote</b></td>
+      <td style="text-align:left"><a name="schedulingNote"></a><b>schedulingNote</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -308,7 +308,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>startDate</b></td>
+      <td style="text-align:left"><a name="startDate"></a><b>startDate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
@@ -317,7 +317,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>subEvent</b></td>
+      <td style="text-align:left"><a name="subEvent"></a><b>subEvent</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/event"><code>Event</code></a>
       </td>
@@ -326,7 +326,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>superEvent</b></td>
+      <td style="text-align:left"><a name="superEvent"></a><b>superEvent</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/event"><code>Event</code></a>
       </td>
@@ -335,7 +335,7 @@ This type is derived from [https://pending.schema.org/CourseInstance](https://pe
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>url</b></td>
+      <td style="text-align:left"><a name="url"></a><b>url</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>

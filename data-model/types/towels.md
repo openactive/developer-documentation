@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left"><a name="type"></a><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left"><a name="name"></a><b>name</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -38,7 +38,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>value</b></td>
+      <td style="text-align:left"><a name="value"></a><b>value</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>

@@ -20,7 +20,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left"><a name="type"></a><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>endTime</b></td>
+      <td style="text-align:left"><a name="endTime"></a><b>endTime</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Time"><code>Time</code></a>
       </td>
@@ -38,7 +38,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>repeatFrequency</b></td>
+      <td style="text-align:left"><a name="repeatFrequency"></a><b>repeatFrequency</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
@@ -47,7 +47,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>scheduledEventType</b></td>
+      <td style="text-align:left"><a name="scheduledEventType"></a><b>scheduledEventType</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -56,7 +56,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>startTime</b></td>
+      <td style="text-align:left"><a name="startTime"></a><b>startTime</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Time"><code>Time</code></a>
       </td>
@@ -82,7 +82,7 @@ While these properties are marked as optional, a data publisher must provide eit
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>byDay</b></td>
+      <td style="text-align:left"><a name="byDay"></a><b>byDay</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/DayOfWeek"><code>DayOfWeek</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -91,7 +91,7 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>byMonth</b></td>
+      <td style="text-align:left"><a name="byMonth"></a><b>byMonth</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -100,7 +100,7 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>byMonthDay</b></td>
+      <td style="text-align:left"><a name="byMonthDay"></a><b>byMonthDay</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -124,7 +124,7 @@ While these properties are marked as optional, a data publisher must provide eit
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>duration</b></td>
+      <td style="text-align:left"><a name="duration"></a><b>duration</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
@@ -133,7 +133,7 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>endDate</b></td>
+      <td style="text-align:left"><a name="endDate"></a><b>endDate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Date"><code>Date</code></a>
       </td>
@@ -142,7 +142,7 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>idTemplate</b></td>
+      <td style="text-align:left"><a name="idTemplate"></a><b>idTemplate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/urlTemplate"><code>urlTemplate</code></a>
       </td>
@@ -151,7 +151,7 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>startDate</b></td>
+      <td style="text-align:left"><a name="startDate"></a><b>startDate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Date"><code>Date</code></a>
       </td>
@@ -160,7 +160,7 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>urlTemplate</b></td>
+      <td style="text-align:left"><a name="urlTemplate"></a><b>urlTemplate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/urlTemplate"><code>urlTemplate</code></a>
       </td>
@@ -184,7 +184,7 @@ While these properties are marked as optional, a data publisher must provide eit
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>byDay</b></td>
+      <td style="text-align:left"><a name="byDay"></a><b>byDay</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/DayOfWeek"><code>DayOfWeek</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -193,7 +193,7 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>byMonth</b></td>
+      <td style="text-align:left"><a name="byMonth"></a><b>byMonth</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -202,7 +202,7 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>byMonthDay</b></td>
+      <td style="text-align:left"><a name="byMonthDay"></a><b>byMonthDay</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -211,7 +211,7 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>exceptDate</b></td>
+      <td style="text-align:left"><a name="exceptDate"></a><b>exceptDate</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Date"><code>Date</code></a><br/> - or - <br/>Array of <a href="https://schema.org/DateTime"><code>DateTime</code></a>
       </td>
@@ -220,7 +220,7 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>repeatCount</b></td>
+      <td style="text-align:left"><a name="repeatCount"></a><b>repeatCount</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>

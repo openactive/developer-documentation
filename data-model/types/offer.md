@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left"><a name="type"></a><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>price</b></td>
+      <td style="text-align:left"><a name="price"></a><b>price</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Float"><code>Float</code></a>
       </td>
@@ -53,7 +53,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>id</b></td>
+      <td style="text-align:left"><a name="id"></a><b>id</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -62,7 +62,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>ageRange</b></td>
+      <td style="text-align:left"><a name="ageRange"></a><b>ageRange</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/quantitativevalue"><code>QuantitativeValue</code></a>
       </td>
@@ -71,7 +71,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left"><a name="name"></a><b>name</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -80,7 +80,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>priceCurrency</b></td>
+      <td style="text-align:left"><a name="priceCurrency"></a><b>priceCurrency</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -89,7 +89,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>url</b></td>
+      <td style="text-align:left"><a name="url"></a><b>url</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -113,7 +113,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>advanceBooking</b></td>
+      <td style="text-align:left"><a name="advanceBooking"></a><b>advanceBooking</b></td>
       <td style="text-align:left">
         <a href="https://openactive.io/RequiredStatusType"><code>RequiredStatusType</code></a>
       </td>
@@ -122,7 +122,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>identifier</b></td>
+      <td style="text-align:left"><a name="identifier"></a><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -131,7 +131,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>prepayment</b></td>
+      <td style="text-align:left"><a name="prepayment"></a><b>prepayment</b></td>
       <td style="text-align:left">
         <a href="https://openactive.io/RequiredStatusType"><code>RequiredStatusType</code></a>
       </td>

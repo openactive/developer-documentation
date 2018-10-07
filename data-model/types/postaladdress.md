@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left"><a name="type"></a><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>addressCountry</b></td>
+      <td style="text-align:left"><a name="addressCountry"></a><b>addressCountry</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -38,7 +38,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>addressLocality</b></td>
+      <td style="text-align:left"><a name="addressLocality"></a><b>addressLocality</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -47,7 +47,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>addressRegion</b></td>
+      <td style="text-align:left"><a name="addressRegion"></a><b>addressRegion</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -56,7 +56,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>postalCode</b></td>
+      <td style="text-align:left"><a name="postalCode"></a><b>postalCode</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -65,7 +65,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>streetAddress</b></td>
+      <td style="text-align:left"><a name="streetAddress"></a><b>streetAddress</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>

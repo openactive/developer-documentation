@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left"><a name="type"></a><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left"><a name="name"></a><b>name</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -38,7 +38,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>url</b></td>
+      <td style="text-align:left"><a name="url"></a><b>url</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -62,7 +62,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>description</b></td>
+      <td style="text-align:left"><a name="description"></a><b>description</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -71,7 +71,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>logo</b></td>
+      <td style="text-align:left"><a name="logo"></a><b>logo</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
@@ -95,7 +95,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>identifier</b></td>
+      <td style="text-align:left"><a name="identifier"></a><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
