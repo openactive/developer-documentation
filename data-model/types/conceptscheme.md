@@ -34,7 +34,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><br/></br></br><b>Example</b></br></br><code>https://example.com/scheme/1234</code>
+        A unique url based identifier for the record</br></br><b>Example</b></br></br><code>https://example.com/scheme/1234</code>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
-        <p>A collection of concepts that are part of this scheme</p><br/></br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/concept/martial-arts&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Martial&nbsp;Arts&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/scheme/123&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;narrower&quot;:&nbsp;&quot;https://example.com/concept/martial-arts/karate&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+        A collection of concepts that are part of this scheme</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/concept/martial-arts&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Martial&nbsp;Arts&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/scheme/123&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;narrower&quot;:&nbsp;&quot;https://example.com/concept/martial-arts/karate&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The title of the scheme</p><br/></br></br><b>Example</b></br></br><code>Activity List</code>
+        The title of the scheme</br></br><b>Example</b></br></br><code>Activity List</code>
       </td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A URL to a web page (or section of a page) that describes the concept scheme.</p><br/></br></br><b>Example</b></br></br><code>https://example.com/scheme/1234</code>
+        A URL to a web page (or section of a page) that describes the concept scheme.</br></br><b>Example</b></br></br><code>https://example.com/scheme/1234</code>
       </td>
     </tr>
   </tbody>
@@ -85,7 +85,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A free text description of the taxonomy</p><br/></br></br><b>Example</b></br></br><code>An example activity list.</code>
+        A free text description of the taxonomy</br></br><b>Example</b></br></br><code>An example activity list.</code>
       </td>
     </tr>
     <tr>
@@ -94,7 +94,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>Reference to the license under which the activity list has been published.</p><br/></br></br><b>Example</b></br></br><code>https://example.com/license/MIT</code>
+        Reference to the license under which the activity list has been published.</br></br><b>Example</b></br></br><code>https://example.com/license/MIT</code>
       </td>
     </tr>
   </tbody>

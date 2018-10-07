@@ -49,7 +49,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><br/></br></br><b>Example</b></br></br><code>https://example.com/person/1234</code>
+        A unique url based identifier for the record</br></br><b>Example</b></br></br><code>https://example.com/person/1234</code>
       </td>
     </tr>
   </tbody>
@@ -73,7 +73,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The description of the Person</p><br/></br></br><b>Example</b></br></br><code>The leader of the coaching team</code>
+        The description of the Person</br></br><b>Example</b></br></br><code>The leader of the coaching team</code>
       </td>
     </tr>
     <tr>
@@ -82,7 +82,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>A local non-URI identifier for the resource</p><br/></br></br><b>Example</b></br></br><code>SB1234</code>
+        A local non-URI identifier for the resource</br></br><b>Example</b></br></br><code>SB1234</code>
       </td>
     </tr>
     <tr>
@@ -91,7 +91,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
         <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
-        <p>A logo for the person.</p><br/></br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code>
+        A logo for the person.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code>
       </td>
     </tr>
     <tr>
@@ -100,7 +100,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A full name for the person.</p><br/></br></br><p>This person must give direct permission for their personal information to be shared as part of the Open Data.</p><br/></br></br><b>Example</b></br></br><code>Daley Thompson</code>
+        A full name for the person.</br></br>This person must give direct permission for their personal information to be shared as part of the Open Data.</br></br><b>Example</b></br></br><code>Daley Thompson</code>
       </td>
     </tr>
     <tr>
@@ -109,7 +109,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
         Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>Lists the URL(s) of the official social media profile pages associated with the person.</p><br/></br></br><b>Example</b></br></br><code>https://example.org/example-org</code>
+        Lists the URL(s) of the official social media profile pages associated with the person.</br></br><b>Example</b></br></br><code>https://example.org/example-org</code>
       </td>
     </tr>
     <tr>
@@ -118,7 +118,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The telephone number of the person</p><br/></br></br><b>Example</b></br></br><code>01234 567890</code>
+        The telephone number of the person</br></br><b>Example</b></br></br><code>01234 567890</code>
       </td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A URL where more information about the person may be found</p><br/></br></br><b>Example</b></br></br><code>http://www.example.com/</code>
+        A URL where more information about the person may be found</br></br><b>Example</b></br></br><code>http://www.example.com/</code>
       </td>
     </tr>
   </tbody>

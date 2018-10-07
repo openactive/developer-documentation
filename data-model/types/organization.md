@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The name of the Organization</p><br/></br></br><b>Example</b></br></br><code>Central Speedball Association</code>
+        The name of the Organization</br></br><b>Example</b></br></br><code>Central Speedball Association</code>
       </td>
     </tr>
   </tbody>
@@ -58,7 +58,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><br/></br></br><b>Example</b></br></br><code>https://example.com/organization/1234</code>
+        A unique url based identifier for the record</br></br><b>Example</b></br></br><code>https://example.com/organization/1234</code>
       </td>
     </tr>
     <tr>
@@ -67,7 +67,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>Lists the URL(s) of the official social media profile pages associated with the organization.</p><br/></br></br><b>Example</b></br></br><code>https://example.org/example-org</code>
+        Lists the URL(s) of the official social media profile pages associated with the organization.</br></br><b>Example</b></br></br><code>https://example.org/example-org</code>
       </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The telephone number of the Organization</p><br/></br></br><b>Example</b></br></br><code>01234 567890</code>
+        The telephone number of the Organization</br></br><b>Example</b></br></br><code>01234 567890</code>
       </td>
     </tr>
     <tr>
@@ -85,7 +85,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A definitive canonical URL for the Organization.</p><br/></br></br><b>Example</b></br></br><code>http://www.speedball-world.com</code>
+        A definitive canonical URL for the Organization.</br></br><b>Example</b></br></br><code>http://www.speedball-world.com</code>
       </td>
     </tr>
   </tbody>
@@ -109,7 +109,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The description of the Organization</p><br/></br></br><b>Example</b></br></br><code>The national governing body of cycling</code>
+        The description of the Organization</br></br><b>Example</b></br></br><code>The national governing body of cycling</code>
       </td>
     </tr>
     <tr>
@@ -118,7 +118,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>A local non-URI identifier for the resource</p><br/></br></br><b>Example</b></br></br><code>SB1234</code>
+        A local non-URI identifier for the resource</br></br><b>Example</b></br></br><code>SB1234</code>
       </td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
-        <p>A logo for the Organization.</p><br/></br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code>
+        A logo for the Organization.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code>
       </td>
     </tr>
   </tbody>
