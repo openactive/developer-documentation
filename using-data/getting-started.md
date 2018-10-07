@@ -48,3 +48,7 @@ echo 'You got to trust me on this, I saved the world'
 
 [https://raw.githubusercontent.com/openactive/developer-microsite/master/app/examples/event\_example\_1.json](https://raw.githubusercontent.com/openactive/developer-microsite/master/app/examples/event_example_1.json)
 
+
+| activity | [`Concept`]() OR [Array of `ConceptORText`](), OR [Array of `Text`]() | Specifies the physical activity or activities that will take place during an event.,### Example,``` {,"id": "https://example.com/reference/activities#Speedball",,"inScheme": "https://example.com/reference/activities",,"prefLabel": "Speedball",,"type": "Concept" } ``` |
+|----------|-----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| activity | [`Concept`]() OR [Array of `ConceptORText`](), OR [Array of `Text`]() | Specifies the physical activity or activities that will take place during an event.,### Example,``` {,"id": "https://example.com/reference/activities#Speedball",,"inScheme": "https://example.com/reference/activities",,"prefLabel": "Speedball",,"type": "Concept" } ``` |
