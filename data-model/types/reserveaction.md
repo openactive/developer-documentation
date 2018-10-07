@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/ReserveAction](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"ReserveAction"</code>
+        Must always be present and set to <code>"type": "ReserveAction"</code>
       </td>
     </tr>
     <tr>

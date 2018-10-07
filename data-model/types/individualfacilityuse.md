@@ -25,7 +25,7 @@ description: This page describes the IndividualFacilityUse type.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"IndividualFacilityUse"</code>
+        Must always be present and set to <code>"type": "IndividualFacilityUse"</code>
       </td>
     </tr>
     <tr>

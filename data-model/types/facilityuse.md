@@ -25,7 +25,7 @@ description: This page describes the FacilityUse type.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"FacilityUse"</code>
+        Must always be present and set to <code>"type": "FacilityUse"</code>
       </td>
     </tr>
     <tr>

@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"SportsActivityLocation"</code>
+        Must always be present and set to <code>"type": "SportsActivityLocation"</code>
       </td>
     </tr>
   </tbody>

@@ -25,7 +25,7 @@ This type is derived from [https://pending.schema.org/EventSeries](https://pendi
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"EventSeries"</code>
+        Must always be present and set to <code>"type": "EventSeries"</code>
       </td>
     </tr>
     <tr>

@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/Action](https://schema.org/Action)
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"Action"</code>
+        Must always be present and set to <code>"type": "Action"</code>
       </td>
     </tr>
     <tr>

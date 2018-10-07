@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"Toilets"</code>
+        Must always be present and set to <code>"type": "Toilets"</code>
       </td>
     </tr>
     <tr>

@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"EntryPoint"</code>
+        Must always be present and set to <code>"type": "EntryPoint"</code>
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"application/vnd.openactive.v0.4+json"</code>
+        Must always be present and set to <code>"encodingType": "application/vnd.openactive.v0.4+json"</code>
       </td>
     </tr>
     <tr>
