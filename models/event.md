@@ -78,7 +78,7 @@ description: 'This model is derived from http://schema.org/Event.'
         <p></p>
         <p>Applications may use <a href="http://schema.org/Text">schema:Text</a> to
           provide a more general description of a location ("In Victoria Park, near
-          the lake"), but this is not recommended: consuming applications will be
+          to the lake"), but this is not recommended: consuming applications will be
           unable to help users discover opportunities based on their location.</p>
         <p></p>
         <p><b>Example</b>
