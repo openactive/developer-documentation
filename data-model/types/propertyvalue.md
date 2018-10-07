@@ -4,7 +4,7 @@ description: This page describes the PropertyValue type.
 
 # PropertyValue
 
-This type is derived from [https://schema.org/PropertyValue](https://schema.org/PropertyValue).
+This type is derived from [https://schema.org/PropertyValue](https://schema.org/PropertyValue), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

@@ -4,7 +4,7 @@ description: This page describes the EntryPoint type.
 
 # EntryPoint
 
-This type is derived from [https://schema.org/EntryPoint](https://schema.org/EntryPoint).
+This type is derived from [https://schema.org/EntryPoint](https://schema.org/EntryPoint), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

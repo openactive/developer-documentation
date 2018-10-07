@@ -4,7 +4,7 @@ description: This page describes the Action type.
 
 # Action
 
-This type is derived from [https://schema.org/Action](https://schema.org/Action).
+This type is derived from [https://schema.org/Action](https://schema.org/Action), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

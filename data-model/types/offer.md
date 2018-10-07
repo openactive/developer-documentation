@@ -4,7 +4,7 @@ description: This page describes the Offer type.
 
 # Offer
 
-This type is derived from [https://schema.org/Offer](https://schema.org/Offer).
+This type is derived from [https://schema.org/Offer](https://schema.org/Offer), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

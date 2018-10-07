@@ -4,7 +4,7 @@ description: This page describes the CourseInstance type.
 
 # CourseInstance
 
-This type is derived from [https://pending.schema.org/CourseInstance](https://pending.schema.org/CourseInstance).
+This type is derived from [https://pending.schema.org/CourseInstance](https://pending.schema.org/CourseInstance), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

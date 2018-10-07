@@ -4,7 +4,7 @@ description: This page describes the Organization type.
 
 # Organization
 
-This type is derived from [https://schema.org/Organization](https://schema.org/Organization).
+This type is derived from [https://schema.org/Organization](https://schema.org/Organization), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

@@ -4,7 +4,7 @@ description: This page describes the PostalAddress type.
 
 # PostalAddress
 
-This type is derived from [https://schema.org/PostalAddress](https://schema.org/PostalAddress).
+This type is derived from [https://schema.org/PostalAddress](https://schema.org/PostalAddress), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

@@ -4,7 +4,7 @@ description: This page describes the OpeningHoursSpecification type.
 
 # OpeningHoursSpecification
 
-This type is derived from [https://schema.org/OpeningHoursSpecification](https://schema.org/OpeningHoursSpecification).
+This type is derived from [https://schema.org/OpeningHoursSpecification](https://schema.org/OpeningHoursSpecification), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

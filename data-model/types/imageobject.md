@@ -4,7 +4,7 @@ description: This page describes the ImageObject type.
 
 # ImageObject
 
-This type is derived from [https://schema.org/ImageObject](https://schema.org/ImageObject).
+This type is derived from [https://schema.org/ImageObject](https://schema.org/ImageObject), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

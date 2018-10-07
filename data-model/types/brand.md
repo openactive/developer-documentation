@@ -4,7 +4,7 @@ description: This page describes the Brand type.
 
 # Brand
 
-This type is derived from [https://schema.org/Brand](https://schema.org/Brand).
+This type is derived from [https://schema.org/Brand](https://schema.org/Brand), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

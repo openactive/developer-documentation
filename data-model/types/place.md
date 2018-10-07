@@ -4,7 +4,7 @@ description: This page describes the Place type.
 
 # Place
 
-This type is derived from [https://schema.org/Place](https://schema.org/Place).
+This type is derived from [https://schema.org/Place](https://schema.org/Place), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

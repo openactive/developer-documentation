@@ -8,7 +8,7 @@ description: This page describes the Event type.
 This is the first paragraph
 This is the second paragraph
 
-This type is derived from [https://schema.org/Event](https://schema.org/Event).
+This type is derived from [https://schema.org/Event](https://schema.org/Event), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

@@ -4,7 +4,7 @@ description: This page describes the SessionSeries type.
 
 # SessionSeries
 
-
+This type is derived from [https://schema.org/Event](https://schema.org/Event), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

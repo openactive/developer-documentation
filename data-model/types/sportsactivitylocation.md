@@ -4,7 +4,7 @@ description: This page describes the SportsActivityLocation type.
 
 # SportsActivityLocation
 
-This type is derived from [https://schema.org/SportsActivityLocation](https://schema.org/SportsActivityLocation).
+This type is derived from [https://schema.org/SportsActivityLocation](https://schema.org/SportsActivityLocation), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

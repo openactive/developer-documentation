@@ -4,7 +4,7 @@ description: This page describes the GeoCoordinates type.
 
 # GeoCoordinates
 
-This type is derived from [https://schema.org/GeoCoordinates](https://schema.org/GeoCoordinates).
+This type is derived from [https://schema.org/GeoCoordinates](https://schema.org/GeoCoordinates), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 

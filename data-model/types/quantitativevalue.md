@@ -4,7 +4,7 @@ description: This page describes the QuantitativeValue type.
 
 # QuantitativeValue
 
-This type is derived from [https://schema.org/QuantitativeValue](https://schema.org/QuantitativeValue).
+This type is derived from [https://schema.org/QuantitativeValue](https://schema.org/QuantitativeValue), which means that any of this type's properties within schema.org may also be used.
 
 ## **Fields**
 
