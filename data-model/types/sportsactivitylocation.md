@@ -124,10 +124,10 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
     <tr>
       <td style="text-align:left"><a name="identifier"></a><b>identifier</b></td>
       <td style="text-align:left">
-        
+        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique identifier for the record</p><p></br><b>Example</b></p><p><code>"identifier": "1234"</code></p>
+        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
       </td>
     </tr>
     <tr>
