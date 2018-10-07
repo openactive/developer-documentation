@@ -8,24 +8,23 @@ Information about Events, Places, Organizations and other types of resources sho
 
 ### **Event - the core model for opportunity data**
 
-* [Event](https://docs.openactive.io/data-model/types/event)
+* [Event](event.md)
 
 ### **Models used to describe of an Event**
 
-* [Ammenity](https://docs.openactive.io/data-model/types/ammenity)
-* [Brand](https://docs.openactive.io/data-model/types/brand)
-* [Concept](https://docs.openactive.io/data-model/types/concept)
-* [GeoCoordinates](https://docs.openactive.io/data-model/types/geocoordinates)
-* [ImageObject](https://docs.openactive.io/data-model/types/imageobject)
-* [Organization](https://docs.openactive.io/data-model/types/organization)
-* [Person](https://docs.openactive.io/data-model/types/person)
-* [Place](https://docs.openactive.io/data-model/types/place)
-* [PostalAddress](https://docs.openactive.io/data-model/types/postaladdress)
-* [Schedule](https://docs.openactive.io/data-model/types/schedule)
+* [Brand](brand.md)
+* [Concept](concept.md)
+* [GeoCoordinates](geocoordinates.md)
+* [ImageObject](imageobject.md)
+* [Organization](organization.md)
+* [Person](person.md)
+* [Place](place.md)
+* [PostalAddress](postaladdress.md)
+* [Schedule](schedule.md)
 
 ### **Models relating to Booking**
 
-* [EntryPoint](https://docs.openactive.io/data-model/types/entrypoint)
-* [Offer](https://docs.openactive.io/data-model/types/offer)
-* [ReserveAction](https://docs.openactive.io/data-model/types/reserveaction)
+* [EntryPoint](entrypoint.md)
+* [Offer](offer.md)
+* [ReserveAction](reserveaction.md)
 

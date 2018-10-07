@@ -4,124 +4,30 @@ description: This page describes the Concept type.
 
 # Concept
 
-This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://www.w3.org/2004/02/skos/core#Concept).
+This type is derived from [http://www.w3.org/2004/02/skos/core\#Concept](http://www.w3.org/2004/02/skos/core#Concept).
 
 ## **Fields**
 
 ### **Required fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        Must always be present and set to <code>Concept</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>prefLabel</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        A human readable string for use in user interfaces.</br></br><b>Example</b></br></br><code>Speedball</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| **type** |  [`Text`](https://schema.org/Text) |  Must always be present and set to `Concept` |
+| **prefLabel** |  [`Text`](https://schema.org/Text) |  A human readable string for use in user interfaces.  **Example**  `Speedball` |
 
 ### **Recommended fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>id</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/url"><code>url</code></a>
-      </td>
-      <td style="text-align:left">
-        A unique url based identifier for the record</br></br><b>Example</b></br></br><code>https://example.com/concept/1234</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>inScheme</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/url"><code>url</code></a>
-      </td>
-      <td style="text-align:left">
-        A stable URL reference for the taxonomy.</br></br><b>Example</b></br></br><code>https://example.com/reference/activities</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| **id** |  [`url`](https://schema.org/url) |  A unique url based identifier for the record  **Example**  `https://example.com/concept/1234` |
+| **inScheme** |  [`url`](https://schema.org/url) |  A stable URL reference for the taxonomy.  **Example**  `https://example.com/reference/activities` |
 
 ### **Optional fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>altLabel</b></td>
-      <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        An alternative human readable string for use in user interfaces.</br></br><b>Example</b></br></br><code>Speedball</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>broader</b></td>
-      <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/url"><code>url</code></a>
-      </td>
-      <td style="text-align:left">
-        A broader concept URI</br></br><b>Example</b></br></br><code>https://example.com/football</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>narrower</b></td>
-      <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/url"><code>url</code></a>
-      </td>
-      <td style="text-align:left">
-        A more specific concept URI</br></br><b>Example</b></br></br><code>https://example.com/walking-football</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>notation</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        A concept label that is not normally recognisable as natural language.</br></br><b>Example</b></br></br><code>Speedball</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| **altLabel** |  Array of [`Text`](https://github.com/openactive/developer-documentation/tree/992826a56c27afeb9178705f587ceb83b4137659/data-model/types/ArrayOf/README.md#https://schema.org/Text) |  An alternative human readable string for use in user interfaces.  **Example**  `Speedball` |
+| **broader** |  Array of [`url`](https://github.com/openactive/developer-documentation/tree/992826a56c27afeb9178705f587ceb83b4137659/data-model/types/ArrayOf/README.md#https://schema.org/url) |  A broader concept URI  **Example**  `https://example.com/football` |
+| **narrower** |  Array of [`url`](https://github.com/openactive/developer-documentation/tree/992826a56c27afeb9178705f587ceb83b4137659/data-model/types/ArrayOf/README.md#https://schema.org/url) |  A more specific concept URI  **Example**  `https://example.com/walking-football` |
+| **notation** |  [`Text`](https://schema.org/Text) |  A concept label that is not normally recognisable as natural language.  **Example**  `Speedball` |
 

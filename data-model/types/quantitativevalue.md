@@ -9,59 +9,15 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
 ## **Fields**
 
 ### **Required fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        Must always be present and set to <code>QuantitativeValue</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| **type** |  [`Text`](https://schema.org/Text) |  Must always be present and set to `QuantitativeValue` |
 
 ### **Optional fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>maxValue</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Integer"><code>Integer</code></a>
-      </td>
-      <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>60</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>minValue</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Integer"><code>Integer</code></a>
-      </td>
-      <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>16</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| **maxValue** |  [`Integer`](https://schema.org/Integer) |  TODO  **Example**  `60` |
+| **minValue** |  [`Integer`](https://schema.org/Integer) |  TODO  **Example**  `16` |
 
