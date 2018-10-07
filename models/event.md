@@ -35,7 +35,6 @@ description: 'This model is derived from http://schema.org/Event.'
       <td style="text-align:left">
         <p>Specifies the physical activity or activities that will take place during
           an event.</p>
-        <p><br/></p>
         <p><b>Example</b>
         </p>
         <p><code>{<br /> &quot;id&quot;: &quot;https://example.com/reference/activities#Speedball&quot;,<br /> &quot;inScheme&quot;: &quot;https://example.com/reference/activities&quot;,<br /> &quot;prefLabel&quot;: &quot;Speedball&quot;,<br /> &quot;type&quot;: &quot;Concept&quot;<br />}</code>
@@ -70,20 +69,16 @@ description: 'This model is derived from http://schema.org/Event.'
       <td style="text-align:left">
         <p>The location at which the event will take place. Or, in the case of events
           that may span multiple locations, the initial meeting or starting point.</p>
-        <p><br/></p>
         <p>It is recommended that locations should be specified as a <a href="https://developer.openactive.io/models/place">Place</a> complete
           with a fully described geographic location and/or address.</p>
-        <p><br/></p>
         <p>If only an address is available then this should be described as a <a href="https://developer.openactive.io/models/postaladdress">PostalAddress</a>.</p>
-        <p><br/></p>
         <p>Applications may use <a href="http://schema.org/Text">schema:Text</a> to
           provide a more general description of a location ("In Victoria Park, near
-          to the lake"), but this is not recommended: consuming applications will be
-          unable to help users discover opportunities based on their location.</p>
-        <p><br/></p>
+          to the lake"), but this is not recommended: consuming applications will
+          be unable to help users discover opportunities based on their location.</p>
         <p><b>Example</b>
         </p>
-        <p><code>{<br/>&nbsp;&nbsp;&quot;address&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;PostalAddress&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;description&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&nbsp;in&nbsp;London&quot;,<br/>&nbsp;&nbsp;&quot;geo&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/locations/1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;&quot;1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&quot;,<br/>&nbsp;&nbsp;&quot;telephone&quot;:&nbsp;&quot;01253&nbsp;473934&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Place&quot;<br/>}</code>
+        <p><code>{<br />  &quot;address&quot;: {<br />    &quot;addressLocality&quot;: &quot;New Malden&quot;,<br />    &quot;addressRegion&quot;: &quot;London&quot;,<br />    &quot;postalCode&quot;: &quot;NW5 3DU&quot;,<br />    &quot;streetAddress&quot;: &quot;46A West Barnes Lane&quot;,<br />    &quot;type&quot;: &quot;PostalAddress&quot;<br />  },<br />  &quot;description&quot;: &quot;Raynes Park High School in London&quot;,<br />  &quot;geo&quot;: {<br />    &quot;latitude&quot;: 51.4034423828125,<br />    &quot;longitude&quot;: -0.2369088977575302,<br />    &quot;type&quot;: &quot;GeoCoordinates&quot;<br />  },<br />  &quot;id&quot;: &quot;https://example.com/locations/1234ABCD&quot;,<br />  &quot;identifier&quot;: &quot;1234ABCD&quot;,<br />  &quot;name&quot;: &quot;Raynes Park High School&quot;,<br />  &quot;telephone&quot;: &quot;01253 473934&quot;,<br />  &quot;type&quot;: &quot;Place&quot;<br />}</code>
         </p>
       </td>
     </tr>
