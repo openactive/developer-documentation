@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>Offer</code>
+        Must always be present and set to <code>"Offer"</code>
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://schema.org/Float"><code>Float</code></a>
       </td>
       <td style="text-align:left">
-        <p>The offer price of the activity.</p><p>This price should be specified without currency symbols and as a floating point number with two decimal places.</p><p>The currency of the price should be expressed in the priceCurrency field.</p><p></br><b>Example</b></p><p><code>33</code></p>
+        <p>The offer price of the activity.</p><p>This price should be specified without currency symbols and as a floating point number with two decimal places.</p><p>The currency of the price should be expressed in the priceCurrency field.</p><p></br><b>Example</b></p><p><code>"price": 33</code></p>
       </td>
     </tr>
   </tbody>
@@ -58,7 +58,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>https://example.com/offer/1234</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"id": "https://example.com/offer/1234"</code></p>
       </td>
     </tr>
     <tr>
@@ -67,7 +67,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://docs.openactive.io/data-model/types/quantitativevalue"><code>QuantitativeValue</code></a>
       </td>
       <td style="text-align:left">
-        <p>Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30</p><p></br><b>Example</b></p><p><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;QuantitativeValue&quot;,<br/>&nbsp;&nbsp;&quot;minValue&quot;:&nbsp;15,<br/>&nbsp;&nbsp;&quot;maxValue&quot;:&nbsp;60<br/>}</code></p>
+        <p>Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30</p><p></br><b>Example</b></p><p><code>"ageRange": {<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;QuantitativeValue&quot;,<br/>&nbsp;&nbsp;&quot;minValue&quot;:&nbsp;15,<br/>&nbsp;&nbsp;&quot;maxValue&quot;:&nbsp;60<br/>}</code></p>
       </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A human readable name for the offer.</p><p></br><b>Example</b></p><p><code>Speedball winger position</code></p>
+        <p>A human readable name for the offer.</p><p></br><b>Example</b></p><p><code>"name": "Speedball winger position"</code></p>
       </td>
     </tr>
     <tr>
@@ -85,7 +85,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The currency (in 3-letter ISO 4217 format) of the price.</p><p>If an Offer has a zero price, then this property is not required. Otherwise the currency must be specified.</p><p></br><b>Example</b></p><p><code>GBP</code></p>
+        <p>The currency (in 3-letter ISO 4217 format) of the price.</p><p>If an Offer has a zero price, then this property is not required. Otherwise the currency must be specified.</p><p></br><b>Example</b></p><p><code>"priceCurrency": "GBP"</code></p>
       </td>
     </tr>
     <tr>
@@ -94,7 +94,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>URL describing the offer</p><p></br><b>Example</b></p><p><code>http://www.rphs.org.uk/</code></p>
+        <p>URL describing the offer</p><p></br><b>Example</b></p><p><code>"url": "http://www.rphs.org.uk/"</code></p>
       </td>
     </tr>
   </tbody>
@@ -118,7 +118,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://openactive.io/RequiredStatusType"><code>RequiredStatusType</code></a>
       </td>
       <td style="text-align:left">
-        <p>Indicates whether to accept this offer, a participant must book in advance, whether they must pay on attending, or have option to do either.</p><p></br><b>Example</b></p><p><code>https://openactive.io/Required</code></p>
+        <p>Indicates whether to accept this offer, a participant must book in advance, whether they must pay on attending, or have option to do either.</p><p></br><b>Example</b></p><p><code>"advanceBooking": "https://openactive.io/Required"</code></p>
       </td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>SB1234</code></p>
+        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
       </td>
     </tr>
     <tr>
@@ -136,7 +136,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://openactive.io/RequiredStatusType"><code>RequiredStatusType</code></a>
       </td>
       <td style="text-align:left">
-        <p>Indicates whether to accept this offer, a participant must pay in advance, pay when attending, or have the option to do either.</p><p></br><b>Example</b></p><p><code>https://openactive.io/Required</code></p>
+        <p>Indicates whether to accept this offer, a participant must pay in advance, pay when attending, or have the option to do either.</p><p></br><b>Example</b></p><p><code>"prepayment": "https://openactive.io/Required"</code></p>
       </td>
     </tr>
   </tbody>

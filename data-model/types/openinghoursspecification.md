@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>OpeningHoursSpecification</code>
+        Must always be present and set to <code>"OpeningHoursSpecification"</code>
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
         <a href="https://schema.org/Time"><code>Time</code></a>
       </td>
       <td style="text-align:left">
-        <p>The closing time.</p><p></br><b>Example</b></p><p><code>17:00Z</code></p>
+        <p>The closing time.</p><p></br><b>Example</b></p><p><code>"closes": "17:00Z"</code></p>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
         <a href="https://schema.org/DayOfWeek"><code>DayOfWeek</code></a>
       </td>
       <td style="text-align:left">
-        <p>Defines the day of the week upon which the Place is open</p><p></br><b>Example</b></p><p><code>https://schema.org/Monday</code></p>
+        <p>Defines the day of the week upon which the Place is open</p><p></br><b>Example</b></p><p><code>"dayOfWeek": "https://schema.org/Monday"</code></p>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
         <a href="https://schema.org/Time"><code>Time</code></a>
       </td>
       <td style="text-align:left">
-        <p>The opening time.</p><p></br><b>Example</b></p><p><code>09:00Z</code></p>
+        <p>The opening time.</p><p></br><b>Example</b></p><p><code>"opens": "09:00Z"</code></p>
       </td>
     </tr>
   </tbody>

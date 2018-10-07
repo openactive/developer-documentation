@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/GeoCoordinates](https://schema.org
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>GeoCoordinates</code>
+        Must always be present and set to <code>"GeoCoordinates"</code>
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/GeoCoordinates](https://schema.org
         <a href="https://schema.org/Float"><code>Float</code></a>
       </td>
       <td style="text-align:left">
-        <p>The latitude of a location. For example 51.522338 (WGS 84).</p><p></br><b>Example</b></p><p><code>51.522338</code></p>
+        <p>The latitude of a location. For example 51.522338 (WGS 84).</p><p></br><b>Example</b></p><p><code>"latitude": 51.522338</code></p>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/GeoCoordinates](https://schema.org
         <a href="https://schema.org/Float"><code>Float</code></a>
       </td>
       <td style="text-align:left">
-        <p>The longitude of a location. For example -0.083437 (WGS 84).</p><p></br><b>Example</b></p><p><code>-0.083437</code></p>
+        <p>The longitude of a location. For example -0.083437 (WGS 84).</p><p></br><b>Example</b></p><p><code>"longitude": -0.083437</code></p>
       </td>
     </tr>
   </tbody>

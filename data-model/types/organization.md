@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>Organization</code>
+        Must always be present and set to <code>"Organization"</code>
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The name of the Organization</p><p></br><b>Example</b></p><p><code>Central Speedball Association</code></p>
+        <p>The name of the Organization</p><p></br><b>Example</b></p><p><code>"name": "Central Speedball Association"</code></p>
       </td>
     </tr>
   </tbody>
@@ -58,7 +58,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>https://example.com/organization/1234</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"id": "https://example.com/organization/1234"</code></p>
       </td>
     </tr>
     <tr>
@@ -67,7 +67,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>Lists the URL(s) of the official social media profile pages associated with the organization.</p><p></br><b>Example</b></p><p><code>https://example.org/example-org</code></p>
+        <p>Lists the URL(s) of the official social media profile pages associated with the organization.</p><p></br><b>Example</b></p><p><code>"sameAs": "https://example.org/example-org"</code></p>
       </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The telephone number of the Organization</p><p></br><b>Example</b></p><p><code>01234 567890</code></p>
+        <p>The telephone number of the Organization</p><p></br><b>Example</b></p><p><code>"telephone": "01234 567890"</code></p>
       </td>
     </tr>
     <tr>
@@ -85,7 +85,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A definitive canonical URL for the Organization.</p><p></br><b>Example</b></p><p><code>http://www.speedball-world.com</code></p>
+        <p>A definitive canonical URL for the Organization.</p><p></br><b>Example</b></p><p><code>"url": "http://www.speedball-world.com"</code></p>
       </td>
     </tr>
   </tbody>
@@ -109,7 +109,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The description of the Organization</p><p></br><b>Example</b></p><p><code>The national governing body of cycling</code></p>
+        <p>The description of the Organization</p><p></br><b>Example</b></p><p><code>"description": "The national governing body of cycling"</code></p>
       </td>
     </tr>
     <tr>
@@ -118,7 +118,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>SB1234</code></p>
+        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
       </td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
-        <p>A logo for the Organization.</p><p></br><b>Example</b></p><p><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code></p>
+        <p>A logo for the Organization.</p><p></br><b>Example</b></p><p><code>"logo": {<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code></p>
       </td>
     </tr>
   </tbody>

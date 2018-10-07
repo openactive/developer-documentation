@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>BabyChanging</code>
+        Must always be present and set to <code>"BabyChanging"</code>
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A string, suitable for presentation in user interfaces.</p><p></br><b>Example</b></p><p><code>Changing Facilities</code></p>
+        <p>A string, suitable for presentation in user interfaces.</p><p></br><b>Example</b></p><p><code>"name": "Changing Facilities"</code></p>
       </td>
     </tr>
     <tr>

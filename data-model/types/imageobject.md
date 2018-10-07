@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>ImageObject</code>
+        Must always be present and set to <code>"ImageObject"</code>
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>The URL for the display resolution image.</p><p></br><b>Example</b></p><p><code>http://example.com/static/image/speedball_large.jpg</code></p>
+        <p>The URL for the display resolution image.</p><p></br><b>Example</b></p><p><code>"url": "http://example.com/static/image/speedball_large.jpg"</code></p>
       </td>
     </tr>
   </tbody>

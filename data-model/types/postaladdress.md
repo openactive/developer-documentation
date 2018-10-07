@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>PostalAddress</code>
+        Must always be present and set to <code>"PostalAddress"</code>
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The country, expressed as a two-letter ISO 3166-1 alpha-2 country code.</p><p></br><b>Example</b></p><p><code>GB</code></p>
+        <p>The country, expressed as a two-letter ISO 3166-1 alpha-2 country code.</p><p></br><b>Example</b></p><p><code>"addressCountry": "GB"</code></p>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The locality, a suburb within a city or a town within a county or district.</p><p></br><b>Example</b></p><p><code>Shoreditch</code></p>
+        <p>The locality, a suburb within a city or a town within a county or district.</p><p></br><b>Example</b></p><p><code>"addressLocality": "Shoreditch"</code></p>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The region, either a city or a county or district.</p><p></br><b>Example</b></p><p><code>London</code></p>
+        <p>The region, either a city or a county or district.</p><p></br><b>Example</b></p><p><code>"addressRegion": "London"</code></p>
       </td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The postal code.</p><p></br><b>Example</b></p><p><code>EC2A 4JE</code></p>
+        <p>The postal code.</p><p></br><b>Example</b></p><p><code>"postalCode": "EC2A 4JE"</code></p>
       </td>
     </tr>
     <tr>
@@ -70,7 +70,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The street address.</p><p></br><b>Example</b></p><p><code>Open Data Institute, Floor 3, 65 Clifton St</code></p>
+        <p>The street address.</p><p></br><b>Example</b></p><p><code>"streetAddress": "Open Data Institute, Floor 3, 65 Clifton St"</code></p>
       </td>
     </tr>
   </tbody>

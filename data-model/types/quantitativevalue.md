@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>QuantitativeValue</code>
+        Must always be present and set to <code>"QuantitativeValue"</code>
       </td>
     </tr>
   </tbody>
@@ -49,7 +49,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></br><b>Example</b></p><p><code>60</code></p>
+        <p>TODO</p><p></br><b>Example</b></p><p><code>"maxValue": 60</code></p>
       </td>
     </tr>
     <tr>
@@ -58,7 +58,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></br><b>Example</b></p><p><code>16</code></p>
+        <p>TODO</p><p></br><b>Example</b></p><p><code>"minValue": 16</code></p>
       </td>
     </tr>
   </tbody>
