@@ -14,7 +14,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -38,7 +38,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -49,7 +49,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></p><p><b>Example</b></p><p><code>https://example.com/place/1234</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>https://example.com/place/1234</code></p>
       </td>
     </tr>
   </tbody>
@@ -62,7 +62,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -73,7 +73,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <a href="https://docs.openactive.io/data-model/types/postaladdress"><code>PostalAddress</code></a><br/> - or - <br/><a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A structured PostalAddress object for the Place.</p><p>Ideally the address should be provided using the PostalAddress structured format. Google Reserve requires <a href="https://schema.org/PostalAddress">https://schema.org/PostalAddress</a> and will not accept plain text addresses.</p><p></p><p><b>Example</b></p><p><code>{<br/>&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;PostalAddress&quot;<br/>}</code></p>
+        <p>A structured PostalAddress object for the Place.</p><p>Ideally the address should be provided using the PostalAddress structured format. Google Reserve requires <a href="https://schema.org/PostalAddress">https://schema.org/PostalAddress</a> and will not accept plain text addresses.</p><p></br><b>Example</b></p><p><code>{<br/>&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;PostalAddress&quot;<br/>}</code></p>
       </td>
     </tr>
     <tr>
@@ -82,7 +82,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         Array of <a href="https://docs.openactive.io/data-model/types/locationfeaturespecification"><code>LocationFeatureSpecification</code></a>
       </td>
       <td style="text-align:left">
-        <p>An array listing the Ammenities of the Place.</p><p></p><p><b>Example</b></p><p><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Changing&nbsp;Facilities&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ChangingFacilities&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Showers&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Showers&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Lockers&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Lockers&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Towels&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Towels&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Creche&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Creche&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Parking&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Parking&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+        <p>An array listing the Ammenities of the Place.</p><p></br><b>Example</b></p><p><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Changing&nbsp;Facilities&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ChangingFacilities&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Showers&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Showers&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Lockers&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Lockers&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Towels&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Towels&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Creche&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Creche&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Parking&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Parking&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
       </td>
     </tr>
     <tr>
@@ -91,7 +91,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a><br/> - or - <br/><a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>While a <code>url</code> is not specified as an option in the Modelling Specification, it is necessary to link entities in RPDE.</p><p></p><p><b>Example</b></p><p><code>TODO</code></p>
+        <p>While a <code>url</code> is not specified as an option in the Modelling Specification, it is necessary to link entities in RPDE.</p><p></br><b>Example</b></p><p><code>TODO</code></p>
       </td>
     </tr>
     <tr>
@@ -100,7 +100,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         Array of <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></p><p><b>Example</b></p><p><code>TODO</code></p>
+        <p>TODO</p><p></br><b>Example</b></p><p><code>TODO</code></p>
       </td>
     </tr>
     <tr>
@@ -109,7 +109,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The description of the Place</p><p></p><p><b>Example</b></p><p><code>Raynes Park High School in London</code></p>
+        <p>The description of the Place</p><p></br><b>Example</b></p><p><code>Raynes Park High School in London</code></p>
       </td>
     </tr>
     <tr>
@@ -118,7 +118,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <a href="https://docs.openactive.io/data-model/types/geocoordinates"><code>GeoCoordinates</code></a>
       </td>
       <td style="text-align:left">
-        <p>The geo coordinates of the Place.</p><p></p><p><b>Example</b></p><p><code>{<br/>&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>}</code></p>
+        <p>The geo coordinates of the Place.</p><p></br><b>Example</b></p><p><code>{<br/>&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>}</code></p>
       </td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         
       </td>
       <td style="text-align:left">
-        <p>A unique identifier for the record</p><p></p><p><b>Example</b></p><p><code>1234</code></p>
+        <p>A unique identifier for the record</p><p></br><b>Example</b></p><p><code>1234</code></p>
       </td>
     </tr>
     <tr>
@@ -136,7 +136,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         Array of <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
-        <p>An image or photo that depicts the place, e.g. a photo taken at a previous event.</p><p></p><p><b>Example</b></p><p><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;thumbnail&quot;:&nbsp;&quot;http://example.com/static/image/speedball_thumbnail.jpg&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+        <p>An image or photo that depicts the place, e.g. a photo taken at a previous event.</p><p></br><b>Example</b></p><p><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;thumbnail&quot;:&nbsp;&quot;http://example.com/static/image/speedball_thumbnail.jpg&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
       </td>
     </tr>
     <tr>
@@ -145,7 +145,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The name of the Place</p><p></p><p><b>Example</b></p><p><code>Raynes Park High School</code></p>
+        <p>The name of the Place</p><p></br><b>Example</b></p><p><code>Raynes Park High School</code></p>
       </td>
     </tr>
     <tr>
@@ -163,7 +163,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The telephone number for the Place</p><p></p><p><b>Example</b></p><p><code>01253 473934</code></p>
+        <p>The telephone number for the Place</p><p></br><b>Example</b></p><p><code>01253 473934</code></p>
       </td>
     </tr>
     <tr>
@@ -172,7 +172,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>The website for the Place</p><p></p><p><b>Example</b></p><p><code>http://www.rphs.org.uk/</code></p>
+        <p>The website for the Place</p><p></br><b>Example</b></p><p><code>http://www.rphs.org.uk/</code></p>
       </td>
     </tr>
   </tbody>

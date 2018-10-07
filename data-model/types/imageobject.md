@@ -14,7 +14,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>The URL for the display resolution image.</p><p></p><p><b>Example</b></p><p><code>http://example.com/static/image/speedball_large.jpg</code></p>
+        <p>The URL for the display resolution image.</p><p></br><b>Example</b></p><p><code>http://example.com/static/image/speedball_large.jpg</code></p>
       </td>
     </tr>
   </tbody>
@@ -47,7 +47,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>

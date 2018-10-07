@@ -14,7 +14,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A string, suitable for presentation in user interfaces.</p><p></p><p><b>Example</b></p><p><code>Changing Facilities</code></p>
+        <p>A string, suitable for presentation in user interfaces.</p><p></br><b>Example</b></p><p><code>Changing Facilities</code></p>
       </td>
     </tr>
     <tr>

@@ -14,7 +14,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.</p><p></p><p><b>Example</b></p><p><code>POST</code></p>
+        <p>An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.</p><p></br><b>Example</b></p><p><code>POST</code></p>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
         <a href="https://schema.org/urlTemplate"><code>urlTemplate</code></a>
       </td>
       <td style="text-align:left">
-        <p>URL of the item</p><p></p><p><b>Example</b></p><p><code>https://example.com/orders{/var}</code></p>
+        <p>URL of the item</p><p></br><b>Example</b></p><p><code>https://example.com/orders{/var}</code></p>
       </td>
     </tr>
   </tbody>

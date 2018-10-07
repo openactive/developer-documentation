@@ -14,7 +14,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -38,7 +38,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -49,7 +49,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></p><p><b>Example</b></p><p><code>60</code></p>
+        <p>TODO</p><p></br><b>Example</b></p><p><code>60</code></p>
       </td>
     </tr>
     <tr>
@@ -58,7 +58,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></p><p><b>Example</b></p><p><code>16</code></p>
+        <p>TODO</p><p></br><b>Example</b></p><p><code>16</code></p>
       </td>
     </tr>
   </tbody>

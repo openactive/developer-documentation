@@ -14,7 +14,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -34,7 +34,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A human readable string for use in user interfaces.</p><p></p><p><b>Example</b></p><p><code>Speedball</code></p>
+        <p>A human readable string for use in user interfaces.</p><p></br><b>Example</b></p><p><code>Speedball</code></p>
       </td>
     </tr>
   </tbody>
@@ -47,7 +47,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -58,7 +58,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></p><p><b>Example</b></p><p><code>https://example.com/concept/1234</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>https://example.com/concept/1234</code></p>
       </td>
     </tr>
     <tr>
@@ -67,7 +67,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A stable URL reference for the taxonomy.</p><p></p><p><b>Example</b></p><p><code>https://example.com/reference/activities</code></p>
+        <p>A stable URL reference for the taxonomy.</p><p></br><b>Example</b></p><p><code>https://example.com/reference/activities</code></p>
       </td>
     </tr>
   </tbody>
@@ -80,7 +80,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -91,7 +91,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
         Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>An alternative human readable string for use in user interfaces.</p><p></p><p><b>Example</b></p><p><code>Speedball</code></p>
+        <p>An alternative human readable string for use in user interfaces.</p><p></br><b>Example</b></p><p><code>Speedball</code></p>
       </td>
     </tr>
     <tr>
@@ -100,7 +100,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
         Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A broader concept URI</p><p></p><p><b>Example</b></p><p><code>https://example.com/football</code></p>
+        <p>A broader concept URI</p><p></br><b>Example</b></p><p><code>https://example.com/football</code></p>
       </td>
     </tr>
     <tr>
@@ -109,7 +109,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
         Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A more specific concept URI</p><p></p><p><b>Example</b></p><p><code>https://example.com/walking-football</code></p>
+        <p>A more specific concept URI</p><p></br><b>Example</b></p><p><code>https://example.com/walking-football</code></p>
       </td>
     </tr>
     <tr>
@@ -118,7 +118,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A concept label that is not normally recognisable as natural language.</p><p></p><p><b>Example</b></p><p><code>Speedball</code></p>
+        <p>A concept label that is not normally recognisable as natural language.</p><p></br><b>Example</b></p><p><code>Speedball</code></p>
       </td>
     </tr>
   </tbody>

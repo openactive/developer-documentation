@@ -14,7 +14,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -34,7 +34,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></p><p><b>Example</b></p><p><code>https://example.com/scheme/1234</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>https://example.com/scheme/1234</code></p>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
-        <p>A collection of concepts that are part of this scheme</p><p></p><p><b>Example</b></p><p><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/concept/martial-arts&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Martial&nbsp;Arts&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/scheme/123&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;narrower&quot;:&nbsp;&quot;https://example.com/concept/martial-arts/karate&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+        <p>A collection of concepts that are part of this scheme</p><p></br><b>Example</b></p><p><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/concept/martial-arts&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Martial&nbsp;Arts&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/scheme/123&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;narrower&quot;:&nbsp;&quot;https://example.com/concept/martial-arts/karate&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The title of the scheme</p><p></p><p><b>Example</b></p><p><code>Activity List</code></p>
+        <p>The title of the scheme</p><p></br><b>Example</b></p><p><code>Activity List</code></p>
       </td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A URL to a web page (or section of a page) that describes the concept scheme.</p><p></p><p><b>Example</b></p><p><code>https://example.com/scheme/1234</code></p>
+        <p>A URL to a web page (or section of a page) that describes the concept scheme.</p><p></br><b>Example</b></p><p><code>https://example.com/scheme/1234</code></p>
       </td>
     </tr>
   </tbody>
@@ -74,7 +74,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Expected Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -85,7 +85,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A free text description of the taxonomy</p><p></p><p><b>Example</b></p><p><code>An example activity list.</code></p>
+        <p>A free text description of the taxonomy</p><p></br><b>Example</b></p><p><code>An example activity list.</code></p>
       </td>
     </tr>
     <tr>
@@ -94,7 +94,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>Reference to the license under which the activity list has been published.</p><p></p><p><b>Example</b></p><p><code>https://example.com/license/MIT</code></p>
+        <p>Reference to the license under which the activity list has been published.</p><p></br><b>Example</b></p><p><code>https://example.com/license/MIT</code></p>
       </td>
     </tr>
   </tbody>
