@@ -58,7 +58,7 @@ description: This page describes the Slot type.
     <tr>
       <td style="text-align:left"><b>startDate</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
         The start date and time of the slot. Can be specified as a schema:Date or schema:DateTime</br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
@@ -93,7 +93,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
     <tr>
       <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
+        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
         A local non-URI identifier for the resource</br></br><b>Example</b></br></br><code>SB1234</code>
@@ -150,7 +150,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
     <tr>
       <td style="text-align:left"><b>endDate</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
         The end date and time of the slot. Can be specified as a schema:Date or schema:DateTime</br></br>It is recommended that publishers provide either an schema:endDate or a schema:duration for an slot.</br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
@@ -159,7 +159,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
     <tr>
       <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
+        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
         A local non-URI identifier for the resource</br></br><b>Example</b></br></br><code>SB1234</code>

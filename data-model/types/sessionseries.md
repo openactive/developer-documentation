@@ -76,7 +76,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>level</b></td>
       <td style="text-align:left">
-        Array of <a href="https://schema.org/Text"><code>Text</code></a>
+        Array of <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
         A general purpose property for specifying the suitability of an event for different participant “levels”. E.g. beginner/intermediate/advanced. Or in the case of martial arts, specific belt requirements. Values should ideally be drawn from a controlled vocabulary.</br></br><b>Example</b></br></br><code>TODO</code>
@@ -118,7 +118,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>@context</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/url"><code>url</code></a>
+        <a href="https://schema.org/url"><code>url</code></a><br/> - or - <br/>Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
         TODO</br></br><b>Example</b></br></br><code>https://openactive.io/</code>
@@ -136,7 +136,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>accessibilitySupport</b></td>
       <td style="text-align:left">
-        Array of <a href="https://schema.org/Text"><code>Text</code></a>
+        Array of <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
         Used to specify the types of disabilities or impairments that are supported at an event.</br></br><b>Example</b></br></br><code>TODO</code>
@@ -163,7 +163,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>category</b></td>
       <td style="text-align:left">
-        Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
         Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/categories#Top%20Club%20Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/categories&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Top&nbsp;Club&nbsp;Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
@@ -190,7 +190,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>endDate</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
         The end date and time of the event. Can be specified as a schema:Date or  schema:DateTime</br></br>It is recommended that publishers provide either an schema:endDate or a schema:duration for an event.</br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
@@ -280,7 +280,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>organizer</b></td>
       <td style="text-align:left">
-        <a href="https://docs.openactive.io/data-model/types/organization"><code>Organization</code></a>
+        <a href="https://docs.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
       <td style="text-align:left">
         The person or organization ultimately responsible for an event. An organizer might be an  schema:Organization or a schema:Person.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
@@ -316,7 +316,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>startDate</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
         The start date and time of the event. Can be specified as a schema:Date or schema:DateTime.</br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>

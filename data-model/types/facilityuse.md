@@ -160,7 +160,7 @@ description: This page describes the FacilityUse type.
     <tr>
       <td style="text-align:left"><b>@context</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/url"><code>url</code></a>
+        <a href="https://schema.org/url"><code>url</code></a><br/> - or - <br/>Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
         TODO</br></br><b>Example</b></br></br><code>https://openactive.io/</code>
@@ -178,7 +178,7 @@ description: This page describes the FacilityUse type.
     <tr>
       <td style="text-align:left"><b>accessibilitySupport</b></td>
       <td style="text-align:left">
-        Array of <a href="https://schema.org/Text"><code>Text</code></a>
+        Array of <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
         Used to specify the types of disabilities or impairments that are supported at a facility.</br></br><b>Example</b></br></br><code>TODO</code>
@@ -196,7 +196,7 @@ description: This page describes the FacilityUse type.
     <tr>
       <td style="text-align:left"><b>category</b></td>
       <td style="text-align:left">
-        Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
         Provides a set of tags that help categorise and describe a facility.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/categories#Top%20Club%20Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/categories&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Top&nbsp;Club&nbsp;Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
@@ -205,7 +205,7 @@ description: This page describes the FacilityUse type.
     <tr>
       <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
+        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
         A local non-URI identifier for the resource</br></br><b>Example</b></br></br><code>SB1234</code>

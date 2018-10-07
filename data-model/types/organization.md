@@ -115,7 +115,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
     <tr>
       <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
+        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
         A local non-URI identifier for the resource</br></br><b>Example</b></br></br><code>SB1234</code>

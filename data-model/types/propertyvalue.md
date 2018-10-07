@@ -40,7 +40,7 @@ This type is derived from [https://schema.org/PropertyValue](https://schema.org/
     <tr>
       <td style="text-align:left"><b>value</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
+        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
         TODO</br></br><b>Example</b></br></br><code>SB1234</code>
@@ -64,7 +64,7 @@ This type is derived from [https://schema.org/PropertyValue](https://schema.org/
     <tr>
       <td style="text-align:left"><b>propertyID</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/url"><code>url</code></a>
+        <a href="https://schema.org/url"><code>url</code></a><br/> - or - <br/><a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
         A commonly used identifier for the characteristic represented by the property</br></br><b>Example</b></br></br><code>TODO</code>

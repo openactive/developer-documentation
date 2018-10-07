@@ -70,7 +70,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
     <tr>
       <td style="text-align:left"><b>address</b></td>
       <td style="text-align:left">
-        <a href="https://docs.openactive.io/data-model/types/postaladdress"><code>PostalAddress</code></a>
+        <a href="https://docs.openactive.io/data-model/types/postaladdress"><code>PostalAddress</code></a><br/> - or - <br/><a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
         A structured PostalAddress object for the Place.</br></br>Ideally the address should be provided using the PostalAddress structured format. Google Reserve requires https://schema.org/PostalAddress and will not accept plain text addresses.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;PostalAddress&quot;<br/>}</code>
@@ -88,7 +88,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
     <tr>
       <td style="text-align:left"><b>containedInPlace</b></td>
       <td style="text-align:left">
-        <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
+        <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a><br/> - or - <br/><a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
         While a `url` is not specified as an option in the Modelling Specification, it is necessary to link entities in RPDE.</br></br><b>Example</b></br></br><code>TODO</code>
