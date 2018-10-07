@@ -1,7 +1,3 @@
----
-description: Automated and manual approaches to testing RPDE feeds
----
-
 # Testing feeds
 
 ## Validator

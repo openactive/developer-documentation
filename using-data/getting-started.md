@@ -1,5 +1,7 @@
 # Getting Started
 
+## 
+
 ## Getting Super Powers!
 
 Becoming a super hero is a fairly straight forward process:
@@ -48,7 +50,129 @@ echo 'You got to trust me on this, I saved the world'
 
 [https://raw.githubusercontent.com/openactive/developer-microsite/master/app/examples/event\_example\_1.json](https://raw.githubusercontent.com/openactive/developer-microsite/master/app/examples/event_example_1.json)
 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">activity</th>
+      <th style="text-align:center"><a href="getting-started.md"><code>xt</code></a><code>Type</code>
+      </th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">activity</td>
+      <td style="text-align:center"><a href="getting-started.md"><code>Concept</code></a>
+        <br />OR
+        <br />Array of <a href="getting-started.md"><code>ConceptORText</code></a>
+        <br
+        />OR
+        <br />Array of <a href="getting-started.md"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Specifies the physical activity or activities that will take place during
+          an event.
+          <br />
+          <br /><b>Example</b>
+          <br />
+        </p>
+        <p><code>{</code>
+          <br /> <code>&quot;id&quot;: &quot;https://example.com/reference/activities#Speedball&quot;,</code>
+          <br
+          /> <code>&quot;inScheme&quot;: &quot;https://example.com/reference/activities&quot;,</code>
+          <br
+          /> <code>&quot;prefLabel&quot;: &quot;Speedball&quot;,</code>
+          <br /> <code>&quot;type&quot;: &quot;Concept&quot;</code>
+          <br /><code>}</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">activity</td>
+      <td style="text-align:center">
+        <p><a href="getting-started.md"><code>Concept</code></a>
+          <br />- or -
+          <br />Array of <a href="../publishing-data/data-feeds/"><code>Concept</code></a>
+        </p>
+        <p>- or -
+          <br /><code>Text</code>
+          <br />- or -
+          <br />Array of <a href="getting-started.md"><code>Text</code></a>
+        </p>
+      </td>
+      <td style="text-align:left">
+        <p>Specifies the physical activity or activities that will take place during
+          an event.</p>
+        <p></p>
+        <p><b>Example</b>
+        </p>
+        <p><code>{<br />  &quot;id&quot;: &quot;https://example.com/reference/activities#Speedball&quot;, <br />  &quot;inScheme&quot;: &quot;https://example.com/reference/activities&quot;,<br />  &quot;prefLabel&quot;: &quot;Speedball&quot;,<br />  &quot;type&quot;: &quot;Concept&quot;<br />}</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:center"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:center"></td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>## **Fields**
 
-| activity | [`Concept`]() OR [Array of `ConceptORText`](), OR [Array of `Text`]() | Specifies the physical activity or activities that will take place during an event.,### Example,``` {,"id": "https://example.com/reference/activities#Speedball",,"inScheme": "https://example.com/reference/activities",,"prefLabel": "Speedball",,"type": "Concept" } ``` |
-|----------|:-----------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| activity | [`Concept`]()<br />OR<br />Array of [`ConceptORText`]()<br />OR<br />Array of [`Text`]() | Specifies the physical activity or activities that will take place during an event.<br /><br />**Example**<br />`{`<br />`  "id": "https://example.com/reference/activities#Speedball",`<br />`  "inScheme": "https://example.com/reference/activities",`<br />`  "prefLabel": "Speedball",`<br />`  "type": "Concept"`<br />`}` |
+### **Required fields**
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:center">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>activity</b>
+      </td>
+      <td style="text-align:center">
+        <p><a href="getting-started.md"><code>Concept</code></a>
+          <br />- or -
+          <br />Array of <a href="../publishing-data/data-feeds/"><code>Concept</code></a>
+        </p>
+        <p>- or -
+          <br /><code>Text</code>
+          <br />- or -
+          <br />Array of <a href="getting-started.md"><code>Text</code></a>
+        </p>
+      </td>
+      <td style="text-align:left">
+        <p>Specifies the physical activity or activities that will take place during
+          an event.</p>
+        <p></p>
+        <p><b>Example</b>
+        </p>
+        <p><code>{<br />  &quot;id&quot;: &quot;https://example.com/reference/activities#Speedball&quot;, <br />  &quot;inScheme&quot;: &quot;https://example.com/reference/activities&quot;,<br />  &quot;prefLabel&quot;: &quot;Speedball&quot;,<br />  &quot;type&quot;: &quot;Concept&quot;<br />}</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>id</b>
+      </td>
+      <td style="text-align:center"><b></b><a href="../publishing-data/properties/amenities.md">url</a>
+      </td>
+      <td style="text-align:left">
+        <p>A unique url based identifier for the record
+          <br />
+        </p>
+        <p><b>Example</b>
+        </p>
+        <p><code>&quot;https://example.com/events/1234&quot;</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

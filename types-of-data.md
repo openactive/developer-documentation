@@ -1,9 +1,3 @@
----
-description: >-
-  This page describes the types of data that have so far been identified as
-  in-scope for OpenActive
----
-
 # Types of data
 
 #### Classes and Session Series \([`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#regular-sessions-sessionseries-and-scheduledsession-)\)

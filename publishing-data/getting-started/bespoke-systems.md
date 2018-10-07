@@ -1,10 +1,3 @@
----
-description: >-
-  This guide focusses on bespoke booking and listing systems which have been
-  design for a single organisation. These are often more straightforward than
-  multi-customer systems.
----
-
 # Bespoke Systems
 
 ## Can I become who I want to be?

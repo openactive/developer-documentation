@@ -2,6 +2,8 @@
 
 * [Welcome to our community](README.md)
 * [Types of data](types-of-data.md)
+* [Data Models](models/README.md)
+  * [Event](models/event.md)
 
 ## Publishing Data
 

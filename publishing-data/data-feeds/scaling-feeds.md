@@ -1,9 +1,3 @@
----
-description: >-
-  RPDE is compatible with edge-caching and CDNs. This page provides guidance on
-  using caching to scale feeds.
----
-
 # Scaling feeds
 
 ## Approach to Scale

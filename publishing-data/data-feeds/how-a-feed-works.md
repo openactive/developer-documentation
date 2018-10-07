@@ -1,7 +1,3 @@
----
-description: A summary of the mechanics of an RPDE data feed
----
-
 # How a feed works
 
 ## RPDE feeds explained

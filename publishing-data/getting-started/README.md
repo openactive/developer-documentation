@@ -1,9 +1,3 @@
----
-description: >-
-  Getting started guide for developers working in organisations that are
-  publishing data
----
-
 # Getting Started
 
 ## Must Read: Principles of Publishing

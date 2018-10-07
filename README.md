@@ -1,10 +1,3 @@
----
-description: >-
-  This microsite contains guides to help you with your OpenActive
-  implementation. It's aimed at developers, is available on GitHub, and feedback
-  is very welcome!
----
-
 # Welcome to our community
 
 ## Help - I'm not a developer!

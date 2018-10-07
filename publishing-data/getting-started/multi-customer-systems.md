@@ -1,10 +1,3 @@
----
-description: >-
-  This guide focusses on multi-customer booking and listing systems, which
-  includes the complexity of handling multi-tenancy environments, and providing
-  automatic dataset site facilities to customers.
----
-
 # Multi-customer Systems
 
 ## Getting Super Powers

@@ -1,9 +1,3 @@
----
-description: >-
-  There are two main types of feeds currently in common use: events and
-  facilities.
----
-
 # Types of feed
 
 ## Time-based Events: Sessions and Courses

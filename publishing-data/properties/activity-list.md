@@ -1,9 +1,3 @@
----
-description: >-
-  Referencing the activity list is vital to ensure that events, courses and
-  facilities are discoverable.
----
-
 # Activity list
 
 ## Example use
