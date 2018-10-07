@@ -9,23 +9,101 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand).
 ## **Fields**
 
 ### **Required fields**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <code>Brand</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        The name of the brand.</br></br><b>Example</b></br></br><code>Play Ball!</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>url</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/url"><code>url</code></a>
+      </td>
+      <td style="text-align:left">
+        A url where further information can be found for the brand.</br></br><b>Example</b></br></br><code>http://example.com/play_ball</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| **name** |  [`Text`](https://schema.org/Text) |  The name of the brand.  **Example**  `Play Ball!` |
-| **type** |  [`Text`](https://schema.org/Text) |  The type of object, in this case Brand  **Example**  `Brand` |
-| **url** |  [`url`](https://schema.org/url) |  A url where further information can be found for the brand.  **Example**  `http://example.com/play_ball` |
 
 ### **Recommended fields**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>description</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        A text description for the brand.</br></br><b>Example</b></br></br><code>Play Ball! is a series of games for people of all abilities.</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>logo</b></td>
+      <td style="text-align:left">
+        <a href="https://docs.openactive.io/model/types/imageobject"><code>ImageObject</code></a>
+      </td>
+      <td style="text-align:left">
+        The logo associated with the brand.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| **description** |  [`Text`](https://schema.org/Text) |  A text description for the brand.  **Example**  `Play Ball! is a series of games for people of all abilities.` |
-| **logo** |  [`ImageObject`](https://docs.openactive.io/model/types/imageobject) |  The logo associated with the brand.  **Example**  `{   "type": "ImageObject",   "url": "http://example.com/static/image/speedball_large.jpg" }` |
 
 ### **Optional fields**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>identifier</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        A local non-URI identifier for the resource</br></br><b>Example</b></br></br><code>BR1234</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property | Type | Description |
-| :--- | :--- | :--- |
-| **identifier** |  [`Text`](https://schema.org/Text) |  A local non-URI identifier for the resource  **Example**  `BR1234` |
 
