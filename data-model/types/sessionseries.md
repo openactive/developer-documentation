@@ -58,7 +58,7 @@ description: This page describes the SessionSeries type.
     <tr>
       <td style="text-align:left"><b>image</b></td>
       <td style="text-align:left">
-        Array of <a href="#"><code>ImageObject</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
         An image or photo that depicts the event, e.g. a photo taken at a previous event.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;thumbnail&quot;:&nbsp;&quot;http://example.com/static/image/speedball_thumbnail.jpg&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
@@ -67,7 +67,7 @@ description: This page describes the SessionSeries type.
     <tr>
       <td style="text-align:left"><b>leader</b></td>
       <td style="text-align:left">
-        Array of <a href="#"><code>Person</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
       <td style="text-align:left">
         Refers to people (schema:Person) or organizations (schema:Organization) who will be leading an event. E.g. a coach. This is a more specific role than an organiser or a contributor. The person will need to have given their consent for their personal information to be present in the Open Data.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;familyName&quot;:&nbsp;&quot;Smith&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;givenName&quot;:&nbsp;&quot;Nicole&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/locations/1234ABCD/leaders/89&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;89,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Person&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
@@ -85,7 +85,7 @@ description: This page describes the SessionSeries type.
     <tr>
       <td style="text-align:left"><b>offers</b></td>
       <td style="text-align:left">
-        Array of <a href="#"><code>Offer</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/offer"><code>Offer</code></a>
       </td>
       <td style="text-align:left">
         TODO
@@ -145,7 +145,7 @@ description: This page describes the SessionSeries type.
     <tr>
       <td style="text-align:left"><b>activity</b></td>
       <td style="text-align:left">
-        Array of <a href="#"><code>Concept</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
         Specifies the physical activity or activities that will take place during an event.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/activities#Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/activities&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
@@ -163,7 +163,7 @@ description: This page describes the SessionSeries type.
     <tr>
       <td style="text-align:left"><b>category</b></td>
       <td style="text-align:left">
-        Array of <a href="#"><code>Concept</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
         Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/categories#Top%20Club%20Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/categories&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Top&nbsp;Club&nbsp;Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
@@ -172,7 +172,7 @@ description: This page describes the SessionSeries type.
     <tr>
       <td style="text-align:left"><b>contributor</b></td>
       <td style="text-align:left">
-        Array of <a href="#"><code>Person</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
       <td style="text-align:left">
         A Person who contributes to the facilitation of the Event.</br></br><b>Example</b></br></br><code>{}</code>
@@ -199,7 +199,7 @@ description: This page describes the SessionSeries type.
     <tr>
       <td style="text-align:left"><b>eventSchedule</b></td>
       <td style="text-align:left">
-        Array of <a href="#"><code>Schedule</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/schedule"><code>Schedule</code></a>
       </td>
       <td style="text-align:left">
         TODO</br></br><b>Example</b></br></br><code>{}</code>
@@ -289,7 +289,7 @@ description: This page describes the SessionSeries type.
     <tr>
       <td style="text-align:left"><b>potentialAction</b></td>
       <td style="text-align:left">
-        Array of <a href="#"><code>Action</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/action"><code>Action</code></a>
       </td>
       <td style="text-align:left">
         The possible actions that a user may make. e.g. Book.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Book&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;target&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;encodingType&quot;:&nbsp;&quot;application/vnd.openactive.v1.0+json&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;httpMethod&quot;:&nbsp;&quot;POST&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;EntryPoint&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://example.com/orders&quot;<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Action&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
@@ -325,7 +325,7 @@ description: This page describes the SessionSeries type.
     <tr>
       <td style="text-align:left"><b>subEvent</b></td>
       <td style="text-align:left">
-        Array of <a href="#"><code>ScheduledSession</code></a>
+        Array of <a href="https://docs.openactive.io/data-model/types/scheduledsession"><code>ScheduledSession</code></a>
       </td>
       <td style="text-align:left">
         Relates a parent event to a child event. Properties describing the parent event can be assumed to apply to the child, unless otherwise specified. A child event might be a specific instance of an Event within a schedule
