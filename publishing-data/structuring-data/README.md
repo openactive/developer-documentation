@@ -1,4 +1,4 @@
-# Data Fields
+# Structuring Data
 
 ## Understanding data fields
 

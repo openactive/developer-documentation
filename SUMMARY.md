@@ -2,12 +2,6 @@
 
 * [Welcome to our community](README.md)
 
-## Data Model
-
-* [Data Model Overview](model/overview.md)
-* [Types](model/types/README.md)
-  * [Event](model/types/event.md)
-
 ## Publishing Data
 
 * [Getting Started](publishing-data/getting-started/README.md)
@@ -18,23 +12,37 @@
   * [Types of feed](publishing-data/data-feeds/types-of-feed.md)
   * [Testing feeds](publishing-data/data-feeds/testing-feeds.md)
   * [Scaling feeds](publishing-data/data-feeds/scaling-feeds.md)
-* [Data Fields](publishing-data/properties/README.md)
-  * [Activity list](publishing-data/properties/activity-list.md)
-  * [Amenities](publishing-data/properties/amenities.md)
-  * [Courses](publishing-data/properties/courses.md)
-  * [Facilities](publishing-data/properties/facilities.md)
-  * [Free events](publishing-data/properties/free-events.md)
-  * [Images](publishing-data/properties/images.md)
-  * [Identifiers](publishing-data/properties/identifiers.md)
-  * [Location](publishing-data/properties/location.md)
-  * [Session Availability](publishing-data/properties/session-availability.md)
-  * [Upselling Membership](publishing-data/properties/upselling-membership.md)
-  * [Extension Properties](publishing-data/properties/extensions.md)
-* [Booking](publishing-data/booking.md)
+* [Structuring Data](publishing-data/structuring-data/README.md)
+  * [Activity list](publishing-data/structuring-data/activity-list.md)
+  * [Amenities](publishing-data/structuring-data/amenities.md)
+  * [Courses](publishing-data/structuring-data/courses.md)
+  * [Facilities](publishing-data/structuring-data/facilities.md)
+  * [Free events](publishing-data/structuring-data/free-events.md)
+  * [Images](publishing-data/structuring-data/images.md)
+  * [Identifiers](publishing-data/structuring-data/identifiers.md)
+  * [Location](publishing-data/structuring-data/location.md)
+  * [Session Availability](publishing-data/structuring-data/session-availability.md)
+  * [Upselling Membership](publishing-data/structuring-data/upselling-membership.md)
+  * [Extension Properties](publishing-data/structuring-data/extensions.md)
 
 ## Using Data
 
 * [Getting Started](using-data/getting-started.md)
+
+## Booking
+
+* [Getting Started](booking/booking.md)
+
+## Data Model
+
+* [Data Model Overview](model/overview.md)
+* [Types Reference](model/types/README.md)
+  * [Event](model/types/event.md)
+
+## Specifications
+
+* [Specifications Overview](specifications/specifications-overview.md)
+* [Namespaces](specifications/namespaces.md)
 
 ## Useful links
 

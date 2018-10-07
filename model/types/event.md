@@ -1,8 +1,14 @@
 ---
-description: 'This model is derived from http://schema.org/Event.'
+description: An event happening at a certain time and location.
 ---
 
 # Event
+
+## **Summary**
+
+An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the [offers](https://schema.org/offers) property. Repeated events may be structured as separate Event objects.
+
+This type is derived from [http://schema.org/Event](http://schema.org/Event).
 
 ## **Fields**
 
@@ -44,7 +50,7 @@ description: 'This model is derived from http://schema.org/Event.'
     <tr>
       <td style="text-align:left"><b>id</b>
       </td>
-      <td style="text-align:left"><a href="../../publishing-data/properties/amenities.md">url</a>
+      <td style="text-align:left"><a href="../../publishing-data/structuring-data/amenities.md">url</a>
       </td>
       <td style="text-align:left">
         <p>A unique url based identifier for the record
@@ -62,10 +68,10 @@ description: 'This model is derived from http://schema.org/Event.'
       <td style="text-align:left"><a href="../../publishing-data/data-feeds/"><code>Place</code></a>
         <br
         />- or -
-        <br /><a href="../../publishing-data/properties/amenities.md"><code>PostalAddress</code></a>
+        <br /><a href="../../publishing-data/structuring-data/amenities.md"><code>PostalAddress</code></a>
         <br
         />- or -
-        <br /><a href="../../publishing-data/properties/amenities.md"><code>Text</code></a>
+        <br /><a href="../../publishing-data/structuring-data/amenities.md"><code>Text</code></a>
       </td>
       <td style="text-align:left">The location at which the event will take place. Or, in the case of events
         that may span multiple locations, the initial meeting or starting point.

@@ -161,7 +161,7 @@ echo 'You got to trust me on this, I saved the world'
     <tr>
       <td style="text-align:left"><b>id</b>
       </td>
-      <td style="text-align:center"><b></b><a href="../publishing-data/properties/amenities.md">url</a>
+      <td style="text-align:center"><b></b><a href="../publishing-data/structuring-data/amenities.md">url</a>
       </td>
       <td style="text-align:left">
         <p>A unique url based identifier for the record
