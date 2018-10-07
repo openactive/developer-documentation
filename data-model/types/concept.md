@@ -20,7 +20,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left"><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="prefLabel"></a><b>prefLabel</b></td>
+      <td style="text-align:left"><b>prefLabel</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -53,7 +53,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="id"></a><b>id</b></td>
+      <td style="text-align:left"><b>id</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -62,7 +62,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="inScheme"></a><b>inScheme</b></td>
+      <td style="text-align:left"><b>inScheme</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -86,7 +86,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="altLabel"></a><b>altLabel</b></td>
+      <td style="text-align:left"><b>altLabel</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -95,7 +95,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="broader"></a><b>broader</b></td>
+      <td style="text-align:left"><b>broader</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -104,7 +104,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="narrower"></a><b>narrower</b></td>
+      <td style="text-align:left"><b>narrower</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -113,7 +113,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="notation"></a><b>notation</b></td>
+      <td style="text-align:left"><b>notation</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>

@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left"><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="closes"></a><b>closes</b></td>
+      <td style="text-align:left"><b>closes</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Time"><code>Time</code></a>
       </td>
@@ -38,7 +38,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="dayOfWeek"></a><b>dayOfWeek</b></td>
+      <td style="text-align:left"><b>dayOfWeek</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/DayOfWeek"><code>DayOfWeek</code></a>
       </td>
@@ -47,7 +47,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="opens"></a><b>opens</b></td>
+      <td style="text-align:left"><b>opens</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Time"><code>Time</code></a>
       </td>

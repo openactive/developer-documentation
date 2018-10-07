@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/GeoCoordinates](https://schema.org
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left"><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/GeoCoordinates](https://schema.org
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="latitude"></a><b>latitude</b></td>
+      <td style="text-align:left"><b>latitude</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Float"><code>Float</code></a>
       </td>
@@ -38,7 +38,7 @@ This type is derived from [https://schema.org/GeoCoordinates](https://schema.org
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="longitude"></a><b>longitude</b></td>
+      <td style="text-align:left"><b>longitude</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Float"><code>Float</code></a>
       </td>

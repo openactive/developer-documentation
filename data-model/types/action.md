@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/Action](https://schema.org/Action)
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left"><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/Action](https://schema.org/Action)
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="name"></a><b>name</b></td>
+      <td style="text-align:left"><b>name</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -38,7 +38,7 @@ This type is derived from [https://schema.org/Action](https://schema.org/Action)
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="target"></a><b>target</b></td>
+      <td style="text-align:left"><b>target</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/entrypoint"><code>EntryPoint</code></a>
       </td>

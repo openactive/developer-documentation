@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left"><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="encodingType"></a><b>encodingType</b></td>
+      <td style="text-align:left"><b>encodingType</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -38,7 +38,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="httpMethod"></a><b>httpMethod</b></td>
+      <td style="text-align:left"><b>httpMethod</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -47,7 +47,7 @@ This type is derived from [https://schema.org/EntryPoint](https://schema.org/Ent
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="urlTemplate"></a><b>urlTemplate</b></td>
+      <td style="text-align:left"><b>urlTemplate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/urlTemplate"><code>urlTemplate</code></a>
       </td>

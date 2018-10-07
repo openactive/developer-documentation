@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left"><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="url"></a><b>url</b></td>
+      <td style="text-align:left"><b>url</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -53,7 +53,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="thumbnail"></a><b>thumbnail</b></td>
+      <td style="text-align:left"><b>thumbnail</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>

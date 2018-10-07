@@ -20,7 +20,7 @@ description: This page describes the Slot type.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left"><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ description: This page describes the Slot type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="duration"></a><b>duration</b></td>
+      <td style="text-align:left"><b>duration</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
@@ -38,7 +38,7 @@ description: This page describes the Slot type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="facilityUse"></a><b>facilityUse</b></td>
+      <td style="text-align:left"><b>facilityUse</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -47,7 +47,7 @@ description: This page describes the Slot type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="remainingUses"></a><b>remainingUses</b></td>
+      <td style="text-align:left"><b>remainingUses</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -56,7 +56,7 @@ description: This page describes the Slot type.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="startDate"></a><b>startDate</b></td>
+      <td style="text-align:left"><b>startDate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
@@ -82,7 +82,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="id"></a><b>id</b></td>
+      <td style="text-align:left"><b>id</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -91,7 +91,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="identifier"></a><b>identifier</b></td>
+      <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -115,7 +115,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="id"></a><b>id</b></td>
+      <td style="text-align:left"><b>id</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -124,7 +124,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="maximumUses"></a><b>maximumUses</b></td>
+      <td style="text-align:left"><b>maximumUses</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -148,7 +148,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="endDate"></a><b>endDate</b></td>
+      <td style="text-align:left"><b>endDate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
@@ -157,7 +157,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="identifier"></a><b>identifier</b></td>
+      <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -166,7 +166,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="offers"></a><b>offers</b></td>
+      <td style="text-align:left"><b>offers</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/offer"><code>Offer</code></a>
       </td>

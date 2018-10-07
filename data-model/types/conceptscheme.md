@@ -20,7 +20,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left"><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="id"></a><b>id</b></td>
+      <td style="text-align:left"><b>id</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -38,7 +38,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="concept"></a><b>concept</b></td>
+      <td style="text-align:left"><b>concept</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
@@ -47,7 +47,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="title"></a><b>title</b></td>
+      <td style="text-align:left"><b>title</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -56,7 +56,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="url"></a><b>url</b></td>
+      <td style="text-align:left"><b>url</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -80,7 +80,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="description"></a><b>description</b></td>
+      <td style="text-align:left"><b>description</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -89,7 +89,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="license"></a><b>license</b></td>
+      <td style="text-align:left"><b>license</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>

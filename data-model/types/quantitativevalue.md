@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left"><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -44,7 +44,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="maxValue"></a><b>maxValue</b></td>
+      <td style="text-align:left"><b>maxValue</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
@@ -53,7 +53,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="minValue"></a><b>minValue</b></td>
+      <td style="text-align:left"><b>minValue</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>

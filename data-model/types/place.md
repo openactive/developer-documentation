@@ -20,7 +20,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left"><b>type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="name"></a><b>name</b></td>
+      <td style="text-align:left"><b>name</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -53,7 +53,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="id"></a><b>id</b></td>
+      <td style="text-align:left"><b>id</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -62,7 +62,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="address"></a><b>address</b></td>
+      <td style="text-align:left"><b>address</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/postaladdress"><code>PostalAddress</code></a><br/> - or - <br/><a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -71,7 +71,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="amenityFeature"></a><b>amenityFeature</b></td>
+      <td style="text-align:left"><b>amenityFeature</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/locationfeaturespecification"><code>LocationFeatureSpecification</code></a>
       </td>
@@ -80,7 +80,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="description"></a><b>description</b></td>
+      <td style="text-align:left"><b>description</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -89,7 +89,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="geo"></a><b>geo</b></td>
+      <td style="text-align:left"><b>geo</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/geocoordinates"><code>GeoCoordinates</code></a>
       </td>
@@ -98,7 +98,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="image"></a><b>image</b></td>
+      <td style="text-align:left"><b>image</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
@@ -107,7 +107,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="openingHoursSpecification"></a><b>openingHoursSpecification</b></td>
+      <td style="text-align:left"><b>openingHoursSpecification</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/openinghoursspecification"><code>OpeningHoursSpecification</code></a>
       </td>
@@ -116,7 +116,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="telephone"></a><b>telephone</b></td>
+      <td style="text-align:left"><b>telephone</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
@@ -125,7 +125,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="url"></a><b>url</b></td>
+      <td style="text-align:left"><b>url</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
@@ -149,7 +149,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="containedInPlace"></a><b>containedInPlace</b></td>
+      <td style="text-align:left"><b>containedInPlace</b></td>
       <td style="text-align:left">
         <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
       </td>
@@ -158,7 +158,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="containsPlace"></a><b>containsPlace</b></td>
+      <td style="text-align:left"><b>containsPlace</b></td>
       <td style="text-align:left">
         Array of <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
       </td>
@@ -167,7 +167,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="identifier"></a><b>identifier</b></td>
+      <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
