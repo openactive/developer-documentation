@@ -38,14 +38,14 @@ description: 'This model is derived from http://schema.org/Event.'
         <p></p>
         <p><b>Example</b>
         </p>
-        <p><code>{<br />  &quot;id&quot;: &quot;https://example.com/reference/activities#Speedball&quot;, <br />  &quot;inScheme&quot;: &quot;https://example.com/reference/activities&quot;,<br />  &quot;prefLabel&quot;: &quot;Speedball&quot;,<br />  &quot;type&quot;: &quot;Concept&quot;<br />}</code>
+        <p><code>{<br /> &quot;id&quot;: &quot;https://example.com/reference/activities#Speedball&quot;,<br /> &quot;inScheme&quot;: &quot;https://example.com/reference/activities&quot;,<br /> &quot;prefLabel&quot;: &quot;Speedball&quot;,<br /> &quot;type&quot;: &quot;Concept&quot;<br />}</code>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>id</b>
       </td>
-      <td style="text-align:center"><b></b><a href="../publishing-data/properties/amenities.md">url</a>
+      <td style="text-align:center"><a href="../publishing-data/properties/amenities.md">url</a>
       </td>
       <td style="text-align:left">
         <p>A unique url based identifier for the record
@@ -61,8 +61,7 @@ description: 'This model is derived from http://schema.org/Event.'
       <td style="text-align:left"><b>location</b>
       </td>
       <td style="text-align:center"><a href="../publishing-data/data-feeds/"><code>Place</code></a>
-        <br
-        />- or -
+        <br />- or -
         <br /><a href="../publishing-data/properties/amenities.md"><code>PostalAddress</code></a>
         <br
         />- or -
@@ -84,10 +83,9 @@ description: 'This model is derived from http://schema.org/Event.'
         <p></p>
         <p><b>Example</b>
         </p>
-        <p><code>{<br />  &quot;address&quot;: {<br />    &quot;addressLocality&quot;: &quot;New Malden&quot;,<br />    &quot;addressRegion&quot;: &quot;London&quot;,<br />    &quot;postalCode&quot;: &quot;NW5 3DU&quot;,<br />    &quot;streetAddress&quot;: &quot;Raynes Park High School, 46A West Barnes Lane&quot;,<br />    &quot;type&quot;: &quot;PostalAddress&quot;<br />  },<br />  &quot;description&quot;: &quot;Raynes Park High School in London&quot;,<br />  &quot;geo&quot;: {<br />    &quot;latitude&quot;: 51.4034423828125,<br />    &quot;longitude&quot;: -0.2369088977575302,<br />    &quot;type&quot;: &quot;GeoCoordinates&quot;<br />  },<br />  &quot;id&quot;: &quot;https://example.com/locations/1234ABCD&quot;,<br />  &quot;identifier&quot;: &quot;1234ABCD&quot;,<br />  &quot;name&quot;: &quot;Raynes Park High School&quot;,<br />  &quot;telephone&quot;: &quot;01253 473934&quot;,<br />  &quot;type&quot;: &quot;Place&quot;<br />}</code>
+        <p><code>{<br />  &quot;address&quot;: {<br />    &quot;addressLocality&quot;: &quot;New Malden&quot;,<br />    &quot;addressRegion&quot;: &quot;London&quot;,<br />    &quot;postalCode&quot;: &quot;NW5 3DU&quot;,<br />    &quot;streetAddress&quot;: &quot;46A West Barnes Lane&quot;,<br />    &quot;type&quot;: &quot;PostalAddress&quot;<br />  },<br />  &quot;description&quot;: &quot;Raynes Park High School in London&quot;,<br />  &quot;geo&quot;: {<br />    &quot;latitude&quot;: 51.4034423828125,<br />    &quot;longitude&quot;: -0.2369088977575302,<br />    &quot;type&quot;: &quot;GeoCoordinates&quot;<br />  },<br />  &quot;id&quot;: &quot;https://example.com/locations/1234ABCD&quot;,<br />  &quot;identifier&quot;: &quot;1234ABCD&quot;,<br />  &quot;name&quot;: &quot;Raynes Park High School&quot;,<br />  &quot;telephone&quot;: &quot;01253 473934&quot;,<br />  &quot;type&quot;: &quot;Place&quot;<br />}</code>
         </p>
       </td>
     </tr>
   </tbody>
 </table>
-
