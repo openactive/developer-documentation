@@ -64,7 +64,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
     <tr>
       <td style="text-align:left"><b>sameAs</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/url"><code>url</code></a>
+        Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
         Lists the URL(s) of the official social media profile pages associated with the organization.</br></br><b>Example</b></br></br><code>https://example.org/example-org</code>
@@ -124,7 +124,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
     <tr>
       <td style="text-align:left"><b>logo</b></td>
       <td style="text-align:left">
-        <a href="imageobject"><code>ImageObject</code></a>
+        <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
         A logo for the Organization.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code>

@@ -84,7 +84,7 @@ While these properties are marked as optional, a data publisher must provide eit
     <tr>
       <td style="text-align:left"><b>byDay</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/DayOfWeek"><code>DayOfWeek</code></a>
+        Array of <a href="https://schema.org/DayOfWeek"><code>DayOfWeek</code></a>
       </td>
       <td style="text-align:left">
         Defines the day of the week upon which the Event takes place.</br></br>When using string values, this MUST conform to iCal BYDAY rule.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;&quot;https://schema.org/Monday&quot;<br/>]</code>
@@ -93,7 +93,7 @@ While these properties are marked as optional, a data publisher must provide eit
     <tr>
       <td style="text-align:left"><b>byMonth</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/Integer"><code>Integer</code></a>
+        Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
         Defines the months of the year on which the Event takes place. Specified as an integer between 1 and 12, with 1 representing January.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;2<br/>]</code>
@@ -102,7 +102,7 @@ While these properties are marked as optional, a data publisher must provide eit
     <tr>
       <td style="text-align:left"><b>byMonthDay</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/Integer"><code>Integer</code></a>
+        Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
         Defines the days of the month on which the Event takes place. Specified as an integer between 1 and 31</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;28<br/>]</code>
@@ -186,7 +186,7 @@ While these properties are marked as optional, a data publisher must provide eit
     <tr>
       <td style="text-align:left"><b>byDay</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/DayOfWeek"><code>DayOfWeek</code></a>
+        Array of <a href="https://schema.org/DayOfWeek"><code>DayOfWeek</code></a>
       </td>
       <td style="text-align:left">
         Defines the day of the week upon which the Event takes place.</br></br>When using string values, this MUST conform to iCal BYDAY rule.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;&quot;https://schema.org/Monday&quot;<br/>]</code>
@@ -195,7 +195,7 @@ While these properties are marked as optional, a data publisher must provide eit
     <tr>
       <td style="text-align:left"><b>byMonth</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/Integer"><code>Integer</code></a>
+        Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
         Defines the months of the year on which the Event takes place. Specified as an integer between 1 and 12, with 1 representing January.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;2<br/>]</code>
@@ -204,7 +204,7 @@ While these properties are marked as optional, a data publisher must provide eit
     <tr>
       <td style="text-align:left"><b>byMonthDay</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/Integer"><code>Integer</code></a>
+        Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
         Defines the days of the month on which the Event takes place. Specified as an integer between 1 and 31</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;28<br/>]</code>
@@ -213,7 +213,7 @@ While these properties are marked as optional, a data publisher must provide eit
     <tr>
       <td style="text-align:left"><b>exceptDate</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/Date"><code>Date</code></a>
+        Array of <a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
         TODO</br></br><b>Example</b></br></br><code>TODO</code>

@@ -88,7 +88,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
     <tr>
       <td style="text-align:left"><b>altLabel</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/Text"><code>Text</code></a>
+        Array of <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
         An alternative human readable string for use in user interfaces.</br></br><b>Example</b></br></br><code>Speedball</code>
@@ -97,7 +97,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
     <tr>
       <td style="text-align:left"><b>broader</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/url"><code>url</code></a>
+        Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
         A broader concept URI</br></br><b>Example</b></br></br><code>https://example.com/football</code>
@@ -106,7 +106,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
     <tr>
       <td style="text-align:left"><b>narrower</b></td>
       <td style="text-align:left">
-        Array of <a href="ArrayOf#https://schema.org/url"><code>url</code></a>
+        Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
         A more specific concept URI</br></br><b>Example</b></br></br><code>https://example.com/walking-football</code>

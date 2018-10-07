@@ -73,7 +73,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand).
     <tr>
       <td style="text-align:left"><b>logo</b></td>
       <td style="text-align:left">
-        <a href="imageobject"><code>ImageObject</code></a>
+        <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
         The logo associated with the brand.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code>

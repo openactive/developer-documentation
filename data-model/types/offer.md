@@ -64,7 +64,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer).
     <tr>
       <td style="text-align:left"><b>ageRange</b></td>
       <td style="text-align:left">
-        <a href="quantitativevalue"><code>QuantitativeValue</code></a>
+        <a href="https://docs.openactive.io/data-model/types/quantitativevalue"><code>QuantitativeValue</code></a>
       </td>
       <td style="text-align:left">
         Indicates that an event is suitable for a specific age range. If only a single age is specified then this is assumed to be a minimum age. Age ranges can be specified as follows: 18-30</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;QuantitativeValue&quot;,<br/>&nbsp;&nbsp;&quot;minValue&quot;:&nbsp;15,<br/>&nbsp;&nbsp;&quot;maxValue&quot;:&nbsp;60<br/>}</code>

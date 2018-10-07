@@ -168,7 +168,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
     <tr>
       <td style="text-align:left"><b>offers</b></td>
       <td style="text-align:left">
-        Array of <a href="offer"><code>Offer</code></a>
+        Array of <a href="#"><code>Offer</code></a>
       </td>
       <td style="text-align:left">
         TODO</br></br><b>Example</b></br></br><code>TODO</code>

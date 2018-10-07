@@ -55,7 +55,7 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
     <tr>
       <td style="text-align:left"><b>thumbnail</b></td>
       <td style="text-align:left">
-        Array of <a href="imageobject"><code>ImageObject</code></a>
+        Array of <a href="#"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
         The URL for a thumbnail image for an image.
