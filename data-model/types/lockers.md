@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        A string, suitable for presentation in user interfaces.</br></br><b>Example</b></br></br><code>Changing Facilities</code>
+        <p>A string, suitable for presentation in user interfaces.</p><p></p><p><b>Example</b></p><p><code>Changing Facilities</code></p>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
       <td style="text-align:left">
-        A boolean value indicating whether this ammenity is available.
+        <p>A boolean value indicating whether this ammenity is available.</p></p>
       </td>
     </tr>
   </tbody>

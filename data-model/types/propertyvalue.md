@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/PropertyValue](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        The name of this PropertyValue</br></br><b>Example</b></br></br><code>Vendor ID</code>
+        <p>The name of this PropertyValue</p><p></p><p><b>Example</b></p><p><code>Vendor ID</code></p>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/PropertyValue](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>SB1234</code>
+        <p>TODO</p><p></p><p><b>Example</b></p><p><code>SB1234</code></p>
       </td>
     </tr>
   </tbody>
@@ -67,7 +67,7 @@ This type is derived from [https://schema.org/PropertyValue](https://schema.org/
         <a href="https://schema.org/url"><code>url</code></a><br/> - or - <br/><a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        A commonly used identifier for the characteristic represented by the property</br></br><b>Example</b></br></br><code>TODO</code>
+        <p>A commonly used identifier for the characteristic represented by the property</p><p></p><p><b>Example</b></p><p><code>TODO</code></p>
       </td>
     </tr>
   </tbody>

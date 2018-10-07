@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        The name of the brand.</br></br><b>Example</b></br></br><code>Play Ball!</code>
+        <p>The name of the brand.</p><p></p><p><b>Example</b></p><p><code>Play Ball!</code></p>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        A url where further information can be found for the brand.</br></br><b>Example</b></br></br><code>http://example.com/play_ball</code>
+        <p>A url where further information can be found for the brand.</p><p></p><p><b>Example</b></p><p><code>http://example.com/play_ball</code></p>
       </td>
     </tr>
   </tbody>
@@ -67,7 +67,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        A text description for the brand.</br></br><b>Example</b></br></br><code>Play Ball! is a series of games for people of all abilities.</code>
+        <p>A text description for the brand.</p><p></p><p><b>Example</b></p><p><code>Play Ball! is a series of games for people of all abilities.</code></p>
       </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
         <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
-        The logo associated with the brand.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code>
+        <p>The logo associated with the brand.</p><p></p><p><b>Example</b></p><p><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code></p>
       </td>
     </tr>
   </tbody>
@@ -100,7 +100,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        A local non-URI identifier for the resource</br></br><b>Example</b></br></br><code>BR1234</code>
+        <p>A local non-URI identifier for the resource</p><p></p><p><b>Example</b></p><p><code>BR1234</code></p>
       </td>
     </tr>
   </tbody>

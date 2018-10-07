@@ -34,7 +34,7 @@ description: This page describes the Slot type.
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
       <td style="text-align:left">
-        The duration of the slot given in [ISO8601] format.</br></br><b>Example</b></br></br><code>PT1H</code>
+        <p>The duration of the slot given in [ISO8601] format.</p><p></p><p><b>Example</b></p><p><code>PT1H</code></p>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ description: This page describes the Slot type.
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        URI to the FacilityUse that has this offer</br></br><b>Example</b></br></br><code>TODO</code>
+        <p>URI to the FacilityUse that has this offer</p><p></p><p><b>Example</b></p><p><code>TODO</code></p>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ description: This page describes the Slot type.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>5</code>
+        <p>TODO</p><p></p><p><b>Example</b></p><p><code>5</code></p>
       </td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ description: This page describes the Slot type.
         <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
-        The start date and time of the slot. Can be specified as a schema:Date or schema:DateTime</br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
+        <p>The start date and time of the slot. Can be specified as a schema:Date or schema:DateTime</p><p></p><p><b>Example</b></p><p><code>2018-01-27T12:00:00Z</code></p>
       </td>
     </tr>
   </tbody>
@@ -87,7 +87,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        A unique url based identifier for the record</br></br><b>Example</b></br></br><code>https://example.com/slot/1234</code>
+        <p>A unique url based identifier for the record</p><p></p><p><b>Example</b></p><p><code>https://example.com/slot/1234</code></p>
       </td>
     </tr>
     <tr>
@@ -96,7 +96,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        A local non-URI identifier for the resource</br></br><b>Example</b></br></br><code>SB1234</code>
+        <p>A local non-URI identifier for the resource</p><p></p><p><b>Example</b></p><p><code>SB1234</code></p>
       </td>
     </tr>
   </tbody>
@@ -120,7 +120,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        A unique url based identifier for the record</br></br><b>Example</b></br></br><code>https://example.com/slot/1234</code>
+        <p>A unique url based identifier for the record</p><p></p><p><b>Example</b></p><p><code>https://example.com/slot/1234</code></p>
       </td>
     </tr>
     <tr>
@@ -129,7 +129,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>16</code>
+        <p>TODO</p><p></p><p><b>Example</b></p><p><code>16</code></p>
       </td>
     </tr>
   </tbody>
@@ -153,7 +153,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
         <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
-        The end date and time of the slot. Can be specified as a schema:Date or schema:DateTime</br></br>It is recommended that publishers provide either an schema:endDate or a schema:duration for an slot.</br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
+        <p>The end date and time of the slot. Can be specified as a schema:Date or schema:DateTime</p><p>It is recommended that publishers provide either an schema:endDate or a schema:duration for an slot.</p><p></p><p><b>Example</b></p><p><code>2018-01-27T12:00:00Z</code></p>
       </td>
     </tr>
     <tr>
@@ -162,7 +162,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        A local non-URI identifier for the resource</br></br><b>Example</b></br></br><code>SB1234</code>
+        <p>A local non-URI identifier for the resource</p><p></p><p><b>Example</b></p><p><code>SB1234</code></p>
       </td>
     </tr>
     <tr>
@@ -171,7 +171,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
         Array of <a href="https://docs.openactive.io/data-model/types/offer"><code>Offer</code></a>
       </td>
       <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>TODO</code>
+        <p>TODO</p><p></p><p><b>Example</b></p><p><code>TODO</code></p>
       </td>
     </tr>
   </tbody>

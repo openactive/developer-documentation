@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        The country, expressed as a two-letter ISO 3166-1 alpha-2 country code.</br></br><b>Example</b></br></br><code>GB</code>
+        <p>The country, expressed as a two-letter ISO 3166-1 alpha-2 country code.</p><p></p><p><b>Example</b></p><p><code>GB</code></p>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        The locality, a suburb within a city or a town within a county or district.</br></br><b>Example</b></br></br><code>Shoreditch</code>
+        <p>The locality, a suburb within a city or a town within a county or district.</p><p></p><p><b>Example</b></p><p><code>Shoreditch</code></p>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        The region, either a city or a county or district.</br></br><b>Example</b></br></br><code>London</code>
+        <p>The region, either a city or a county or district.</p><p></p><p><b>Example</b></p><p><code>London</code></p>
       </td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        The postal code.</br></br><b>Example</b></br></br><code>EC2A 4JE</code>
+        <p>The postal code.</p><p></p><p><b>Example</b></p><p><code>EC2A 4JE</code></p>
       </td>
     </tr>
     <tr>
@@ -70,7 +70,7 @@ This type is derived from [https://schema.org/PostalAddress](https://schema.org/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        The street address.</br></br><b>Example</b></br></br><code>Open Data Institute, Floor 3, 65 Clifton St</code>
+        <p>The street address.</p><p></p><p><b>Example</b></p><p><code>Open Data Institute, Floor 3, 65 Clifton St</code></p>
       </td>
     </tr>
   </tbody>
