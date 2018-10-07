@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>Person</code>
+        Must always be present and set to <code>Person</code>
       </td>
     </tr>
   </tbody>

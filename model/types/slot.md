@@ -25,7 +25,7 @@ description: This page describes the Slot type.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>Slot</code>
+        Must always be present and set to <code>Slot</code>
       </td>
     </tr>
     <tr>

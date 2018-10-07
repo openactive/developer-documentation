@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>OpeningHoursSpecification</code>
+        Must always be present and set to <code>OpeningHoursSpecification</code>
       </td>
     </tr>
     <tr>

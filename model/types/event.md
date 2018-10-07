@@ -29,7 +29,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event).
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>Event</code>
+        Must always be present and set to <code>Event</code>
       </td>
     </tr>
     <tr>

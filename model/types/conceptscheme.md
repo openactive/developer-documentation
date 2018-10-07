@@ -25,7 +25,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>ConceptScheme</code>
+        Must always be present and set to <code>ConceptScheme</code>
       </td>
     </tr>
     <tr>

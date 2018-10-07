@@ -25,7 +25,25 @@ description: This page describes the Showers type.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>Showers</code>
+        Must always be present and set to <code>Showers</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        A string, suitable for presentation in user interfaces.</br></br><b>Example</b></br></br><code>Changing Facilities</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>value</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        A boolean value indicating whether this ammenity is available.
       </td>
     </tr>
   </tbody>

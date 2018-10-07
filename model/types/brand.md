@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand).
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>Brand</code>
+        Must always be present and set to <code>Brand</code>
       </td>
     </tr>
     <tr>

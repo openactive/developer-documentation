@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place).
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>Place</code>
+        Must always be present and set to <code>Place</code>
       </td>
     </tr>
     <tr>

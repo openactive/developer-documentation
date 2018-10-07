@@ -25,7 +25,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>Schedule</code>
+        Must always be present and set to <code>Schedule</code>
       </td>
     </tr>
     <tr>

@@ -112,7 +112,214 @@ description: This page describes the SessionSeries type.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>SessionSeries</code>
+        Must always be present and set to <code>SessionSeries</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>@context</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/url"><code>url</code></a>
+      </td>
+      <td style="text-align:left">
+        TODO</br></br><b>Example</b></br></br><code>https://openactive.io/</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>accessibilityInformation</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        Provide additional, specific documentation for participants about how disabilities are, or can be supported at the Event.</br></br><b>Example</b></br></br><code>TODO</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>accessibilitySupport</b></td>
+      <td style="text-align:left">
+        Array of <a href="ArrayOf#https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        Used to specify the types of disabilities or impairments that are supported at an event.</br></br><b>Example</b></br></br><code>TODO</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>activity</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://docs.openactive.io/model/types/concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        Specifies the physical activity or activities that will take place during an event.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/activities#Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/activities&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>attendeeInstructions</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        Provides additional notes and instructions for event attendees. E.g. more information on how to find the event, what to bring, etc.</br></br><b>Example</b></br></br><code>TODO</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>category</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://docs.openactive.io/model/types/concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/categories#Top%20Club%20Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/categories&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Top&nbsp;Club&nbsp;Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>contributor</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://docs.openactive.io/model/types/person"><code>Person</code></a>
+      </td>
+      <td style="text-align:left">
+        A Person who contributes to the facilitation of the Event.</br></br><b>Example</b></br></br><code>{}</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>duration</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Duration"><code>Duration</code></a>
+      </td>
+      <td style="text-align:left">
+        The duration of the event given in [ISO8601] format.</br></br><b>Example</b></br></br><code>PT1H</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>endDate</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+      </td>
+      <td style="text-align:left">
+        The end date and time of the event. Can be specified as a schema:Date or  schema:DateTime</br></br>It is recommended that publishers provide either an schema:endDate or a schema:duration for an event.</br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>eventSchedule</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://docs.openactive.io/model/types/schedule"><code>Schedule</code></a>
+      </td>
+      <td style="text-align:left">
+        TODO</br></br><b>Example</b></br></br><code>{}</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>eventStatus</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/EventStatusType"><code>EventStatusType</code></a>
+      </td>
+      <td style="text-align:left">
+        The status of an event. Can be used to indicate rescheduled or cancelled events</br></br><b>Example</b></br></br><code>https://schema.org/EventScheduled</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>identifier</b></td>
+      <td style="text-align:left">
+        
+      </td>
+      <td style="text-align:left">
+        A unique identifier for the record</br></br><b>Example</b></br></br><code>1234</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>isAccessibleForFree</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        Whether the Event is accessible without charge.</br></br><b>Example</b></br></br><code>true</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>isCoached</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        A boolean property that indicates whether an Event will be coached. This flag allows an Event to be marked as being coached without having to specify a named individual as a coach. This addresses both privacy concerns and also scenarios where the actual coach may only be decided on the day.</br></br><b>Example</b></br></br><code>true</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>location</b></td>
+      <td style="text-align:left">
+        <a href="https://docs.openactive.io/model/types/place"><code>Place</code></a>
+      </td>
+      <td style="text-align:left">
+        The location at which the event will take place. Or, in the case of events that may span multiple locations, the initial meeting or starting point.</br></br>It is recommended that locations should be specified as a [Place](/models/place) complete with a fully described geographic location and/or address.<br/>If only an address is available then this should be described as a [PostalAddress](/models/postaladdress).</br></br>Applications may use [schema:Text](https://schema.org/Text) to provide a more general description of a location ("In Victoria Park, near the lake"), but this is not recommended: consuming applications will be unable to help users discover opportunities based on their location.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;address&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;PostalAddress&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;description&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&nbsp;in&nbsp;London&quot;,<br/>&nbsp;&nbsp;&quot;geo&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/locations/1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;&quot;1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&quot;,<br/>&nbsp;&nbsp;&quot;telephone&quot;:&nbsp;&quot;01253&nbsp;473934&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Place&quot;<br/>}</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>maximumAttendeeCapacity</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        The maximum capacity of the Event.</br></br><b>Example</b></br></br><code>30</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>meetingPoint</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions.</br></br><b>Example</b></br></br><code>At the entrance to the park</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        The name of the event</br></br><b>Example</b></br></br><code>Speedball</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>organizer</b></td>
+      <td style="text-align:left">
+        <a href="https://docs.openactive.io/model/types/organization"><code>Organization</code></a>
+      </td>
+      <td style="text-align:left">
+        The person or organization ultimately responsible for an event. An organizer might be an  schema:Organization or a schema:Person.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>potentialAction</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://docs.openactive.io/model/types/action"><code>Action</code></a>
+      </td>
+      <td style="text-align:left">
+        The possible actions that a user may make. e.g. Book.</br></br><b>Example</b></br></br><code>[<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Book&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;target&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;encodingType&quot;:&nbsp;&quot;application/vnd.openactive.v1.0+json&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;httpMethod&quot;:&nbsp;&quot;POST&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;EntryPoint&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://example.com/orders&quot;<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Action&quot;<br/>&nbsp;&nbsp;}<br/>]</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>programme</b></td>
+      <td style="text-align:left">
+        <a href="https://docs.openactive.io/model/types/brand"><code>Brand</code></a>
+      </td>
+      <td style="text-align:left">
+        Indicates that an event will be organised according to a specific Programme.</br></br><b>Example</b></br></br><code>{<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Brand&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Play&nbsp;Ball!&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.org/brand/play-ball&quot;<br/>}</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>schedulingNote</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        Provides a note from an organizer relating to how this Event is scheduled.</br></br><b>Example</b></br></br><code>This event doesn't run during school holidays</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>startDate</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+      </td>
+      <td style="text-align:left">
+        The start date and time of the event. Can be specified as a schema:Date or schema:DateTime.</br></br><b>Example</b></br></br><code>2018-01-27T12:00:00Z</code>
       </td>
     </tr>
     <tr>
@@ -122,6 +329,24 @@ description: This page describes the SessionSeries type.
       </td>
       <td style="text-align:left">
         Relates a parent event to a child event. Properties describing the parent event can be assumed to apply to the child, unless otherwise specified. A child event might be a specific instance of an Event within a schedule
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>superEvent</b></td>
+      <td style="text-align:left">
+        <a href="https://docs.openactive.io/model/types/event"><code>Event</code></a>
+      </td>
+      <td style="text-align:left">
+        Relates a child event to a parent event. Properties describing the parent event can be assumed to apply to the child, unless otherwise specified. A parent event might specify a recurring schedule, of which the child event is one specific instance
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>url</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/url"><code>url</code></a>
+      </td>
+      <td style="text-align:left">
+        A URL to a web page (or section of a page) that describes the event.</br></br><b>Example</b></br></br><code>https://example.com/event/1234</code>
       </td>
     </tr>
   </tbody>

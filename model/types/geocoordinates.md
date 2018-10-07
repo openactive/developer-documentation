@@ -25,7 +25,7 @@ This type is derived from [https://schema.org/GeoCoordinates](https://schema.org
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <code>GeoCoordinates</code>
+        Must always be present and set to <code>GeoCoordinates</code>
       </td>
     </tr>
     <tr>
