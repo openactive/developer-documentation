@@ -9,68 +9,16 @@ This type is derived from [https://schema.org/PropertyValue](https://schema.org/
 ## **Fields**
 
 ### **Required fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>name</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        The name of this PropertyValue</br></br><b>Example</b></br></br><code>Vendor ID</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        The type of object, in this case PropertyValue</br></br><b>Example</b></br></br><code>PropertyValue</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>value</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        TODO</br></br><b>Example</b></br></br><code>SB1234</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| **name** |  [`Text`](https://schema.org/Text) |  The name of this PropertyValue  **Example**  `Vendor ID` |
+| **type** |  [`Text`](https://schema.org/Text) |  The type of object, in this case PropertyValue  **Example**  `PropertyValue` |
+| **value** |  [`Text`](https://schema.org/Text) |  TODO  **Example**  `SB1234` |
 
 ### **Optional fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>propertyID</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/url"><code>url</code></a>
-      </td>
-      <td style="text-align:left">
-        A commonly used identifier for the characteristic represented by the property</br></br><b>Example</b></br></br><code>TODO</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| **propertyID** |  [`url`](https://schema.org/url) |  A commonly used identifier for the characteristic represented by the property  **Example**  `TODO` |
 

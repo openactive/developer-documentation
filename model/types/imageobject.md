@@ -9,59 +9,15 @@ This type is derived from [https://schema.org/ImageObject](https://schema.org/Im
 ## **Fields**
 
 ### **Required fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        The type of object, in this case ImageObject</br></br><b>Example</b></br></br><code>ImageObject</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>url</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/url"><code>url</code></a>
-      </td>
-      <td style="text-align:left">
-        The URL for the display resolution image.</br></br><b>Example</b></br></br><code>http://example.com/static/image/speedball_large.jpg</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| **type** |  [`Text`](https://schema.org/Text) |  The type of object, in this case ImageObject  **Example**  `ImageObject` |
+| **url** |  [`url`](https://schema.org/url) |  The URL for the display resolution image.  **Example**  `http://example.com/static/image/speedball_large.jpg` |
 
 ### **Optional fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>thumbnail</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://docs.openactive.io/model/types/imageobject"><code>ImageObject</code></a>
-      </td>
-      <td style="text-align:left">
-        The URL for a thumbnail image for an image.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| **thumbnail** |  Array of [`ImageObject`](https://docs.openactive.io/model/types/imageobject) |  The URL for a thumbnail image for an image. |
 
