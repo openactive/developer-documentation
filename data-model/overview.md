@@ -1,7 +1,3 @@
----
-description: This page lists the types of data described by the data model.
----
-
 # Data Model Overview
 
 #### Classes and Session Series \([`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#regular-sessions-sessionseries-and-scheduledsession-)\)

@@ -35,9 +35,10 @@
 
 ## Data Model
 
-* [Data Model Overview](model/overview.md)
-* [Types Reference](model/types/README.md)
-  * [Event](model/types/event.md)
+* [Data Model Overview](data-model/overview.md)
+* [Types Reference](data-model/types/README.md)
+  * [Event2](data-model/types/event2.md)
+  * [Event](data-model/types/event.md)
 
 ## Specifications
 

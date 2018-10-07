@@ -1,7 +1,3 @@
----
-description: The page lists and explains the various OpenActive specifications
----
-
 # Specifications Overview
 
 ## Summary
