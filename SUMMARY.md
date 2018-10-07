@@ -46,5 +46,6 @@
 
 ## Useful links
 
+* [Data Validator](https://validator.openactive.io)
 * [Non-technical Guidance](https://www.openactive.io/getting-started/)
 
