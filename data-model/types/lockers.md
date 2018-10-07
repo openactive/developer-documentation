@@ -8,7 +8,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
 
 ## **Fields**
 
-### **Optional fields**
+### **Required fields**
     
 <table>
   <thead>

@@ -104,15 +104,6 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="identifier"></a><b>identifier</b></td>
-      <td style="text-align:left">
-        
-      </td>
-      <td style="text-align:left">
-        <p>A unique identifier for the record</p><p></br><b>Example</b></p><p><code>"identifier": "1234"</code></p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><a name="narrower"></a><b>narrower</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/url"><code>url</code></a>

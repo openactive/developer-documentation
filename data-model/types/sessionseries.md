@@ -8,6 +8,75 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
 
 ## **Fields**
 
+### **Required fields**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><a name="type"></a><b>type</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        Must always be present and set to <code>"SessionSeries"</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a name="activity"></a><b>activity</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Specifies the physical activity or activities that will take place during an event.</p><p></br><b>Example</b></p><p><code>"activity": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/activities#Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/activities&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a name="location"></a><b>location</b></td>
+      <td style="text-align:left">
+        <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The location at which the event will take place. Or, in the case of events that may span multiple locations, the initial meeting or starting point.</p><p>It is recommended that locations should be specified as a <a href="/models/place">Place</a> complete with a fully described geographic location and/or address.If only an address is available then this should be described as a <a href="/models/postaladdress">PostalAddress</a>.</p><p>Applications may use <a href="https://schema.org/Text">schema:Text</a> to provide a more general description of a location (&quot;In Victoria Park, near the lake&quot;), but this is not recommended: consuming applications will be unable to help users discover opportunities based on their location.</p><p></br><b>Example</b></p><p><code>"location": {<br/>&nbsp;&nbsp;&quot;address&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;PostalAddress&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;description&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&nbsp;in&nbsp;London&quot;,<br/>&nbsp;&nbsp;&quot;geo&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/locations/1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;&quot;1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&quot;,<br/>&nbsp;&nbsp;&quot;telephone&quot;:&nbsp;&quot;01253&nbsp;473934&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Place&quot;<br/>}</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a name="name"></a><b>name</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The name of the event</p><p></br><b>Example</b></p><p><code>"name": "Speedball"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a name="organizer"></a><b>organizer</b></td>
+      <td style="text-align:left">
+        <a href="https://docs.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The person or organization ultimately responsible for an event. An organizer might be an  schema:Organization or a schema:Person.</p><p></br><b>Example</b></p><p><code>"organizer": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a name="url"></a><b>url</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/url"><code>url</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A URL to a web page (or section of a page) that describes the event.</p><p></br><b>Example</b></p><p><code>"url": "https://example.com/event/1234"</code></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 ### **Recommended fields**
     
 <table>
@@ -107,15 +176,6 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><a name="type"></a><b>type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        Must always be present and set to <code>"SessionSeries"</code>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><a name="@context"></a><b>@context</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/url"><code>url</code></a><br/> - or - <br/>Array of <a href="https://schema.org/url"><code>url</code></a>
@@ -140,15 +200,6 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
       </td>
       <td style="text-align:left">
         <p>Used to specify the types of disabilities or impairments that are supported at an event.</p><p></br><b>Example</b></p><p><code>"accessibilitySupport": "TODO"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a name="activity"></a><b>activity</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Specifies the physical activity or activities that will take place during an event.</p><p></br><b>Example</b></p><p><code>"activity": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/reference/activities#Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/activities&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Speedball&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
       </td>
     </tr>
     <tr>
@@ -242,15 +293,6 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><a name="location"></a><b>location</b></td>
-      <td style="text-align:left">
-        <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The location at which the event will take place. Or, in the case of events that may span multiple locations, the initial meeting or starting point.</p><p>It is recommended that locations should be specified as a <a href="/models/place">Place</a> complete with a fully described geographic location and/or address.If only an address is available then this should be described as a <a href="/models/postaladdress">PostalAddress</a>.</p><p>Applications may use <a href="https://schema.org/Text">schema:Text</a> to provide a more general description of a location (&quot;In Victoria Park, near the lake&quot;), but this is not recommended: consuming applications will be unable to help users discover opportunities based on their location.</p><p></br><b>Example</b></p><p><code>"location": {<br/>&nbsp;&nbsp;&quot;address&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;PostalAddress&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;description&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&nbsp;in&nbsp;London&quot;,<br/>&nbsp;&nbsp;&quot;geo&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/locations/1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;&quot;1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&quot;,<br/>&nbsp;&nbsp;&quot;telephone&quot;:&nbsp;&quot;01253&nbsp;473934&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Place&quot;<br/>}</code></p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><a name="maximumAttendeeCapacity"></a><b>maximumAttendeeCapacity</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Integer"><code>Integer</code></a>
@@ -266,24 +308,6 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
       </td>
       <td style="text-align:left">
         <p>Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions.</p><p></br><b>Example</b></p><p><code>"meetingPoint": "At the entrance to the park"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a name="name"></a><b>name</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The name of the event</p><p></br><b>Example</b></p><p><code>"name": "Speedball"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a name="organizer"></a><b>organizer</b></td>
-      <td style="text-align:left">
-        <a href="https://docs.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/person"><code>Person</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The person or organization ultimately responsible for an event. An organizer might be an  schema:Organization or a schema:Person.</p><p></br><b>Example</b></p><p><code>"organizer": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
       </td>
     </tr>
     <tr>
@@ -338,15 +362,6 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
       </td>
       <td style="text-align:left">
         <p>Relates a child event to a parent event. Properties describing the parent event can be assumed to apply to the child, unless otherwise specified. A parent event might specify a recurring schedule, of which the child event is one specific instance</p></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a name="url"></a><b>url</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/url"><code>url</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A URL to a web page (or section of a page) that describes the event.</p><p></br><b>Example</b></p><p><code>"url": "https://example.com/event/1234"</code></p>
       </td>
     </tr>
   </tbody>
