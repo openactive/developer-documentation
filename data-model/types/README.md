@@ -8,24 +8,24 @@ Information about Events, Places, Organizations and other types of resources sho
 
 ### **Event - the core model for opportunity data**
 
-* [Event](https://developer.openactive.io/models/event)
+* [Event](https://docs.openactive.io/data-model/types/event)
 
 ### **Models used to describe of an Event**
 
-* [Ammenity](https://developer.openactive.io/models/ammenity)
-* [Brand](https://developer.openactive.io/models/brand)
-* [Concept](https://developer.openactive.io/models/concept)
-* [GeoCoordinates](https://developer.openactive.io/models/geocoordinates)
-* [ImageObject](https://developer.openactive.io/models/imageobject)
-* [Organization](https://developer.openactive.io/models/organization)
-* [Person](https://developer.openactive.io/models/person)
-* [Place](https://developer.openactive.io/models/place)
-* [PostalAddress](https://developer.openactive.io/models/postaladdress)
-* [Schedule](https://developer.openactive.io/models/schedule)
+* [Ammenity](https://docs.openactive.io/data-model/types/ammenity)
+* [Brand](https://docs.openactive.io/data-model/types/brand)
+* [Concept](https://docs.openactive.io/data-model/types/concept)
+* [GeoCoordinates](https://docs.openactive.io/data-model/types/geocoordinates)
+* [ImageObject](https://docs.openactive.io/data-model/types/imageobject)
+* [Organization](https://docs.openactive.io/data-model/types/organization)
+* [Person](https://docs.openactive.io/data-model/types/person)
+* [Place](https://docs.openactive.io/data-model/types/place)
+* [PostalAddress](https://docs.openactive.io/data-model/types/postaladdress)
+* [Schedule](https://docs.openactive.io/data-model/types/schedule)
 
 ### **Models relating to Booking**
 
-* [EntryPoint](https://developer.openactive.io/models/entrypoint)
-* [Offer](https://developer.openactive.io/models/offer)
-* [ReserveAction](https://developer.openactive.io/models/reserveaction)
+* [EntryPoint](https://docs.openactive.io/data-model/types/entrypoint)
+* [Offer](https://docs.openactive.io/data-model/types/offer)
+* [ReserveAction](https://docs.openactive.io/data-model/types/reserveaction)
 
