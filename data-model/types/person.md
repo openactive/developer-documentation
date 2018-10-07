@@ -4,7 +4,7 @@ description: This page describes the Person type.
 
 # Person
 
-This type is derived from [https://schema.org/Person](https://schema.org/Person), which means that any of this type's properties within schema.org may also be used.
+This type is derived from [https://schema.org/Person](https://schema.org/Person), which means that any of this type's properties within schema.org may also be used. Note however the properties on this page must be used in preference if a relevant property is available.
 
 ## **Fields**
 
