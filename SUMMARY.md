@@ -1,9 +1,12 @@
 # Table of contents
 
 * [Welcome to our community](README.md)
-* [Types of data](types-of-data.md)
-* [Data Models](models/README.md)
-  * [Event](models/event.md)
+
+## Data Model
+
+* [Data Model Overview](model/overview.md)
+* [Types](model/types/README.md)
+  * [Event](model/types/event.md)
 
 ## Publishing Data
 
