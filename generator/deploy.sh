@@ -5,8 +5,8 @@ setup_git() {
   git config --global user.name "Travis CI"
 }
 
-checkout_master() {
-  git checkout master
+checkout_current_branch() {
+  git checkout $TRAVIS_BRANCH
 }
 
 commit_generated_files() {
@@ -16,8 +16,8 @@ commit_generated_files() {
 }
 
 push_files() {
-  git remote add origin-master https://${GH_TOKEN}@github.com/openactive/developer-documentation.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin-master master
+  git remote add origin-branch https://${GH_TOKEN}@github.com/openactive/developer-documentation.git > /dev/null 2>&1
+  git push --quiet --set-upstream origin-branch $TRAVIS_BRANCH
 }
 
 echo "Git version:"
@@ -27,7 +27,7 @@ echo "Setup Git:"
 setup_git
 
 echo "Checkout master:"
-checkout_master
+checkout_current_branch
 
 echo "npm install:"
 npm install
