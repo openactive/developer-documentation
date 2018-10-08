@@ -29,6 +29,9 @@ setup_git
 echo "Checkout master:"
 checkout_master
 
+echo "npm install:"
+npm install
+
 echo "Generating data model documentation..."
 npm run start
 

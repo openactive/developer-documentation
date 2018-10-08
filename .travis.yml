@@ -4,7 +4,6 @@ node_js:
 - '8'
 script:
 - cd generator
-- npm install
 - bash ./deploy.sh
 branches:
   only:
