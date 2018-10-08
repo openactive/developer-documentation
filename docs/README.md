@@ -1,6 +1,6 @@
 # Welcome to our community
 
-## Help - I'm not a developer!
+## Help - I'm not a developer!!
 
 Here's a quick escape hatch - quick, run! But before you do, e-mail this page to your development team.
 
