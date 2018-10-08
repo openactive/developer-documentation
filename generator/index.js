@@ -65,7 +65,7 @@ function augmentWithParentFields(augFields, model, models, notInSpec) {
         'example': ''
     };
     if (model.hasId && model.sampleId) {
-      augFields['id']['example'] = model['sampleId'] + '1234';
+      augFields['id']['example'] = model['sampleId'] + '12345';
     }
   }
 
