@@ -1,9 +1,3 @@
----
-description: >-
-  The page provides an overview of the key concepts that can be represented in
-  OpenActive data
----
-
 # Data Model Overview
 
 ## Classes and Sessions
@@ -21,7 +15,7 @@ Typical opportunities in this category are provided by clubs, community provider
 ## Ad-hoc Facility Bookings
 
 {% hint style="info" %}
-Represented in the model by [`FacilityUse`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-facility-use-code-oa-facilityuse-code-code-oa-individualfacilityuse-code-) and [`IndividualFacilityUse`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-facility-use-code-oa-facilityuse-code-code-oa-individualfacilityuse-code-)\`\`
+Represented in the model by [`FacilityUse`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-facility-use-code-oa-facilityuse-code-code-oa-individualfacilityuse-code-), [`IndividualFacilityUse`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-facility-use-code-oa-facilityuse-code-code-oa-individualfacilityuse-code-), and [`Slot`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-facility-use-code-oa-facilityuse-code-code-oa-individualfacilityuse-code-)\`\`
 {% endhint %}
 
 These are activities which are bookable based on slots of availability for a particular activity \(e.g. Badminton\) at a facility within a venue \(e.g. a sports hall\). These include squash courts, a running track, community facilities such as youth centres, school halls, or church halls. If you book "Badminton in School Hall" you can expect the appropriate equipment to be available to allow you to carry out this activity \(e.g. a badminton net\). In this example the Facility is "School Hall", and the Use is "Badminton".
