@@ -1,4 +1,4 @@
-# Welcome to our community!
+# Welcome to our community
 
 ## Help - I'm not a developer!
 
