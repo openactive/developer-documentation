@@ -129,7 +129,7 @@ While these properties are marked as optional, a data publisher must provide eit
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"id": "https://example.com/event/1234"</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"id": "https://example.com/event/12345"</code></p>
       </td>
     </tr>
     <tr>
