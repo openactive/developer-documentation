@@ -23,9 +23,11 @@ git --version
 echo "Generating data model documentation..."
 npm run start
 
-echo "Git status:"
-git status
-
+echo "Setup Git:"
 setup_git
+
+echo "Commit Generated Files:"
 commit_generated_files
+
+echo "Push Files:"
 push_files
