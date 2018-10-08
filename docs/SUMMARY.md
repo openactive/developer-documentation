@@ -36,6 +36,7 @@
 ## Data Model
 
 * [Data Model Overview](data-model/overview.md)
+* [Namespaces and JSON-LD](data-model/namespaces.md)
 * [Types Reference](data-model/types/README.md)
   * [Action](data-model/types/action.md)
   * [BabyChanging](data-model/types/babychanging.md)
@@ -78,7 +79,6 @@
 ## Specifications
 
 * [Specifications Overview](specifications/specifications-overview.md)
-* [Namespaces](specifications/namespaces.md)
 
 ## Useful links
 
