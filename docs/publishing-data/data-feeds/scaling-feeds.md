@@ -2,13 +2,13 @@
 
 ## Approach to Scale
 
-A CDN such as [CloudFlare](https://www.cloudflare.com/) is recommended to allow your RPDE endpoint to scale to millions of requests inbound. 
+A CDN such as [CloudFlare](https://www.cloudflare.com/) is recommended to allow your RPDE endpoint to scale to millions of requests inbound.
 
 ## CDN Configuration
 
 A CDN is simple to configure and requires a small amount of additional code within the RPDE endpoint.
 
-#### Basic Configuration
+### Basic Configuration
 
 The following CDN configuration options are recommended:
 
@@ -23,7 +23,7 @@ The following CDN configuration options are recommended:
 
 The settings in the CDN Configuration section will create the behaviour described in this worked example automatically:
 
-#### Scenario
+### Scenario
 
 * In this scenario, 200 data consumers are tracking the RPDE feed by polling at the end of the list \(the last `next` URL\).
 * Although each data consumer can choose a polling frequency arbitrarily, that frequency is not relevant to the calculations here, as it is the settings of the cache header that dictate the load on the origin server. It should also be noted that during normal operation the number of data consumers also does not impact the load on the origin server, and that 200 is used illustratively.
@@ -34,7 +34,7 @@ The settings in the CDN Configuration section will create the behaviour describe
 * For a feed whose source data is not being updated, the origin server receives one hit every 10 seconds and returns an empty list of `items` each time, and an identical `next` URL.
 * Hence the maximum load during "Sleep" mode is 6 requests/minute.
 
-#### "Live" mode
+### "Live" mode
 
 * When an update to source data occurs, one of the 10-second interval requests will render a list of items and a new `next` URL.
 * The `items` list is rendered once by the origin server, and the subsiquent 199 data consumers would receive a cached version.

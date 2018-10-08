@@ -1,7 +1,5 @@
 # Getting Started
 
-## 
-
 ## Getting Super Powers!
 
 Becoming a super hero is a fairly straight forward process:
@@ -54,7 +52,7 @@ echo 'You got to trust me on this, I saved the world'
   <thead>
     <tr>
       <th style="text-align:left">activity</th>
-      <th style="text-align:center"><a href="getting-started.md"><code>xt</code></a><code>Type</code>
+      <th style="text-align:left"><a href="getting-started.md"><code>xt</code></a><code>Type</code>
       </th>
       <th style="text-align:left">Description</th>
     </tr>
@@ -62,7 +60,7 @@ echo 'You got to trust me on this, I saved the world'
   <tbody>
     <tr>
       <td style="text-align:left">activity</td>
-      <td style="text-align:center"><a href="getting-started.md"><code>Concept</code></a>
+      <td style="text-align:left"><a href="getting-started.md"><code>Concept</code></a>
         <br />OR
         <br />Array of <a href="getting-started.md"><code>ConceptORText</code></a>
         <br
@@ -89,7 +87,7 @@ echo 'You got to trust me on this, I saved the world'
     </tr>
     <tr>
       <td style="text-align:left">activity</td>
-      <td style="text-align:center">
+      <td style="text-align:left">
         <p><a href="getting-started.md"><code>Concept</code></a>
           <br />- or -
           <br />Array of <a href="../publishing-data/data-feeds/"><code>Concept</code></a>
@@ -103,33 +101,30 @@ echo 'You got to trust me on this, I saved the world'
       <td style="text-align:left">
         <p>Specifies the physical activity or activities that will take place during
           an event.</p>
-        <p></p>
         <p><b>Example</b>
         </p>
-        <p><code>{<br />  &quot;id&quot;: &quot;https://example.com/reference/activities#Speedball&quot;, <br />  &quot;inScheme&quot;: &quot;https://example.com/reference/activities&quot;,<br />  &quot;prefLabel&quot;: &quot;Speedball&quot;,<br />  &quot;type&quot;: &quot;Concept&quot;<br />}</code>
+        <p><code>{<br /> &quot;id&quot;: &quot;https://example.com/reference/activities#Speedball&quot;,<br /> &quot;inScheme&quot;: &quot;https://example.com/reference/activities&quot;,<br /> &quot;prefLabel&quot;: &quot;Speedball&quot;,<br /> &quot;type&quot;: &quot;Concept&quot;<br />}</code>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"></td>
-      <td style="text-align:center"></td>
+      <td style="text-align:left"></td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left"></td>
-      <td style="text-align:center"></td>
+      <td style="text-align:left"></td>
       <td style="text-align:left"></td>
     </tr>
   </tbody>
-</table>## **Fields**
-
-### **Required fields**
+</table>\#\# \*\*Fields\*\* \#\#\# \*\*Required fields\*\*
 
 <table>
   <thead>
     <tr>
       <th style="text-align:left">Property</th>
-      <th style="text-align:center">Type</th>
+      <th style="text-align:left">Type</th>
       <th style="text-align:left">Description</th>
     </tr>
   </thead>
@@ -137,7 +132,7 @@ echo 'You got to trust me on this, I saved the world'
     <tr>
       <td style="text-align:left"><b>activity</b>
       </td>
-      <td style="text-align:center">
+      <td style="text-align:left">
         <p><a href="getting-started.md"><code>Concept</code></a>
           <br />- or -
           <br />Array of <a href="../publishing-data/data-feeds/"><code>Concept</code></a>
@@ -151,17 +146,16 @@ echo 'You got to trust me on this, I saved the world'
       <td style="text-align:left">
         <p>Specifies the physical activity or activities that will take place during
           an event.</p>
-        <p></p>
         <p><b>Example</b>
         </p>
-        <p><code>{<br />  &quot;id&quot;: &quot;https://example.com/reference/activities#Speedball&quot;, <br />  &quot;inScheme&quot;: &quot;https://example.com/reference/activities&quot;,<br />  &quot;prefLabel&quot;: &quot;Speedball&quot;,<br />  &quot;type&quot;: &quot;Concept&quot;<br />}</code>
+        <p><code>{<br /> &quot;id&quot;: &quot;https://example.com/reference/activities#Speedball&quot;,<br /> &quot;inScheme&quot;: &quot;https://example.com/reference/activities&quot;,<br /> &quot;prefLabel&quot;: &quot;Speedball&quot;,<br /> &quot;type&quot;: &quot;Concept&quot;<br />}</code>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><b>id</b>
       </td>
-      <td style="text-align:center"><b></b><a href="../publishing-data/structuring-data/amenities.md">url</a>
+      <td style="text-align:left"><a href="../publishing-data/structuring-data/amenities.md">url</a>
       </td>
       <td style="text-align:left">
         <p>A unique url based identifier for the record
@@ -175,4 +169,3 @@ echo 'You got to trust me on this, I saved the world'
     </tr>
   </tbody>
 </table>
-

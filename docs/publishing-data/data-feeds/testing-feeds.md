@@ -54,5 +54,3 @@ To quickly access the last page:
 * Does the endpoint without any parameters return the first page \(from the beginning of time\)?
 * Does each page contain a "license" key?
 
- 
-

@@ -27,7 +27,3 @@ Create a drop-down of activities in your frontend, against your internal activit
 
 Use EMD fork, and if not raise it on this spreadsheet
 
-
-
-
-
