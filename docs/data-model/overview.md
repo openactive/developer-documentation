@@ -12,6 +12,7 @@ The key thing that distinguishes a Session Series is that it's a thematic event 
 
 Typical opportunities in this category are provided by clubs, community providers, which might take place in a park, club or within leisure centres. It also includes a local walking club that might meet on a Saturday morning once a month.
 
+
 ## Ad-hoc Facility Bookings
 
 {% hint style="info" %}
@@ -39,6 +40,7 @@ These are large scale events such as London Marathon or a Triathlon "Hebridean C
 For example, the "Big South East Aquathlon" contains "Big South East Aquathlon Long Course", "Big South East Aquathlon Sprint", and "Dartford Bridge Aquathlon". All these events happen together, or at offset times during the day. The same is true of any marathon or half-marathon, which might include different races such as the "Elite Wheelchair Marathon".
 
 Headline Events also include festivals, such as the [Lambeth Country Show](http://lambethcountryshow.co.uk/), which may include a range of different short activities within its programme \(such sessions of "try wheelchair basketball"\).
+
 
 ## Courses
 
@@ -81,6 +83,7 @@ Note that use cases for this data have are not yet fully defined, please join th
 For self-directed activities like walking, running and cycling, where there is a detailed pre-defined route available for the activity.
 
 Note that use cases for this data have are not yet fully defined, please join the discussion [here](https://github.com/openactive/modelling-opportunity-data/issues/108) if you have any ideas to contribute.
+
 
 ## Personal Trainers
 
