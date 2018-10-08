@@ -1,4 +1,4 @@
-# Welcome to our community
+# Welcome to our community!
 
 ## Help - I'm not a developer!
 
@@ -20,7 +20,7 @@ If you are developing a booking or listing system, go straight here:
 
 {% page-ref page="publishing-data/getting-started/" %}
 
-If you are building an app or website that uses open data directly \(as opposed to through an aggregator\),  go here:
+If you are building an app or website that uses open data directly \(as opposed to through an aggregator\), go here:
 
 {% page-ref page="using-data/getting-started.md" %}
 

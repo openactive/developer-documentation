@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to our community](README.md)
+* [Welcome to our community!](README.md)
 
 ## Publishing Data
 
