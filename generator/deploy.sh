@@ -7,7 +7,7 @@ setup_git() {
 
 commit_generated_files() {
   git checkout master
-  git add ../docs/data-model/types/*
+  git add -u ../docs/data-model/types/*
   git status
   git commit --message "Updating auto-generated model documentation: $TRAVIS_BUILD_NUMBER [ci skip]"
 }
