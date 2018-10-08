@@ -1,8 +1,0 @@
-sudo: true
-language: node_js
-node_js:
-- '6'
-script:
-- cd generator
-- npm install
-- bash ./deploy.sh
