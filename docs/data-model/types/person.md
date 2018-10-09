@@ -9,31 +9,13 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
 ## **Fields**
 
 ### **Required fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        Must always be present and set to <code>"type": "Person"</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Expected Type | Description |
+| :--- | :--- | :--- |
+| **type** |  [`Text`](https://schema.org/Text) |  Must always be present and set to `"type": "Person"` |
 
 ### **Recommended fields**
-    
+
 <table>
   <thead>
     <tr>
@@ -44,20 +26,22 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>id</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/url"><code>url</code></a>
+      <td style="text-align:left"><b>id</b>
+      </td>
+      <td style="text-align:left"> <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"id": "https://example.com/person/12345"</code></p>
+        <p>A unique url based identifier for the record</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;id&quot;: &quot;https://example.com/person/12345&quot;</code>
+        </p>
       </td>
     </tr>
   </tbody>
-</table>
+</table>### **Optional fields**
 
-
-### **Optional fields**
-    
 <table>
   <thead>
     <tr>
@@ -68,69 +52,113 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>description</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
+      <td style="text-align:left"><b>description</b>
+      </td>
+      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The description of the Person</p><p></br><b>Example</b></p><p><code>"description": "The leader of the coaching team"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>identifier</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
+        <p>The description of the Person</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;description&quot;: &quot;The leader of the coaching team&quot;</code>
+        </p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>logo</b></td>
-      <td style="text-align:left">
-        <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
+      <td style="text-align:left"><b>identifier</b>
+      </td>
+      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
+        <br />- or -
+        <br /><a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a>
+        <br
+        />- or -
+        <br />Array of <a href="https://docs.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a>
+        <br
+        />- or -
+        <br /><a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>A logo for the person.</p><p></br><b>Example</b></p><p><code>"logo": {<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>name</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A full name for the person.</p><p>This person must give direct permission for their personal information to be shared as part of the Open Data.</p><p></br><b>Example</b></p><p><code>"name": "Daley Thompson"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>sameAs</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://schema.org/url"><code>url</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Lists the URL(s) of the official social media profile pages associated with the person.</p><p></br><b>Example</b></p><p><code>"sameAs": "https://example.org/example-org"</code></p>
+        <p>A local non-URI identifier for the resource</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;identifier&quot;: &quot;SB1234&quot;</code>
+        </p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>telephone</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
+      <td style="text-align:left"><b>logo</b>
+      </td>
+      <td style="text-align:left"> <a href="https://docs.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
-        <p>The telephone number of the person</p><p></br><b>Example</b></p><p><code>"telephone": "01234 567890"</code></p>
+        <p>A logo for the person.</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;logo&quot;: {<br />  &quot;type&quot;: &quot;ImageObject&quot;,<br />  &quot;url&quot;: &quot;http://example.com/static/image/speedball_large.jpg&quot;<br />}</code>
+        </p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>url</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/url"><code>url</code></a>
+      <td style="text-align:left"><b>name</b>
+      </td>
+      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A URL where more information about the person may be found</p><p></br><b>Example</b></p><p><code>"url": "http://www.example.com/"</code></p>
+        <p>A full name for the person.</p>
+        <p>This person must give direct permission for their personal information
+          to be shared as part of the Open Data.</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;name&quot;: &quot;Daley Thompson&quot;</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>sameAs</b>
+      </td>
+      <td style="text-align:left">Array of <a href="https://schema.org/url"><code>url</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Lists the URL(s) of the official social media profile pages associated
+          with the person.</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;sameAs&quot;: &quot;https://example.org/example-org&quot;</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>telephone</b>
+      </td>
+      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The telephone number of the person</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;telephone&quot;: &quot;01234 567890&quot;</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>url</b>
+      </td>
+      <td style="text-align:left"> <a href="https://schema.org/url"><code>url</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A URL where more information about the person may be found</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;url&quot;: &quot;http://www.example.com/&quot;</code>
+        </p>
       </td>
     </tr>
   </tbody>
 </table>
-
-
