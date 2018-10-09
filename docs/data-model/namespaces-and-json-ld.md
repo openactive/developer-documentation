@@ -1,7 +1,3 @@
----
-description: The page explains the various namespaces in use within OpenActive data model
----
-
 # Namespaces and JSON-LD
 
 ## Properties and Namespaces
