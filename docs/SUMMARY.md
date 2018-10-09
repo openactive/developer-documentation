@@ -2,6 +2,14 @@
 
 * [Welcome to our community](README.md)
 
+## Publishing Data
+
+* [Data Feeds](publishing-data/data-feeds/README.md)
+  * [How a data feed works](publishing-data/data-feeds/how-a-data-feed-works.md)
+  * [Types of feed](publishing-data/data-feeds/types-of-feed.md)
+  * [Testing feeds](publishing-data/data-feeds/testing-feeds.md)
+  * [Scaling feeds](publishing-data/data-feeds/scaling-feeds.md)
+
 ## Data Model
 
 * [Types Reference](data-model/types/README.md)
