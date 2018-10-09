@@ -4,7 +4,7 @@
 
 A validator is available which attempts to consume an RPDE feed and check for common errors.
 
-{% embed data="{\"url\":\"https://validator.openactive.io/rpde\",\"type\":\"link\",\"title\":\"OpenActive Validator\",\"description\":\"This tool allows you to validate your data models against the Modelling Opportunity Data Specification v2.0\",\"icon\":{\"type\":\"icon\",\"url\":\"https://validator.openactive.io/favicon/favicon-196x196.png\",\"width\":196,\"height\":196,\"aspectRatio\":1}}" %}
+{% embed url="https://validator.openactive.io/rpde" %}
 
 ## Manual Testing Checklist
 

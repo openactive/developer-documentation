@@ -10,6 +10,10 @@
   * [Testing feeds](publishing-data/data-feeds/testing-feeds.md)
   * [Scaling feeds](publishing-data/data-feeds/scaling-feeds.md)
 
+## Using data
+
+* [Harvesting opportunity data](using-data/harvesting-opportunity-data.md)
+
 ## Data Model
 
 * [Data Model Overview](data-model/data-model-overview.md)
