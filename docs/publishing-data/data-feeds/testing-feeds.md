@@ -1,4 +1,4 @@
-# Testing feeds
+# Testing RPDE feeds
 
 ## Validator
 

@@ -5,10 +5,10 @@
 ## Publishing Data
 
 * [Data Feeds](publishing-data/data-feeds/README.md)
-  * [How a data feed works](publishing-data/data-feeds/how-a-data-feed-works.md)
-  * [Types of feed](publishing-data/data-feeds/types-of-feed.md)
-  * [Testing feeds](publishing-data/data-feeds/testing-feeds.md)
-  * [Scaling feeds](publishing-data/data-feeds/scaling-feeds.md)
+  * [How an RPDE data feed works](publishing-data/data-feeds/how-a-data-feed-works.md)
+  * [Types of RDPE feed](publishing-data/data-feeds/types-of-feed.md)
+  * [Testing RPDE feeds](publishing-data/data-feeds/testing-feeds.md)
+  * [Scaling RPDE feeds](publishing-data/data-feeds/scaling-feeds.md)
 
 ## Using data
 
