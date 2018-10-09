@@ -1,14 +1,10 @@
----
-description: The page explains the various contexts in use within OpenActive data model
----
-
 # @context and JSON-LD
 
 ## Contexts, Properties and Types
 
 A **context** provides globally unique identifiers for **properties** and **types** used to describe data.
 
-For example, the OpenActive **context,** which can be referenced using the globally unique identifier "`https://openactive.io/`", defines the **property** "`startDate`" within the **type** "`Event`". Additionally every instance of a **type** optionally has a unique **ID** in the form of a URL. In JSON an instance of a type is represented as a JSON object.
+For example, the OpenActive **context,** which can be referenced using the globally unique identifier "`https://openactive.io/`", defines the **property** "`startDate`" of the **type** "`Event`". Additionally every instance of a **type** optionally has a unique **ID** in the form of a URL. In JSON an instance of a type is represented as a JSON object.
 
 When using **types** and **properties** from a particular context, that context must be referenced using "`@context`" in the top-level JSON object as follows:
 
