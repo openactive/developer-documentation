@@ -1,9 +1,3 @@
----
-description: >-
-  This tutorial is intended for people who are interested in using open
-  opportunity data, and who have not yet gathered it from source.
----
-
 # Harvesting opportunity data
 
 ## **Introduction** {#introduction}
