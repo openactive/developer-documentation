@@ -1,8 +1,14 @@
+---
+description: >-
+  The page explains the various "contexts" used within the OpenActive data model
+  to standardise the data structure.
+---
+
 # @context and JSON-LD
 
 ## Contexts, Properties and Types
 
-A **context** provides globally unique identifiers for **properties** and **types** used to describe data.
+A **context** provides globally unique identifiers for standard **properties** and **types** used to describe data.
 
 For example, the OpenActive **context,** which can be referenced using the globally unique identifier "`https://openactive.io/`", defines the **property** "`startDate`" of the **type** "`Event`". Additionally every instance of a **type** optionally has a unique **ID** in the form of a URL. In JSON an instance of a type is represented as a JSON object.
 
@@ -21,7 +27,7 @@ When using **types** and **properties** from a particular context, that context 
 }
 ```
 
-The OpenActive context "https://openactive.io/" brings together several standards,  including [schema.org](https://schema.org) and [SKOS](http://www.w3.org/2004/02/skos/core) define some standard properties, which we can use to help describe our data.
+The OpenActive context "https://openactive.io/" brings together several standards,  including [schema.org](https://schema.org) and [SKOS](http://www.w3.org/2004/02/skos/core) define some standard properties, which we can use to describe our data.
 
 There are four primary contexts which are used within OpenActive data. These are listed below. Clicking on the name of each context will take you to a list of properties within it. Additionally data publishers can define their own properties and publish their own context, which is known as an extension context.
 
