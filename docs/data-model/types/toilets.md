@@ -9,7 +9,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
 ## **Fields**
 
 ### **Required fields**
-
+    
 <table>
   <thead>
     <tr>
@@ -20,33 +20,33 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b>
-      </td>
-      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">Must always be present and set to <code>&quot;type&quot;: &quot;Toilets&quot;</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>name</b>
-      </td>
-      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
+      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A string, suitable for presentation in user interfaces.</p>
-        <p>
-          <br /><b>Example</b>
-        </p>
-        <p><code>&quot;name&quot;: &quot;Changing Facilities&quot;</code>
-        </p>
+        Must always be present and set to <code>"type": "Toilets"</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>value</b>
+      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      <td style="text-align:left">
+        <p>A string, suitable for presentation in user interfaces.</p><p></br><b>Example</b></p><p><code>"name": "Changing Facilities"</code></p>
       </td>
-      <td style="text-align:left">A boolean value indicating whether this ammenity is available.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>value</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A boolean value indicating whether this ammenity is available.</p></p>
+      </td>
     </tr>
   </tbody>
 </table>
+
+
