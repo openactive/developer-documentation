@@ -1,3 +1,9 @@
+---
+description: >-
+  This page provides an overview of the various types of data that are in scope
+  for OpenActive
+---
+
 # Data Model Overview
 
 ## Classes and Sessions
