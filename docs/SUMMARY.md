@@ -12,6 +12,7 @@
 
 ## Data Model
 
+* [Data Model Overview](data-model/data-model-overview.md)
 * [Types Reference](data-model/types/README.md)
   * [Action](data-model/types/action.md)
   * [BabyChanging](data-model/types/babychanging.md)
