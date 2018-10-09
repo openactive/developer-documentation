@@ -2,12 +2,6 @@
 
 * [Welcome to our community](README.md)
 
-## Publishing Data
-
-## Using Data
-
-## Booking
-
 ## Data Model
 
 * [Types Reference](data-model/types/README.md)
