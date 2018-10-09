@@ -56,7 +56,9 @@ Courses generally involve an upfront commitment to a number of sessions, with a 
 
 These are activities which tend to have a start and end date, likely to coincide with a holiday period or are activities based on improving a skill e.g. Soccer Schools, holiday camps, learn to swim.
 
-## Online Classes and Events
+## Areas of future work
+
+### Online Classes and Events
 
 {% hint style="warning" %}
 Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71), and any properties suggested in the associated proposals are subject to change. We welcome your contribution to the discussion to expedite building these into the OpenActive specifications.
@@ -66,7 +68,7 @@ These are activities are accessed online by users live from source through a dig
 
 Note that use cases for this data have are not yet fully defined, please join the discussion [here](https://github.com/openactive/modelling-opportunity-data/issues/71) if you have any ideas to contribute.
 
-## Leagues and Ringers
+### Leagues and Ringers
 
 {% hint style="warning" %}
 Leagues and ringers are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/144), and any properties suggested in the associated proposals are subject to change. We welcome your contribution to the discussion to help expedite building these into the OpenActive specifications.
@@ -78,7 +80,7 @@ Ringer opportunities are spaces available in teams already scheduled to play due
 
 Note that use cases for this data have are not yet fully defined, please join the discussion [here](https://github.com/openactive/modelling-opportunity-data/issues/144) if you have any ideas to contribute.
 
-## Routes
+### Routes
 
 {% hint style="warning" %}
 [Routes](https://github.com/openactive/modelling-opportunity-data/issues/108) are part of an ongoing discussion, and any properties suggested in the associated proposals are subject to change. We welcome your contribution to the discussion to help expedite building these into the OpenActive specifications.
@@ -88,11 +90,9 @@ For self-directed activities like walking, running and cycling, where there is a
 
 Note that use cases for this data have are not yet fully defined, please join the discussion [here](https://github.com/openactive/modelling-opportunity-data/issues/108) if you have any ideas to contribute.
 
-## Personal Trainers
+## Other types of data
 
-{% hint style="warning" %}
-Personal trainers have not yet been discussed. We welcome you to get in touch at hello@openactive.io with your use case to help expedite building these into the OpenActive specifications.
-{% endhint %}
+The OpenActive community is focussed on ensuring that all types of physical activity and sport opportunities can made available as open data and where possible bookable online.
 
-For activity instructors who are available to travel to different locations.
+If there are any types of data that are not mentioned above, please feel free to either get in touch at [hello@openactive.io](mailto:hello@openactive.io) with your use case, or raise a [new issue on GitHub](https://github.com/openactive/modelling-opportunity-data/issues), or both.
 

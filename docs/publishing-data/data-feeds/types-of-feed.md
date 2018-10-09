@@ -1,4 +1,4 @@
-# Types of feed
+# Types of RDPE feed
 
 ## Time-based Events: Sessions and Courses
 

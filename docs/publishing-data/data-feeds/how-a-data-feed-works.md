@@ -1,4 +1,4 @@
-# How a data feed works
+# How an RPDE data feed works
 
 ## RPDE feeds explained
 
