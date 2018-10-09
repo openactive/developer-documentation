@@ -91,7 +91,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a><br/> - or - <br/><a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>While a <code>url</code> is not specified as an option in the Modelling Specification, it is necessary to link entities in RPDE.</p><p></br><b>Example</b></p><p><code>"containedInPlace": "TODO"</code></p>
+        <p>While a <code>url</code> is not specified as an option in the Modelling Specification, it is necessary to link entities in RPDE.</p><p></br><b>Example</b></p><p><code>"containedInPlace": "http://www.example.org/api/locations/8958f9b8-2004-4e90-80ff-50c98a9b121d"</code></p>
       </td>
     </tr>
     <tr>
@@ -100,7 +100,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         Array of <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></br><b>Example</b></p><p><code>"containsPlace": "TODO"</code></p>
+        <p>Places that exist within this place</p><p></br><b>Example</b></p><p><code>"containsPlace": {<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Place&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://www.everyoneactive.com/centres/Center-Parcs-Sports-Plaza&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Center&nbsp;Parcs&nbsp;Sports&nbsp;Plaza&quot;<br/>}</code></p>
       </td>
     </tr>
     <tr>

@@ -43,7 +43,7 @@ description: This page describes the Slot type.
         <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>URI to the FacilityUse that has this offer</p><p></br><b>Example</b></p><p><code>"facilityUse": "TODO"</code></p>
+        <p>URI to the FacilityUse that has this offer</p><p></br><b>Example</b></p><p><code>"facilityUse": "https://example.com/facility-use/1"</code></p>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ description: This page describes the Slot type.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></br><b>Example</b></p><p><code>"remainingUses": 5</code></p>
+        <p>The remaining available courts or pitches at this time. Must be 0 or 1 for an IndividualFacilityUse.</p><p></br><b>Example</b></p><p><code>"remainingUses": 5</code></p>
       </td>
     </tr>
     <tr>
@@ -129,7 +129,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></br><b>Example</b></p><p><code>"maximumUses": 16</code></p>
+        <p>The maximum available courts or pitches at this time. Must be 0 or 1 for an IndividualFacilityUse.</p><p></br><b>Example</b></p><p><code>"maximumUses": 16</code></p>
       </td>
     </tr>
   </tbody>
@@ -171,7 +171,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
         Array of <a href="https://docs.openactive.io/data-model/types/offer"><code>Offer</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></br><b>Example</b></p><p><code>"offers": "TODO"</code></p>
+        <p>An array of schema:Offer that include the price of booking.</p><p></br><b>Example</b></p><p><code>"offers": {<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Offer&quot;,<br/>&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;&quot;OX-AD&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Adult&quot;,<br/>&nbsp;&nbsp;&quot;price&quot;:&nbsp;7.5,<br/>&nbsp;&nbsp;&quot;priceCurrency&quot;:&nbsp;&quot;GBP&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://profile.everyoneactive.com/booking?Site=0140&Activities=1402CBP20150217&Culture=en-GB&quot;<br/>}</code></p>
       </td>
     </tr>
   </tbody>

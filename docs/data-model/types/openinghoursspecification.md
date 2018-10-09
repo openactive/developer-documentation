@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
         <a href="https://schema.org/Time"><code>Time</code></a>
       </td>
       <td style="text-align:left">
-        <p>The closing time.</p><p></br><b>Example</b></p><p><code>"closes": "17:00Z"</code></p>
+        <p>The closing time.</p><p></br><b>Example</b></p><p><code>"closes": "17:00"</code></p>
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
         <a href="https://schema.org/Time"><code>Time</code></a>
       </td>
       <td style="text-align:left">
-        <p>The opening time.</p><p></br><b>Example</b></p><p><code>"opens": "09:00Z"</code></p>
+        <p>The opening time.</p><p></br><b>Example</b></p><p><code>"opens": "09:00"</code></p>
       </td>
     </tr>
   </tbody>

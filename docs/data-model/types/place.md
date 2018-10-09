@@ -154,7 +154,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
         <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></br><b>Example</b></p><p><code>"containedInPlace": "TODO"</code></p>
+        <p>The place within which this Place exists</p><p></br><b>Example</b></p><p><code>"containedInPlace": {<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Place&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://www.everyoneactive.com/centres/Middlesbrough-Sports-Village&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Middlesbrough&nbsp;Sports&nbsp;Village&quot;<br/>}</code></p>
       </td>
     </tr>
     <tr>
@@ -163,7 +163,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
         Array of <a href="https://docs.openactive.io/data-model/types/place"><code>Place</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></br><b>Example</b></p><p><code>"containsPlace": "TODO"</code></p>
+        <p>Places that exist within this place</p><p></br><b>Example</b></p><p><code>"containsPlace": {<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Place&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://www.everyoneactive.com/centres/Center-Parcs-Sports-Plaza&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Center&nbsp;Parcs&nbsp;Sports&nbsp;Plaza&quot;<br/>}</code></p>
       </td>
     </tr>
     <tr>

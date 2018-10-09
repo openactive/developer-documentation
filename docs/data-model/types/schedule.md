@@ -52,7 +52,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>The type of event this schedule related to</p><p></br><b>Example</b></p><p><code>"scheduledEventType": "Event"</code></p>
+        <p>The type of event this schedule related to.</p><p></br><b>Example</b></p><p><code>"scheduledEventType": "Event"</code></p>
       </td>
     </tr>
     <tr>
@@ -216,7 +216,7 @@ While these properties are marked as optional, a data publisher must provide eit
         Array of <a href="https://schema.org/Date"><code>Date</code></a><br/> - or - <br/>Array of <a href="https://schema.org/DateTime"><code>DateTime</code></a>
       </td>
       <td style="text-align:left">
-        <p>TODO</p><p></br><b>Example</b></p><p><code>"exceptDate": "TODO"</code></p>
+        <p>Exception dates where the schedule should not generate an event.</p><p></br><b>Example</b></p><p><code>"exceptDate": [<br/>&nbsp;&nbsp;&quot;2016-04-13T17:10:00Z&quot;,<br/>&nbsp;&nbsp;&quot;2016-09-14T17:10:00Z&quot;,<br/>&nbsp;&nbsp;&quot;2016-12-14T18:10:00Z&quot;,<br/>&nbsp;&nbsp;&quot;2016-12-21T18:10:00Z&quot;,<br/>&nbsp;&nbsp;&quot;2016-12-28T18:10:00Z&quot;,<br/>&nbsp;&nbsp;&quot;2017-01-04T18:10:00Z&quot;<br/>]</code></p>
       </td>
     </tr>
     <tr>

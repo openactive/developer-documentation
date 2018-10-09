@@ -100,7 +100,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
         Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A broader concept URI</p><p></br><b>Example</b></p><p><code>"broader": "https://example.com/football"</code></p>
+        <p>A broader Concept URI</p><p></br><b>Example</b></p><p><code>"broader": "https://example.com/football"</code></p>
       </td>
     </tr>
     <tr>
