@@ -1,10 +1,7 @@
----
-description: >-
-  The page explains the various "contexts" used within the OpenActive data model
-  to standardise the data structure.
----
-
 # @context and JSON-LD
+
+The page explains the various "contexts" used within the OpenActive data model  
+to standardise the data structure.
 
 ## Contexts, Properties and Types
 

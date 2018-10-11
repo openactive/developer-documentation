@@ -2,7 +2,7 @@
 
 ## Help - I'm not a developer!
 
-Here's a quick escape hatch - quick, run! But before you do, e-mail this page to your development team.
+Here's a quick [escape hatch](https://www.openactive.io/getting-started/) - quick, run! But before you do, e-mail this page to your development team.
 
 ## What is OpenActive?
 
