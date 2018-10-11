@@ -2,7 +2,7 @@
 
 ## **Introduction** {#introduction}
 
-To follow along you’ll need some existing knowledge of programming, including familiarity with HTTP, JSON, and APIs.
+To follow along you’ll need some existing knowledge of programming, including familiarity with HTTP, JSON, and APIs..
 
 This guide is intended to be language agnostic, and is instead a guide to strategy and a general approach that should suit multiple implementations. Where code examples exist, they are intended as quick start assets rather than being production-ready.
 
