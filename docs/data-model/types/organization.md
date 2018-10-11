@@ -67,7 +67,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         Array of <a href="https://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>Lists the URL(s) of the official social media profile pages associated with the organization.</p><p></br><b>Example</b></p><p><code>"sameAs": "https://example.org/example-org"</code></p>
+        <p>Lists the URL(s) of the official social media profile pages associated with the organization.</p><p></br><b>Example</b></p><p><code>"sameAs": [<br/>&nbsp;&nbsp;&quot;https://www.facebook.com/everyoneactive/&quot;,<br/>&nbsp;&nbsp;&quot;https://twitter.com/everyoneactive&quot;<br/>]</code></p>
       </td>
     </tr>
     <tr>
