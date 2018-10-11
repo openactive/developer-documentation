@@ -1,5 +1,8 @@
 # @context and JSON-LD
 
+The page explains the various "contexts" used within the OpenActive data model  
+to standardise the data structure.
+
 ## Contexts, Properties and Types
 
 A **context** provides globally unique identifiers for standard **properties** and **types** used to describe data.

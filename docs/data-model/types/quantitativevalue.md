@@ -9,31 +9,13 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
 ## **Fields**
 
 ### **Required fields**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        Must always be present and set to <code>"type": "QuantitativeValue"</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Expected Type | Description |
+| :--- | :--- | :--- |
+| **type** |  [`Text`](https://schema.org/Text) |  Must always be present and set to `"type": "QuantitativeValue"` |
 
 ### **Optional fields**
-    
+
 <table>
   <thead>
     <tr>
@@ -44,24 +26,32 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>maxValue</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      <td style="text-align:left"><b>maxValue</b>
+      </td>
+      <td style="text-align:left"> <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>The maximum value.</p><p></br><b>Example</b></p><p><code>"maxValue": 60</code></p>
+        <p>The maximum value.</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;maxValue&quot;: 60</code>
+        </p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>minValue</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      <td style="text-align:left"><b>minValue</b>
+      </td>
+      <td style="text-align:left"> <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>The minimum value.</p><p></br><b>Example</b></p><p><code>"minValue": 16</code></p>
+        <p>The minimum value.</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;minValue&quot;: 16</code>
+        </p>
       </td>
     </tr>
   </tbody>
 </table>
-
-
