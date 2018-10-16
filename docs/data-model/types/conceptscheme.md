@@ -40,7 +40,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
     <tr>
       <td style="text-align:left"><b>concept</b></td>
       <td style="text-align:left">
-        Array of <a href="https://docs.openactive.io/data-model/types/concept"><code>Concept</code></a>
+        Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
         <p>A collection of concepts that are part of this scheme</p><p></br><b>Example</b></p><p><code>"concept": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;&quot;https://example.com/concept/martial-arts&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Martial&nbsp;Arts&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/scheme/123&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;narrower&quot;:&nbsp;&quot;https://example.com/concept/martial-arts/karate&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
@@ -101,3 +101,8 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
 </table>
 
 
+
+
+
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
