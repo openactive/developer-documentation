@@ -10,11 +10,7 @@ var md = new Remarkable({
 });
 
 var EXTENSIONS = {
-  "beta": {
-    "url": "https://www.openactive.io/ns-beta/beta.jsonld",
-    "heading": "OpenActive Beta Extension",
-    "description": "These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta/). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term."
-  }
+
 };
 
 generateTypeDocumentation(DATA_MODEL_DOCS_DIR, EXTENSIONS);
@@ -197,7 +193,13 @@ description: This page describes the ` + model.type + ` type.
   + createRequiredOptionsIfFields(fullModel.requiredOptions, fullFields) 
   + createSectionIfFields("Recommended fields", fullModel.recommendedFields, fullFields) 
   + createSectionIfFields("Optional fields", fullModel.optionalFields, fullFields)
-  + createSectionForEachExtension(fullModel.extensionFields, fullFields, extensions);
+  + createSectionForEachExtension(fullModel.extensionFields, fullFields, extensions)
++ `
+
+
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
+`;
 
 }
 
