@@ -19,7 +19,7 @@
     "url": "git+https://github.com/openactive/data-model-documentation-generator.git"
   },
   "author": "Nick Evans",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/openactive/data-model-documentation-generator/issues"
   },
