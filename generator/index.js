@@ -1,35 +1,122 @@
 const DATA_MODEL_DOCS_DIR = "../docs/data-model/types/";
+const DATA_MODEL_DOCS_URL_PREFIX = "https://developer.openactive.io/data-model/types/";
 
-const { getModels } = require('@openactive/data-models');
+const { getModels, getMetaData } = require('@openactive/data-models');
 var fs = require('fs');
 var Remarkable = require('remarkable');
+var request = require('sync-request');
 var md = new Remarkable({
   linkify: true
 });
 
-// Returns the latest version of the models map
-const models = getModels();
+var EXTENSIONS = {
 
+};
 
-Object.keys(models).forEach(function(typeName) {
-    model = models[typeName];
-    if (typeName != "undefined") { //ignores "model_list.json" (which appears to be ignored everywhere else)
-      
-      var pageName = model.type.toLowerCase() + ".md";
-      var pageContent = createModelMarkdownPage(model, models);
+generateTypeDocumentation(DATA_MODEL_DOCS_DIR, EXTENSIONS);
 
-      console.log("NAME: " + pageName);
-      console.log(pageContent);
-      
-      fs.writeFile(DATA_MODEL_DOCS_DIR + pageName, pageContent, function(err) {
-          if(err) {
-              return console.log(err);
-          }
+function generateTypeDocumentation(dataModelDirectory, extensions) {
+  // Returns the latest version of the models map
+  const models = getModels();
+  const namespaces = getMetaData().namespaces;
 
-          console.log("FILE SAVED: " + pageName);
-      }); 
+  // Add all extensions and namespaces first, in case they reference each other
+  Object.keys(extensions).forEach(function(prefix) {
+    var extension = getExtension(extensions[prefix].url);
+    if (!extension) throw "Error loading extension: " + prefix;
+
+    extensions[prefix].graph = extension["@graph"];
+    extension["@context"].forEach(function(context) {
+      if (typeof context === 'object') {
+        Object.assign(namespaces, context);
+      }
+    });
+  });
+
+  Object.keys(extensions).forEach(function(prefix) {
+      var extension = extensions[prefix];
+      augmentWithExtension(extension.graph, models, extension.url, prefix, namespaces);
+  });
+
+  Object.keys(models).forEach(function(typeName) {
+      var model = models[typeName];
+      if (typeName != "undefined") { //ignores "model_list.json" (which appears to be ignored everywhere else)
+        
+        var pageName = model.type.toLowerCase() + ".md";
+        var pageContent = createModelMarkdownPage(model, models, extensions);
+
+        console.log("NAME: " + pageName);
+        console.log(pageContent);
+        
+        fs.writeFile(DATA_MODEL_DOCS_DIR + pageName, pageContent, function(err) {
+            if(err) {
+                return console.log(err);
+            }
+
+            console.log("FILE SAVED: " + pageName);
+        }); 
+      }
+  });
+}
+
+function augmentWithExtension(extModelGraph, models, extensionUrl, extensionPrefix, namespaces) {
+  extModelGraph.forEach(function(node) {
+    if (node.type === 'Property') {
+      var field = {
+        "fieldName": node.id,
+        "alternativeTypes": node.rangeIncludes.map(type => expandPrefix(type, node.isArray, namespaces)),
+        "description": [
+          node.comment + (node.githubIssue ? '\n\nIf you are using this property, please join the discussion at proposal ' + renderGitHubIssueLink(node.githubIssue) + '.' : '')
+        ],
+        "example": node.example,
+        "extensionPrefix": extensionPrefix
+      };
+      node.domainIncludes.forEach(function(prop) {
+        var model = models[getPropNameFromFQP(prop)];
+        if (model) {
+          model.extensionFields = model.extensionFields || [];
+          model.fields = model.fields || {};
+          model.extensionFields.push(field.fieldName);
+          model.fields[field.fieldName] = field;
+        }
+      });
+    } else if (node.type === 'Class') {
+      //Ignore Classes and other extension types for now
     }
-});
+  });
+}
+
+function expandPrefix(prop, isArray, namespaces) {
+  if (prop.lastIndexOf(":") > -1) {
+    var propNs = prop.substring(0, prop.indexOf(":"));
+    var propName = prop.substring(prop.indexOf(":") + 1);
+    if (namespaces[propNs]) {
+      if (propNs === "oa") {
+        return (isArray ? "ArrayOf#" : "#") + propName;
+      } else {
+        return (isArray ? "ArrayOf#" : "") + namespaces[propNs] + propName;
+      }
+    } else {
+      throw "Namespace not found for '" + prop + "'";
+    }
+  } else return prop;
+}
+
+function renderGitHubIssueLink(url) {
+  var splitUrl = url.split("/");
+  var issueNumber = splitUrl[splitUrl.length - 1];
+  return "[#" + issueNumber + "](" + url + ")";
+}
+
+function getExtension(extensionUrl) {
+  var response = request('GET', extensionUrl, { accept: 'application/ld+json' });
+  if (response && response.statusCode == 200) {
+    var body = JSON.parse(response.body);
+    return body["@graph"] && body["@context"] ? body : undefined;
+  } else {
+    return undefined;
+  }
+}
 
 function getParentModel(model, models) {
   if (model.subClassOf && model.subClassOf.indexOf("#") == 0) {
@@ -48,6 +135,16 @@ function getPropertyWithInheritance(prop, model, models) {
   }
 
   return false;
+}
+
+function getMergedPropertyWithInheritance(prop, model, models) {
+  var thisProp = model[prop] || [];
+  var parentModel = getParentModel(model, models);
+  if (parentModel) {
+    return thisProp.concat(getMergedPropertyWithInheritance(prop, parentModel, models));
+  } else {
+    return thisProp;
+  }
 }
 
 function augmentWithParentFields(augFields, model, models, notInSpec) {
@@ -77,7 +174,7 @@ function augmentWithParentFields(augFields, model, models, notInSpec) {
   }
 }
 
-function createModelMarkdownPage(model, models) {
+function createModelMarkdownPage(model, models, extensions) {
   var fullFields = augmentWithParentFields({}, model, models, []);
   var fullModel = createFullModel(fullFields, model, models);
   var derivedFrom = getPropertyWithInheritance("derivedFrom", model, models);
@@ -95,7 +192,8 @@ description: This page describes the ` + model.type + ` type.
 ` + createSectionIfFields("Required fields", fullModel.requiredFields, fullFields)
   + createRequiredOptionsIfFields(fullModel.requiredOptions, fullFields) 
   + createSectionIfFields("Recommended fields", fullModel.recommendedFields, fullFields) 
-  + createSectionIfFields("Optional fields", fullModel.optionalFields, fullFields);
+  + createSectionIfFields("Optional fields", fullModel.optionalFields, fullFields)
+  + createSectionForEachExtension(fullModel.extensionFields, fullFields, extensions);
 
 }
 
@@ -108,10 +206,22 @@ function createRequiredOptionsIfFields(requiredOptions, fields) {
   } else return "";
 }
 
-function createSectionIfFields(title, fieldList, fields) {
+function createSectionForEachExtension(fieldList, fullFields, extensions) {
+  var str = '';
+  Object.keys(extensions).forEach(function(prefix) {
+    var extension = extensions[prefix];
+    extensionFieldList = fieldList.filter(field => fullFields[field].extensionPrefix === prefix);
+    // If extention has any fields, then include it
+    if (extensionFieldList.length > 0) {
+      str += createSectionIfFields(extension.heading, extensionFieldList, fullFields, extension.description);
+    }
+  });
+  return str;
+}
+
+function createSectionIfFields(title, fieldList, fields, description) {
   if (fieldList.length > 0) {
-    return `### **` + title + `**
-    ` + createTableFromFields(fieldList, fields) + "\n\n";
+    return '### **' + title + '**\n    ' + (description ? '\n' + description + '\n\n' : '') + createTableFromFields(fieldList, fields) + "\n\n";
   } else return "";
 }
 
@@ -179,15 +289,16 @@ function getPropLinkFromFQP(prop) {
   if (prop.lastIndexOf("/") > -1) {
     return prop.replace("ArrayOf#", "");
   } else if (prop.lastIndexOf("#") > -1) {
-    return "https://docs.openactive.io/data-model/types/" + prop.substring(prop.lastIndexOf("#") + 1).toLowerCase();
+    return DATA_MODEL_DOCS_URL_PREFIX + prop.substring(prop.lastIndexOf("#") + 1).toLowerCase();
   } else return "#";
 }
 
 function getPropNameFromFQP(prop) {
-  if (prop.lastIndexOf("/") > -1) {
-    return prop.substring(prop.lastIndexOf("/") + 1);
-  } else if (prop.lastIndexOf("#") > -1) {
-    return prop.substring(prop.lastIndexOf("#") + 1)
+  //Just the characters after the last /, # or :
+  var match      = prop.match(/[/#:]/g);
+  var lastIndex  = prop.lastIndexOf(match[match.length-1]);
+  if (lastIndex > -1) {
+    return prop.substring(lastIndex + 1);
   } else return prop;
 }
 
@@ -196,7 +307,7 @@ function createDescriptionWithExample(field) {
     return "Must always be present and set to " + renderCode(field.requiredContent, field.fieldName, field.requiredType);
   } else {
     return field.description.map(text => md.render(text).replace(/\r?\n\r?/g, "")).join("") 
-      + (field.example ? "<p></br><b>Example</b></p><p>" + renderCode(field.example, field.fieldName, field.requiredType) : "") + "</p>";
+      + (field.example ? "<p></br><b>Example</b></p><p>" + renderCode(field.example, field.fieldName, field.requiredType) + "</p>" : "");
   }
 }
 
@@ -217,7 +328,8 @@ function createFullModel(fields, partialModel, models) {
   var model = {
     requiredFields: getPropertyWithInheritance("requiredFields", partialModel, models) || [],
     requiredOptions: getPropertyWithInheritance("requiredOptions", partialModel, models) || [],
-    recommendedFields: getPropertyWithInheritance("recommendedFields", partialModel, models) || []
+    recommendedFields: getPropertyWithInheritance("recommendedFields", partialModel, models) || [],
+    extensionFields: getMergedPropertyWithInheritance("extensionFields", partialModel, models) || []
   }
   // Get all options that are used in requiredOptions
   var optionSetFields = [];
@@ -230,7 +342,7 @@ function createFullModel(fields, partialModel, models) {
       return map;
   }, {});
   // Set all known fields to false
-  model.requiredFields.concat(model.recommendedFields, optionalFieldsMap)
+  model.requiredFields.concat(model.recommendedFields).concat(model.extensionFields)
     .forEach(field => optionalFieldsMap[field] = false);
   // Create array of optional fields
   var optionalFields = Object.keys(optionalFieldsMap).filter(field => optionalFieldsMap[field]);
@@ -239,6 +351,7 @@ function createFullModel(fields, partialModel, models) {
     requiredFields: sortWithIdAndTypeOnTop(model.requiredFields),
     recommendedFields: sortWithIdAndTypeOnTop(model.recommendedFields),
     optionalFields: sortWithIdAndTypeOnTop(optionalFields),
+    extensionFields: sortWithIdAndTypeOnTop(model.extensionFields),
     requiredOptions: model.requiredOptions
   };
 }

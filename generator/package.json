@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "@openactive/data-models": "^1.2.1",
-    "remarkable": "^1.7.1"
+    "remarkable": "^1.7.1",
+    "sync-request": "^6.0.0"
   },
   "devDependencies": {},
   "scripts": {
