@@ -12,6 +12,7 @@
 
 ## Using data
 
+* [How to find opportunity data using the OpenActive Opportunity Data Dashboard](using-data/how-to-find-opportunity-data-using-the-openactive-opportunity-data-dashboard.md)
 * [Harvesting opportunity data](using-data/harvesting-opportunity-data.md)
 
 ## Data Model
@@ -56,6 +57,7 @@
   * [SportsActivityLocation](data-model/types/sportsactivitylocation.md)
   * [Toilets](data-model/types/toilets.md)
   * [Towels](data-model/types/towels.md)
+* [Tutorial: describing events using the OpenActive data model - part one: the basics](data-model/tutorial-describing-events-using-the-openactive-data-model-part-one-the-basics.md)
 
 ## Specifications
 
