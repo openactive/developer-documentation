@@ -51,12 +51,13 @@ The recommended approach to publishing open opportunity data is as JSON, and spe
 
 ### **3.1 Add a context**
 
-For our starting foundations, all opportunity data should begin with a context contained within an opening and closing bracket \(see below\).  
-****
+For our starting foundations, all opportunity data should begin with a context contained within an opening and closing bracket \(see below\).
 
-| **{   "@context": "https://openactive.io/ns/oa.jsonld" }** |
-| :--- |
-
+```text
+{ 
+"@context": "https://openactive.io/ns/oa.jsonld" 
+}
+```
 
 A JSON-LD context maps the terms used in a JSON document to their standard definitions. To indicate that your data conforms to the OpenActive opportunity data specification, include a @context reference that matches the above.  
   
@@ -90,25 +91,25 @@ Adding to the JSON-LD context that we added in the first step, we now want to st
 
 To describe what type of thing we're going to be sharing in our data, we need to add a type property. It’s possible for the data model to describe a number of different types of things, but as we're describing an Event we’ll use that as the value.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p><b>{<br />  "@context": "https://openactive.io/ns/oa.jsonld",<br />  "type": "Event"</b>
-        </p>
-        <p><b>}</b>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>#### **Give it a name and URL**
+```text
+{ 
+"@context": "https://openactive.io/ns/oa.jsonld", 
+"type": "Event"
+}
+```
+
+#### **Give it a name and URL**
 
 Add in the name for your individual session, and the public URL where someone could go to find more information, or perhaps sign up to participate.
 
-| **{   "@context": "https://openactive.io/ns/oa.jsonld",   "type": "Event",   "name": "Blade and tone",   "url": "http://www.example.org/events/1" }** |
-| :--- |
-
+```text
+{
+  "@context": "https://openactive.io/ns/oa.jsonld",
+  "type": "Event",
+  "name": "Blade and tone",
+  "url": "http://www.example.org/events/1"
+}
+```
 
 #### **Defining the activity type**
 
@@ -116,9 +117,24 @@ Next, we want to describe the type of activity this opportunity is for. As part 
 
 In this case Roller Blading is in the standardised activity list, so we can add it to our model, along with references to the activity list that it has come from. We do this by adding an array of SKOS Concepts, however for our example we only need to define one activity type:
 
-| **{   "@context": "https://openactive.io/ns/oa.jsonld",   "type": "Event",   "name": "Blade and tone",   "url": "http://www.example.org/events/1",   "activity": \[{      "id":"**[**https://openactive.io/activity-list/\#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3**](https://www.openactive.io/activity-list/#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3)**",       "type": "Concept",       "prefLabel": "Roller blading",       "inScheme": "**[**https://openactive.io/activity-list/activity-list.jsonld**](https://www.openactive.io/activity-list/activity-list.jsonld)**"    }\], }** |
-| :--- |
-
+```text
+{
+  "@context": "https://openactive.io/ns/oa.jsonld",
+  "type": "Event",
+  "name": "Blade and tone",
+  "url": "http://www.example.org/events/1",
+  "activity": [{
+     "id":"
+https://openactive.io/activity-list/#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3
+",
+      "type": "Concept",
+      "prefLabel": "Roller blading",
+      "inScheme": "
+https://openactive.io/activity-list/activity-list.jsonld
+"
+   }],
+}
+```
 
 #### **Giving it a time**
 
@@ -130,9 +146,27 @@ The endDate property is the partner to startDate, and is used to signify the end
 
 In our example the activity lasts the full hour dictated by the start and end points. For that reason duration is optional, but it has been included here to illustrate usage.
 
-| **{   "@context": "https://openactive.io/ns/oa.jsonld",   "type": "Event",   "name": "Blade and tone",   "url": "http://www.example.org/events/1",   "activity": \[{      "id":"**[**https://openactive.io/activity-list/\#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3**](https://www.openactive.io/activity-list/#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3)**",       "type": "Concept",       "prefLabel": "Roller blading",       "inScheme": "**[**https://openactive.io/activity-list/activity-list.jsonld**](https://www.openactive.io/activity-list/activity-list.jsonld)**"    }\],   "startDate": "2018-08-13T20:00:00Z",   "endDate": "2018-08-13T21:00:00Z",   "duration": "PT1H", }** |
-| :--- |
-
+```text
+{
+  "@context": "https://openactive.io/ns/oa.jsonld",
+  "type": "Event",
+  "name": "Blade and tone",
+  "url": "http://www.example.org/events/1",
+  "activity": [{
+     "id":"
+https://openactive.io/activity-list/#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3
+",
+      "type": "Concept",
+      "prefLabel": "Roller blading",
+      "inScheme": "
+https://openactive.io/activity-list/activity-list.jsonld
+"
+   }],
+  "startDate": "2018-08-13T20:00:00Z",
+  "endDate": "2018-08-13T21:00:00Z",
+  "duration": "PT1H",
+}
+```
 
 Your event timings may be more complicated than this, and we’ll come onto that in part two of this tutorial.
 
@@ -140,24 +174,129 @@ Your event timings may be more complicated than this, and we’ll come onto that
 
 Finally, people need to know where to go to attend the event. Locations are added to events using the location property, which follows the [schema.org standards for address data](https://schema.org/PostalAddress). The minimum requirements for validation are shown below, but the recommendation in the specification is that applications should provide as much information about the **Place** as possible.
 
-| **{   "@context": "https://openactive.io/ns/oa.jsonld",   "type": "Event",   "name": "Blade and tone",   "url": "http://www.example.org/events/1",   "activity": \[{      "id":"**[**https://openactive.io/activity-list/\#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3**](https://www.openactive.io/activity-list/#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3)**",       "type": "Concept",       "prefLabel": "Roller blading",       "inScheme": "**[**https://openactive.io/activity-list/activity-list.jsonld**](https://www.openactive.io/activity-list/activity-list.jsonld)**"    }\],    "startDate": "2018-08-13T20:00:00Z",    "endDate": "2018-08-13T21:00:00Z",    "duration": "PT1H",   "location": {     "type": "Place",     "name": "ExampleCo Gym",     "address": {       "type": "PostalAddress",       "streetAddress": "1 High Street",       "addressLocality": "Colchester",       "addressRegion": "Essex",       "postalCode": "AB1 2CD",       "addressCountry": "GB"     }   } }** |
-| :--- |
-
+```text
+{
+  "@context": "https://openactive.io/ns/oa.jsonld",
+  "type": "Event",
+  "name": "Blade and tone",
+  "url": "http://www.example.org/events/1",
+  "activity": [{
+     "id":"
+https://openactive.io/activity-list/#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3
+",
+      "type": "Concept",
+      "prefLabel": "Roller blading",
+      "inScheme": "
+https://openactive.io/activity-list/activity-list.jsonld
+"
+   }],
+   "startDate": "2018-08-13T20:00:00Z",
+   "endDate": "2018-08-13T21:00:00Z",
+   "duration": "PT1H",
+  "location": {
+    "type": "Place",
+    "name": "ExampleCo Gym",
+    "address": {
+      "type": "PostalAddress",
+      "streetAddress": "1 High Street",
+      "addressLocality": "Colchester",
+      "addressRegion": "Essex",
+      "postalCode": "AB1 2CD",
+      "addressCountry": "GB"
+    }
+  }
+}
+```
 
 An example of providing more information is through including geocodes. Whilst this is not mandatory for each event, it’s recommended as people are more likely to use the data if it’s geocoded.
 
-| **{   "@context": "https://openactive.io/ns/oa.jsonld",   "type": "Event",   "name": "Blade and tone",   "url": "http://www.example.org/events/1",   "activity": \[{      "id":"**[**https://openactive.io/activity-list/\#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3**](https://www.openactive.io/activity-list/#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3)**",       "type": "Concept",       "prefLabel": "Roller blading",       "inScheme": "**[**https://openactive.io/activity-list/activity-list.jsonld**](https://www.openactive.io/activity-list/activity-list.jsonld)**"    }\],    "startDate": "2018-08-13T20:00:00Z",    "endDate": "2018-08-13T21:00:00Z",    "duration": "PT1H",    "location": {       "type": "Place",       "name": "ExampleCo Gym",       "address": {          "type": "PostalAddress",          "streetAddress": "1 High Street",          "addressLocality": "Colchester",          "addressRegion": "Essex",          "postalCode": "AB1 2CD",          "addressCountry": "GB"       }    },   "geo": {      "type": "GeoCoordinates",      "latitude": 51.88805,      "longitude": 0.90286   } }** |
-| :--- |
-
+```text
+{
+  "@context": "https://openactive.io/ns/oa.jsonld",
+  "type": "Event",
+  "name": "Blade and tone",
+  "url": "http://www.example.org/events/1",
+  "activity": [{
+     "id":"
+https://openactive.io/activity-list/#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3
+",
+      "type": "Concept",
+      "prefLabel": "Roller blading",
+      "inScheme": "
+https://openactive.io/activity-list/activity-list.jsonld
+"
+   }],
+   "startDate": "2018-08-13T20:00:00Z",
+   "endDate": "2018-08-13T21:00:00Z",
+   "duration": "PT1H",
+   "location": {
+      "type": "Place",
+      "name": "ExampleCo Gym",
+      "address": {
+         "type": "PostalAddress",
+         "streetAddress": "1 High Street",
+         "addressLocality": "Colchester",
+         "addressRegion": "Essex",
+         "postalCode": "AB1 2CD",
+         "addressCountry": "GB"
+      }
+   },
+  "geo": {
+     "type": "GeoCoordinates",
+     "latitude": 51.88805,
+     "longitude": 0.90286
+  }
+}
+```
 
 **Providing information about the organiser**  
   
 And finally, we need to include information about the person or organisation responsible for running the event. With this it’s important to note that personal data must not be published as open data without consent.  
 Whilst events could be organised by a club, led by a particular individual, or include other named participants of note, we’ll keep it simple for this first example and just use a club. As always, further detail is available in the [spec](https://www.openactive.io/modelling-opportunity-data/#describing-organisers-code-schema-person-code-and-code-schema-organization-code-) if needed.
 
-| **{   "@context": "https://openactive.io/",   "type": "Event",   "name": "Blade and tone",   "url": "http://www.example.org/events/1",   "activity": \[{      "id":"**[**https://openactive.io/activity-list/\#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3**](https://www.openactive.io/activity-list/#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3)**",       "type": "Concept",       "prefLabel": "Roller blading",       "inScheme": "**[**https://openactive.io/activity-list**](https://www.openactive.io/activity-list/activity-list.jsonld)**"    }\],    "startDate": "2018-08-13T20:00:00Z",    "endDate": "2018-08-13T21:00:00Z",    "duration": "PT1H",    "location": {       "type": "Place",       "name": "ExampleCo Gym",       "address": {          "type": "PostalAddress",          "streetAddress": "1 High Street",          "addressLocality": "Colchester",          "addressRegion": "Essex",          "postalCode": "AB1 2CD",          "addressCountry": "GB"       },       "geo": {          "type": "GeoCoordinates",          "latitude": 51.88805,          "longitude": 0.90286       }    },    "organizer": {        "name": "Colchester Bladers",        "type": "Organization",        "url": "https://www.examplecluburl.com"    }   }** |
-| :--- |
-
+```text
+{
+  "@context": "https://openactive.io/",
+  "type": "Event",
+  "name": "Blade and tone",
+  "url": "http://www.example.org/events/1",
+  "activity": [{
+     "id":"
+https://openactive.io/activity-list/#7e5cb3ee-8c91-4f85-8c97-e335e0013eb3
+",
+      "type": "Concept",
+      "prefLabel": "Roller blading",
+      "inScheme": "
+https://openactive.io/activity-list
+"
+   }],
+   "startDate": "2018-08-13T20:00:00Z",
+   "endDate": "2018-08-13T21:00:00Z",
+   "duration": "PT1H",
+   "location": {
+      "type": "Place",
+      "name": "ExampleCo Gym",
+      "address": {
+         "type": "PostalAddress",
+         "streetAddress": "1 High Street",
+         "addressLocality": "Colchester",
+         "addressRegion": "Essex",
+         "postalCode": "AB1 2CD",
+         "addressCountry": "GB"
+      },
+      "geo": {
+         "type": "GeoCoordinates",
+         "latitude": 51.88805,
+         "longitude": 0.90286
+      }
+   },
+   "organizer": {
+       "name": "Colchester Bladers",
+       "type": "Organization",
+       "url": "https://www.examplecluburl.com"
+   }
+  }
+```
 
 And that’s it! Here we have a valid event described according to the OpenActive opportunity data model.  
 You’re able to double-check that you’ve got everything entered correctly by pasting your code into the [OpenActive data validator tool](https://validator.openactive.io/), or jump to [this pre-populated example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Ftutorials%2Fdescribing-events%2Fpart-one-finished.json&version=2.0).
