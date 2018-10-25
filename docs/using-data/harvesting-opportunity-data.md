@@ -1,6 +1,6 @@
 # Harvesting opportunity data
 
-## **Introduction** {#introduction}
+## **Introduction** <a id="introduction"></a>
 
 To follow along you’ll need some existing knowledge of programming, including familiarity with HTTP, JSON, and APIs.
 
@@ -15,13 +15,13 @@ By the end of this tutorial you’ll have:
 
 Whilst you’ll be able to follow along with this tutorial as your sole guide, you may wish to refer to the OpenActive [Realtime Paged Data Exchange](https://www.openactive.io/realtime-paged-data-exchange/) specification for greater detail at points.
 
-## **Before we begin** {#before-we-begin}
+## **Before we begin** <a id="before-we-begin"></a>
 
 Before we dive into implementation, let’s start with a bit of background. [OpenActive](https://www.openactive.io/) intends to facilitate the sharing and use of physical activity opportunity data. To date, a number of datasets have been made available for use. You can find out more about them in our upcoming guide ‘How to find physical activity opportunity data using the OpenActive Opportunity Data Dashboard’, or through the [status dashboard](https://status.openactive.io/) itself.
 
 This is a tutorial which aims to cover how to harvest the data from these feeds. For simplicity, we’re going to focus on harvesting data from a single source, however at the end of this tutorial we’ll include some prompters for how to approach combining data from multiple sources.
 
-## **Data transport** {#data-transport}
+## **Data transport** <a id="data-transport"></a>
 
 First of all, it’s important to understand the general approach to how the data is transported.
 
@@ -39,11 +39,11 @@ The RPDE specification recommends use of standard HTTP status codes. So your cod
 
 To harvest all of the data from a feed your code will need to make repeated HTTP requests until it has fetched all the data. There’s no need for any authentication as all of the endpoints are freely available.Now that we understand the mechanic for transferring data, let’s move on to understanding the content of what’s returned from a request, and how we navigate through all of the content.
 
-## **Understanding paging** {#understanding-paging}
+## **Understanding paging** <a id="understanding-paging"></a>
 
 Before we grab the data there are a few key concepts that are important to understand.
 
-### **Data is returned as pages** {#data-is-returned-as-pages}
+### **Data is returned as pages** <a id="data-is-returned-as-pages"></a>
 
 Looking at the [URL we previously visited](https://opensessions.io/api/Session/GetSessionsForOpenActive), you’ll notice that the data isn’t extensive - there are only 10 items in the items array.
 
@@ -57,7 +57,7 @@ From the link we opened \(and the image above\), you’ll notice the property ne
 
 Follow the links a couple of times to get a feel for this, but there’s no need to go to the end \(we’ll come on to that shortly\).
 
-### **How items appear in the overall list \(and pages\)** {#how-items-appear-in-the-overall-list-and-pages}
+### **How items appear in the overall list \(and pages\)** <a id="how-items-appear-in-the-overall-list-and-pages"></a>
 
 If you’ve looked into some of the items that have been returned, you may notice that some opportunities are in the past. The next important point to understand here is that the specification requires strict chronological ordering of items, with newly added and modified data added to the end of the feed. There are some simple rules that govern items in the overall list:
 
@@ -72,11 +72,11 @@ A conceptual view of a first page of items, followed by the rest of the list. No
 
 Let’s move on to putting this into practice, to understand it in context.
 
-## **Doing our initial download** {#doing-our-initial-download}
+## **Doing our initial download** <a id="doing-our-initial-download"></a>
 
 When consuming the data for the first time, pages are initially downloaded sequentially to catch up with the current state of the data publisher. As we’ve seen, this is achieved by following the next property of each page until the last page is reached.
 
-### **The last page** {#the-last-page}
+### **The last page** <a id="the-last-page"></a>
 
 According to the spec definition, the last page of data must have both of the following properties:
 
@@ -128,7 +128,7 @@ In pseudocode, a very basic \(and unrobust\) page through the dataset for the fi
 
 At this point, what you have is an as-is store of all of the items in the dataset, from as far back as they are available. Whilst this tutorial has not covered any processing of the data, so you will need to be mindful of getting it into a sensible state for your needs.
 
-## **Deleted items** {#deleted-items}
+## **Deleted items** <a id="deleted-items"></a>
 
 Whilst we’ve captured all of the items, what we also haven’t done is given any consideration to their state.
 
@@ -184,9 +184,9 @@ For our initial download of data, for now \(we’ll revisit this in the next sec
   <tbody></tbody>
 </table>Our initial import of data should therefore now reflect only the current, active records. However, as we’ve seen, records can be amended and deleted.
 
-## **Keeping data up to date** {#keeping-data-up-to-date}
+## **Keeping data up to date** <a id="keeping-data-up-to-date"></a>
 
-### **Handling updates and deletions** {#handling-updates-and-deletions}
+### **Handling updates and deletions** <a id="handling-updates-and-deletions"></a>
 
 Even with a small initial import, we run the risk of an item that we harvest early on actually being updated or deleted in the publisher’s system at the same time. As we’ve seen, this will lead to that item moving through the queue and being added to the end, so it could show up one to many times before our overall harvest is finished.
 
@@ -247,7 +247,7 @@ Our pseudocode therefore becomes a little bit more detailed:
     </tr>
   </thead>
   <tbody></tbody>
-</table>### **Polling for near real-time updates** {#polling-for-near-real-time-updates}
+</table>### **Polling for near real-time updates** <a id="polling-for-near-real-time-updates"></a>
 
 Whilst we’ve reached the end of the feed, handled modifications and deletions, the changes don’t stop there. In order to keep your data updated in near real-time, you may wish to keep track of the URL for the last page, and infrequently poll this to check for updates. Revisiting the rules of what defines a page as the last page:
 
@@ -336,7 +336,7 @@ If items are found, your harvester should resume the behaviour of the initial do
     </tr>
   </thead>
   <tbody></tbody>
-</table>## **Extending this example: harvesting from multiple sources** {#extending-this-example-harvesting-from-multiple-sources}
+</table>## **Extending this example: harvesting from multiple sources** <a id="extending-this-example-harvesting-from-multiple-sources"></a>
 
 As mentioned at the start of this tutorial, once you’ve mastered harvesting from a single source you may well wish to extend this by harvesting multiple sources.
 
@@ -346,7 +346,7 @@ Whilst this is beyond the scope of this tutorial, we’ve included some pointers
 * Whether or not you wish to re-harvest the full set of data every time.
 * Whether or not you plan to harvest datasets sequentially, or in parallel.
 
-## **Resources** {#resources}
+## **Resources** <a id="resources"></a>
 
 The specification that covers the Realtime Pages Data Exchange format in more detail can be found here: [https://www.openactive.io/realtime-paged-data-exchange/](https://www.openactive.io/realtime-paged-data-exchange/)​
 

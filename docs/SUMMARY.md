@@ -58,6 +58,7 @@
   * [Toilets](data-model/types/toilets.md)
   * [Towels](data-model/types/towels.md)
 * [Tutorial: describing events using the OpenActive data model - part one: the basics](data-model/tutorial-describing-events-using-the-openactive-data-model-part-one-the-basics.md)
+* [Tutorial: describing events using the OpenActive data model - part two: adding additional detail](data-model/tutorial-describing-events-using-the-openactive-data-model-part-two-adding-additional-detail.md)
 
 ## Specifications
 
