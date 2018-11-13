@@ -301,6 +301,10 @@ https://openactive.io/activity-list
 And that’s it! Here we have a valid event described according to the OpenActive opportunity data model.  
 You’re able to double-check that you’ve got everything entered correctly by pasting your code into the [OpenActive data validator tool](https://validator.openactive.io/), or jump to [this pre-populated example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Ftutorials%2Fdescribing-events%2Fpart-one-finished.json&version=2.0).
 
+### **3.2 Changes for v2.1**
+
+v2.1 of the modelling spec will include offers as a required field, as it is critical for data users and end user experience. If you are building your data now we strongly recommend you include this field. Details of how to do this are included in part 2 of this tutorial. 
+
 ## **4. Where to go next**
 
 This is all you need to get up and running, but it may be that you’d like a bit more detail. If you’ve taken the time to validate the above, you’ll also see that the validator returns a number of additional recommendations for making the data even better. If you’d like to build the example up even further you can follow along with [part two: adding additional timing detail](tutorial-describing-events-using-the-openactive-data-model-part-two-adding-additional-detail.md).  
