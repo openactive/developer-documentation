@@ -24,7 +24,7 @@ When using **types** and **properties** from a particular context, that context 
 }
 ```
 
-The OpenActive context "https://openactive.io/" brings together several standards,  including [schema.org](https://schema.org) and [SKOS](http://www.w3.org/2004/02/skos/core) define some standard properties, which we can use to describe our data.
+The OpenActive context "[https://openactive.io/](https://openactive.io/)" brings together several standards, including [schema.org](https://schema.org) and [SKOS](http://www.w3.org/2004/02/skos/core) define some standard properties, which we can use to describe our data.
 
 There are four primary contexts which are used within OpenActive data. These are listed below. Clicking on the name of each context will take you to a list of properties within it. Additionally data publishers can define their own properties and publish their own context, which is known as an extension context.
 
@@ -36,7 +36,7 @@ OpenActive data is valid JSON-LD, which means that properties published in OpenA
 | [SKOS](http://www.w3.org/2004/02/skos/core#) | skos | [http://www.w3.org/2004/02/skos/core\#](http://www.w3.org/2004/02/skos/core#) |  | No | Stable |
 | [OpenActive](https://www.openactive.io/ns) | oa | [https://openactive.io/](https://openactive.io/) | schema.org, SKOS | No | Stable |
 | [OpenActive Beta](https://www.openactive.io/ns-beta) | beta | [https://openactive.io/ns-beta](https://openactive.io/ns-beta) |  | Yes | Experimental |
-| \[[Extensions]()\] | \* | \* |  | Yes | Experimental |
+| \[[Extensions](context-and-json-ld.md)\] | \* | \* |  | Yes | Experimental |
 
 The [OpenActive modelling specification](https://www.openactive.io/modelling-opportunity-data/) includes a "profile" \(subset\) of schema.org and SKOS which has been defined for OpenActive use, along with the specification for additional OpenActive-specific properties.
 
@@ -127,8 +127,4 @@ In the example below the `"britishcycling:gpxFile"` field is defined by an exten
   "meetingPoint": "Start of Loxley Road just past the bus stop, which is immediately after the pedestrian crossing/traffic lights."
 }
 ```
-
-
-
-
 

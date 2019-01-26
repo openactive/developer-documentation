@@ -8,5 +8,3 @@ These feeds must be published using the OpenActive Realtime Paged Data Exchange 
 
 {% page-ref page="how-a-data-feed-works.md" %}
 
- 
-

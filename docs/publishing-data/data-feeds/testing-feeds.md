@@ -4,7 +4,7 @@
 
 A validator is available which attempts to consume an RPDE feed and check for common errors.
 
-{% embed url="https://validator.openactive.io/rpde" %}
+{% embed url="https://validator.openactive.io/rpde" caption="" %}
 
 ## Manual Testing Checklist
 

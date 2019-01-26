@@ -15,9 +15,9 @@ The following CDN configuration options are recommended:
 * Configure the CDN to "Pass through and respect cache TTL headers" instead of overriding
 * In the application, vary the cache headers for RPDE pages as follows:
   * For all pages which contain greater than zero items, return a TTL of "60 minutes":
-    * `Cache-Control: max-age=3600`
+    * `Cache-Control: public, max-age=3600`
   * For the last page, which contains zero items, return a TTL of "10 seconds":
-    * `Cache-Control: max-age=10`
+    * `Cache-Control: public, max-age=10`
 
 ## Worked Example
 

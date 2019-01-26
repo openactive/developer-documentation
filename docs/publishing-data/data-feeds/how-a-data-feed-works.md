@@ -6,7 +6,7 @@ The following video is a beta explainer animation for Realtime Paged Data Exchan
 
 For a full explanation of how to create an RPDE feed, please see the [specification](https://www.openactive.io/realtime-paged-data-exchange/#paging).
 
-{% embed url="https://youtu.be/yHZS24xzY-8" %}
+{% embed url="https://youtu.be/yHZS24xzY-8" caption="" %}
 
 ## Must Read: Principles of Feeds
 
