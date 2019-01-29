@@ -41,7 +41,7 @@ The settings in the CDN Configuration section will create the behaviour describe
 * All 200 data consumers will follow the same next URL, and again the first request will be cached for the other 199 data consumers.
 * Hence the maximum load during "Live" mode is bounded by the response time of the "last" page, as the CDN will queue the requests from other data consumers waiting for this page. If the origin server is under high general load from other services, and the response time of the last page is increased,  then the queue waits. This avoids a large number of data consumers adversely affecting the origin server performance during times of peak general load.
 
-## CloudFlare example configuration walkthrough
+## CloudFlare Walkthrough
 
 In order for [CloudFlare](https://www.cloudflare.com/) to respect your cache control headers, there are five simple steps to follow:
 
