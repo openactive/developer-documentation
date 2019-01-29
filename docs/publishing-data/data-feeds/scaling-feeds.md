@@ -77,7 +77,7 @@ On the Caching configuration page, ensure that following is set:
 
 ### 4\) Ensure that your feed does not inadvertently set any cookies
 
-Ensure that your web application web server infrastructure does not set any cookies on the feed pages \(for example load balancer [affinity cookies](https://azure.microsoft.com/en-gb/blog/disabling-arrs-instance-affinity-in-windows-azure-web-sites/)\), as these will prevent CloudFlare from caching pages.
+Ensure that your web application or web server infrastructure does not set any cookies on the feed pages \(for example load balancer [affinity cookies](https://azure.microsoft.com/en-gb/blog/disabling-arrs-instance-affinity-in-windows-azure-web-sites/)\), as these will prevent CloudFlare from caching pages.
 
 ### 5\) Test your configuration
 
