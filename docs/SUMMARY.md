@@ -7,6 +7,7 @@
 * [Data Feeds](publishing-data/data-feeds/README.md)
   * [How an RPDE data feed works](publishing-data/data-feeds/how-a-data-feed-works.md)
   * [Types of RDPE feed](publishing-data/data-feeds/types-of-feed.md)
+  * [Implementing RPDE](publishing-data/data-feeds/implementing-rpde-feeds.md)
   * [Testing RPDE feeds](publishing-data/data-feeds/testing-feeds.md)
   * [Scaling RPDE feeds](publishing-data/data-feeds/scaling-feeds.md)
 

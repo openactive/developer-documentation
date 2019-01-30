@@ -47,7 +47,7 @@ In order for [CloudFlare](https://www.cloudflare.com/) to respect your cache con
 
 ### 1\) Set up CloudFlare as your DNS provider and proxy
 
-After you've [set up CloudFlare](https://support.cloudflare.com/hc/en-us/categories/200275218-Getting-Started) as your DNS provider, check requests are being routed through CloudFlare by enabling the orange cloud button: ![](../../.gitbook/assets/screenshot-2019-01-29-at-23.10.09.png) 
+After you've [set up CloudFlare](https://support.cloudflare.com/hc/en-us/categories/200275218-Getting-Started) as your DNS provider, check requests are being routed through CloudFlare by enabling the orange cloud button: ![](../../.gitbook/assets/screenshot-2019-01-29-at-23.10.09%20%281%29.png)
 
 ![](../../.gitbook/assets/screenshot-2019-01-29-at-23.26.30.png)
 
@@ -65,7 +65,7 @@ The page rule should have the following configuration:
 * **Origin Cache Control**: On
 * **SSL:** Flexible \(if you do not have SSL configured on your own server\)
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.01.57.png)
+![](../../.gitbook/assets/screenshot-2019-01-29-at-23.01.57%20%281%29.png)
 
 ### 3\) Set Browser Cache Expiration to Respect Existing Headers
 
@@ -87,7 +87,7 @@ A successfully cached page will return the following header:
 
 * **cf-cache-status: HIT**
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.19.16.png)
+![](../../.gitbook/assets/screenshot-2019-01-29-at-23.19.16%20%281%29.png)
 
 ### Further information
 
