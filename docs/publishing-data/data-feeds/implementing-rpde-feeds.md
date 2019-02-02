@@ -46,9 +46,7 @@ public class RPDERestUtils
                 // Do not include empty strings in JSON output (as per OpenActive Modelling Specification)
                 property.ShouldSerialize = instance =>
                 {
-                    // Note this line makes an assumption that all same-type properties will be overridden rather than hidden with the new keyword (which they should be if the modelling is done right).
-                    // If this is not the case GetProperty will throw AmbiguousMatchException.
-                    return !string.IsNullOrWhiteSpace(instance.GetType().GetProperty(member.Name, typeof(string)).GetValue(instance, null) as string);
+                    return !string.IsNullOrWhiteSpace(instance.GetType().GetRuntimeProperty(member.Name).GetValue(instance, null) as string);
                 };
             }
             
