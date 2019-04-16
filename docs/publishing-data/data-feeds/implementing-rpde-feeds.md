@@ -8,7 +8,7 @@ Language-specific examples of library implementations that also support the remo
 
 ### OpenActive.NET
 
-We highly recommend using the [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) library for .NET implementations. It includes strongly typed classes for the [OpenActive data model](https://www.openactive.io/modelling-opportunity-data/) including [beta properties](https://www.openactive.io/ns-beta/).
+We highly recommend using the [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) library for .NET implementations. It includes strongly typed classes for the [OpenActive data model](https://www.openactive.io/modelling-opportunity-data/) including [beta properties](https://www.openactive.io/ns-beta/), and fully compliant serialisation methods too.
 
 ### Manual Implementation
 
