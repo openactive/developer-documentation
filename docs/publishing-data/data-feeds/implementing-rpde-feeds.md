@@ -6,6 +6,12 @@ Language-specific examples of library implementations that also support the remo
 
 ## C\# and .NET Framework
 
+### OpenActive.NET
+
+We highly recommend using the [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) library for .NET implementations. It includes strongly typed classes for the [OpenActive data model](https://www.openactive.io/modelling-opportunity-data/) including [beta properties](https://www.openactive.io/ns-beta/).
+
+### Manual Implementation
+
 Use [JSON.NET / Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) with a `ContractResolver` to remove empty strings, and `NullValueHandling` to remove nulls. Empty list values must be removed by setting them to null in the generating code, aided by the extension `ToListOrNullIfEmpty` which is useful at the end of LINQ expressions.
 
 ```csharp

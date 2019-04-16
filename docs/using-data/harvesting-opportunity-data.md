@@ -154,7 +154,7 @@ For our initial download of data, for now \(we’ll revisit this in the next sec
             <ul>
               <li>If there are data items
                 <ul>
-                  <li>Where items do not possess the state "deleted"
+                  <li>Where items do not possess the state &quot;deleted&quot;
                     <ul>
                       <li>Retrieve (and store) all data items contained within the page</li>
                     </ul>
@@ -203,7 +203,7 @@ Our pseudocode therefore becomes a little bit more detailed:
             <ul>
               <li>If there are data items
                 <ul>
-                  <li>If items possess the state "deleted"
+                  <li>If items possess the state &quot;deleted&quot;
                     <ul>
                       <li>Remove any existing items in our store that match the ID</li>
                     </ul>
@@ -263,7 +263,7 @@ If items are found, your harvester should resume the behaviour of the initial do
             <ul>
               <li><b>If there are data items</b>
                 <ul>
-                  <li><b>If items possess the state "deleted"</b>
+                  <li><b>If items possess the state &quot;deleted&quot;</b>
                     <ul>
                       <li><b>Remove any existing items in our store that match the ID</b>
                       </li>
