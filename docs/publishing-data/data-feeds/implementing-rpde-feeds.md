@@ -46,7 +46,7 @@ public class RPDERestUtils
         protected override JsonProperty CreateProperty(MemberInfo member, MemberSerialization memberSerialization)
         {
             JsonProperty property = base.CreateProperty(member, memberSerialization);
-            
+
             if (property.PropertyType == typeof(string))
             {
                 // Do not include empty strings in JSON output (as per OpenActive Modelling Specification)
@@ -55,11 +55,11 @@ public class RPDERestUtils
                     return !string.IsNullOrWhiteSpace(instance.GetType().GetRuntimeProperty(member.Name).GetValue(instance, null) as string);
                 };
             }
-            
+
             return property;
         }
     }
-    
+
     public static List<TSource> ToListOrNullIfEmpty<TSource>(this IEnumerable<TSource> source)
     {
         if (source != null && source.Count() > 0)
@@ -72,7 +72,7 @@ public class RPDERestUtils
 
 ## PHP
 
-Define the RPDE response structure as nested arrays, and recursively unset empty properties before using  [json\_encode](http://php.net/manual/en/function.json-encode.php) to generate the response.
+Define the RPDE response structure as nested arrays, and recursively unset empty properties before using [json\_encode](http://php.net/manual/en/function.json-encode.php) to generate the response.
 
 Run the example below [here](https://www.tehplayground.com/bQZT9xjRC3ToXbPc) to see the result.
 
@@ -117,13 +117,11 @@ function array_unset_recursive(&$array) {
             if (count($value) == 1 && array_key_exists("type",$value))
                 $value = null;
         }
-        
+
         // Remove null values, empty strings, and empty lists
         if ($value !== false && ($value === null || $value === "" || empty($value))) 
             unset($array[$key]);
     }
 }
 ```
-
-
 

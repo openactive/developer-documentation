@@ -14,6 +14,7 @@
 ## Using data
 
 * [Harvesting opportunity data](using-data/harvesting-opportunity-data.md)
+* [Rendering the activity list](using-data/rendering-the-activity-list.md)
 
 ## Data Model
 
