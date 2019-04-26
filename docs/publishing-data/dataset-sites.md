@@ -36,7 +36,7 @@ It is designed to be embedded in a booking system that outputs open data feeds f
 
 ### Getting Started
 
-The [Dataset Site Template](https://github.com/openactive/dataset-site-template/) is a single self-contained mustache template of an HTML page that contains embedded CSS, an image, and references to [Font Awesome](https://fontawesome.com/) and [Google Fonts](https://fonts.google.com/). It works across all browsers, and includes fully compliant DCAT and schema.org machine-readable metadata to ensure it is compatible with [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
+The [Dataset Site Template](https://github.com/openactive/dataset-site-template/) is a single self-contained mustache template of an HTML page that contains embedded CSS, an embedded encoded image, and references to CDNs of [Font Awesome](https://fontawesome.com/) and [Google Fonts](https://fonts.google.com/). It works across all browsers, and includes fully compliant DCAT and schema.org machine-readable metadata to ensure it is compatible with [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
 
 Steps to render the template:
 
@@ -51,6 +51,8 @@ Steps to render the template:
 The Dataset Site Template is designed to carry the customer's brand with minimal configuration.
 
 See the [`settings` specified here](https://github.com/openactive/dataset-site-template-example-dotnet/blob/master/DatasetSiteTemplateExample/Program.cs#L25) for an example of how a minimal number of configurable properties can be used to generate the whole dataset site in a way that is personalised to each customer.
+
+We suggest if you can provide the customer with a means of customising the logo and background image \(e.g. via uploading an image to the [cloudinary.com](https://cloudinary.com) CDN, using [their widget](https://jsfiddle.net/nickevansuk/ugpnxmby/), which is free at low volume\), these have the largest effect on the brand feel of the page.
 
 Although the customer will likely be able to fill in most properties specific to them, there are two where they will require guidance:
 
@@ -71,13 +73,15 @@ This [simple console app](https://github.com/openactive/dataset-site-template-ex
 
 ### JavaScript Example
 
-This [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/12/) demonstrates the Dataset Site Template render steps outlined above using plain JavaScript.
+This [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/) demonstrates the Dataset Site Template render steps outlined above using plain JavaScript.
 
 Please note this is only an example to demonstrate the logic and is not intended for production. The mustache template **must** be rendered server-side as one of its primary purposes is SEO.
 
 Click the **Result** tab below to see the result of a template render.
 
-{% embed url="https://jsfiddle.net/nickevansuk/msby0vqg/12" %}
+{% embed url="https://jsfiddle.net/nickevansuk/msby0vqg/" %}
+
+
 
 
 
