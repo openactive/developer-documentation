@@ -2,6 +2,8 @@
 
 Dataset Sites help data users to find your data, and interact with you if they find any issues. They are both human and machine readable, and allow your data to appear everywhere from the [OpenActive Status Page](https://status.openactive.io) to the [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
 
+Example dataset sites: [GLL](http://data.better.org.uk), [Fusion Lifestyle](https://fusionopendata.fusion-lifestyle.com/OpenActive)
+
 ### What do I need?
 
 * If you are creating just one Dataset Site for your organisation, then jump to the [Dataset Site Generator](dataset-sites.md#dataset-site-generator).
@@ -43,6 +45,17 @@ Steps to render the template:
 3. Write code to do the following:
    * Stringify the input JSON, and place the contents of the string within the "json" property at the root of the JSON itself \(i.e. serialised JSON embedded in the original deserialised object\).
    * Use the resulting JSON with the [mustache template](https://www.openactive.io/dataset-site-template/datasetsite.mustache) to render the dataset site.
+
+### Personalising the Dataset Site
+
+The Dataset Site Template is designed to carry the customer's brand with minimal configuration.
+
+See the [`settings` specified here](https://github.com/openactive/dataset-site-template-example-dotnet/blob/master/DatasetSiteTemplateExample/Program.cs#L25) for an example of how a minimal number of configurable properties can be used to generate the whole dataset site in a way that is personalised to each customer.
+
+Although the customer will likely be able to fill in most properties specific to them, there are two where they will require guidance:
+
+* `discussionUrl` - each customer will need to create a new [GitHub organisation](https://docs.google.com/document/d/1pM8fse2x_grSulLPzQ2J5S_iTZH2LrnWcmEA0J0xTgI/edit) and repository and copy the URL of its [Issues board](https://github.com/gll-better/opendata/issues) into the property value.
+* `documentation` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer will have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct.
 
 ### .NET Example
 
