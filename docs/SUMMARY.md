@@ -10,6 +10,7 @@
   * [Implementing RPDE](publishing-data/data-feeds/implementing-rpde-feeds.md)
   * [Testing RPDE feeds](publishing-data/data-feeds/testing-feeds.md)
   * [Scaling RPDE feeds](publishing-data/data-feeds/scaling-feeds.md)
+* [Dataset Sites](publishing-data/dataset-sites.md)
 
 ## Using data
 
