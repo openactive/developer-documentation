@@ -54,7 +54,7 @@ See the [`settings` specified here](https://github.com/openactive/dataset-site-t
 
 Although the customer will likely be able to fill in most properties specific to them, there are two where they will require guidance:
 
-* `discussionUrl` - each customer will need to create a new [GitHub organisation](https://docs.google.com/document/d/1pM8fse2x_grSulLPzQ2J5S_iTZH2LrnWcmEA0J0xTgI/edit) and repository and copy the URL of its [Issues board](https://github.com/gll-better/opendata/issues) into the property value. If you "follow" these repositories on GitHub using your support e-mail account you will receive notifications for each query, and be able to reply via e-mail to the notifications from your support e-mail address - these replies then appear directly in GitHub.
+* `discussionUrl` - each customer will need to create a new [GitHub organisation](https://docs.google.com/document/d/1pM8fse2x_grSulLPzQ2J5S_iTZH2LrnWcmEA0J0xTgI/edit) and repository and copy the URL of its [Issues board](https://github.com/gll-better/opendata/issues) into the property value. If you "follow" these repositories using a new GitHub account created with your support e-mail address then you will receive notifications for each query, and be able to reply via e-mail to the notifications from your support e-mail address - these replies then appear directly in GitHub.
 * `documentation` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer will have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct.
 
 ### Providing a Data Catalog
