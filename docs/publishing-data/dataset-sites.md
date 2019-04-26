@@ -57,15 +57,23 @@ Although the customer will likely be able to fill in most properties specific to
 * `discussionUrl` - each customer will need to create a new [GitHub organisation](https://docs.google.com/document/d/1pM8fse2x_grSulLPzQ2J5S_iTZH2LrnWcmEA0J0xTgI/edit) and repository and copy the URL of its [Issues board](https://github.com/gll-better/opendata/issues) into the property value.
 * `documentation` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer will have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct.
 
+### Providing a Data Catalog
+
+For large booking systems, a Data Catalog must also be provided to allow the many Dataset Sites that are created to be easily indexed by the [OpenActive Status Page](https://status.openactive.io) and other data users.
+
+The Data Catalog is very simply an array of URLs of the Dataset Sites in a [specific format](https://schema.org/DataCatalog). An example of a live Data Catalog from the Gladstone system can be found [here](https://opendata.leisurecloud.live/api/datacatalog).
+
 ### .NET Example
 
-This [simple console app](https://github.com/openactive/dataset-site-template-example-dotnet) demonstrates the render steps outlined above using [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/).
+This [simple console app](https://github.com/openactive/dataset-site-template-example-dotnet) demonstrates the Dataset Site Template render steps outlined above using [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/).
 
 {% embed url="https://github.com/openactive/dataset-site-template-example-dotnet" %}
 
 ### JavaScript Example
 
-This [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/12/) demonstrates the render steps outlined above using plain JavaScript.
+This [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/12/) demonstrates the Dataset Site Template render steps outlined above using plain JavaScript.
+
+Please note this is only an example to demonstrate the logic and is not intended for production. The mustache template **must** be rendered server-side as one of its primary purposes is SEO.
 
 Click the **Result** tab below to see the result of a template render.
 
