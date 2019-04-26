@@ -1,6 +1,6 @@
 # Dataset Sites
 
-Dataset Sites help data users find your data, and interact with you if they find any issues. They are both human and machine readable, and allow your data to appear everyone from the [OpenActive Status Page](https://status.openactive.io) to the [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
+Dataset Sites help data users to find your data, and interact with you if they find any issues. They are both human and machine readable, and allow your data to appear everywhere from the [OpenActive Status Page](https://status.openactive.io) to the [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
 
 ### What do I need?
 
