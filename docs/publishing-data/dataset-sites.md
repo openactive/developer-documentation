@@ -24,7 +24,7 @@ The Dataset Site Generator and associated guides very quickly create a minimal D
 
 Please find out more at the [Dataset Site Generator instructions page](https://github.com/openactive/dataset-site-generator/wiki).
 
-{% embed url="https://github.com/openactive/dataset-site-generator/wiki" %}
+{% embed url="https://github.com/openactive/dataset-site-generator/wiki" caption="" %}
 
 ## Option 2: Dataset Site Template: Build Dataset Sites into your system
 
@@ -61,11 +61,13 @@ Although the customer will likely be able to fill in most properties specific to
 
 ### Issues board creation
 
+The `discussionUrl` is the url of the GitHub issues board for that dataset site. There are two ways of creating a GitHub issues board.
+
 #### Manually
 
 A guide for creating a new GitHub repository for each customer can be found below:
 
-{% embed url="https://docs.google.com/document/d/1GO4HLYgrwpXH\_qxVuaAWXw\_HIr2Hn4KB7cl973Q1M4M/edit" %}
+{% embed url="https://docs.google.com/document/d/1GO4HLYgrwpXH\_qxVuaAWXw\_HIr2Hn4KB7cl973Q1M4M/edit" caption="" %}
 
 #### Automatically
 
@@ -94,7 +96,7 @@ A Data Catalog is very simply an array of the URLs of all your Dataset Sites \(t
 
 This [simple console app](https://github.com/openactive/dataset-site-template-example-dotnet) demonstrates the Dataset Site Template render steps outlined above using [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/).
 
-{% embed url="https://github.com/openactive/dataset-site-template-example-dotnet" %}
+{% embed url="https://github.com/openactive/dataset-site-template-example-dotnet" caption="" %}
 
 ### JavaScript Example
 
@@ -104,9 +106,5 @@ Please note this is only an example to demonstrate the logic and is not intended
 
 Click the **Result** tab below to see the result of a template render.
 
-{% embed url="https://jsfiddle.net/nickevansuk/msby0vqg/" %}
-
-
-
-
+{% embed url="https://jsfiddle.net/nickevansuk/msby0vqg/" caption="" %}
 
