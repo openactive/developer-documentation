@@ -72,7 +72,7 @@ public class RPDERestUtils
 
 ## PHP
 
-Define the RPDE response structure as nested arrays, and recursively unset empty properties before using [json\_encode](http://php.net/manual/en/function.json-encode.php) to generate the response.
+The specification requires that no null or empty strings are present in the OpenActive feed. To achieve this, define the RPDE response structure as nested arrays, and recursively unset empty properties before using [json\_encode](http://php.net/manual/en/function.json-encode.php) to generate the response.
 
 Run the example below [here](https://www.tehplayground.com/bQZT9xjRC3ToXbPc) to see the result.
 
