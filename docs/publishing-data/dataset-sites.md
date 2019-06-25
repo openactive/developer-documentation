@@ -45,6 +45,7 @@ Steps to render the template:
 3. Write code to do the following:
    * Stringify the input JSON, and place the contents of the string within the "json" property at the root of the JSON itself \(i.e. serialised JSON embedded in the original deserialised object\).
    * Use the resulting JSON with the [mustache template](https://www.openactive.io/dataset-site-template/datasetsite.mustache) to render the dataset site.
+   * Keep in mind that OpenActive will be providing updates to the mustache template in the future, so it is best to write code that anticipates this.
 
 ### Personalising the Dataset Site
 
