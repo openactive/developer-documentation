@@ -10,12 +10,12 @@
   * [Implementing RPDE](publishing-data/data-feeds/implementing-rpde-feeds.md)
   * [Testing RPDE feeds](publishing-data/data-feeds/testing-feeds.md)
   * [Scaling RPDE feeds](publishing-data/data-feeds/scaling-feeds.md)
+* [Rendering the activity list](publishing-data/rendering-the-activity-list.md)
 * [Dataset Sites](publishing-data/dataset-sites.md)
 
 ## Using data
 
 * [Harvesting opportunity data](using-data/harvesting-opportunity-data.md)
-* [Rendering the activity list](using-data/rendering-the-activity-list.md)
 
 ## Data Model
 

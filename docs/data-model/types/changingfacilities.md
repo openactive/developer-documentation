@@ -9,7 +9,7 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
 ## **Fields**
 
 ### **Required fields**
-    
+
 <table>
   <thead>
     <tr>
@@ -20,38 +20,34 @@ This type is derived from [https://schema.org/LocationFeatureSpecification](http
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
+      <td style="text-align:left"><b>type</b>
       </td>
-      <td style="text-align:left">
-        Must always be present and set to <code>"type": "ChangingFacilities"</code>
+      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>name</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A string, suitable for presentation in user interfaces.</p><p></br><b>Example</b></p><p><code>"name": "Changing Rooms"</code></p>
+      <td style="text-align:left">Must always be present and set to <code>&quot;type&quot;: &quot;ChangingFacilities&quot;</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>value</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      <td style="text-align:left"><b>name</b>
+      </td>
+      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A boolean value indicating whether this ammenity is available.</p>
+        <p>A string, suitable for presentation in user interfaces.</p>
+        <p>
+          <br /><b>Example</b>
+        </p>
+        <p><code>&quot;name&quot;: &quot;Changing Rooms&quot;</code>
+        </p>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>value</b>
+      </td>
+      <td style="text-align:left"> <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">A boolean value indicating whether this ammenity is available.</td>
     </tr>
   </tbody>
-</table>
+</table>Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License \(CC-BY V4.0\)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
 
-
-
-
-
-
-Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
