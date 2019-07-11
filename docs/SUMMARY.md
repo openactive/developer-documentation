@@ -70,3 +70,18 @@
 * [Dataset Dashboard](http://status.openactive.io)
 * [Non-technical Guidance](https://www.openactive.io/getting-started/)
 
+## OpenActive on GitHub <a id="guide-to-openactive-on-github"></a>
+
+* [Overview](guide-to-openactive-on-github/overview.md)
+* [Activity List](guide-to-openactive-on-github/activity-list.md)
+* [Community](guide-to-openactive-on-github/community.md)
+* [Controlled Vocabularies](guide-to-openactive-on-github/controlled-vocabularies.md)
+* [Dataset Publication](guide-to-openactive-on-github/dataset-publication.md)
+* [Documentation](guide-to-openactive-on-github/documentation.md)
+* [Implementation Support](guide-to-openactive-on-github/implementation-support.md)
+* [Programmes](guide-to-openactive-on-github/programmes.md)
+* [RPDE](guide-to-openactive-on-github/rpde.md)
+* [SKOS](guide-to-openactive-on-github/skos.md)
+* [Specifications](guide-to-openactive-on-github/specifications.md)
+* [Validators](guide-to-openactive-on-github/validators.md)
+
