@@ -11,6 +11,7 @@ Example dataset sites: [GLL](http://data.better.org.uk), [Fusion Lifestyle](http
 * If you are a large booking system with **multiple databases**, each of which has their own set of OpenActive data feeds, a Dataset Site is required for each customer. This can be achieved using customer configuration to drive the mustache template.
 * You need to create a [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for each Dataset Site.
 * If you are publishing multiple dataset sites you also need to provide a [Data Catalogue](dataset-sites.md#step-3-providing-a-data-catalog-multiple-databases-only).
+* Data publishers should be encouraged to provide links to their Dataset Site from their own website.
 
 ### What is a Dataset Site?
 
