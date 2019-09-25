@@ -22,13 +22,21 @@ The following topics are used for OpenActive GitHub repos:
 * `documentation`
 * `extensions`
 * `implementation-support`
+* `pre-release`
 * `programmes`
 * `rpde`
 * `skos`
 * `specifications`
 * `validators`
 
-Note that some repos may be tagged with more than one topic. Each of these topics \(with the exception of `archived`, which is used for deprecated repos\) is discussed in more detail in the pages in this section.
+Note that some repos may be tagged with more than one topic. Each of these topics is discussed in more detail in the pages in this section.
+
+{% hint style="info" %}
+**`archived` and `pre-release` repositories**  
+Both these topics are used to indicate repositories whose contents are not recommended for use in their current state - in the case of `archived`, because they are now obsolete and no longer under active development, and for `pre-release` because they are still in the 'bootstrapping' phase and not yet useable as they stand. 
+
+Although developers are of course welcome to clone, download, or make pull requests on the codebase, no guarantees are made as to the behaviour of `archived` or `pre-release` codebases or its future development direction.
+{% endhint %}
 
 ## How the Topics Relate
 
