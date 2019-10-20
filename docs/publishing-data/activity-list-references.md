@@ -21,9 +21,9 @@ This controlled vocabulary **SHOULD** be retrieved live within an application us
 
 ## Storing references to the OpenActive Activity List
 
-Within your application, it is advisable to store the full `id` of the OpenActive Activity List `Concept` against each opportunity in your database, as the `prefLabel` and other properties are likely to change over time.
+Within your application, it is advisable to store the full `id` of an OpenActive Activity List `Concept` against each opportunity in your database, as the `prefLabel` and other properties are likely to change over time.
 
-Your application may also store the `prefLabel` alongside the `id` at the point of the associating an activity list `Concept` with an opportunity, to remove the need to reference the activity list while outputting open data. It is the responsibility of the data user to use the latest `prefLabel` when rendering the open data it receives.
+Your application may also store the `prefLabel` alongside the `id` at the point of the associating an OpenActive Activity List `Concept` with an opportunity, to remove the need to reference the activity list while outputting open data. It is the responsibility of the data user to use the latest `prefLabel` when rendering the open data it receives.
 
 ## Rendering the OpenActive Activity List with SKOS.js
 
