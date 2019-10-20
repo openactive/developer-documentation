@@ -10,7 +10,7 @@
   * [Implementing RPDE](publishing-data/data-feeds/implementing-rpde-feeds.md)
   * [Testing RPDE feeds](publishing-data/data-feeds/testing-feeds.md)
   * [Scaling RPDE feeds](publishing-data/data-feeds/scaling-feeds.md)
-* [Rendering the activity list](publishing-data/rendering-the-activity-list.md)
+* [Activity list references](publishing-data/activity-list-references.md)
 * [Dataset Sites](publishing-data/dataset-sites.md)
 
 ## Using data
