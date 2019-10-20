@@ -21,7 +21,7 @@ This controlled vocabulary **SHOULD** be retrieved live within an application us
 
 ## Rendering the activity list with SKOS.js
 
-We recommend using [SKOS.js](https://www.npmjs.com/package/@openactive/skos) to implement any activity list client-side rendering, to allow your users to select an activity from the activity list to associate with an Event.
+We recommend using [SKOS.js](https://www.npmjs.com/package/@openactive/skos) to implement any activity list client-side rendering, to allow your users to select an activity from the hierarchical activity list to associate with an Event.
 
 ### Activity List Dropdown Example
 
