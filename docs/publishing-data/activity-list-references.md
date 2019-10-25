@@ -19,8 +19,6 @@ A [JSON-LD definition](https://www.openactive.io/accessibility-support/accessibi
 
 This controlled vocabulary **SHOULD** be retrieved live within an application using an HTTP GET, to ensure that the most up-to-date version is displayed to the user. To access this controlled vocabulary the application **MUST** GET the URL `"https://openactive.io/activity-list/activity-list.jsonld"` \(note there is no `www` in the URL\) which does not require a specific `Accept` header, and is cached via CDN. The controlled vocabulary is also available via a GET of the URL `"https://openactive.io/activity-list"` using an `Accept` header of `application/ld+json`, for completeness, however this shorter URL **MUST NOT** be used in production.
 
-This controlled vocabulary **SHOULD** be retrieved live within an application using an HTTP GET, to ensure that the most up-to-date version is displayed to the user. The application **SHOULD** GET the URL `"https://openactive.io/activity-list"` using an `Accept` header of `application/ld+json`, but **MAY** also GET the URL `"https://openactive.io/activity-list/activity-list.jsonld"` which does not require a specific `Accept` header, useful for client-side rendering \(note there is no `www` in the URL\).
-
 ## Storing references to the OpenActive Activity List
 
 Within your application, it is advisable to store the full `id` of an OpenActive Activity List `Concept` against each opportunity in your database, as the `prefLabel` and other properties are likely to change over time.
