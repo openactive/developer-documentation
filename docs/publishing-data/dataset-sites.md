@@ -47,42 +47,46 @@ The Dataset Site Template is designed to carry the customer's brand with minimal
 
 #### Single database
 
-For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a single Dataset Site is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template.
+For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a single Dataset Site is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template, or hard-coding the settings passed to the [.NET library](https://github.com/openactive/OpenActive.Server.NET/blob/master/OpenActive.DatasetSite.NET/).
 
 #### Multiple databases
 
-For large booking systems with **multiple databases**, usually a separate database for each customer, the list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/dataset-site-template-example-dotnet/blob/master/DatasetSiteTemplateExample/Program.cs#L39) for how these map into the JSON data structure.
+For large booking systems with **multiple databases**, usually a separate database for each customer, the list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#model-level-customisation) for how these map into the JSON data structure, for your reference - in practice the libraries supplied below [take care of this mapping for you](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#simple-configuration).
 
 * `organisationName` e.g. "Better",
 * `datasetSiteUrl` e.g. "[https://halo-odi.legendonlineservices.co.uk/openactive/](https://halo-odi.legendonlineservices.co.uk/openactive/)",
-* `discussionUrl` e.g. "[https://github.com/gll-better/opendata](https://github.com/gll-better/opendata)",
-* `documentation` e.g. "[https://docs.acmebooker.example.com/](https://docs.acmebooker.example.com/)",
-* `legalEntity` e.g. "GLL",
-* `plainTextDescription` e.g. "Established in 1993, GLL is the largest UK-based charitable social enterprise delivering leisure, health and community services. Under the consumer facing brand Better, we operate 258 public Sports and Leisure facilities, 88 libraries, 10 children’s centres and 5 adventure playgrounds in partnership with 50 local councils, public agencies and sporting organisations. Better leisure facilities enjoy 46 million visitors a year and have more than 650,000 members.",
-* `email` e.g. "info@better.org.uk",
-* `url` e.g. "[https://www.better.org.uk/](https://www.better.org.uk/)",
-* `logoUrl` e.g. "[http://data.better.org.uk/images/logo.png](http://data.better.org.uk/images/logo.png)",
+* `datasetDiscussionUrl` e.g. "[https://github.com/gll-better/opendata](https://github.com/gll-better/opendata)",
+* `datasetDocumentationUrl` e.g. "[https://docs.acmebooker.example.com/](https://docs.acmebooker.example.com/)",
+* `organisationLegalEntity` e.g. "GLL",
+* `organisationPlainTextDescription` e.g. "Established in 1993, GLL is the largest UK-based charitable social enterprise delivering leisure, health and community services. Under the consumer facing brand Better, we operate 258 public Sports and Leisure facilities, 88 libraries, 10 children’s centres and 5 adventure playgrounds in partnership with 50 local councils, public agencies and sporting organisations. Better leisure facilities enjoy 46 million visitors a year and have more than 650,000 members.",
+* `organisationEmail` e.g. "info@better.org.uk",
+* `organisationUrl` e.g. "[https://www.better.org.uk/](https://www.better.org.uk/)",
+* `organisationLogoUrl` e.g. "[http://data.better.org.uk/images/logo.png](http://data.better.org.uk/images/logo.png)",
 * `backgroundImageUrl` e.g. "[https://data.better.org.uk/images/bg.jpg](https://data.better.org.uk/images/bg.jpg)",
-* `baseUrl` e.g. "[https://halo-odi.legendonlineservices.co.uk/api/](https://halo-odi.legendonlineservices.co.uk/api/)"
+* `openDataFeedBaseUrl` e.g. "[https://halo-odi.legendonlineservices.co.uk/api/](https://halo-odi.legendonlineservices.co.uk/api/)"
 
 We suggest if you can provide the customer with a means of customising the logo and background image \(e.g. via uploading an image to the [cloudinary.com](https://cloudinary.com) CDN, using [their widget](https://jsfiddle.net/nickevansuk/ugpnxmby/), which is free at low volume\), these have the largest effect on the brand feel of the page.
 
 Although the customer will likely be able to fill in most properties specific to them, there are two where they will require guidance:
 
-* `discussionUrl` - the URL of the [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for the dataset.
-* `documentation` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer will have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct.
+* `datasetDiscussionUrl` - the URL of the [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for the dataset.
+* `datasetDocumentationUrl` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer will have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct.
 
-### .NET Example
+### .NET Library
 
-This [simple console app](https://github.com/openactive/dataset-site-template-example-dotnet) demonstrates the Dataset Site Template render steps outlined above using [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/).
+This [.NET library](https://github.com/openactive/dataset-site-template-example-dotnet) makes it really easy to render a dataset site template, accepting basic settings to automatically complete the Dataset Site Template render steps outlined above using [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/).
 
-{% embed url="https://github.com/openactive/dataset-site-template-example-dotnet" caption="" %}
+[Click here for more information about the .NET library](https://github.com/openactive/OpenActive.Server.NET/blob/master/OpenActive.DatasetSite.NET/).
+
+### Other Languages
+
+A basic example of following the above render steps can be found [here](https://github.com/openactive/dataset-site-template-example-dotnet/blob/master/DatasetSiteTemplateExample/Program.cs), and can be readily ported into other languages.
 
 ### JavaScript Example
 
 This [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/) demonstrates the Dataset Site Template render steps outlined above using plain JavaScript.
 
-Please note this is only an example to demonstrate the logic and is not intended for production. The mustache template **must** be rendered server-side as one of its primary purposes is SEO.
+Please note this is only an example to demonstrate the logic and is not intended for production. The mustache template **must** be copied locally and rendered server-side for security - to prevent XSS attacks and as one of its primary purposes is SEO.
 
 Click the **Result** tab below to see the result of a template render.
 
