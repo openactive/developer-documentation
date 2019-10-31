@@ -47,7 +47,7 @@ The Dataset Site Template is designed to carry the customer's brand with minimal
 
 #### Single database
 
-For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a single Dataset Site is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template, or hard-coding the settings passed to the [.NET library](https://github.com/openactive/OpenActive.Server.NET/blob/master/OpenActive.DatasetSite.NET/).
+For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a single Dataset Site is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template, or hard-coding the settings passed to the [.NET library](https://github.com/openactive/OpenActive.DatasetSite.NET/).
 
 #### Multiple databases
 
@@ -74,9 +74,9 @@ Although the customer will likely be able to fill in most properties specific to
 
 ### .NET Library
 
-This [.NET library](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET) makes it really easy to render a dataset site template, accepting basic settings to automatically complete the Dataset Site Template render steps outlined above using [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/).
+This [.NET library](https://github.com/openactive/OpenActive.DatasetSite.NET/) makes it really easy to render a dataset site template, accepting basic settings to automatically complete the Dataset Site Template render steps outlined above using [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/).
 
-[Click here for more information about the .NET library](https://github.com/openactive/OpenActive.Server.NET/blob/master/OpenActive.DatasetSite.NET/).
+[Click here for more information about the .NET library](https://github.com/openactive/OpenActive.DatasetSite.NET/).
 
 ### Other Languages
 
