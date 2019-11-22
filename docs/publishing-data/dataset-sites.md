@@ -70,7 +70,7 @@ We suggest if you can provide the customer with a means of customising the logo 
 Although the customer will likely be able to fill in most properties specific to them, there are two where they will require guidance:
 
 * `datasetDiscussionUrl` - the URL of the [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for the dataset.
-* `datasetDocumentationUrl` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer will have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct.
+* `datasetDocumentationUrl` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer will have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct. If you do not have your own documentation page, you can just link to "[https://developer.openactive.io/](https://developer.openactive.io/)".
 
 ### .NET Library
 
