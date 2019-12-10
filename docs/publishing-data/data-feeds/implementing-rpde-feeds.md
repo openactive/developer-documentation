@@ -4,6 +4,39 @@ Always use a JSON library to generate the output, and never construct the JSON m
 
 Language-specific examples of library implementations that also support the removal of nulls, empty strings and empty arrays - as the specification stipulates - are included here.
 
+## Transactions: Preventing delayed item interleaving
+
+When concurrent transactions are used to write to tables that power RPDE feeds, a "modified" date must be set a few seconds into the future just before the transaction is committed, to prevent a delayed item interleaving race condition from occurring.
+
+### Example of race condition
+
+Delayed item interleaving is a race condition that occurs when two concurrent transactions containing "timestamps" or "change numbers" are committed out of order. For example using the [Modified Timestamp and ID](https://www.w3.org/2017/08/realtime-paged-data-exchange/#modified-timestamp-and-id) ordering strategy:
+
+* **Transaction 1**: Starts at 10:00:01 and updates RPDE item timestamps
+* **Transaction 2**: Starts at 10:00:02 and updates RPDE item timestamps
+* **Transaction 2**: Commits
+* Data consumer reads the feed at 10:00:03, and gets the latest items up to 10:00:02
+* **Transaction 1**: Commits
+* Items from **Transaction 1** appear in the feed with timestamp 10:00:01, but the data consumer has already moved past them
+
+The same issue can be demonstrated with the [Incrementing Unique Change Number](https://www.w3.org/2017/08/realtime-paged-data-exchange/#incrementing-unique-change-number) ordering strategy:
+
+* **Transaction 1**: Creates change number 001 and updates RPDE item timestamp
+* **Transaction 2**: Creates change number 002 and updates RPDE item timestamp
+* **Transaction 2**: Commits
+* Data consumer reads the feed up to 002
+* **Transaction 1**: Commits
+* Item from **Transaction 1** appears in the feed with change number 001, but the data consumer has already moved past it
+
+### Preventing the race condition
+
+In order to prevent this race condition, simply separate the more intensive work of the transaction from the atomic timestamp and change number update:
+
+1. Commit the transaction
+2. Update the timestamp or change number after the transaction has been committed as an atomic operation, outside of a transaction, using `GETDATE()` or similar
+
+Updating items in the feed without updating their timestamp/change number immediately does not have any negative effects, as data consumers who are reading the feed will read the updated item earlier than they would otherwise instead of an older version, then read it again after the timestamp/change number is updated as they would normally.
+
 ## C\# and .NET Framework
 
 ### OpenActive.NET
