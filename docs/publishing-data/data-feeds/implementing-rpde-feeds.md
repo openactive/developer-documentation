@@ -6,7 +6,7 @@ Language-specific examples of library implementations that also support the remo
 
 ## Transactions: Preventing delayed item interleaving
 
-When concurrent transactions are used to write to tables that power RPDE feeds, a "modified" date must be set a few seconds into the future just before the transaction is committed, to prevent a delayed item interleaving race condition from occurring.
+When concurrent transactions are used to write to tables that power RPDE feeds, the timestamp and change number update must be done outside of the transaction.
 
 ### Example of race condition
 
