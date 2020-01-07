@@ -22,7 +22,7 @@ The [high-volume proposal](https://github.com/openactive/realtime-paged-data-exc
 
 A CDN is simple to configure and requires a small amount of additional code within the RPDE endpoint.
 
-Note that in order for the CDN to be effective you **should not** implement the [optional `limit` parameter specified in the RPDE ](https://www.w3.org/2017/08/realtime-paged-data-exchange/#modified-timestamp-and-id)specification.
+Note that in order for the CDN to be effective your application **should not** implement the [optional `limit` parameter specified in the RPDE specification](https://www.w3.org/2017/08/realtime-paged-data-exchange/#modified-timestamp-and-id).
 
 ### Basic Configuration
 
