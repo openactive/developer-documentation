@@ -4,6 +4,7 @@
 
 ## Publishing Data
 
+* [Overview](publishing-data/overview.md)
 * [Data Feeds](publishing-data/data-feeds/README.md)
   * [How an RPDE data feed works](publishing-data/data-feeds/how-a-data-feed-works.md)
   * [Types of RDPE feed](publishing-data/data-feeds/types-of-feed.md)
@@ -15,6 +16,7 @@
 
 ## Using data
 
+* [Overview](using-data/overview.md)
 * [Harvesting opportunity data](using-data/harvesting-opportunity-data.md)
 
 ## Data Model
