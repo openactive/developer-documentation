@@ -72,6 +72,8 @@ The Dataset Site Template is designed to carry the customer's brand with minimal
 
 For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a **single Dataset Site** is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template, or hard-coding the settings passed to the library.
 
+Note a single Dataset Site must only be used when all feeds it includes are part of the same dataset - for example a SessionSeries and ScheduledSession feed that together constitute the dataset for all providers in the booking system. Where multiple feeds exist that represent distinct datasets \(e.g. SessionSeries feed for Provider A, SessionSeries feed for Provider B\), they must be referenced from distinct Dataset Sites.
+
 ### Multiple databases
 
 For large booking systems with **multiple databases**, usually a separate database for each customer, a **separate Dataset Site** may be created for each database. The list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#model-level-customisation) for how these map into the JSON data structure, for your reference - in practice the libraries supplied above [take care of this mapping for you](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#simple-configuration).
