@@ -41,15 +41,15 @@ The same issue can be demonstrated with the [Incrementing Unique Change Number](
 
 ### Preventing the race condition
 
-In order to prevent this race condition, simply separate the more intensive work of the transaction from the atomic timestamp and change number update, add a "visible" timestamp column, and ensure you are using accurate timestamps:
+In order to prevent this race condition, simply separate the more intensive work of the transaction from the atomic timestamp and change number update, filter out recent changes in the feed, and ensure you are using accurate timestamps:
 
 1. First commit the transaction, then update the timestamps or change numbers after the transaction has been committed as an atomic operation, outside of a transaction, using `GETDATE()` or similar
-2. Add a "visible" timestamp column to the table that is updated with a timestamp 2 seconds in the future, then ensure the RPDE endpoint filters out all items with a "visible" date in the future
+2. Ensure the RPDE endpoint filters out all items with a "modified" date after 2 seconds in the past, to delay items appearing in the feed
 3. If using the [Modified Timestamp and ID](https://www.w3.org/2017/08/realtime-paged-data-exchange/#modified-timestamp-and-id) ordering strategy, use a timestamp column with a high degree of accuracy \(e.g. `datetime2` in SQL Server\).
 
 Updating items in the feed without updating their timestamp/change number immediately does not have any negative effects, as data consumers who are reading the feed will read the updated item earlier than they would otherwise instead of an older version, then read it again after the timestamp/change number is updated as they would normally.
 
-Using the "visible" timestamp column is a belt-and-braces measure that ensures that [small variances](https://stackoverflow.com/questions/30301302/identity-and-getdate-out-of-order) between timestamp and change number update order are accounted for under high database load, by only presenting data to the data consumer after all timestamp/change number updates have commited.
+Using the RPDE endpoint filter to delay items appearing is a belt-and-braces measure that ensures that [small variances](https://stackoverflow.com/questions/30301302/identity-and-getdate-out-of-order) between timestamp and change number update order are accounted for under high database load, by only presenting data to the data consumer after a small delay, when all timestamp/change number updates have commited.
 
 ## C\# and .NET Framework
 
