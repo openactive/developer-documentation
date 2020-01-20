@@ -28,7 +28,20 @@ The Dataset Site Template is very easy to use and quick to apply - it's essentia
 
 The[ dataset site template repository](https://github.com/openactive/dataset-site-template) contains a [mustache template](https://www.openactive.io/dataset-site-template/datasetsite.mustache) for creating an OpenActive dataset site.
 
-### Getting Started
+### .NET, PHP and Ruby Libraries
+
+Several libraries are available that make it really easy to render the dataset site template, accepting basic settings to configure your dataset site automatically.
+
+The table below lists the available OpenActive libraries:
+
+| Library | [.NET](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) | [PHP](https://www.php.net/releases/5_4_0.php) | [Ruby](https://www.ruby-lang.org/en/) |
+| :--- | :--- | :--- | :--- |
+| Open Opportunity Data Feeds | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) | [openactive/models](https://packagist.org/packages/openactive/models) | [openactive](https://rubygems.org/gems/openactive) |
+| Dataset Site | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/) | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site) | [openactive-dataset\_site](https://rubygems.org/gems/openactive-dataset_site) |
+
+### Other Languages
+
+A basic example of following the below render steps can be found [here](https://github.com/openactive/dataset-site-template-example-dotnet/blob/master/DatasetSiteTemplateExample/Program.cs), and can be readily ported into other languages. An explanation of how this works is included below.
 
 The [Dataset Site Template](https://github.com/openactive/dataset-site-template/) is a single self-contained mustache template of an HTML page that contains embedded CSS, an embedded encoded image, and references to CDNs of [Font Awesome](https://fontawesome.com/) and [Google Fonts](https://fonts.google.com/). It works across all browsers, and includes fully compliant DCAT and schema.org machine-readable metadata to ensure it is compatible with [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
 
@@ -41,17 +54,27 @@ Steps to render the template:
    * Use the resulting JSON with the [mustache template](https://www.openactive.io/dataset-site-template/datasetsite.mustache) to render the dataset site.
    * Keep in mind that OpenActive will be providing updates to the mustache template in the future, so it is best to write code that anticipates this.
 
-### Personalising the Dataset Site
+#### JavaScript Example
+
+This [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/) demonstrates the Dataset Site Template render steps outlined above using plain JavaScript.
+
+Please note this is only an example to demonstrate the logic and is not intended for production. The mustache template **must** be copied locally and rendered server-side for security - to prevent XSS attacks and as one of its primary purposes is SEO.
+
+Click the **Result** tab below to see the result of a template render.
+
+{% embed url="https://jsfiddle.net/nickevansuk/msby0vqg/" caption="" %}
+
+## Step 2: Personalising the Dataset Site
 
 The Dataset Site Template is designed to carry the customer's brand with minimal configuration.
 
-#### Single database
+### Single database
 
-For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a single Dataset Site is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template, or hard-coding the settings passed to the [.NET library](https://github.com/openactive/OpenActive.DatasetSite.NET/).
+For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a single Dataset Site is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template, or hard-coding the settings passed to the library.
 
-#### Multiple databases
+### Multiple databases
 
-For large booking systems with **multiple databases**, usually a separate database for each customer, the list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#model-level-customisation) for how these map into the JSON data structure, for your reference - in practice the libraries supplied below [take care of this mapping for you](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#simple-configuration).
+For large booking systems with **multiple databases**, usually a separate database for each customer, the list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#model-level-customisation) for how these map into the JSON data structure, for your reference - in practice the libraries supplied above [take care of this mapping for you](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#simple-configuration).
 
 * `organisationName` e.g. "Better",
 * `datasetSiteUrl` e.g. "[https://halo-odi.legendonlineservices.co.uk/openactive/](https://halo-odi.legendonlineservices.co.uk/openactive/)",
@@ -72,27 +95,7 @@ Although the customer will likely be able to fill in most properties specific to
 * `datasetDiscussionUrl` - the URL of the [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for the dataset.
 * `datasetDocumentationUrl` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer will have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct. If you do not have your own documentation page, you can just link to "[https://developer.openactive.io/](https://developer.openactive.io/)".
 
-### .NET Library
-
-This [.NET library](https://github.com/openactive/OpenActive.DatasetSite.NET/) makes it really easy to render a dataset site template, accepting basic settings to automatically complete the Dataset Site Template render steps outlined above using [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/).
-
-[Click here for more information about the .NET library](https://github.com/openactive/OpenActive.DatasetSite.NET/).
-
-### Other Languages
-
-A basic example of following the above render steps can be found [here](https://github.com/openactive/dataset-site-template-example-dotnet/blob/master/DatasetSiteTemplateExample/Program.cs), and can be readily ported into other languages.
-
-### JavaScript Example
-
-This [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/) demonstrates the Dataset Site Template render steps outlined above using plain JavaScript.
-
-Please note this is only an example to demonstrate the logic and is not intended for production. The mustache template **must** be copied locally and rendered server-side for security - to prevent XSS attacks and as one of its primary purposes is SEO.
-
-Click the **Result** tab below to see the result of a template render.
-
-{% embed url="https://jsfiddle.net/nickevansuk/msby0vqg/" caption="" %}
-
-## Step 2: GitHub Issues Board creation
+## Step 3: GitHub Issues Board creation
 
 The `discussionUrl` is the url of the GitHub issues board for that dataset site.
 
@@ -128,7 +131,7 @@ The GitHub API provides a mechanism to [automatically create GitHub repositories
 }
 ```
 
-## Step 3: Providing a Data Catalog \(multiple databases only\)
+## Step 4: Providing a Data Catalog \(multiple databases only\)
 
 For booking systems with **multiple databases**, a Data Catalog must also be provided to allow the many Dataset Sites that are created to be easily indexed by the [OpenActive Status Page](https://status.openactive.io) and other data users.
 

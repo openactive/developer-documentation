@@ -4,6 +4,17 @@ Always use a JSON library to generate the output, and never construct the JSON m
 
 Language-specific examples of library implementations that also support the removal of nulls, empty strings and empty arrays - as the specification stipulates - are included here.
 
+## .NET, PHP and Ruby Libraries
+
+Several libraries are available that make it really easy to create open opportunity data feeds.
+
+The table below lists the available OpenActive libraries:
+
+| Library | [.NET](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) | [PHP](https://www.php.net/releases/5_4_0.php) | [Ruby](https://www.ruby-lang.org/en/) |
+| :--- | :--- | :--- | :--- |
+| Open Opportunity Data Feeds | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) | [openactive/models](https://packagist.org/packages/openactive/models) | [openactive](https://rubygems.org/gems/openactive) |
+| Dataset Site | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/) | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site) | [openactive-dataset\_site](https://rubygems.org/gems/openactive-dataset_site) |
+
 ## Transactions: Preventing delayed item interleaving
 
 When concurrent transactions are used to write to tables that power RPDE feeds, the timestamp and change number update must be done outside of the transaction, with high accuracy timestamp, and a "visible" timestamp column added.
@@ -42,7 +53,7 @@ Using the "visible" timestamp column is a belt-and-braces measure that ensures t
 
 ## C\# and .NET Framework
 
-### OpenActive.NET
+### OpenActive.NET Library
 
 We highly recommend using the [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) library for .NET implementations. It includes strongly typed classes for the [OpenActive data model](https://www.openactive.io/modelling-opportunity-data/) including [beta properties](https://www.openactive.io/ns-beta/), and fully compliant serialisation methods too.
 
@@ -107,6 +118,12 @@ public class RPDERestUtils
 ```
 
 ## PHP
+
+### OpenActive PHP Models Library
+
+We highly recommend using the [OpenActive PHP Models Library](https://packagist.org/packages/openactive/models) for PHP implementations. It includes strongly typed classes for the [OpenActive data model](https://www.openactive.io/modelling-opportunity-data/) including [beta properties](https://www.openactive.io/ns-beta/), and fully compliant serialisation methods too.
+
+### Manual Implementation
 
 The specification requires that no null or empty strings are present in the OpenActive feed. To achieve this, define the RPDE response structure as nested arrays, and recursively unset empty properties before using [json\_encode](http://php.net/manual/en/function.json-encode.php) to generate the response.
 
