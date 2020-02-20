@@ -1,16 +1,10 @@
 # Types of RDPE feed
 
-## Time-based Events: Sessions and Courses
+## Time-based Events: **Regular Classes and Sessions**
 
-These always have at least `activity`, `location` and `startDate` specified: so a Yoga class in Downtown Leisure Centre at 7pm on a Tuesday. This class may be part of a 10-week course.
+These always have at least `activity`, `location` and `startDate` specified: so a Yoga class in Downtown Leisure Centre at 7pm on a Tuesday. See [here](../../data-model/data-model-overview.md#classes-and-sessions) for further clarification of the types available. 
 
-These are feeds which, at the top level, can contain a mixture of [`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#regular-sessions-sessionseries-and-scheduledsession-), [`EventSeries`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#grouping-together-events-eventseries-), [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#headline-events-headlineevent-) , [`CourseInstance`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#courses-courseinstance-), [`ext:VirtualEvent`](https://github.com/openactive/modelling-opportunity-data/issues/71) \([UC](https://github.com/openactive/modelling-opportunity-data/issues/71)\) or [`BroadcastEvent`](https://schema.org/BroadcastEvent) \([UC](https://github.com/openactive/modelling-opportunity-data/issues/71)\).
-
-Such types of event can be combined into a single feed or presented as separate feeds \(e.g. a feed for classes and a feed for courses\).
-
-## **Regular event types**
-
-The OpenActive Modelling Specification 2.0 represents regular events using a hierarchy of types: `EventSeries`, `SessionSeries`, and `ScheduledSession`. These are described by example in the diagram below:
+The OpenActive Modelling Specification 2.0 represents regular events using a hierarchy of types: [`EventSeries`](https://www.openactive.io/modelling-opportunity-data/#grouping-together-events-eventseries-), [`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-), and [`ScheduledSession`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-).  These are described by example in the diagram below:
 
 ![](https://docs.google.com/drawings/u/0/d/s78NrrrLPOgQHs-TaXftQdg/image?w=602&h=268&rev=325&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
@@ -62,9 +56,9 @@ Listings data feed examples:
 * Small provider: [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example_1.json&version=2.0)
 * Large provider: [SessionSeries with EventSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-eventseries-split_example_1.json&version=2.0)
 
-## **Ad-hoc event types**
+## Time-based Events: Ad-hoc Events
 
-The OpenActive model allows for ad-hoc events to be described using the pattern below. Ad-hoc events must only be used to describe truly ad-hoc events, and not to describe regular events such as those described in the previous section. See [here](https://developer.openactive.io/data-model/data-model-overview#events) for further clarification of the types available. 
+The OpenActive model allows for ad-hoc events to be described using the pattern below. Ad-hoc events must only be used to describe truly ad-hoc events, and not to describe regular events such as those described in the previous section. See [here](../../data-model/data-model-overview.md#events) for further clarification of the types available. 
 
 ### **Summary of ad-hoc event types**
 
@@ -98,16 +92,6 @@ For [**bookable**](https://www.openactive.io/open-booking-api/EditorsDraft/#dfn-
 
 ![](https://docs.google.com/drawings/u/0/d/sjJOI7mL_qflDQspoKgNUmw/image?w=636&h=440&rev=174&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
-## **Schema.org type inheritance**
-
-The model itself \(the properties within the types\) follows a different structure to the property inheritance structure described above.
-
-`EventSeries`, `SessionSeries`, `ScheduledSession` and `Slot` all sub-class `Event`.
-
-This can be useful for modelling the entities within certain frameworks**.**
-
-![](https://docs.google.com/drawings/u/0/d/sHnIqB65tCLtqxkTO0dBaVA/image?w=602&h=132&rev=53&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
-
 ## Slot-based Events: FacilityUses
 
 These always have at least `activity` and`location` specified, where the activity can be booked in slots: so a Tennis at Downtown Leisure Centre with slots available hourly from 8am until 8pm.
@@ -125,4 +109,20 @@ Additionally, to publish specific court availability they must also implement th
 
 * `http://www.example.org/feeds/individual-facility-uses`
 * `http://www.example.org/feeds/individual-facility-use-slots`
+
+## Other types of Time-based Events: Headline Events and Courses
+
+A feed of  [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/#headline-events-headlineevent-) can be used to represent whole day or multi-day events, such as mass participation events, family fun days, etc. See [here](../../data-model/data-model-overview.md#headline-events) for further clarification, and [here](http://data.britishtriathlon.org/) for an example.
+
+A feed of [`CourseInstance`](https://www.openactive.io/modelling-opportunity-data/#courses-courseinstance-) can be used to represent a fixed-length course. See [here](../../data-model/data-model-overview.md#courses) for further clarification, and [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fcourseinstance_event_example_1.json&version=2.x) for an example.
+
+## **Schema.org type inheritance**
+
+The model itself \(the properties within the types\) follows a _different inheritance structure_ to the property inheritance structure described above.
+
+`EventSeries`, `SessionSeries`, `ScheduledSession`, `HeadlineEvent`, `CourseInstance`, and `Slot` all **sub-class** `Event`.
+
+This can be useful for modelling the entities within certain frameworks**.**
+
+![](https://docs.google.com/drawings/u/0/d/sHnIqB65tCLtqxkTO0dBaVA/image?w=602&h=272&rev=181&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
