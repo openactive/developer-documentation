@@ -126,7 +126,7 @@ A feed of [`CourseInstance`](https://www.openactive.io/modelling-opportunity-dat
 
 ## **Event relationship overview**
 
-The following diagram illustrates the relationships between the types available within the OpenActive Modelling Specification 2.0:
+The following diagram illustrates the relationships between the event types available within the OpenActive Modelling Specification 2.0:
 
 ![](https://docs.google.com/drawings/u/0/d/saLhrYuhXzasZGFjI9oAzfQ/image?w=602&h=209&rev=48&ac=1&parent=1mo_N1xa0H9D4uVEz3m8kyCPAAXcSEjwpEiv995hDxQs)
 
