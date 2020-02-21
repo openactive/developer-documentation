@@ -4,7 +4,7 @@
 
 These always have at least `activity`, `location` and `startDate` specified: so a Yoga class in Downtown Leisure Centre at 7pm on a Tuesday. See [here](../../data-model/data-model-overview.md#classes-and-sessions) for further clarification of the types available. 
 
-The OpenActive Modelling Specification 2.0 represents regular events using a hierarchy of types: [`EventSeries`](https://www.openactive.io/modelling-opportunity-data/#grouping-together-events-eventseries-), [`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-), and [`ScheduledSession`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-).  These are described by example in the diagram below:
+The OpenActive Modelling Specification 2.0 represents regular events using a hierarchy of types: [`EventSeries`](https://www.openactive.io/modelling-opportunity-data/#grouping-together-events-eventseries-), [`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-), and [`ScheduledSession`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-), linked via the `superEvent` and `subEvent` properties. These are described by example in the diagram below:
 
 ![](https://docs.google.com/drawings/u/0/d/s78NrrrLPOgQHs-TaXftQdg/image?w=602&h=268&rev=325&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
@@ -62,7 +62,7 @@ The OpenActive model allows for ad-hoc events to be described using the pattern 
 
 ### **Summary of ad-hoc event types**
 
-The OpenActive Modelling Specification 2.0 represents ad-hoc events using a hierarchy of types: `EventSeries` and `Event`. These are described by example in the diagram below:
+The OpenActive Modelling Specification 2.0 represents ad-hoc events using a hierarchy of types: `EventSeries` and `Event`, linked via the `superEvent` and `subEvent` properties. These are described by example in the diagram below:
 
 ![](https://docs.google.com/drawings/u/0/d/soe-8CJhGcRo3o-w3Njk_4g/image?w=602&h=168&rev=64&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
@@ -98,6 +98,8 @@ These always have at least `activity` and`location` specified, where the activit
 
 Two different levels of granularity are available: A `FacilityUse` represents "Badminton at Downtown Leisure Centre", where as `IndividualFacilityUse` is "Court 2 in Sports Hall 3 for Badminton at Towntown Leisure Centre".
 
+The OpenActive Modelling Specification 2.0 represents slot-based events using a hierarchy of types: `FacilityUse`/`IndividualFacilityUse` and `Slot`, linked via the `facilityUse` and `event` properties.
+
 For facilities a publisher must implement the following two independent feeds:
 
 * `http://www.example.org/feeds/facility-uses` 
@@ -112,11 +114,30 @@ Additionally, to publish specific court availability they must also implement th
 
 ## Other types of Time-based Events: Headline Events and Courses
 
-A feed of  [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/#headline-events-headlineevent-) can be used to represent whole day or multi-day events, such as mass participation events, family fun days, etc. See [here](../../data-model/data-model-overview.md#headline-events) for further clarification, and [here](http://data.britishtriathlon.org/) for an example.
+A feed of  [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/#headline-events-headlineevent-) can be used to represent whole day or multi-day events, such as mass participation events, family fun days, etc.
 
-A feed of [`CourseInstance`](https://www.openactive.io/modelling-opportunity-data/#courses-courseinstance-) can be used to represent a fixed-length course. See [here](../../data-model/data-model-overview.md#courses) for further clarification, and [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fcourseinstance_event_example_1.json&version=2.x) for an example.
+* The OpenActive Modelling Specification 2.0 represents these events using a hierarchy of types: `HeadlineEvent` \(for the overall event\) and `Event` \(for small events within the overall event\) linked via the `superEvent` and `subEvent` properties.
+* See [here](../../data-model/data-model-overview.md#headline-events) for further clarification, and [here](http://data.britishtriathlon.org/) for an example.
 
-## **Schema.org type inheritance**
+A feed of [`CourseInstance`](https://www.openactive.io/modelling-opportunity-data/#courses-courseinstance-) can be used to represent a fixed-length course.
+
+* The OpenActive Modelling Specification 2.0 represents these events using a hierarchy of types: `CourseInstance` \(for the whole course\) and `Event` \(for the individual occurrences\) linked via the `superEvent` and `subEvent` properties.
+* See [here](../../data-model/data-model-overview.md#courses) for further clarification, and [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fcourseinstance_event_example_1.json&version=2.x) for an example.
+
+## **Event relationship overview**
+
+The following diagram illustrates the relationships between the types available within the OpenActive Modelling Specification 2.0:
+
+![](https://docs.google.com/drawings/u/0/d/saLhrYuhXzasZGFjI9oAzfQ/image?w=602&h=209&rev=48&ac=1&parent=1mo_N1xa0H9D4uVEz3m8kyCPAAXcSEjwpEiv995hDxQs)
+
+Note the use of aliases \(e.g. "IndividualSlot"\) which are useful when referring to a specific type that is being used in a particular context.
+
+The relationship between all types is represented via the `superEvent` and `subEvent` properties, with the exception of:
+
+* `FacilityUse`/`IndividualFacilityUse` and `Slot`, which are linked via the `facilityUse` and `event` properties 
+* `FacilityUse` and `IndividualFacilityUse`, which are linked via the `aggregateFacilityUse` and `individualFacilityUse` properties.
+
+## **Schema.org type inheritance overview**
 
 The model itself \(the properties within the types\) follows a _different inheritance structure_ to the property inheritance structure described above.
 
