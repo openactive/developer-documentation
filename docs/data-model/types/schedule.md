@@ -250,6 +250,33 @@ While these properties are marked as optional, a data publisher must provide eit
 </table>
 
 
+### **OpenActive Beta Extension properties**
+    
+These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
+
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>beta:timeZone</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>[DEPRECATED: This beta property is now deprecated, please use <code>schema:scheduleTimezone</code> instead.] The time zone used to generate occurrences, same as iCal TZID. E.g. 'Europe/London'.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/197">#197</a>.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 
 

@@ -359,6 +359,177 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
 </table>
 
 
+### **OpenActive Beta Extension properties**
+    
+These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
+
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>beta:affiliatedLocation</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Place"><code>Place</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The original location of the event before it was moved online.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/227">#227</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:attendeeCount</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>For events that have an unlimited number of tickets, captures the number of attendees (actual attendance).</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/12">#12</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:availability</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>For data publishers not wishing to disclose the granular availability of their sessions openly.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/9">#9</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:distance</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/QuantitativeValue"><code>QuantitativeValue</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The distance of a run, cycle or other activity. Must also include units.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/3">#3</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:estimatedDuration</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/QuantitativeValue"><code>QuantitativeValue</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A property that allows an Event duration to be represented as a range (e.g. 0-30mins, 30-60mins, 60-90mins, 90+).</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/201">#201</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:facilitySetting</b></td>
+      <td style="text-align:left">
+        <a href="https://openactive.io/ns-beta#FacilitySettingType"><code>FacilitySettingType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Whether the event or facility is indoor or outdoor.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/facility-types/issues/1">#1</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:formattedDescription</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/2">#2</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:isFirstSessionAccessibleForFree</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A property that indicates whether the first session is free.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/232">#232</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:isInteractivityPreferred</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A property that indicates whether the virtual event is interactive (e.g. Zoom with participant microphones and cameras on), or is just a one-way broadcast (e.g. Facebook Live, Instagram Live, Zoom with participant microphones and cameras off).</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/230">#230</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:isVirtuallyCoached</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A property that indicates whether the event is led by a virtual coach. Only relevant if an event <code>isCoached</code>. If not provided is assumed to be <code>false</code>.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/71">#71</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:isWheelchairAccessible</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A property that details whether the event is suitable for wheelchair access. Placed on Event as this field could be used to detail whether the Event is suitable, as well as the Place.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/166">#166</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:offerValidityPeriod</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Duration"><code>Duration</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Duration before the event for which the associated Offers are valid</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/204">#204</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:participantSuppliedEquipment</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/requiredstatustype"><code>RequiredStatusType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A property that indicates whether the participant must or may supply equipment for use in the Event.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/229">#229</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:registrationCount</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>For events that have an unlimited number of tickets, captures the number of registrations (intention to attend).</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/13">#13</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:sportsActivityLocation</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/SportsActivityLocation"><code>SportsActivityLocation</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Internal location of the event, e.g. Court 1</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/110">#110</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:video</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>An related video object.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/88">#88</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:virtualLocation</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/VirtualLocation"><code>VirtualLocation</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Describes a means of electronic access to a shared virtual space.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/224">#224</a>.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 
 

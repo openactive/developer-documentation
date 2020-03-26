@@ -188,6 +188,42 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
 </table>
 
 
+### **OpenActive Beta Extension properties**
+    
+These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
+
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>beta:formattedDescription</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/2">#2</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:video</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>An related video object.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/88">#88</a>.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 
 
