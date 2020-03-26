@@ -53,17 +53,31 @@ Courses generally involve an upfront commitment to a number of sessions, with a 
 
 These are activities which tend to have a start and end date, likely to coincide with a holiday period or are activities based on improving a skill e.g. Soccer Schools, holiday camps, learn to swim.
 
-## Areas of future work
+## Virtual Events
 
-### Online Classes and Events
-
-{% hint style="warning" %}
-Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71), and any properties suggested in the associated proposals are subject to change. We welcome your contribution to the discussion to expedite building these into the OpenActive specifications.
+{% hint style="info" %}
+Represented in the model by the [**`eventAttendanceMode`**](https://github.com/openactive/modelling-opportunity-data/issues/225) property, which can be applied to the existing opportunity types for `SessionSeries`, `HeadlineEvent`, `Event`, `CourseInstance`.
 {% endhint %}
 
-These are activities are accessed online by users live from source through a digital product e.g. fitness classes, workouts, sessions which are streamed or provided via an online product, such as FitSwarm, Flex, Les Mills On Demand, and Racefully. They include scheduled online events, on-demand content, and sessions which can be participated in virtually using an app or run-tracker \(e.g. live virtual 5k\).
+Virtual Events \(aka "Livestream" or "Live" events\) are activities that can be accessed online by users **live** from source through a digital product e.g. fitness classes, workouts, sessions which are live-streamed or provided via an online product, such as FitSwarm, Zoom, Facebook Live, or Instagram Live. They also include scheduled online events and sessions which can be participated in virtually using an app or run-tracker \(e.g. live virtual 5k\).
 
-Note that use cases for this data have are not yet fully defined, please join the discussion [here](https://github.com/openactive/modelling-opportunity-data/issues/71) if you have any ideas to contribute.
+{% hint style="warning" %}
+Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71) that has been accelerated in response to the COVID-19 pandemic, and any properties suggested in the associated proposals are subject to change after the pandemic has ended. We welcome your contribution to the [discussion and various proposals](https://github.com/openactive/modelling-opportunity-data/labels/virtual%20events) to expedite building these into the OpenActive specifications.
+{% endhint %}
+
+## On-Demand Events
+
+{% hint style="info" %}
+Represented in the model by [`OnDemandEvent`](https://github.com/openactive/modelling-opportunity-data/issues/228).
+{% endhint %}
+
+On-demand Events are recordings of events that do not occur at a specific time, and are available to watch at any time - similar to content on Netflix or iPlayer. These might be pre-recorded fitness classes, workouts, sessions which are provided via an online product, such as Les Mills On Demand and Racefully. They include on-demand video content and sessions which can be participated in virtually using an app or run-tracker \(e.g. live virtual 5k\).
+
+{% hint style="warning" %}
+Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71) that has been accelerated in response to the COVID-19 pandemic, and any properties suggested in the associated proposals are subject to change after the pandemic has ended. We welcome your contribution to the [discussion and various proposals](https://github.com/openactive/modelling-opportunity-data/labels/virtual%20events) to expedite building these into the OpenActive specifications.
+{% endhint %}
+
+## Areas of future work
 
 ### Leagues and Ringers
 

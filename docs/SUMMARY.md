@@ -12,6 +12,8 @@
   * [Scaling RPDE feeds](publishing-data/data-feeds/scaling-feeds.md)
 * [Activity list references](publishing-data/activity-list-references.md)
 * [Dataset Sites](publishing-data/dataset-sites.md)
+* [Virtual Events](publishing-data/virtual-events.md)
+* [On-Demand Events](publishing-data/on-demand-events.md)
 
 ## Using data
 
