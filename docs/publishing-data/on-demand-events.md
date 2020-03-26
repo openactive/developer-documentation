@@ -39,7 +39,7 @@ The following properties should be **RECOMMENDED**:
 **Example**
 
 {% hint style="info" %}
-The example below only include**s** new properties specific to virtual events, please see above for all properties that should be included. This will be improved soon.
+The example below only includes new properties specific to virtual events, please see above for all properties that should be included. This will be improved soon.
 {% endhint %}
 
 ```javascript
