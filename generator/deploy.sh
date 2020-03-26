@@ -10,8 +10,9 @@ checkout_current_branch() {
 }
 
 erase_existing_docs() {
-  pushd ../docs/data-model/types
-  rm !("README.md")
+  pushd ../docs/data-model/type
+  shopt -s extglob
+  rm -- !(README.md)
   popd
 }
 
