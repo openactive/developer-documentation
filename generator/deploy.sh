@@ -15,6 +15,7 @@ erase_existing_docs_except_readme() {
 
 commit_generated_files() {
   git add ../docs/data-model/types/*
+  git add ../docs/SUMMARY.md
   git status
   git commit --message "Updating auto-generated model documentation: $TRAVIS_BUILD_NUMBER [ci skip]"
 }
