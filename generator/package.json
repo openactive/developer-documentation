@@ -4,7 +4,7 @@
   "description": "OpenActive Data Model Documentation Generator",
   "main": "index.js",
   "dependencies": {
-    "@openactive/data-models": "^2.0.72",
+    "@openactive/data-models": "latest",
     "remarkable": "^1.7.1",
     "sync-request": "^6.0.0"
   },
