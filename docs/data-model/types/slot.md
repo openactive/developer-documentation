@@ -40,10 +40,10 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>facilityUse</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
+        <a href="https://developer.openactive.io/data-model/types/facilityuse"><code>FacilityUse</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/individualfacilityuse"><code>IndividualFacilityUse</code></a><br/> - or - <br/><a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>URI to the FacilityUse that has this offer</p><p></br><b>Example</b></p><p><code>"facilityUse": "https://example.com/facility-use/1"</code></p>
+        <p>FacilityUse or IndividualFacilityUse that has this offer, either directly embedded or referenced by its @id</p><p></br><b>Example</b></p><p><code>"facilityUse": "https://example.com/facility-use/1"</code></p>
       </td>
     </tr>
     <tr>
@@ -172,6 +172,15 @@ While these properties are marked as optional/recommended in the Modelling Speci
       </td>
       <td style="text-align:left">
         <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>organizer</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The person or organization ultimately responsible for an event. An organizer might be an  schema:Organization or a schema:Person.</p><p></br><b>Example</b></p><p><code>"organizer": {<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
       </td>
     </tr>
   </tbody>

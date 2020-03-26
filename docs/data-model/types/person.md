@@ -8,7 +8,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
 
 ## **Fields**
 
-### **Required fields**
+### **Optional fields**
     
 <table>
   <thead>
@@ -37,21 +37,15 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
         <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"id": "https://example.com/person/12345"</code></p>
       </td>
     </tr>
-  </tbody>
-</table>
-
-
-### **Optional fields**
-    
-<table>
-  <thead>
     <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
+      <td style="text-align:left"><b>address</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/postaladdress"><code>PostalAddress</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Address of the Seller, used on tax receipts.</p>
+      </td>
     </tr>
-  </thead>
-  <tbody>
     <tr>
       <td style="text-align:left"><b>description</b></td>
       <td style="text-align:left">
@@ -116,6 +110,15 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>legalName</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The official name of the organization, e.g. the registered company name.</p><p></br><b>Example</b></p><p><code>"legalName": "Central Speedball Ltd"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>logo</b></td>
       <td style="text-align:left">
         <a href="https://developer.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
@@ -143,6 +146,15 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>taxMode</b></td>
+      <td style="text-align:left">
+        <a href="https://openactive.io/TaxMode"><code>TaxMode</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Either  <a href="https://openactive.io/TaxNet">https://openactive.io/TaxNet</a> or  <a href="https://openactive.io/TaxGross">https://openactive.io/TaxGross</a></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>telephone</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
@@ -152,12 +164,30 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>termsOfService</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/terms"><code>Terms</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The terms of service of the Seller.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>url</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
         <p>A URL where more information about the person may be found</p><p></br><b>Example</b></p><p><code>"url": "http://www.example.com/"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>vatID</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The Value-added Tax ID of the of the Seller.</p>
       </td>
     </tr>
   </tbody>
