@@ -1,4 +1,5 @@
 const DATA_MODEL_DOCS_DIR = "../docs/data-model/types/";
+const SUMMARY_FILE = "../docs/SUMMARY.md";
 const DATA_MODEL_DOCS_URL_PREFIX = "https://developer.openactive.io/data-model/types/";
 
 const { getModels, getMetaData } = require('@openactive/data-models');
@@ -12,7 +13,7 @@ var md = new Remarkable({
 var EXTENSIONS = {
   "beta": {
     "url": "https://www.openactive.io/ns-beta/beta.jsonld",
-    "heading": "OpenActive Beta Extension properties",
+    "heading": "Beta Extension properties",
     "description": "These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term."
   }
 };
@@ -42,25 +43,51 @@ function generateTypeDocumentation(dataModelDirectory, extensions) {
       augmentWithExtension(extension.graph, models, extension.url, prefix, namespaces);
   });
 
+  var contents = [];
+
   Object.keys(models).forEach(function(typeName) {
       var model = models[typeName];
-      if (typeName != "undefined") { //ignores "model_list.json" (which appears to be ignored everywhere else)
+      if (typeName != "undefined" //ignores "model_list.json" (which appears to be ignored everywhere else)
+        && model.subClassOf != "#OpenBookingError" // Exclude all error types
+        ) {
         
         var pageName = model.type.toLowerCase() + ".md";
         var pageContent = createModelMarkdownPage(model, models, extensions);
 
         console.log("NAME: " + pageName);
         console.log(pageContent);
+
+        contents.push(`  * [${model.type}](data-model/types/${pageName})`);
         
         fs.writeFile(DATA_MODEL_DOCS_DIR + pageName, pageContent, function(err) {
             if(err) {
                 return console.log(err);
             }
-
-            console.log("FILE SAVED: " + pageName);
+            
+            console.log(`FILE SAVED: data-model/types/${pageName}`);
         }); 
       }
   });
+
+
+  // Write the SUMMARY.md file to allow GitBook to include the newly added files
+
+  console.log("Contents for " + SUMMARY_FILE);
+  console.log(`...\n\n${contents.sort().join('\n')}\n...\n\n`);
+
+  var summary = fs.readFileSync(SUMMARY_FILE, "utf8");
+  var summary = summary.replace(/data-model\/types\/README.md\)[^]*?\n\n/g, "data-model/types/README.md)\n" + contents.sort().join('\n') + "\n\n");
+
+  console.log("NAME: " + SUMMARY_FILE);
+  console.log(summary);
+
+  fs.writeFile(SUMMARY_FILE, summary, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    
+    console.log("FILE SAVED: " + SUMMARY_FILE);
+  }); 
 }
 
 function augmentWithExtension(extModelGraph, models, extensionUrl, extensionPrefix, namespaces) {
@@ -70,7 +97,7 @@ function augmentWithExtension(extModelGraph, models, extensionUrl, extensionPref
         "fieldName": node.id,
         "alternativeTypes": node.rangeIncludes.map(type => expandPrefix(type, node["@container"] == "@list", namespaces)),
         "description": [
-          node.comment + (node.discussionUrl ? '\n\nIf you are using this property, please join the discussion at proposal ' + renderGitHubIssueLink(node.discussionUrl) + '.' : '')
+          (node.discussionUrl ? renderGitHubIssueLink(node.discussionUrl) + '\n\n' : '') + node.comment
         ],
         "example": node.example,
         "extensionPrefix": extensionPrefix
@@ -109,7 +136,7 @@ function expandPrefix(prop, isArray, namespaces) {
 function renderGitHubIssueLink(url) {
   var splitUrl = url.split("/");
   var issueNumber = splitUrl[splitUrl.length - 1];
-  return "[#" + issueNumber + "](" + url + ")";
+  return "[Proposal #" + issueNumber + "](" + url + ")";
 }
 
 function getExtension(extensionUrl) {
@@ -193,12 +220,12 @@ description: This page describes the ` + model.type + ` type.
 ` + createMarkdownFromDescription(model.description || {}) + `
 ` + (derivedFrom ? `This type is derived from [` + derivedFrom + `](` + derivedFrom + `)` + (derivedFrom.indexOf("schema.org") > -1 ? ", which means that any of this type's properties within schema.org may also be used. Note however the properties on this page must be used in preference if a relevant property is available" : "") + "." : "" ) + `
 
-## **Fields**
+## **Properties**
 
-` + createSectionIfFields("Required fields", fullModel.requiredFields, fullFields)
+` + createSectionIfFields("Required properties", fullModel.requiredFields, fullFields)
   + createRequiredOptionsIfFields(fullModel.requiredOptions, fullFields) 
-  + createSectionIfFields("Recommended fields", fullModel.recommendedFields, fullFields) 
-  + createSectionIfFields("Optional fields", fullModel.optionalFields, fullFields)
+  + createSectionIfFields("Recommended properties", fullModel.recommendedFields, fullFields) 
+  + createSectionIfFields("Optional properties", fullModel.optionalFields, fullFields)
   + createSectionForEachExtension(fullModel.extensionFields, fullFields, extensions)
 + `
 
