@@ -48,7 +48,7 @@ function generateTypeDocumentation(dataModelDirectory, extensions) {
   Object.keys(models).forEach(function(typeName) {
       var model = models[typeName];
       if (typeName != "undefined" //ignores "model_list.json" (which appears to be ignored everywhere else)
-        && model.subClassOf != "#OpenBookingError" // Exclude all error types
+        && model.subClassOf != "#OpenBookingError" // Exclude all OpenBookingError subclasses
         ) {
         
         var pageName = model.type.toLowerCase() + ".md";
