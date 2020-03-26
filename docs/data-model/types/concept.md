@@ -6,9 +6,9 @@ description: This page describes the Concept type.
 
 This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://www.w3.org/2004/02/skos/core#Concept).
 
-## **Fields**
+## **Properties**
 
-### **Required fields**
+### **Required properties**
     
 <table>
   <thead>
@@ -41,7 +41,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
 </table>
 
 
-### **Recommended fields**
+### **Recommended properties**
     
 <table>
   <thead>
@@ -74,7 +74,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
 </table>
 
 
-### **Optional fields**
+### **Optional properties**
     
 <table>
   <thead>

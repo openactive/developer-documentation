@@ -6,9 +6,9 @@ description: This page describes the Person type.
 
 This type is derived from [https://schema.org/Person](https://schema.org/Person), which means that any of this type's properties within schema.org may also be used. Note however the properties on this page must be used in preference if a relevant property is available.
 
-## **Fields**
+## **Properties**
 
-### **Optional fields**
+### **Optional properties**
     
 <table>
   <thead>
@@ -194,7 +194,7 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
 </table>
 
 
-### **OpenActive Beta Extension properties**
+### **Beta Extension properties**
     
 These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
 
@@ -214,7 +214,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/2">#2</a>.</p>
+        <p><a href="https://github.com/openactive/ns-beta/issues/2">Proposal #2</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers.</p>
       </td>
     </tr>
   </tbody>
