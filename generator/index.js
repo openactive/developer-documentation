@@ -10,7 +10,11 @@ var md = new Remarkable({
 });
 
 var EXTENSIONS = {
-
+  "beta": {
+    "url": "https://www.openactive.io/ns-beta/beta.jsonld",
+    "heading": "OpenActive Beta Extension properties",
+    "description": "These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term."
+  }
 };
 
 generateTypeDocumentation(DATA_MODEL_DOCS_DIR, EXTENSIONS);
@@ -64,9 +68,9 @@ function augmentWithExtension(extModelGraph, models, extensionUrl, extensionPref
     if (node.type === 'Property') {
       var field = {
         "fieldName": node.id,
-        "alternativeTypes": node.rangeIncludes.map(type => expandPrefix(type, node.isArray, namespaces)),
+        "alternativeTypes": node.rangeIncludes.map(type => expandPrefix(type, node["@container"] == "@list", namespaces)),
         "description": [
-          node.comment + (node.githubIssue ? '\n\nIf you are using this property, please join the discussion at proposal ' + renderGitHubIssueLink(node.githubIssue) + '.' : '')
+          node.comment + (node.discussionUrl ? '\n\nIf you are using this property, please join the discussion at proposal ' + renderGitHubIssueLink(node.discussionUrl) + '.' : '')
         ],
         "example": node.example,
         "extensionPrefix": extensionPrefix
@@ -179,6 +183,8 @@ function createModelMarkdownPage(model, models, extensions) {
   var fullModel = createFullModel(fullFields, model, models);
   var derivedFrom = getPropertyWithInheritance("derivedFrom", model, models);
 
+  console.log("Model: " + model.type);
+
   return `---
 description: This page describes the ` + model.type + ` type.
 ---
@@ -242,6 +248,8 @@ function createMarkdownFromDescription(description) {
 }
 
 function createTableFromFields(fieldNameList, fields) {
+  console.log("Fields list: " + fieldNameList.join(", "));
+  console.log("Found fields: " + fieldNameList.map(field => (fields[field] || {}).fieldName).join(", "));
   return createTableFromFieldList(fieldNameList.map(field => fields[field]))
 }
 
