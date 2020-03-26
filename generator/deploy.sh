@@ -9,11 +9,8 @@ checkout_current_branch() {
   git checkout $TRAVIS_BRANCH
 }
 
-erase_existing_docs() {
-  pushd ../docs/data-model/type
-  shopt -s extglob
-  rm -- !(README.md)
-  popd
+erase_existing_docs_except_readme() {
+  find ../docs/data-model/types -type f -maxdepth 1 ! -name README.md -delete
 }
 
 commit_generated_files() {
@@ -37,7 +34,7 @@ echo "Checkout master:"
 checkout_current_branch
 
 echo "Erase existing data model documentation..."
-erase_existing_docs
+erase_existing_docs_except_readme
 
 echo "npm install:"
 npm install
