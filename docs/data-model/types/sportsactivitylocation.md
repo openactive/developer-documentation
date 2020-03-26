@@ -52,6 +52,15 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
         <p>While a <code>url</code> is not specified as an option in the Modelling Specification, it is necessary to link entities in RPDE.</p><p></br><b>Example</b></p><p><code>"containedInPlace": "http://www.example.org/api/locations/8958f9b8-2004-4e90-80ff-50c98a9b121d"</code></p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The name of the internal location where the activity is taking place</p><p></br><b>Example</b></p><p><code>"name": "Court 1"</code></p>
+      </td>
+    </tr>
   </tbody>
 </table>
 

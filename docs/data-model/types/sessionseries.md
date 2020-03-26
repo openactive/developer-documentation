@@ -239,6 +239,15 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>eventAttendanceMode</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/EventAttendanceModeEnumeration"><code>EventAttendanceModeEnumeration</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The eventAttendanceMode of an event indicates whether it occurs online, offline, or a mix.</p><p></br><b>Example</b></p><p><code>"eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>eventSchedule</b></td>
       <td style="text-align:left">
         Array of <a href="https://developer.openactive.io/data-model/types/schedule"><code>Schedule</code></a>
@@ -299,15 +308,6 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
       </td>
       <td style="text-align:left">
         <p>Instructions for the attendees of an Event about where they should meet the organizer or leader at the start of the event. Some larger locations may have several possible meeting points, so this property provides additional more specific directions.</p><p></br><b>Example</b></p><p><code>"meetingPoint": "At the entrance to the park"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>potentialAction</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/action"><code>Action</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The possible actions that a user may make. e.g. Book.</p><p></br><b>Example</b></p><p><code>"potentialAction": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Book&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;target&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;encodingType&quot;:&nbsp;&quot;application/vnd.openactive.v1.0+json&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;httpMethod&quot;:&nbsp;&quot;POST&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;EntryPoint&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://example.com/orders&quot;<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Action&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
       </td>
     </tr>
     <tr>

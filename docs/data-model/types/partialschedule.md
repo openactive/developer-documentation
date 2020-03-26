@@ -158,6 +158,15 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>scheduleTimezone</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Indicates the timezone for which the time(s) indicated in the Schedule are given. The value provided should be among those listed in the IANA Time Zone Database.</p><p></br><b>Example</b></p><p><code>"scheduleTimezone": "Europe/London"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>scheduledEventType</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
