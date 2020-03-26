@@ -6,9 +6,9 @@ description: This page describes the Schedule type.
 
 This type is derived from [https://pending.schema.org/Schedule](https://pending.schema.org/Schedule), which means that any of this type's properties within schema.org may also be used. Note however the properties on this page must be used in preference if a relevant property is available.
 
-## **Fields**
+## **Properties**
 
-### **Required fields**
+### **Required properties**
     
 <table>
   <thead>
@@ -121,7 +121,7 @@ While these properties are marked as optional, a data publisher must provide eit
 </table>
 
 
-### **Recommended fields**
+### **Recommended properties**
     
 <table>
   <thead>
@@ -181,7 +181,7 @@ While these properties are marked as optional, a data publisher must provide eit
 </table>
 
 
-### **Optional fields**
+### **Optional properties**
     
 <table>
   <thead>
@@ -250,7 +250,7 @@ While these properties are marked as optional, a data publisher must provide eit
 </table>
 
 
-### **OpenActive Beta Extension properties**
+### **Beta Extension properties**
     
 These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
 
@@ -270,7 +270,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>[DEPRECATED: This beta property is now deprecated, please use <code>schema:scheduleTimezone</code> instead.] The time zone used to generate occurrences, same as iCal TZID. E.g. 'Europe/London'.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/197">#197</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/197">Proposal #197</a></p><p>[DEPRECATED: This beta property is now deprecated, please use <code>schema:scheduleTimezone</code> instead.] The time zone used to generate occurrences, same as iCal TZID. E.g. 'Europe/London'.</p>
       </td>
     </tr>
   </tbody>

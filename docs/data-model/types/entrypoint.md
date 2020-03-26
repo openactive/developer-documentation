@@ -6,9 +6,9 @@ description: This page describes the EntryPoint type.
 
 This type is derived from [https://schema.org/EntryPoint](https://schema.org/EntryPoint), which means that any of this type's properties within schema.org may also be used. Note however the properties on this page must be used in preference if a relevant property is available.
 
-## **Fields**
+## **Properties**
 
-### **Required fields**
+### **Required properties**
     
 <table>
   <thead>

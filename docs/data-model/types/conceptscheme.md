@@ -6,9 +6,9 @@ description: This page describes the ConceptScheme type.
 
 This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme).
 
-## **Fields**
+## **Properties**
 
-### **Required fields**
+### **Required properties**
     
 <table>
   <thead>
@@ -68,7 +68,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#ConceptScheme](ht
 </table>
 
 
-### **Recommended fields**
+### **Recommended properties**
     
 <table>
   <thead>

@@ -6,9 +6,9 @@ description: This page describes the SportsActivityLocation type.
 
 This type is derived from [https://schema.org/SportsActivityLocation](https://schema.org/SportsActivityLocation), which means that any of this type's properties within schema.org may also be used. Note however the properties on this page must be used in preference if a relevant property is available.
 
-## **Fields**
+## **Properties**
 
-### **Required fields**
+### **Required properties**
     
 <table>
   <thead>
@@ -32,7 +32,7 @@ This type is derived from [https://schema.org/SportsActivityLocation](https://sc
 </table>
 
 
-### **Recommended fields**
+### **Recommended properties**
     
 <table>
   <thead>

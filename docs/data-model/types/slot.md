@@ -6,9 +6,9 @@ description: This page describes the Slot type.
 
 This type is derived from [https://schema.org/Event](https://schema.org/Event), which means that any of this type's properties within schema.org may also be used. Note however the properties on this page must be used in preference if a relevant property is available.
 
-## **Fields**
+## **Properties**
 
-### **Required fields**
+### **Required properties**
     
 <table>
   <thead>
@@ -112,7 +112,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
 </table>
 
 
-### **Recommended fields**
+### **Recommended properties**
     
 <table>
   <thead>
@@ -145,7 +145,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
 </table>
 
 
-### **Optional fields**
+### **Optional properties**
     
 <table>
   <thead>
@@ -187,7 +187,7 @@ While these properties are marked as optional/recommended in the Modelling Speci
 </table>
 
 
-### **OpenActive Beta Extension properties**
+### **Beta Extension properties**
     
 These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
 
@@ -207,7 +207,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Place"><code>Place</code></a>
       </td>
       <td style="text-align:left">
-        <p>The original location of the event before it was moved online.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/227">#227</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/227">Proposal #227</a></p><p>The original location of the event before it was moved online.</p>
       </td>
     </tr>
     <tr>
@@ -216,7 +216,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>For events that have an unlimited number of tickets, captures the number of attendees (actual attendance).</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/12">#12</a>.</p>
+        <p><a href="https://github.com/openactive/ns-beta/issues/12">Proposal #12</a></p><p>For events that have an unlimited number of tickets, captures the number of attendees (actual attendance).</p>
       </td>
     </tr>
     <tr>
@@ -225,7 +225,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>For data publishers not wishing to disclose the granular availability of their sessions openly.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/9">#9</a>.</p>
+        <p><a href="https://github.com/openactive/ns-beta/issues/9">Proposal #9</a></p><p>For data publishers not wishing to disclose the granular availability of their sessions openly.</p>
       </td>
     </tr>
     <tr>
@@ -234,7 +234,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/QuantitativeValue"><code>QuantitativeValue</code></a>
       </td>
       <td style="text-align:left">
-        <p>The distance of a run, cycle or other activity. Must also include units.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/3">#3</a>.</p>
+        <p><a href="https://github.com/openactive/ns-beta/issues/3">Proposal #3</a></p><p>The distance of a run, cycle or other activity. Must also include units.</p>
       </td>
     </tr>
     <tr>
@@ -243,7 +243,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/QuantitativeValue"><code>QuantitativeValue</code></a>
       </td>
       <td style="text-align:left">
-        <p>A property that allows an Event duration to be represented as a range (e.g. 0-30mins, 30-60mins, 60-90mins, 90+).</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/201">#201</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/201">Proposal #201</a></p><p>A property that allows an Event duration to be represented as a range (e.g. 0-30mins, 30-60mins, 60-90mins, 90+).</p>
       </td>
     </tr>
     <tr>
@@ -252,7 +252,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://openactive.io/ns-beta#FacilitySettingType"><code>FacilitySettingType</code></a>
       </td>
       <td style="text-align:left">
-        <p>Whether the event or facility is indoor or outdoor.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/facility-types/issues/1">#1</a>.</p>
+        <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>Whether the event or facility is indoor or outdoor.</p>
       </td>
     </tr>
     <tr>
@@ -261,7 +261,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/2">#2</a>.</p>
+        <p><a href="https://github.com/openactive/ns-beta/issues/2">Proposal #2</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers.</p>
       </td>
     </tr>
     <tr>
@@ -270,7 +270,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
       <td style="text-align:left">
-        <p>A property that indicates whether the first session is free.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/232">#232</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/232">Proposal #232</a></p><p>A property that indicates whether the first session is free.</p>
       </td>
     </tr>
     <tr>
@@ -279,7 +279,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
       <td style="text-align:left">
-        <p>A property that indicates whether the virtual event is interactive (e.g. Zoom with participant microphones and cameras on), or is just a one-way broadcast (e.g. Facebook Live, Instagram Live, Zoom with participant microphones and cameras off).</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/230">#230</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/230">Proposal #230</a></p><p>A property that indicates whether the virtual event is interactive (e.g. Zoom with participant microphones and cameras on), or is just a one-way broadcast (e.g. Facebook Live, Instagram Live, Zoom with participant microphones and cameras off).</p>
       </td>
     </tr>
     <tr>
@@ -288,7 +288,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
       <td style="text-align:left">
-        <p>A property that indicates whether the event is led by a virtual coach. Only relevant if an event <code>isCoached</code>. If not provided is assumed to be <code>false</code>.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/71">#71</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/71">Proposal #71</a></p><p>A property that indicates whether the event is led by a virtual coach. Only relevant if an event <code>isCoached</code>. If not provided is assumed to be <code>false</code>.</p>
       </td>
     </tr>
     <tr>
@@ -297,7 +297,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
       <td style="text-align:left">
-        <p>A property that details whether the event is suitable for wheelchair access. Placed on Event as this field could be used to detail whether the Event is suitable, as well as the Place.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/166">#166</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/166">Proposal #166</a></p><p>A property that details whether the event is suitable for wheelchair access. Placed on Event as this field could be used to detail whether the Event is suitable, as well as the Place.</p>
       </td>
     </tr>
     <tr>
@@ -306,7 +306,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
       <td style="text-align:left">
-        <p>Duration before the event for which the associated Offers are valid</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/204">#204</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/204">Proposal #204</a></p><p>Duration before the event for which the associated Offers are valid</p>
       </td>
     </tr>
     <tr>
@@ -315,7 +315,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://developer.openactive.io/data-model/types/requiredstatustype"><code>RequiredStatusType</code></a>
       </td>
       <td style="text-align:left">
-        <p>A property that indicates whether the participant must or may supply equipment for use in the Event.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/229">#229</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/229">Proposal #229</a></p><p>A property that indicates whether the participant must or may supply equipment for use in the Event.</p>
       </td>
     </tr>
     <tr>
@@ -324,7 +324,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>For events that have an unlimited number of tickets, captures the number of registrations (intention to attend).</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/13">#13</a>.</p>
+        <p><a href="https://github.com/openactive/ns-beta/issues/13">Proposal #13</a></p><p>For events that have an unlimited number of tickets, captures the number of registrations (intention to attend).</p>
       </td>
     </tr>
     <tr>
@@ -333,7 +333,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         Array of <a href="https://schema.org/SportsActivityLocation"><code>SportsActivityLocation</code></a>
       </td>
       <td style="text-align:left">
-        <p>Internal location of the event, e.g. Court 1</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/110">#110</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/110">Proposal #110</a></p><p>Internal location of the event, e.g. Court 1</p>
       </td>
     </tr>
     <tr>
@@ -342,7 +342,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         Array of <a href="https://schema.org/SportsActivityLocation"><code>SportsActivityLocation</code></a>
       </td>
       <td style="text-align:left">
-        <p>Internal location of the event, e.g. Court 1</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/110">#110</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/110">Proposal #110</a></p><p>Internal location of the event, e.g. Court 1</p>
       </td>
     </tr>
     <tr>
@@ -351,7 +351,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
       </td>
       <td style="text-align:left">
-        <p>An related video object.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/88">#88</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>An related video object.</p>
       </td>
     </tr>
     <tr>
@@ -360,7 +360,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/VirtualLocation"><code>VirtualLocation</code></a>
       </td>
       <td style="text-align:left">
-        <p>Describes a means of electronic access to a shared virtual space.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/224">#224</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/224">Proposal #224</a></p><p>Describes a means of electronic access to a shared virtual space.</p>
       </td>
     </tr>
   </tbody>

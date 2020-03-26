@@ -6,9 +6,9 @@ description: This page describes the Brand type.
 
 This type is derived from [https://schema.org/Brand](https://schema.org/Brand), which means that any of this type's properties within schema.org may also be used. Note however the properties on this page must be used in preference if a relevant property is available.
 
-## **Fields**
+## **Properties**
 
-### **Required fields**
+### **Required properties**
     
 <table>
   <thead>
@@ -50,7 +50,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
 </table>
 
 
-### **Recommended fields**
+### **Recommended properties**
     
 <table>
   <thead>
@@ -83,7 +83,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
 </table>
 
 
-### **Optional fields**
+### **Optional properties**
     
 <table>
   <thead>
@@ -107,7 +107,7 @@ This type is derived from [https://schema.org/Brand](https://schema.org/Brand), 
 </table>
 
 
-### **OpenActive Beta Extension properties**
+### **Beta Extension properties**
     
 These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
 
@@ -127,7 +127,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
       </td>
       <td style="text-align:left">
-        <p>An related video object.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/88">#88</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>An related video object.</p>
       </td>
     </tr>
   </tbody>

@@ -6,9 +6,9 @@ description: This page describes the IndividualFacilityUse type.
 
 
 
-## **Fields**
+## **Properties**
 
-### **Required fields**
+### **Required properties**
     
 <table>
   <thead>
@@ -77,7 +77,7 @@ description: This page describes the IndividualFacilityUse type.
 </table>
 
 
-### **Recommended fields**
+### **Recommended properties**
     
 <table>
   <thead>
@@ -146,7 +146,7 @@ description: This page describes the IndividualFacilityUse type.
 </table>
 
 
-### **Optional fields**
+### **Optional properties**
     
 <table>
   <thead>
@@ -215,7 +215,7 @@ description: This page describes the IndividualFacilityUse type.
 </table>
 
 
-### **OpenActive Beta Extension properties**
+### **Beta Extension properties**
     
 These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
 
@@ -235,7 +235,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://openactive.io/ns-beta#FacilitySettingType"><code>FacilitySettingType</code></a>
       </td>
       <td style="text-align:left">
-        <p>Whether the event or facility is indoor or outdoor.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/facility-types/issues/1">#1</a>.</p>
+        <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>Whether the event or facility is indoor or outdoor.</p>
       </td>
     </tr>
     <tr>
@@ -244,7 +244,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         Array of <a href="http://www.w3.org/2004/02/skos/core#Concept"><code>Concept</code></a>
       </td>
       <td style="text-align:left">
-        <p>The type of facility in use.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/facility-types/issues/1">#1</a>.</p>
+        <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>The type of facility in use.</p>
       </td>
     </tr>
     <tr>
@@ -253,7 +253,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/ns-beta/issues/2">#2</a>.</p>
+        <p><a href="https://github.com/openactive/ns-beta/issues/2">Proposal #2</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers.</p>
       </td>
     </tr>
     <tr>
@@ -262,7 +262,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
       <td style="text-align:left">
-        <p>A property that details whether the event is suitable for wheelchair access. Placed on Event as this field could be used to detail whether the Event is suitable, as well as the Place.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/166">#166</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/166">Proposal #166</a></p><p>A property that details whether the event is suitable for wheelchair access. Placed on Event as this field could be used to detail whether the Event is suitable, as well as the Place.</p>
       </td>
     </tr>
     <tr>
@@ -271,7 +271,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
       <td style="text-align:left">
-        <p>Duration before the event for which the associated Offers are valid</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/204">#204</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/204">Proposal #204</a></p><p>Duration before the event for which the associated Offers are valid</p>
       </td>
     </tr>
     <tr>
@@ -280,7 +280,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         Array of <a href="https://schema.org/SportsActivityLocation"><code>SportsActivityLocation</code></a>
       </td>
       <td style="text-align:left">
-        <p>Internal location of the event, e.g. Court 1</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/110">#110</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/110">Proposal #110</a></p><p>Internal location of the event, e.g. Court 1</p>
       </td>
     </tr>
     <tr>
@@ -289,7 +289,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
       </td>
       <td style="text-align:left">
-        <p>An related video object.</p><p>If you are using this property, please join the discussion at proposal <a href="https://github.com/openactive/modelling-opportunity-data/issues/88">#88</a>.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>An related video object.</p>
       </td>
     </tr>
   </tbody>
