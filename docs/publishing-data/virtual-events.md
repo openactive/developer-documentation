@@ -165,6 +165,10 @@ The existing `attendeeInstruction` and `description` properties may be used for 
 
 ## Conformance criteria
 
+{% hint style="info" %}
+Please feedback on the guidance below or request any clarifications by commenting on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
+{% endhint %}
+
 Note that in order to make use of "beta" properties, `"@context"` must include the beta namespace, as follows:
 
 ```javascript
