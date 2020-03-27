@@ -10,22 +10,7 @@ Online classes and events are part of an [ongoing discussion](https://github.com
 
 ## Implementation guidance
 
-## Properties
-
-{% hint style="info" %}
-This guidance is still being augmented with details. Please see the "**Updated Proposal**" within each of the referenced GitHub issues below for specific guidance on each property, which will be transferred here very soon. Comments welcome on these issues if anything is unclear. For feedback on the guidance below itself, please comment on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
-{% endhint %}
-
 In order to upgrade your booking or listing system to support virtual events, consider implementing the following properties. The [OpenActive libraries](data-feeds/implementing-rpde-feeds.md#net-php-and-ruby-libraries), [types reference documentation](../data-model/types/#event-types-also-used-for-virtual-events), and [validator](http://validator.openactive.io/) have been updated to support these properties.
-
-Note that in order to make use of "beta" properties, `"@context"` must include the beta namespace, as follows:
-
-```javascript
-"@context": [
-  "https://openactive.io/",
-  "https://openactive.io/ns-beta"
-],
-```
 
 {% hint style="info" %}
 Please see the "**Updated Proposal**" within each of the referenced GitHub issues in the headings below for further specific guidance on each property. Please comment on these GitHub issue if you require any specific clarifications.
@@ -36,8 +21,6 @@ Please see the "**Updated Proposal**" within each of the referenced GitHub issue
 #### **Definition**
 
 Whether an event occurs online, offline, or a mix of both.
-
-The following properties should be **REQUIRED** \(inheriting from existing Modelling Opportunity Data specification\):
 
 #### **Why implement this property?**
 
@@ -182,9 +165,18 @@ The existing `attendeeInstruction` and `description` properties may be used for 
 
 ## Conformance criteria
 
+Note that in order to make use of "beta" properties, `"@context"` must include the beta namespace, as follows:
+
+```javascript
+"@context": [
+  "https://openactive.io/",
+  "https://openactive.io/ns-beta"
+]
+```
+
 ### SessionSeries, HeadlineEvent, CourseInstance and Event
 
-The following properties are **REQUIRED**:
+The following properties are **REQUIRED** \(inheriting from existing Modelling Opportunity Data specification\):
 
 * `name`
 * `activity`
