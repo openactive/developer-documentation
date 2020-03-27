@@ -47,11 +47,17 @@ The following properties should be **RECOMMENDED**:
 * `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
 * `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
 
-**Example**
+## **Examples**
 
-{% hint style="info" %}
-The example below only includes new properties specific to virtual events, please see above for all properties that should be included. This will be improved soon.
-{% endhint %}
+### **Complete examples**
+
+The validator includes a complete example for:
+
+* [OnDemandEvent](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent_example_1.json&version=2.x)
+
+### Illustrative examples
+
+The example below only include new properties specific to on-demand events, for those already familiar with the OpenActive specifications. Please see above for all properties that should be included.
 
 ```javascript
 {
@@ -61,10 +67,16 @@ The example below only includes new properties specific to virtual events, pleas
   ],
   "type": "OnDemandEvent",
   ...
-
   "workFeatured": {
-    "type": "VideoObject",
-    "url": "https://www.youtube.com/watch?v=3fbCs0GVjgQ"
+    "@type": "VideoObject",
+    "url": "https://www.youtube.com/watch?v=3fbCs0GVjgQ",
+    "embedUrl": "https://www.youtube.com/embed/3fbCs0GVjgQ",
+    "thumbnail": [
+      {
+        "@type": "ImageObject",
+        "url": "http://example.com/static/image/speedball_thumbnail.jpg"
+      }
+    ]
   },
   "beta:participantSuppliedEquipment": "https://openactive.io/Required"
 }

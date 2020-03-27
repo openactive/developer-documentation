@@ -58,13 +58,18 @@ The following properties should be RECOMMENDED:
 * `endDate`
 * `beta:virtualLocation` \([\#224](https://github.com/openactive/modelling-opportunity-data/issues/224)\) \(including a `url` to the live class itself, e.g. a Facebook Live or Zoom URL, and`beta:maximumVirtualAttendeeCapacity` \([\#226](https://github.com/openactive/modelling-opportunity-data/issues/226)\)\)
 
-**Example**
+## **Examples**
 
-{% hint style="info" %}
-The examples below only include new properties specific to virtual events, please see above for all properties that should be included. This will be improved soon.
-{% endhint %}
+### **Complete examples**
 
-Note full guidance will include the above fields, and individual ScheduledSessions.
+The validator includes complete examples for:
+
+* [Virtual SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split-virtual_example_1.json&version=2.x)
+* [Virtual ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split-virtual_example_1.json&version=2.x)
+
+### Illustrative examples
+
+The examples below only include new properties specific to virtual events, for those already familiar with the OpenActive specifications. Please see above for all properties that should be included.
 
 ```javascript
 {
