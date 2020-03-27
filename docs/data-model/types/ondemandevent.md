@@ -148,7 +148,7 @@ This type is derived from [https://schema.org/OnDemandEvent](https://schema.org/
         <a href="https://developer.openactive.io/data-model/types/mediaobject"><code>MediaObject</code></a>
       </td>
       <td style="text-align:left">
-        <p>An video, audio or other media that represents the actual recording of the <code>OnDemandEvent</code>.</p><p></br><b>Example</b></p><p><code>"workFeatured": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;VideoObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://www.youtube.com/watch?v=3fbCs0GVjgQ&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;embedUrl&quot;:&nbsp;&quot;https://www.youtube.com/embed/3fbCs0GVjgQ&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;thumbnail&quot;:&nbsp;[<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_thumbnail.jpg&quot;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;}<br/>]</code></p>
+        <p>An video, audio or other media that represents the actual recording of the <code>OnDemandEvent</code>.</p><p></br><b>Example</b></p><p><code>"workFeatured": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;VideoObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://www.youtube.com/watch?v=3fbCs0GVjgQ&quot;,<br/>&nbsp;&nbsp;&quot;embedUrl&quot;:&nbsp;&quot;https://www.youtube.com/embed/3fbCs0GVjgQ&quot;,<br/>&nbsp;&nbsp;&quot;thumbnail&quot;:&nbsp;[<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_thumbnail.jpg&quot;<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}</code></p>
       </td>
     </tr>
   </tbody>
@@ -439,7 +439,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
     <tr>
       <td style="text-align:left"><b>beta:virtualLocation</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/VirtualLocation"><code>VirtualLocation</code></a>
+        <a href="https://pending.schema.org/VirtualLocation"><code>VirtualLocation</code></a>
       </td>
       <td style="text-align:left">
         <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/224">Proposal #224</a></p><p>Describes a means of electronic access to a shared virtual space.</p>
