@@ -157,9 +157,61 @@ The existing `attendeeInstruction` and `description` properties may be used for 
 
 ### `maximumVirtualAttendeeCapacity` \([\#226](https://github.com/openactive/modelling-opportunity-data/issues/226)\)
 
+**Definition**
+
+Indicates the maximum number of connections to a shared virtual space.
+
+#### **Why implement this property?**
+
+This property allows applications to present a filter for "class size", for those users who are interested in attending more intimate classes.
+
+#### **Values**
+
+`maximumVirtualAttendeeCapacity` must be an integer.
+
+The property can be defined on either the `SessionSeries` or `ScheduledSession`.
+
+#### **Example**
+
+```javascript
+{
+ "@type": "ScheduledSession",
+ ...
+ "maximumVirtualAttendeeCapacity": 20,
+ ...
+}
+```
+
 ### `beta:virtualLocation` \([\#224](https://github.com/openactive/modelling-opportunity-data/issues/224)\)
 
-### `level` \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\)
+### 
+
+### `level` for "Beginner-friendly" \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\)
+
+**Definition**
+
+To allow for "beginner-friendly" events to be easily discoverable.
+
+#### **Why implement this property?**
+
+This property can be implemented simply as a "beginner-friendly" tick box, if no notion of "level" currently exists within the booking or listing system. This allows applications to present a filter for "beginner friendly", for those users who are new to the activity.
+
+#### **Values**
+
+To specify "Beginner-friendly" the value of the `level` property must include the string `Beginner` in an array.
+
+#### **Example**
+
+```javascript
+{
+ "@type": "ScheduledSession",
+ ...
+  "level": [
+    "Beginner"
+  ]
+ ...
+} 
+```
 
 ## Conformance criteria
 
