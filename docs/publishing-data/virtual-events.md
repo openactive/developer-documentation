@@ -43,15 +43,6 @@ The following properties should be **REQUIRED** \(inheriting from existing Model
 
 This property is the **required** for a minimal implementation of virtual events.
 
-* `name`
-* `activity`
-* `organizer` \(including a recommended `sameAs` property for social media handles\)
-* `eventAttendanceMode` \([\#225](https://github.com/openactive/modelling-opportunity-data/issues/225)\)
-* `offers` \(including a recommended `url` that links straight to the purchase page\)
-* `url` \(to a page describing the session\)
-
-The following properties should be **RECOMMENDED**:
-
 #### **Values**
 
 `eventAttendanceMode` must have one of the following values:
@@ -192,6 +183,15 @@ The existing `attendeeInstruction` and `description` properties may be used for 
 ## Conformance criteria
 
 ### SessionSeries, HeadlineEvent, CourseInstance and Event
+
+The following properties are **REQUIRED**:
+
+* `name`
+* `activity`
+* `organizer` \(including a recommended `sameAs` property for social media handles\)
+* `eventAttendanceMode` \([\#225](https://github.com/openactive/modelling-opportunity-data/issues/225)\)
+* `offers` \(including a recommended `url` that links straight to the purchase page\)
+* `url` \(to a page describing the session\)
 
 The following properties **MUST NOT** be included when `eventAttendanceMode` is set to `https://schema.org/OnlineEventAttendanceMode`:
 
