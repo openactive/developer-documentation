@@ -132,8 +132,6 @@ A property that indicates whether the participant must or may supply equipment f
 
 This property allows applications to present a filter for "no equipment required", for those users who do not have equipment at home. This helps first-time virtual participants find classes they can easily attend.
 
-This is a key differentiator for smaller classes that will likely benefit most from being published as open data, as activity providers who use Instagram or Facebook Live already have a large audience.
-
 #### **Values**
 
 `beta:participantSuppliedEquipment` must have one of the following values:
@@ -166,7 +164,7 @@ The existing `attendeeInstruction` and `description` properties may be used for 
 ## Conformance criteria
 
 {% hint style="info" %}
-Please feedback on the guidance below or request any clarifications by commenting on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
+Please feedback on the below or request any clarifications by commenting on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
 {% endhint %}
 
 Note that in order to make use of "beta" properties, `"@context"` must include the beta namespace, as follows:
@@ -180,7 +178,7 @@ Note that in order to make use of "beta" properties, `"@context"` must include t
 
 ### SessionSeries, HeadlineEvent, CourseInstance and Event
 
-The following properties are **REQUIRED** \(inheriting from existing Modelling Opportunity Data specification\):
+The following properties are **REQUIRED** \(inheriting from existing [Modelling Opportunity Data specification](https://www.openactive.io/modelling-opportunity-data/)\):
 
 * `name`
 * `activity`
