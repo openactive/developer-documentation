@@ -184,7 +184,37 @@ The property can be defined on either the `SessionSeries` or `ScheduledSession`.
 
 ### `beta:virtualLocation` \([\#224](https://github.com/openactive/modelling-opportunity-data/issues/224)\)
 
-### 
+**Definition**
+
+Describes a means of electronic access to a shared virtual space.
+
+#### **Why implement this property?**
+
+This property allows participants to jump straight into the virtual class from any application, and for applications to show "sessions happening right now" that they can access for free, for example.
+
+#### **Values**
+
+The value of `beta:virtualLocation`, specified at either a `SessionSeries` or `ScheduledSession` level, must be a `VirtualLocation` object, which must include at least the `url`, `name`, or `description` property. The `url` property is recommended for simple implementations.
+
+The `url` must provide direct access to participate in a free virtual event, which could be used for e.g. a "View Livestream" button.
+
+Note where the virtual location is private \(e.g. behind a paywall\), the `VirtualLocation` `url` should **not** be included.
+
+The `Offer` `url` can be used for the link to purchase access or registration, and the `Event` `url` can signpost to a general page about the session.
+
+#### **Example**
+
+```javascript
+{
+ "@type": "SessionSeries",
+ ...
+ "beta:virtualLocation": {
+    "@type": "VirtualLocation",
+    "url": "https://zoom.us/j/1234567890/signup",
+ }
+ ...
+}
+```
 
 ### `level` for "Beginner-friendly" \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\)
 
