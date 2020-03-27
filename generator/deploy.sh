@@ -39,6 +39,7 @@ erase_existing_docs_except_readme
 
 echo "npm install:"
 npm install
+npm install @openactive/data-models@latest
 npm ls @openactive/data-models
 
 echo "Generating data model documentation..."
