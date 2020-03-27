@@ -25,7 +25,9 @@ Note that in order to make use of "beta" properties, `"@context"` must include t
 ],
 ```
 
+{% hint style="info" %}
 For a full description of all properties available within `OnDemandEvent`, please see the [reference documentation](../data-model/types/ondemandevent.md).
+{% endhint %}
 
 The following properties should be **REQUIRED**:
 

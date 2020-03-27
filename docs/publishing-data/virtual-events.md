@@ -45,6 +45,7 @@ The following properties should be **RECOMMENDED**:
 * `beta:isInteractivityPreferred` \([\#230](https://github.com/openactive/modelling-opportunity-data/issues/230)\)
 * `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
 * `beta:affiliatedLocation` \([\#227](https://github.com/openactive/modelling-opportunity-data/issues/227)\)
+* `maximumVirtualAttendeeCapacity` \([\#226](https://github.com/openactive/modelling-opportunity-data/issues/226)\)
 
 ### ScheduledSession and Event
 
@@ -56,7 +57,7 @@ The following properties should be RECOMMENDED:
 
 * `duration`
 * `endDate`
-* `beta:virtualLocation` \([\#224](https://github.com/openactive/modelling-opportunity-data/issues/224)\) \(including a `url` to the live class itself, e.g. a Facebook Live or Zoom URL, and`beta:maximumVirtualAttendeeCapacity` \([\#226](https://github.com/openactive/modelling-opportunity-data/issues/226)\)\)
+* `beta:virtualLocation` \([\#224](https://github.com/openactive/modelling-opportunity-data/issues/224)\) \(including a `url` to the live class itself, e.g. a Facebook Live or Zoom URL\)
 
 ## **Examples**
 
@@ -110,12 +111,12 @@ The examples below only include new properties specific to virtual events, for t
   ],
   "type": "ScheduledSession",
   ...
+  "maximumVirtualAttendeeCapacity": 20,
   "beta:virtualLocation": {
     "type": "VirtualLocation",
     "name": "Zoom Video Chat",
     "url": "https://zoom.us/j/1234567890/signup",
-    "description": "Please log into Zoom a few minutes before the event, and mute your mic while you wait for the session to start",
-    "beta:maximumVirtualAttendeeCapacity": 20
+    "description": "Please log into Zoom a few minutes before the event, and mute your mic while you wait for the session to start"
   }
 }
 ```
