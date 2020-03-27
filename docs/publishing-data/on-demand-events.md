@@ -16,6 +16,15 @@ Online classes and events are part of an [ongoing discussion](https://github.com
 This guidance is still being augmented with details. Please see the "**Updated Proposal**" within each of the referenced GitHub issues below for specific guidance on each property, which will be transferred here very soon. Comments welcome on these issues if anything is unclear. For feedback on the guidance below itself, please comment on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
 {% endhint %}
 
+Note that in order to make use of "beta" properties, `"@context"` must include the beta namespace, as follows:
+
+```javascript
+"@context": [
+  "https://openactive.io/",
+  "https://openactive.io/ns-beta"
+],
+```
+
 For a full description of all properties available within `OnDemandEvent`, please see the [reference documentation](../data-model/types/ondemandevent.md).
 
 The following properties should be **REQUIRED**:
@@ -36,7 +45,7 @@ The following properties should be **RECOMMENDED**:
 * `genderRestriction`
 * `beta:isFirstSessionAccessibleForFree` \([\#232](https://github.com/openactive/modelling-opportunity-data/issues/232)\)
 * `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
-* `workFeatured`
+* `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
 
 **Example**
 
@@ -46,6 +55,10 @@ The example below only includes new properties specific to virtual events, pleas
 
 ```javascript
 {
+  "@context": [
+    "https://openactive.io/",
+    "https://openactive.io/ns-beta"
+  ],
   "type": "OnDemandEvent",
   ...
 

@@ -14,6 +14,15 @@ Online classes and events are part of an [ongoing discussion](https://github.com
 This guidance is still being augmented with details. Please see the "**Updated Proposal**" within each of the referenced GitHub issues below for specific guidance on each property, which will be transferred here very soon. Comments welcome on these issues if anything is unclear. For feedback on the guidance below itself, please comment on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
 {% endhint %}
 
+Note that in order to make use of "beta" properties, `"@context"` must include the beta namespace, as follows:
+
+```javascript
+"@context": [
+  "https://openactive.io/",
+  "https://openactive.io/ns-beta"
+],
+```
+
 ### SessionSeries, HeadlineEvent, CourseInstance and Event
 
 The following properties should be **REQUIRED** \(inheriting from existing Modelling Opportunity Data specification\):
@@ -27,7 +36,6 @@ The following properties should be **REQUIRED** \(inheriting from existing Model
 
 The following properties should be **RECOMMENDED**:
 
-* `duration`
 * `description`
 * `image`
 * `level` \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\) - using the string "`Beginner`" for beginner friendly classes
@@ -46,6 +54,7 @@ The following properties should be REQUIRED \(inheriting from existing Modelling
 
 The following properties should be RECOMMENDED:
 
+* `duration`
 * `endDate`
 * `beta:virtualLocation` \([\#224](https://github.com/openactive/modelling-opportunity-data/issues/224)\) \(including a `url` to the live class itself, e.g. a Facebook Live or Zoom URL, and`beta:maximumVirtualAttendeeCapacity` \([\#226](https://github.com/openactive/modelling-opportunity-data/issues/226)\)\)
 
@@ -59,6 +68,10 @@ Note full guidance will include the above fields, and individual ScheduledSessio
 
 ```javascript
 {
+  "@context": [
+    "https://openactive.io/",
+    "https://openactive.io/ns-beta"
+  ],
   "type": "SessionSeries",
   ...
   "beta:affiliatedLocation": {
@@ -86,6 +99,10 @@ Note full guidance will include the above fields, and individual ScheduledSessio
 
 ```javascript
 {
+  "@context": [
+    "https://openactive.io/",
+    "https://openactive.io/ns-beta"
+  ],
   "type": "ScheduledSession",
   ...
   "beta:virtualLocation": {
