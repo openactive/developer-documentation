@@ -16,6 +16,8 @@ Online classes and events are part of an [ongoing discussion](https://github.com
 This guidance is still being augmented with details. Please see the "**Updated Proposal**" within each of the referenced GitHub issues below for specific guidance on each property, which will be transferred here very soon. Comments welcome on these issues if anything is unclear. For feedback on the guidance below itself, please comment on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
 {% endhint %}
 
+For a full description of all properties available within `OnDemandEvent`, please see the [reference documentation](../data-model/types/ondemandevent.md).
+
 The following properties should be **REQUIRED**:
 
 * `name`
