@@ -6,12 +6,16 @@ Information about Events, Places, Organizations and other types of resources sho
 
 ## **List of Types**
 
-### **Event types**
+### **Event types \(also used for v**irtual events\)
 
 * [SessionSeries](sessionseries.md) and [ScheduledSession](scheduledsession.md)
 * [HeadlineEvent](headlineevent.md)
 * [CourseInstance](courseinstance.md)
 * [Event](event.md)
+
+### On-demand event types
+
+* [OnDemandEvent](ondemandevent.md)
 
 ### Facilities types
 
@@ -31,4 +35,6 @@ Information about Events, Places, Organizations and other types of resources sho
 * [Place](place.md)
 * [PostalAddress](postaladdress.md)
 * [Schedule](schedule.md)
+
+
 
