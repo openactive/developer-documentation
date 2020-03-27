@@ -33,8 +33,6 @@ Please see the "**Updated Proposal**" within each of the referenced GitHub issue
 
 ### `eventAttendanceMode` \([\#225](https://github.com/openactive/modelling-opportunity-data/issues/225)\)
 
-### SessionSeries, HeadlineEvent, CourseInstance and Event
-
 #### **Definition**
 
 Whether an event occurs online, offline, or a mix of both.
@@ -193,6 +191,8 @@ The existing `attendeeInstruction` and `description` properties may be used for 
 
 ## Conformance criteria
 
+### SessionSeries, HeadlineEvent, CourseInstance and Event
+
 The following properties **MUST NOT** be included when `eventAttendanceMode` is set to `https://schema.org/OnlineEventAttendanceMode`:
 
 * `location` \([\#227](https://github.com/openactive/modelling-opportunity-data/issues/227)\)
@@ -214,13 +214,9 @@ The following properties are **RECOMMENDED**:
 
 The following properties are **REQUIRED** \(inheriting from existing [Modelling Opportunity Data specification](https://www.openactive.io/modelling-opportunity-data/)\):
 
-The following properties should be REQUIRED \(inheriting from existing Modelling Opportunity Data specification\):
-
 * `startDate`
 
 The following properties are **RECOMMENDED**:
-
-The following properties should be RECOMMENDED:
 
 * `duration`
 * `endDate`
@@ -265,37 +261,6 @@ The examples below only include new properties specific to virtual events, for t
       "longitude": -1.20978500000001
     }
   },
-  "beta:isInteractivityPreferred": true,
-  "beta:participantSuppliedEquipment": "https://openactive.io/Required"
-}
-```
-
-```javascript
-{
-  "@context": [
-    "https://openactive.io/",
-    "https://openactive.io/ns-beta"
-  ],
-  "type": "SessionSeries",
-  ...
-  "beta:affiliatedLocation": {
-    "type": "Place",
-    "name": "Middlesbrough Sports Village",
-    "address": {
-      "type": "PostalAddress",
-      "streetAddress": "Alan Peacock Way",
-      "addressLocality": "Village East",
-      "addressRegion": "Middlesbrough",
-      "postalCode": "TS4 3AE",
-      "addressCountry": "GB"
-    },
-    "geo": {
-      "type": "GeoCoordinates",
-      "latitude": 54.543964,
-      "longitude": -1.20978500000001
-    }
-  },
-  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
   "beta:isInteractivityPreferred": true,
   "beta:participantSuppliedEquipment": "https://openactive.io/Required"
 }
