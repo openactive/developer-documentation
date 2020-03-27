@@ -200,7 +200,7 @@ The `url` must provide direct access to participate in a free virtual event, whi
 
 Note where the virtual location is private \(e.g. behind a paywall\), the `VirtualLocation` `url` should **not** be included.
 
-The `Offer` `url` can be used for the link to purchase access or registration, and the `Event` `url` can signpost to a general page about the session.
+From the existing [Modelling Opportunity Data specification](https://www.openactive.io/modelling-opportunity-data/), the `Offer` `url` can be used for the link to purchase access or registration, and the `Event` `url` can signpost to a general page about the session.
 
 #### **Example**
 
