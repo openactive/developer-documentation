@@ -302,6 +302,15 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>maximumVirtualAttendeeCapacity</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Indicates the maximum number of connections to a shared virtual space.</p><p></br><b>Example</b></p><p><code>"maximumVirtualAttendeeCapacity": 20</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>meetingPoint</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
@@ -520,7 +529,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
     <tr>
       <td style="text-align:left"><b>beta:virtualLocation</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/VirtualLocation"><code>VirtualLocation</code></a>
+        <a href="https://pending.schema.org/VirtualLocation"><code>VirtualLocation</code></a>
       </td>
       <td style="text-align:left">
         <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/224">Proposal #224</a></p><p>Describes a means of electronic access to a shared virtual space.</p>

@@ -118,33 +118,6 @@ A data publisher must provide either a `name`, `description` or `url` for the `V
 </table>
 
 
-### **Beta Extension properties**
-    
-These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
-
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>beta:maximumVirtualAttendeeCapacity</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Integer"><code>Integer</code></a>
-      </td>
-      <td style="text-align:left">
-        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/226">Proposal #226</a></p><p>Indicates the maximum number of connections to a shared virtual space</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
 
 
 
