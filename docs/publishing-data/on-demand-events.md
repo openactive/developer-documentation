@@ -67,7 +67,7 @@ The example below only include new properties specific to on-demand events, for 
     "https://openactive.io/",
     "https://openactive.io/ns-beta"
   ],
-  "type": "OnDemandEvent",
+  "@type": "OnDemandEvent",
   ...
   "workFeatured": {
     "@type": "VideoObject",

@@ -70,10 +70,10 @@ The property is identical to the existing `location` property, requiring a `Plac
  "@type": "SessionSeries",
  ...
   "beta:affiliatedLocation": {
-    "type": "Place",
+    "@type": "Place",
     "name": "Middlesbrough Sports Village",
     "address": {
-      "type": "PostalAddress",
+      "@type": "PostalAddress",
       "streetAddress": "Alan Peacock Way",
       "addressLocality": "Village East",
       "addressRegion": "Middlesbrough",
@@ -81,7 +81,7 @@ The property is identical to the existing `location` property, requiring a `Plac
       "addressCountry": "GB"
     },
     "geo": {
-      "type": "GeoCoordinates",
+      "@type": "GeoCoordinates",
       "latitude": 54.543964,
       "longitude": -1.20978500000001
     }
@@ -317,14 +317,14 @@ The examples below only include new properties specific to virtual events, for t
     "https://openactive.io/",
     "https://openactive.io/ns-beta"
   ],
-  "type": "SessionSeries",
+  "@type": "SessionSeries",
   ...
   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
   "beta:affiliatedLocation": {
-    "type": "Place",
+    "@type": "Place",
     "name": "Middlesbrough Sports Village",
     "address": {
-      "type": "PostalAddress",
+      "@type": "PostalAddress",
       "streetAddress": "Alan Peacock Way",
       "addressLocality": "Village East",
       "addressRegion": "Middlesbrough",
@@ -332,7 +332,7 @@ The examples below only include new properties specific to virtual events, for t
       "addressCountry": "GB"
     },
     "geo": {
-      "type": "GeoCoordinates",
+      "@type": "GeoCoordinates",
       "latitude": 54.543964,
       "longitude": -1.20978500000001
     }
@@ -348,11 +348,11 @@ The examples below only include new properties specific to virtual events, for t
     "https://openactive.io/",
     "https://openactive.io/ns-beta"
   ],
-  "type": "ScheduledSession",
+  "@type": "ScheduledSession",
   ...
   "maximumVirtualAttendeeCapacity": 20,
   "beta:virtualLocation": {
-    "type": "VirtualLocation",
+    "@type": "VirtualLocation",
     "name": "Zoom Video Chat",
     "url": "https://zoom.us/j/1234567890/signup",
     "description": "Please log into Zoom a few minutes before the event, and mute your mic while you wait for the session to start"
