@@ -92,10 +92,10 @@ function generateTypeDocumentation(dataModelDirectory, extensions) {
 
 function augmentWithExtension(extModelGraph, models, extensionUrl, extensionPrefix, namespaces) {
   extModelGraph.forEach(function(node) {
-    if (node.type === 'Property') {
+    if (node['@type'] === 'Property') {
       var field = {
-        "fieldName": node.id,
-        "alternativeTypes": node.rangeIncludes.map(type => expandPrefix(type, node["@container"] == "@list", namespaces)),
+        "fieldName": node['@id'],
+        "alternativeTypes": node.rangeIncludes.map(type => expandPrefix(type, node['@container'] == '@list', namespaces)),
         "description": [
           (node.discussionUrl ? renderGitHubIssueLink(node.discussionUrl) + '\n\n' : '') + node.comment
         ],
@@ -111,7 +111,7 @@ function augmentWithExtension(extModelGraph, models, extensionUrl, extensionPref
           model.fields[field.fieldName] = field;
         }
       });
-    } else if (node.type === 'Class') {
+    } else if (node['@type'] === 'Class') {
       //Ignore Classes and other extension types for now
     }
   });
