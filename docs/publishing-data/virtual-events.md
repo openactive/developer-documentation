@@ -190,7 +190,7 @@ Describes a means of electronic access to a shared virtual space.
 
 #### **Why implement this property?**
 
-This property allows participants to jump straight into the virtual class from any application, and for applications to show "sessions happening right now" that they can access for free, for example.
+This property allows participants to jump straight into a free virtual class from any application, and for applications to show "sessions happening right now" that they can access for free, for example.
 
 #### **Values**
 
