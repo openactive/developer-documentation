@@ -47,6 +47,7 @@ The following properties should be **RECOMMENDED**:
 * `genderRestriction`
 * `beta:isFirstSessionAccessibleForFree` \([\#232](https://github.com/openactive/modelling-opportunity-data/issues/232)\)
 * `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
+* `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
 * `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
 
 ## **Examples**
@@ -80,7 +81,8 @@ The example below only include new properties specific to on-demand events, for 
       }
     ]
   },
-  "beta:participantSuppliedEquipment": "https://openactive.io/Required"
+  "beta:participantSuppliedEquipment": "https://openactive.io/Required",
+  "beta:donationPaymentUrl": "https://www.paypal.com/donate/acme_fit"
 }
 ```
 

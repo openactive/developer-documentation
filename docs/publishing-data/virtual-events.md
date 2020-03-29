@@ -190,7 +190,7 @@ Describes a means of electronic access to a shared virtual space.
 
 #### **Why implement this property?**
 
-This property allows participants to jump straight into a free virtual class from any application, and for applications to show "sessions happening right now" that they can access for free, for example.
+This property allows participants to jump straight into the virtual class from any application, and for applications to show "sessions happening right now" that they can access for free, for example.
 
 #### **Values**
 
@@ -243,6 +243,31 @@ To specify "Beginner-friendly" the value of the `level` property must include th
 } 
 ```
 
+### `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
+
+**Definition**
+
+The URL of the webpage where the activity provider accepts donations.
+
+#### **Why implement this property?**
+
+A number of activity providers are seeking donations for their free virtual classes in the wake of the COVID-19 pandemic lockdowns. Sessions that appear to be offered for "free" based on `isAccessibleForFree` and `offers` actually proactively ask for donations. This property allows applications to advertise donation requests prominently to participants.
+
+#### **Values**
+
+The property accepts a URL, the existence of which both indicates that an activity provider is requesting donations, and provides the URL that applications should use when displaying a "Donate" button.
+
+#### **Example**
+
+```javascript
+{
+ "@type": "ScheduledSession",
+ ...
+  "beta:donationPaymentUrl": "https://www.paypal.com/donate/acme_fit"
+ ...
+} 
+```
+
 ## Conformance criteria
 
 {% hint style="info" %}
@@ -285,6 +310,7 @@ The following properties are **RECOMMENDED**:
 * `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
 * `beta:affiliatedLocation` \([\#227](https://github.com/openactive/modelling-opportunity-data/issues/227)\)
 * `maximumVirtualAttendeeCapacity` \([\#226](https://github.com/openactive/modelling-opportunity-data/issues/226)\)
+* `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
 
 ### ScheduledSession and Event
 
@@ -338,7 +364,8 @@ The examples below only include new properties specific to virtual events, for t
     }
   },
   "beta:isInteractivityPreferred": true,
-  "beta:participantSuppliedEquipment": "https://openactive.io/Required"
+  "beta:participantSuppliedEquipment": "https://openactive.io/Required",
+  "beta:donationPaymentUrl": "https://www.paypal.com/donate/acme_fit"
 }
 ```
 
