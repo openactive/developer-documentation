@@ -106,7 +106,7 @@ The property accepts a URL, the existence of which both indicates that an activi
 ## Conformance criteria
 
 {% hint style="info" %}
-For a full description of all properties available within `OnDemandEvent`, please see the [reference documentation](../data-model/types/ondemandevent.md). Please feedback on the below or request any clarifications by commenting on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
+For a full description of all properties available within [`OnDemandEvent`](../data-model/types/ondemandevent.md), please see the [reference documentation](../data-model/types/ondemandevent.md). Please feedback on the below or request any clarifications by commenting on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
 {% endhint %}
 
 Note that in order to make use of "beta" properties, `"@context"` must include the beta namespace, as follows:
@@ -118,26 +118,26 @@ Note that in order to make use of "beta" properties, `"@context"` must include t
 ],
 ```
 
-The following properties are **REQUIRED** for `OnDemandEvent`:
+The following properties are **REQUIRED** for [`OnDemandEvent`](../data-model/types/ondemandevent.md):
 
-* `name`
 * `activity`
-* `organizer` \(including a recommended `sameAs` property for social media handles\)
+* `name`
 * `offers` \(including a recommended `url` that links straight to the purchase page\)
+* `organizer` \(including a recommended `sameAs` property for social media handles\)
 * `url` \(to a page describing the session\)
 
-The following properties should be **RECOMMENDED** for `OnDemandEvent`:
+The following properties are **RECOMMENDED** for [`OnDemandEvent`](../data-model/types/ondemandevent.md):
 
-* `duration`
+* `ageRange`
 * `description`
+* `duration`
+* `genderRestriction`
 * `image`
 * `level` \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\) - using the string "`Beginner`" for beginner friendly classes
-* `ageRange`
-* `genderRestriction`
+* `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
+* `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
 * `beta:isFirstSessionAccessibleForFree` \([\#232](https://github.com/openactive/modelling-opportunity-data/issues/232)\)
 * `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
-* `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
-* `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
 
 ## **Examples**
 
