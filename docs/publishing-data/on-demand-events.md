@@ -42,7 +42,7 @@ The existing `attendeeInstruction` and `description` properties may be used for 
 
 ```javascript
 {
- "@type": "SessionSeries",
+ "@type": "OnDemandEvent",
  ...
  "beta:participantSuppliedEquipment": true,
  "description": "This class is better with steps at home, but you can improvise if you don't have any.",
@@ -69,7 +69,7 @@ To specify "Beginner-friendly" the value of the `level` property must include th
 
 ```javascript
 {
- "@type": "ScheduledSession",
+ "@type": "OnDemandEvent",
  ...
   "level": [
     "Beginner"
@@ -96,10 +96,45 @@ The property accepts a URL, the existence of which both indicates that an activi
 
 ```javascript
 {
- "@type": "ScheduledSession",
+ "@type": "OnDemandEvent",
  ...
   "beta:donationPaymentUrl": "https://www.paypal.com/donate/acme_fit"
  ...
+}
+```
+
+### `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
+
+**Definition**
+
+A video, audio or other media that represents the actual recording of the [`OnDemandEvent`](../data-model/types/ondemandevent.md).
+
+#### **Why implement this property?**
+
+This property allows applications to link directly to the media associated with the [`OnDemandEvent`](../data-model/types/ondemandevent.md), and allows applications to embed this media within their user experience - where such media is available free of charge - to provide users with a more seamless user journey.
+
+#### **Values**
+
+The property accepts a [`VideoObject`](../data-model/types/videoobject.md), [`AudioObject`](../data-model/types/audioobject.md), or a more general [`MediaObject`](../data-model/types/mediaobject.md), which includes a `url` for the page where the media is available,  an `embedUrl` that can be used to embed the media in an application, and a `thumbnail` that can be used to represent the media within an application.
+
+#### **Example**
+
+```javascript
+{
+  "@type": "OnDemandEvent",
+  ...
+  "workFeatured": {
+    "@type": "VideoObject",
+    "url": "https://www.youtube.com/watch?v=3fbCs0GVjgQ",
+    "embedUrl": "https://www.youtube.com/embed/3fbCs0GVjgQ",
+    "thumbnail": [
+      {
+        "@type": "ImageObject",
+        "url": "http://example.com/static/image/speedball_thumbnail.jpg"
+      }
+    ]
+  },
+  ...
 }
 ```
 
@@ -134,7 +169,7 @@ The following properties are **RECOMMENDED** for [`OnDemandEvent`](../data-model
 * `genderRestriction`
 * `image`
 * `level` \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\) - using the string "`Beginner`" for beginner friendly classes
-* `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
+* `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\) - which could could be a [`VideoObject`](../data-model/types/videoobject.md), [`AudioObject`](../data-model/types/audioobject.md), or a more general [`MediaObject`](../data-model/types/mediaobject.md).
 * `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
 * `beta:isFirstSessionAccessibleForFree` \([\#232](https://github.com/openactive/modelling-opportunity-data/issues/232)\)
 * `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
