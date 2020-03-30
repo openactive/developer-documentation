@@ -103,7 +103,7 @@ The property accepts a URL, the existence of which both indicates that an activi
 }
 ```
 
-### `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
+### `workFeatured` \([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
 
 **Definition**
 
