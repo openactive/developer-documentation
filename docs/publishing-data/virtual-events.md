@@ -53,7 +53,7 @@ If `eventAttendanceMode` is set to `https://schema.org/OnlineEventAttendanceMode
 
 #### **Definition**
 
-The original location of the event before it was moved online.
+The physical location affiliated with the virtual event, for example the original location of the event before it was moved online.
 
 #### **Why implement this property?**
 
