@@ -4,16 +4,109 @@ On-Demand Events are recordings of events that do not occur at a specific time, 
 
 These might be pre-recorded fitness classes, workouts, sessions which are provided via an online product, such as Les Mills On Demand and Racefully. They include on-demand video content and sessions which can be participated in virtually using an app or run-tracker \(e.g. live virtual 5k\).
 
-The **`OnDemandEvent`** type is used to represent such events, and they must be published using a **separate RPDE feed**.
+The [**`OnDemandEvent`**](../data-model/types/ondemandevent.md) type is used to represent such events, and they must be published using a **separate RPDE feed**, as per [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent_example_1.json&version=2.x).
 
 {% hint style="warning" %}
 Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71) that has been accelerated in response to the COVID-19 pandemic, and any properties suggested in the associated proposals are subject to change after the pandemic has ended. We welcome your contribution to the [discussion and various proposals](https://github.com/openactive/modelling-opportunity-data/labels/virtual%20events) with any thoughts and feedback from your implementation.
 {% endhint %}
 
-## Properties
+## Implementation guidance
+
+In order to upgrade your booking or listing system to support virtual events, consider implementing the following properties, in addition to the [standard required and recommended properties](../data-model/types/ondemandevent.md), within your **new RPDE feed specific to** [**`OnDemandEvent`**](../data-model/types/ondemandevent.md). The [OpenActive libraries](data-feeds/implementing-rpde-feeds.md#net-php-and-ruby-libraries), [types reference documentation](../data-model/types/#event-types-also-used-for-virtual-events), and [validator](http://validator.openactive.io/) have been updated to support these properties.
 
 {% hint style="info" %}
-This guidance is still being augmented with details. Please see the "**Updated Proposal**" within each of the referenced GitHub issues below for specific guidance on each property, which will be transferred here very soon. Comments welcome on these issues if anything is unclear. For feedback on the guidance below itself, please comment on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
+Please see the "**Updated Proposal**" within each of the referenced GitHub issues in the headings below for further specific guidance on each property. Please comment on these GitHub issue if you require any specific clarifications.
+{% endhint %}
+
+### `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
+
+**Definition**
+
+A property that indicates whether the participant must or may supply equipment for use in the Event.
+
+#### **Why implement this property?**
+
+This property allows applications to present a filter for "no equipment required", for those users who do not have equipment at home. This helps first-time virtual participants find classes they can easily participate in.
+
+#### **Values**
+
+`beta:participantSuppliedEquipment` must have one of the following values:
+
+* `https://openactive.io/Required` - Equipment is required
+* `https://openactive.io/Optional` - Equipment is optional, and the participant can improvise
+* `https://openactive.io/Unavailable` - No equipment required
+
+The existing `attendeeInstruction` and `description` properties may be used for activity providers to provide further clarification about equipment requirements.
+
+#### **Example**
+
+```javascript
+{
+ "@type": "SessionSeries",
+ ...
+ "beta:participantSuppliedEquipment": true,
+ "description": "This class is better with steps at home, but you can improvise if you don't have any.",
+ "attendeeInstruction": "If you don't have a step at home, find two reasonably thick books.",
+ ...
+}
+```
+
+### `level` for "Beginner-friendly" \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\)
+
+**Definition**
+
+To allow for "beginner-friendly" events to be easily discoverable.
+
+#### **Why implement this property?**
+
+This property can be implemented simply as a "beginner-friendly" tick box, if no notion of "level" currently exists within the booking or listing system. This allows applications to present a filter for "beginner friendly", for those users who are new to the activity.
+
+#### **Values**
+
+To specify "Beginner-friendly" the value of the `level` property must include the string `Beginner` in an array.
+
+#### **Example**
+
+```javascript
+{
+ "@type": "ScheduledSession",
+ ...
+  "level": [
+    "Beginner"
+  ]
+ ...
+} 
+```
+
+### `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
+
+**Definition**
+
+The URL of the webpage where the activity provider accepts donations.
+
+#### **Why implement this property?**
+
+A number of activity providers are seeking donations for their free on-demand classes in the wake of the COVID-19 pandemic lockdowns. On-demand sessions that appear to be offered for "free" based on `isAccessibleForFree` and `offers` actually proactively ask for donations. This property allows applications to advertise donation requests prominently to participants.
+
+#### **Values**
+
+The property accepts a URL, the existence of which both indicates that an activity provider is requesting donations, and provides the URL that applications should use when displaying a "Donate" button.
+
+#### **Example**
+
+```javascript
+{
+ "@type": "ScheduledSession",
+ ...
+  "beta:donationPaymentUrl": "https://www.paypal.com/donate/acme_fit"
+ ...
+} 
+```
+
+## Conformance criteria
+
+{% hint style="info" %}
+For a full description of all properties available within `OnDemandEvent`, please see the [reference documentation](../data-model/types/ondemandevent.md). Please feedback on the below or request any clarifications by commenting on [this GitHub issue](https://github.com/openactive/modelling-opportunity-data/issues/231).
 {% endhint %}
 
 Note that in order to make use of "beta" properties, `"@context"` must include the beta namespace, as follows:
@@ -25,11 +118,7 @@ Note that in order to make use of "beta" properties, `"@context"` must include t
 ],
 ```
 
-{% hint style="info" %}
-For a full description of all properties available within `OnDemandEvent`, please see the [reference documentation](../data-model/types/ondemandevent.md).
-{% endhint %}
-
-The following properties should be **REQUIRED**:
+The following properties are **REQUIRED** for `OnDemandEvent`:
 
 * `name`
 * `activity`
@@ -37,7 +126,7 @@ The following properties should be **REQUIRED**:
 * `offers` \(including a recommended `url` that links straight to the purchase page\)
 * `url` \(to a page describing the session\)
 
-The following properties should be **RECOMMENDED**:
+The following properties should be **RECOMMENDED** for `OnDemandEvent`:
 
 * `duration`
 * `description`
