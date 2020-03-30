@@ -63,6 +63,8 @@ This property allows data users to display only virtual events that would usuall
 
 The property is identical to the existing `location` property, requiring a `Place` with either an `address` or a `geo`.
 
+`beta:affiliatedLocation` may only be present when `eventAttendanceMode` is set to `https://schema.org/OnlineEventAttendanceMode`.
+
 #### Example
 
 ```javascript
@@ -107,6 +109,8 @@ This property allows applications to present a filter for "interactive classes",
 The existing `attendeeInstruction` and `description` properties may be used for activity providers to provide further clarification about interactivity preferences.
 
 Additionally, this may optionally be combined with the boolean `beta:isVirtuallyCoached` \([\#71](https://github.com/openactive/modelling-opportunity-data/issues/71)\) for the cases where the virtual class instruction is pre-recorded - e.g. for the common use case where Zoom is used for a group of participants to share in a pre-recorded class. If `beta:isVirtuallyCoached` is unspecified, it is assumed to be `false`.
+
+`beta:isInteractivityPreferred` **must not** be present when `eventAttendanceMode` is set to `https://schema.org/OfflineEventAttendanceMode` or is unspecified.
 
 #### **Example**
 
@@ -171,6 +175,8 @@ This property allows applications to present a filter for "class size", for thos
 
 The property can be defined on either the `SessionSeries` or `ScheduledSession`.
 
+`maximumVirtualAttendeeCapacity` **must not** be present when `eventAttendanceMode` is set to `https://schema.org/OfflineEventAttendanceMode` or is unspecified.
+
 #### **Example**
 
 ```javascript
@@ -201,6 +207,8 @@ The `url` must provide direct access to participate in a free virtual event, whi
 Note where the virtual location is private \(e.g. behind a paywall\), the `VirtualLocation` `url` should **not** be included.
 
 From the existing [Modelling Opportunity Data specification](https://www.openactive.io/modelling-opportunity-data/), the `Offer` `url` can be used for the link to purchase access or registration, and the `Event` `url` can signpost to a general page about the session.
+
+`beta:virtualLocation` **must not** be present when `eventAttendanceMode` is set to `https://schema.org/OfflineEventAttendanceMode` or is unspecified.
 
 #### **Example**
 
