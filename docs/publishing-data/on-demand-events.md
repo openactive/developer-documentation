@@ -63,7 +63,7 @@ This property can be implemented simply as a "beginner-friendly" tick box, if no
 
 #### **Values**
 
-To specify "Beginner-friendly" the value of the `level` property must include the string `Beginner` in an array.
+To specify "Beginner-friendly" the value of the `level` property must include the string `Beginner` in an array. Other values such as `Intermediate` and `Advanced` are also permissible, but are not standardised.
 
 #### **Example**
 
@@ -75,7 +75,7 @@ To specify "Beginner-friendly" the value of the `level` property must include th
     "Beginner"
   ]
  ...
-} 
+}
 ```
 
 ### `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
@@ -100,7 +100,7 @@ The property accepts a URL, the existence of which both indicates that an activi
  ...
   "beta:donationPaymentUrl": "https://www.paypal.com/donate/acme_fit"
  ...
-} 
+}
 ```
 
 ## Conformance criteria
