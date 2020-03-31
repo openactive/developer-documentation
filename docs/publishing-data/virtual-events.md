@@ -61,7 +61,7 @@ This property allows data users to display only virtual events that would usuall
 
 #### **Values**
 
-The property is identical to the existing `location` property, requiring a `Place` with either an `address` or a `geo`.
+The property is identical to the existing `location` property, requiring a `Place` with either an `address` or a `geo`, or both.
 
 `beta:affiliatedLocation` may only be present when `eventAttendanceMode` is set to `https://schema.org/OnlineEventAttendanceMode`.
 
