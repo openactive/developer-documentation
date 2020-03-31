@@ -103,7 +103,7 @@ The property accepts a URL, the existence of which both indicates that an activi
 }
 ```
 
-### `workFeatured` \([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
+### `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
 
 **Definition**
 
@@ -115,7 +115,7 @@ This property allows applications to link directly to the media associated with 
 
 #### **Values**
 
-The property accepts a [`VideoObject`](../data-model/types/videoobject.md), [`AudioObject`](../data-model/types/audioobject.md), or a more general [`MediaObject`](../data-model/types/mediaobject.md), which includes a `url` for the page where the media is available,  an `embedUrl` that can be used to embed the media in an application, and a `thumbnail` that can be used to represent the media within an application.
+The property accepts a [`VideoObject`](../data-model/types/videoobject.md), [`AudioObject`](../data-model/types/audioobject.md), or a more general [`MediaObject`](../data-model/types/mediaobject.md), which includes a `url` for the page where the media is available, an `embedUrl` that can be used to embed the media in an application, and a `thumbnail` that can be used to represent the media within an application.
 
 #### **Example**
 
