@@ -134,7 +134,7 @@ A property that indicates whether the participant must or may supply equipment f
 
 #### **Why implement this property?**
 
-This property allows applications to present a filter for "no equipment required", for those users who do not have equipment at home for an online event, or to bring with them to an offline event. This helps first-time participants find classes they can easily attend. It is applicable to online, offline and mixed events.
+This property allows applications to present a filter for "no equipment required", for those users who do not have equipment at home for an online event, or to bring with them to an offline event. This helps first-time participants find classes they can easily attend.
 
 #### **Values**
 
@@ -143,6 +143,8 @@ This property allows applications to present a filter for "no equipment required
 * `https://openactive.io/Required` - Equipment is required
 * `https://openactive.io/Optional` - Equipment is optional, and the participant can improvise
 * `https://openactive.io/Unavailable` - No equipment required
+
+ The property is applicable to online, offline and mixed events.
 
 The existing `attendeeInstruction` and `description` properties may be used for activity providers to provide further clarification about equipment requirements.
 
@@ -263,7 +265,7 @@ A number of activity providers are seeking donations for their free live stream 
 
 #### **Values**
 
-The property accepts a URL, the existence of which both indicates that an activity provider is requesting donations, and provides the URL that applications should use when displaying a "Donate" button.
+The property accepts a URL, the existence of which both indicates that an activity provider is requesting donations, and provides the URL that applications should use when displaying a "Donate" button. It is applicable to online, offline and mixed events.
 
 #### **Example**
 
