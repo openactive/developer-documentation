@@ -119,8 +119,8 @@ Additionally, this may optionally be combined with the boolean `beta:isVirtually
  "@type": "SessionSeries",
  ...
  "beta:isInteractivityPreferred": true,
- "description": "We get together with others in the village weekly to follow a Yoga video together on Zoom.",
- "attendeeInstruction": "We encourage you to switch your camera on to feel part of the community.",
+ "description": "... We get together with others in the village weekly to follow a Yoga video together on Zoom. ...",
+ "attendeeInstruction": "... We encourage you to switch your camera on to feel part of the community. ...",
  "beta:isVirtuallyCoached": true
  ...
 }
@@ -155,8 +155,8 @@ The existing `attendeeInstruction` and `description` properties may be used for 
  "@type": "SessionSeries",
  ...
  "beta:participantSuppliedEquipment": true,
- "description": "This class is better with steps at home, but you can improvise if you don't have any.",
- "attendeeInstruction": "If you don't have a step at home, find two reasonably thick books.",
+ "description": "... This class is better with steps at home, but you can improvise if you don't have any. ...",
+ "attendeeInstruction": "... If you don't have a step at home, find two reasonably thick books. ...",
  ...
 }
 ```
