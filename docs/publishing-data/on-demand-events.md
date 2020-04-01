@@ -45,8 +45,8 @@ The existing `attendeeInstruction` and `description` properties may be used for 
  "@type": "OnDemandEvent",
  ...
  "beta:participantSuppliedEquipment": true,
- "description": "This class is better with steps at home, but you can improvise if you don't have any.",
- "attendeeInstruction": "If you don't have a step at home, find two reasonably thick books.",
+ "description": "... This class is better with steps at home, but you can improvise if you don't have any. ...",
+ "attendeeInstruction": "... If you don't have a step at home, find two reasonably thick books. ...",
  ...
 }
 ```
