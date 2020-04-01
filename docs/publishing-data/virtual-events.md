@@ -134,7 +134,7 @@ A property that indicates whether the participant must or may supply equipment f
 
 #### **Why implement this property?**
 
-This property allows applications to present a filter for "no equipment required", for those users who do not have equipment at home. This helps first-time virtual participants find classes they can easily attend.
+This property allows applications to present a filter for "no equipment required", for those users who do not have equipment at home for an online event, or to bring with them to an offline event. This helps first-time participants find classes they can easily attend. It is applicable to online, offline and mixed events.
 
 #### **Values**
 
