@@ -5,7 +5,7 @@ Virtual Events, to be presented in user interfaces as "Livestream" or "Live" eve
 The **`eventAttendanceMode`** property is used to indicate that an opportunity is available to attend online. It can be applied to the existing [opportunity types](../data-model/data-model-overview.md) for [`SessionSeries`](../data-model/types/sessionseries.md), [`HeadlineEvent`](../data-model/types/headlineevent.md), [`Event`](../data-model/types/event.md), [`CourseInstance`](../data-model/types/courseinstance.md) as part of **existing RPDE feeds for those types**.
 
 {% hint style="warning" %}
-Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71) that has been accelerated in response to the COVID-19 pandemic, and any properties suggested in the associated proposals are subject to change after the pandemic has ended. We welcome your contribution to the [discussion and various proposals](https://github.com/openactive/modelling-opportunity-data/labels/virtual%20events) with any thoughts and feedback from your implementation.
+Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71) that has been [accelerated](https://w3c.openactive.io/meetings/2020-03-25-virtual-events) in response to the COVID-19 pandemic, and any properties suggested in the associated proposals are subject to change after the pandemic has ended. We welcome your contribution to the [discussion and various proposals](https://github.com/openactive/modelling-opportunity-data/labels/virtual%20events) with any thoughts and feedback from your implementation.
 {% endhint %}
 
 ## Implementation guidance

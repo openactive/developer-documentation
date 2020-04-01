@@ -7,7 +7,7 @@ These might be pre-recorded fitness classes, workouts, sessions which are provid
 The [**`OnDemandEvent`**](../data-model/types/ondemandevent.md) type is used to represent such events, and they must be published using a **separate RPDE feed**, as per [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent_example_1.json&version=2.x).
 
 {% hint style="warning" %}
-Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71) that has been accelerated in response to the COVID-19 pandemic, and any properties suggested in the associated proposals are subject to change after the pandemic has ended. We welcome your contribution to the [discussion and various proposals](https://github.com/openactive/modelling-opportunity-data/labels/virtual%20events) with any thoughts and feedback from your implementation.
+Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71) that has been [accelerated](https://w3c.openactive.io/meetings/2020-03-25-virtual-events) in response to the COVID-19 pandemic, and any properties suggested in the associated proposals are subject to change after the pandemic has ended. We welcome your contribution to the [discussion and various proposals](https://github.com/openactive/modelling-opportunity-data/labels/virtual%20events) with any thoughts and feedback from your implementation.
 {% endhint %}
 
 ## Implementation guidance
