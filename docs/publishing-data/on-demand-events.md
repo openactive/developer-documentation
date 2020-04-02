@@ -158,7 +158,7 @@ The following properties are **REQUIRED** for [`OnDemandEvent`](../data-model/ty
 * `activity`
 * `name`
 * `offers` \(including a recommended `url` that links straight to the purchase page\)
-* `organizer` \(including a **required** `@id` to give each organizer a [globally unique identifier in the form of a URL](https://www.openactive.io/open-booking-api/EditorsDraft/#globally-unique-identifiers) - which does not need to resolve, and a **recommended** `sameAs` property for social media handles\)
+* `organizer` \(including a **required** `@id` to give each organizer a [globally unique identifier in the form of a URL](https://www.openactive.io/open-booking-api/EditorsDraft/#globally-unique-identifiers) - which does not need to resolve to a functional endpoint, and a **recommended** `sameAs` property for social media handles\)
 * `url` \(to a page describing the session\)
 
 The following properties are **RECOMMENDED** for [`OnDemandEvent`](../data-model/types/ondemandevent.md):

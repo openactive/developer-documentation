@@ -299,7 +299,7 @@ The following properties are **REQUIRED** \(inheriting from existing [Modelling 
 
 * `name`
 * `activity`
-* `organizer` \(including a **required** `@id` to give each organizer a [globally unique identifier in the form of a URL](https://www.openactive.io/open-booking-api/EditorsDraft/#globally-unique-identifiers) - which does not need to resolve, and a **recommended** `sameAs` property for social media handles\)
+* `organizer` \(including a **required** `@id` to give each organizer a [globally unique identifier in the form of a URL](https://www.openactive.io/open-booking-api/EditorsDraft/#globally-unique-identifiers) - which does not need to resolve to a functional endpoint, and a **recommended** `sameAs` property for social media handles\)
 * `eventAttendanceMode` \([\#225](https://github.com/openactive/modelling-opportunity-data/issues/225)\)
 * `offers` \(including a recommended `url` that links straight to the purchase page\)
 * `url` \(to a page describing the session\)
