@@ -158,7 +158,10 @@ The following properties are **REQUIRED** for [`OnDemandEvent`](../data-model/ty
 * `activity`
 * `name`
 * `offers` \(including a recommended `url` that links straight to the purchase page\)
-* `organizer` \(including a **required** `@id` to give each organizer a [globally unique identifier in the form of a URL](https://www.openactive.io/open-booking-api/EditorsDraft/#globally-unique-identifiers) - which does not need to resolve to a functional endpoint, and a **recommended** `sameAs` property for social media handles\)
+* `organizer` \(including a **required** `@id`, and a **recommended** `sameAs` property for social media handles\)
+  * The `@id` is required to give each organizer a [globally unique identifier in the form of a URL](https://www.openactive.io/open-booking-api/EditorsDraft/#globally-unique-identifiers).
+  * The `@id` does not need to resolve to a functional endpoint, but **must** use a domain name owned by your booking or listing system. This allows applications with specific content approval requirements to register trusted organizers based on their `@id`.
+  * An example of such an `@id` is `https://id.bookingsystem.com/organizers/123`.
 * `url` \(to a page describing the session\)
 
 The following properties are **RECOMMENDED** for [`OnDemandEvent`](../data-model/types/ondemandevent.md):
