@@ -41,7 +41,7 @@ The same issue can be demonstrated with the [Incrementing Unique Change Number](
 
 ### Preventing the race condition
 
-In order to prevent this race condition, simply separate the more intensive work of the transaction from the atomic timestamp and change number update, filter out recent changes in the feed, and ensure you are using accurate timestamps:
+In order to prevent this race condition, one solution is to simply separate the more intensive work of the transaction from the atomic timestamp and change number update, filter out recent changes in the feed, and ensure you are using accurate timestamps:
 
 1. First commit the transaction, then update the timestamps or change numbers after the transaction has been committed as an atomic operation, outside of a transaction, using `GETDATE()` or similar
 2. Ensure the RPDE endpoint filters out all items with a "modified" date after 2 seconds in the past, to delay items appearing in the feed
