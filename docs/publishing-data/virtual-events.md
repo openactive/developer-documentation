@@ -36,7 +36,7 @@ This property is the **required** for a minimal implementation of virtual events
 
 If `eventAttendanceMode` not provided it is must be assumed to be `https://schema.org/OfflineEventAttendanceMode` for backwards compatibility.
 
-If `eventAttendanceMode` is set to `https://schema.org/OnlineEventAttendanceMode`, `location` **MUST NOT** be provided for backwards compatibility, in order to ensure that existing data users do not misrepresent virtual classes as physical ones.
+If `eventAttendanceMode` is set to `https://schema.org/OnlineEventAttendanceMode`, `location` **MUST NOT** be provided for backwards compatibility, in order to ensure that existing data users do not misrepresent virtual classes as physical ones. See the property [`beta:affiliatedLocation`](virtual-events.md#beta-affiliatedlocation-227) below for an alternative.
 
 #### Example
 
