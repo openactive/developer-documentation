@@ -2,7 +2,7 @@
 
 ## Time-based Events: **Regular Classes and Sessions**
 
-These always have at least `activity`, `location` and `startDate` specified: so a Yoga class in Downtown Leisure Centre at 7pm on a Tuesday. See [here](../../data-model/data-model-overview.md#classes-and-sessions) for further clarification of the types available. 
+These always have at least `activity`, `location` and `startDate` specified: so a Yoga class in Downtown Leisure Centre, at 7pm, on a Tuesday. See [here](../../data-model/data-model-overview.md#classes-and-sessions) for further clarification of the types available. 
 
 The OpenActive Modelling Specification 2.0 represents regular events using a hierarchy of types: [`EventSeries`](https://www.openactive.io/modelling-opportunity-data/#grouping-together-events-eventseries-), [`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-), and [`ScheduledSession`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-), linked via the `superEvent` and `subEvent` properties. These are described by example in the diagram below:
 
