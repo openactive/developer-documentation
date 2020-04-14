@@ -2,11 +2,11 @@
 
 Virtual Events are opportunities that are accessible remotely in real-time.
 
+The **`eventAttendanceMode`** property is used to indicate that an opportunity is available to attend online. It can be applied to the existing [opportunity types](../data-model/data-model-overview.md) for [`SessionSeries`](../data-model/types/sessionseries.md), [`HeadlineEvent`](../data-model/types/headlineevent.md), [`Event`](../data-model/types/event.md), [`CourseInstance`](../data-model/types/courseinstance.md) as part of **existing RPDE feeds for those types**.
+
 Although in most cases a Virtual Event will be a "Livestream" event - where an instructor live streams a video of themselves or their class - other types of virtual events exist. For example, using augmented reality or virtual reality. Such alternative forms of media will be accounted for in the future with further properties in addition to those listed below.
 
 For the sake of speed and external consistency during the COVID-19 Pandemic, in the short term, the word “Livestream” or "Live" is recommended within user interfaces to represent all Virtual Events. However, implementers should be aware that properties introduced in the future may necessitate the use of more specific language to correctly represent events.
-
-The **`eventAttendanceMode`** property is used to indicate that an opportunity is available to attend online. It can be applied to the existing [opportunity types](../data-model/data-model-overview.md) for [`SessionSeries`](../data-model/types/sessionseries.md), [`HeadlineEvent`](../data-model/types/headlineevent.md), [`Event`](../data-model/types/event.md), [`CourseInstance`](../data-model/types/courseinstance.md) as part of **existing RPDE feeds for those types**.
 
 {% hint style="warning" %}
 Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71) that has been [accelerated](https://w3c.openactive.io/meetings/2020-03-25-virtual-events) in response to the COVID-19 pandemic, and any properties suggested in the associated proposals are subject to change after the pandemic has ended. We welcome your contribution to the [discussion and various proposals](https://github.com/openactive/modelling-opportunity-data/labels/virtual%20events) with any thoughts and feedback from your implementation.
