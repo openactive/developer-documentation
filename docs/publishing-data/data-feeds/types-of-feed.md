@@ -128,9 +128,9 @@ A feed of [`CourseInstance`](https://www.openactive.io/modelling-opportunity-dat
 
 The following diagram illustrates the relationships between the event types available within the OpenActive Modelling Specification 2.0:
 
-![](https://docs.google.com/drawings/u/0/d/saLhrYuhXzasZGFjI9oAzfQ/image?w=602&h=209&rev=48&ac=1&parent=1mo_N1xa0H9D4uVEz3m8kyCPAAXcSEjwpEiv995hDxQs)
+![](../../.gitbook/assets/untitled-document-2.png)
 
-Note the use of aliases \(e.g. "IndividualSlot"\) which are useful when referring to a specific type that is being used in a particular context.
+Note the use of aliases \(e.g. "IndividualFacilityUseSlot"\) which are useful when referring to a specific type that is being used in a particular context.
 
 The relationship between all types is represented via the `superEvent` and `subEvent` properties, with the exception of:
 
