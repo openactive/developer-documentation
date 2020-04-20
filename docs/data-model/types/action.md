@@ -8,7 +8,7 @@ This type is derived from [https://schema.org/Action](https://schema.org/Action)
 
 ## **Properties**
 
-### **Required properties**
+### **Optional properties**
     
 <table>
   <thead>
@@ -29,21 +29,12 @@ This type is derived from [https://schema.org/Action](https://schema.org/Action)
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left"><b>object</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
+        <a href="https://developer.openactive.io/data-model/types/event"><code>Event</code></a>
       </td>
       <td style="text-align:left">
-        <p>The name of the action</p><p></br><b>Example</b></p><p><code>"name": "Book"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>target</b></td>
-      <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/entrypoint"><code>EntryPoint</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A definition of the target of the action.</p><p></br><b>Example</b></p><p><code>"target": {<br/>&nbsp;&nbsp;&quot;encodingType&quot;:&nbsp;&quot;application/vnd.openactive.v1.0+json&quot;,<br/>&nbsp;&nbsp;&quot;httpMethod&quot;:&nbsp;&quot;POST&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;EntryPoint&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://example.com/orders&quot;<br/>}</code></p>
+        <p>The object upon which the action is carried out, whose state is kept intact or changed.</p><p></br><b>Example</b></p><p><code>"object": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;SessionSeries&quot;,<br/>&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://id.booking-system.example.com/session-series/42&quot;<br/>}</code></p>
       </td>
     </tr>
   </tbody>

@@ -24,6 +24,7 @@
 * [Data Model Overview](data-model/data-model-overview.md)
 * [@context and JSON-LD](data-model/context-and-json-ld.md)
 * [Types Reference](data-model/types/README.md)
+  * [Action](data-model/types/action.md)
   * [AudioObject](data-model/types/audioobject.md)
   * [BabyChanging](data-model/types/babychanging.md)
   * [Barcode](data-model/types/barcode.md)
