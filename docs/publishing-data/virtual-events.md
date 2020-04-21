@@ -341,7 +341,7 @@ The following properties are **REQUIRED** \(inheriting from existing [Modelling 
 
 * `name`
 * `activity`
-* `organizer` \(including a **required** `@id`, and a **recommended** `sameAs` property for social media handles\)
+* `organizer` - including a **required** `@id`, a **recommended** `sameAs` property for social media handles, and a **recommended** `beta:formalCriteriaMet` \([\#236](https://github.com/openactive/modelling-opportunity-data/issues/236)\).
   * The `@id` is required to give each organizer a [globally unique identifier in the form of a URL](https://www.openactive.io/open-booking-api/EditorsDraft/#globally-unique-identifiers).
   * The `@id` does not need to resolve to a functional endpoint, but **must** use a domain name owned by your booking or listing system. This allows applications with specific content approval requirements to register trusted organizers based on their `@id`.
   * An example of such an `@id` is `https://id.bookingsystem.com/organizers/123`.
@@ -366,7 +366,6 @@ The following properties are **RECOMMENDED**:
 * `beta:affiliatedLocation` \([\#227](https://github.com/openactive/modelling-opportunity-data/issues/227)\)
 * `maximumVirtualAttendeeCapacity` \([\#226](https://github.com/openactive/modelling-opportunity-data/issues/226)\)
 * `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
-* `beta:formalCriteriaMet` \([\#236](https://github.com/openactive/modelling-opportunity-data/issues/236)\)
 
 ### ScheduledSession and Event
 
