@@ -145,15 +145,11 @@ OpenActive Data Catalogs provide a mechanism for registering OpenActive Datasite
 
 ### Single database
 
-If you have created a new Dataset Site, simply create a Pull Request for the following file and add your Dataset Site's production URL to the `dataset` array:
-
-[https://github.com/openactive/data-catalogs/blob/master/singular.jsonld](https://github.com/openactive/data-catalogs/blob/master/singular.jsonld)
+If you have created a new Dataset Site, simply create a [Pull Request for the OpenActive Data Catalog for Singular Datasets](https://github.com/openactive/data-catalogs/edit/master/singular.jsonld) and add your Dataset Site's production URL to the `dataset` array.
 
 ### Multiple databases
 
-If you have created a new Data Catalog, simply create a Pull Request for the following file and add your Data Catalog's production URL to the `hasPart` array:
-
-[https://github.com/openactive/data-catalogs/blob/master/data-catalog-collection.jsonld](https://github.com/openactive/data-catalogs/blob/master/data-catalog-collection.jsonld)
+If you have created a new Data Catalog, simply create a [Pull Request for the OpenActive Data Catalog Collection](https://github.com/openactive/data-catalogs/edit/master/data-catalog-collection.jsonld) and add your Data Catalog's production URL to the `hasPart` array.
 
 
 
