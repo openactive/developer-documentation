@@ -179,7 +179,7 @@ This property allows applications to present a filter for "class size", for thos
 
 `maximumVirtualAttendeeCapacity` must be an integer.
 
-The property can be defined on either the `SessionSeries` or `ScheduledSession`.
+The property can be set at either the `SessionSeries`, `ScheduledSession`or `Event` level.
 
 `maximumVirtualAttendeeCapacity` **must not** be present when `eventAttendanceMode` is set to `https://schema.org/OfflineEventAttendanceMode` or is unspecified.
 
@@ -187,7 +187,7 @@ The property can be defined on either the `SessionSeries` or `ScheduledSession`.
 
 ```javascript
 {
- "@type": "ScheduledSession",
+ "@type": "SessionSeries",
  ...
  "maximumVirtualAttendeeCapacity": 20,
  ...
@@ -206,7 +206,7 @@ This property allows participants to jump straight into the virtual class from a
 
 #### **Values**
 
-The value of `beta:virtualLocation`, specified at either a `SessionSeries` or `ScheduledSession` level, must be a `VirtualLocation` object, which must include at least the `url`, `name`, or `description` property. The `url` property is recommended for simple implementations.
+The value of `beta:virtualLocation`, must be a `VirtualLocation` object, which must include at least the `url`, `name`, or `description` property. The `url` property is recommended for simple implementations.
 
 The `url` must provide direct access to participate in a free virtual event, which could be used for e.g. a "View Livestream" button.
 
@@ -215,6 +215,8 @@ Note where the virtual location is private \(e.g. behind a paywall\), the `Virtu
 From the existing [Modelling Opportunity Data specification](https://www.openactive.io/modelling-opportunity-data/), the `Offer` `url` can be used for the link to purchase access or registration, and the `Event` `url` can signpost to a general page about the session.
 
 `beta:virtualLocation` **must not** be present when `eventAttendanceMode` is set to `https://schema.org/OfflineEventAttendanceMode` or is unspecified.
+
+The property can be set at the `SessionSeries`, `ScheduledSession` or `Event` level.
 
 #### **Example**
 
@@ -242,13 +244,13 @@ This property can be implemented simply as a "beginner-friendly" tick box, if no
 
 #### **Values**
 
-To specify "Beginner-friendly" the value of the `level` property must include the string `Beginner` in an array.
+To specify "Beginner-friendly" the value of the `level` property, must include the string `Beginner` in an array.
 
 #### **Example**
 
 ```javascript
 {
- "@type": "ScheduledSession",
+ "@type": "SessionSeries",
  ...
   "level": [
     "Beginner"
@@ -275,10 +277,46 @@ The property accepts a URL, the existence of which both indicates that an activi
 
 ```javascript
 {
- "@type": "ScheduledSession",
+ "@type": "SessionSeries",
  ...
   "beta:donationPaymentUrl": "https://www.paypal.com/donate/acme_fit"
  ...
+} 
+```
+
+### `beta:formalCriteriaMet` \([\#236](https://github.com/openactive/modelling-opportunity-data/issues/236)\)
+
+**Definition**
+
+An array of URLs, each of which describe the formal criteria that are met by the organizer.
+
+#### **Why implement this property?**
+
+It is the activity provider’s responsibility to ensure they have adequate insurance in place for virtual classes \(and correct music licences, where relevant\). Booking systems that wish to allow their customers to be part of Sport England's [Join the Movement](https://www.sportengland.org/stayinworkout) campaign must provide assurance that activity providers have met these criteria, by either including the `beta:formalCriteriaMet` property per-organizer, or by demonstrating system-level safeguards are in place.
+
+#### **Values**
+
+The `beta:formalCriteriaMet` property accepts an array of URLs, and in most cases will contain just one URL. Each URL must reference a webpage that includes the criteria that have been presented to the activity provider, and that have been actively accepted by them. The webpage itself does not need to be presented to the activity provider, as long as the criteria it contains is accepted by the activity provider in some form.
+
+An example of such a URL is: [`https://emduk.org/advice-on-how-instructors-can-continue-to-deliver-their-classes-online/`](https://emduk.org/advice-on-how-instructors-can-continue-to-deliver-their-classes-online/)
+
+Applications can use the content of the webpage at each URL to decide if the criteria specified are sufficient for their needs, and filter for opportunities where the `beta:formalCriteriaMet` property includes such URLs.
+
+The property must be set on the `Organization` or `Person` within the `organizer` property.
+
+#### **Example**
+
+```javascript
+{
+ "@type": "SessionSeries",
+ ...
+ "organizer": {
+  "@type": "Organization",
+  ...
+  "beta:formalCriteriaMet": [
+    "https://emduk.org/advice-on-how-instructors-can-continue-to-deliver-their-classes-online/"
+  ]
+ }
 } 
 ```
 
@@ -328,6 +366,7 @@ The following properties are **RECOMMENDED**:
 * `beta:affiliatedLocation` \([\#227](https://github.com/openactive/modelling-opportunity-data/issues/227)\)
 * `maximumVirtualAttendeeCapacity` \([\#226](https://github.com/openactive/modelling-opportunity-data/issues/226)\)
 * `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
+* `beta:formalCriteriaMet` \([\#236](https://github.com/openactive/modelling-opportunity-data/issues/236)\)
 
 ### ScheduledSession and Event
 
@@ -362,6 +401,14 @@ The examples below only include new properties specific to virtual events, for t
   ],
   "@type": "SessionSeries",
   ...
+  "organizer": {
+    "@type": "Organization",
+    "@id": "https://id.bookingsystem.com/organizers/123",
+    ...
+    "beta:formalCriteriaMet": [
+      "https://emduk.org/advice-on-how-instructors-can-continue-to-deliver-their-classes-online/"
+    ]
+  },
   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
   "beta:affiliatedLocation": {
     "@type": "Place",
@@ -383,6 +430,7 @@ The examples below only include new properties specific to virtual events, for t
   "beta:isInteractivityPreferred": true,
   "beta:participantSuppliedEquipment": "https://openactive.io/Required",
   "beta:donationPaymentUrl": "https://www.paypal.com/donate/acme_fit"
+ }
 }
 ```
 
