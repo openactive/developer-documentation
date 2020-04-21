@@ -139,3 +139,21 @@ For booking systems with **multiple databases**, a Data Catalog must also be pro
 
 A Data Catalog is very simply an array of the URLs of all your Dataset Sites \(the `dataset` array\), presented within a `DataCatalog` wrapper following a [specific format](https://schema.org/DataCatalog). An example of a live Data Catalog from the Gladstone system can be found [here](https://opendata.leisurecloud.live/api/datacatalog).
 
+## Step 5: Adding your Dataset Site to the OpenActive Data Catalog Collection
+
+OpenActive Data Catalogs provide a mechanism for registering OpenActive Datasite Sites so that they can be discovered and harvested by data users.
+
+### Single database
+
+If you have created a new Dataset Site, simply create a Pull Request for the following file and add your Dataset Site's production URL to the `dataset` array:
+
+[https://github.com/openactive/data-catalogs/blob/master/singular.jsonld](https://github.com/openactive/data-catalogs/blob/master/singular.jsonld)
+
+### Multiple databases
+
+If you have created a new Data Catalog, simply create a Pull Request for the following file and add your Data Catalog's production URL to the `hasPart` array:
+
+[https://github.com/openactive/data-catalogs/blob/master/data-catalog-collection.jsonld](https://github.com/openactive/data-catalogs/blob/master/data-catalog-collection.jsonld)
+
+
+
