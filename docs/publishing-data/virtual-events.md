@@ -300,7 +300,7 @@ The `beta:formalCriteriaMet` property accepts an array of URLs, and in most case
 
 An example of such a URL is: [`https://emduk.org/advice-on-how-instructors-can-continue-to-deliver-their-classes-online/`](https://emduk.org/advice-on-how-instructors-can-continue-to-deliver-their-classes-online/)
 
-Applications can use the content of the webpage at each URL to decide if the criteria specified are sufficient for their needs, and filter for opportunities where the `beta:formalCriteriaMet` property includes such URLs.
+Applications that consume the open data can use the content of the webpage at each URL to decide if the criteria specified are sufficient for their needs, and filter for opportunities where the `beta:formalCriteriaMet` property includes such URLs.
 
 The property must be set on the `Organization` or `Person` within the `organizer` property.
 
