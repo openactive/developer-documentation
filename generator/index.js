@@ -299,7 +299,7 @@ function createTableFromFieldList(fieldList) {
 
 function createMarkdownFromField(field) {
   return `    <tr>
-      <td style="text-align:left"><b>` + field.fieldName + `</b></td>
+      <td style="text-align:left"><b>` + convertToJsonLd(field.fieldName) + `</b></td>
       <td style="text-align:left">
         ` + createTypeString(field) + `
       </td>
@@ -352,15 +352,23 @@ function createDescriptionWithExample(field) {
   }
 }
 
+function convertToJsonLd(fieldName) {
+  if (fieldName === 'type' || fieldName === 'id') {
+    return '@' + fieldName;
+  } else {
+    return fieldName;
+  }
+}
+
 function renderCode(code, fieldName, requiredType) {
   if (typeof code === 'object') {
-    return "<code>" + (fieldName ? `"` + fieldName + `": ` : "") + JSON.stringify(code, null, 2)
+    return "<code>" + (fieldName ? `"` + convertToJsonLd(fieldName) + `": ` : "") + JSON.stringify(code, null, 2)
       .replace(/ /g, "&nbsp;")
       .replace(/"/g, "&quot;")
       .replace(/\n/g, "<br/>") + "</code>";
   } else {
     var isNumber = requiredType && (requiredType.indexOf("Integer") > -1 || requiredType.indexOf("Float") > -1);
-    return "<code>" + (fieldName ? `"` + fieldName + `": ` : "") + (isNumber ? code : `"` + code + `"`) + "</code>";
+    return "<code>" + (fieldName ? `"` + convertToJsonLd(fieldName) + `": ` : "") + (isNumber ? code : `"` + code + `"`) + "</code>";
   }
 }
 
