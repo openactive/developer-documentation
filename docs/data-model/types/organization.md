@@ -86,21 +86,21 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left"><b>@type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"type": "Organization"</code>
+        Must always be present and set to <code>"@type": "Organization"</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>id</b></td>
+      <td style="text-align:left"><b>@id</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"id": "https://id.bookingsystem.example.com/organizers/112345"</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://id.bookingsystem.example.com/organizers/112345"</code></p>
       </td>
     </tr>
     <tr>
@@ -226,7 +226,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
       </td>
       <td style="text-align:left">
-        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>An related video object.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>A related video object.</p>
       </td>
     </tr>
   </tbody>

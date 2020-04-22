@@ -20,12 +20,12 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left"><b>@type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"type": "Place"</code>
+        Must always be present and set to <code>"@type": "Place"</code>
       </td>
     </tr>
     <tr>
@@ -88,12 +88,12 @@ While these properties are marked as recommended in the specification, a data pu
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>id</b></td>
+      <td style="text-align:left"><b>@id</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"id": "https://example.com/place/12345"</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/place/12345"</code></p>
       </td>
     </tr>
     <tr>

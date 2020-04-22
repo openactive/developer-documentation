@@ -24,12 +24,12 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>type</b></td>
+      <td style="text-align:left"><b>@type</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"type": "WebAPI"</code>
+        Must always be present and set to <code>"@type": "WebAPI"</code>
       </td>
     </tr>
     <tr>
