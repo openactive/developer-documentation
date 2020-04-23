@@ -101,13 +101,13 @@ Although the customer will likely be able to fill in most properties specific to
 
 The `discussionUrl` is the url of the GitHub issues board for that specific dataset site.
 
-We recommend that you create each repository \(that will include a GitHub Issues Board\) within your own GitHub organisation either [manually](dataset-sites.md#manually) or via an [API call](dataset-sites.md#automatically).
+We recommend that you create each GitHub repository \(that will include a GitHub Issues Board\) within your own GitHub organisation either [manually](dataset-sites.md#manually) or via an [API call](dataset-sites.md#automatically).
 
-If you have multiple databases and customers with large data volumes, you should create one repository  \(that will include a GitHub Issues Board\) for each customer. Single database systems need only create one repository \(that will include a GitHub Issues Board\). 
+If you have multiple databases and customers with large data volumes, you should create one GitHub repository  \(that will include a GitHub Issues Board\) for each customer. Single database systems need only create one GitHub repository \(that will include a GitHub Issues Board\). 
 
 ### Helpdesk integration
 
-If you "follow" these repositories using a new GitHub account created with your support e-mail address then you will receive notifications for each query, and be able to reply via e-mail to the notifications from your support e-mail address - these replies then appear directly in GitHub. Note that any administrator accounts automatically follow newly created GitHub repositories within your organisation.
+If you "follow" these GitHub repositories using a new GitHub account created with your support e-mail address then you will receive notifications for each query, and be able to reply via e-mail to the notifications from your support e-mail address - these replies then appear directly in GitHub. Note that any administrator accounts automatically follow newly created GitHub repositories within your organisation.
 
 ### GitHub Organisation Creation
 
@@ -149,13 +149,13 @@ Use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fwww.opena
 
 For booking systems with **multiple databases**, a Data Catalog must also be provided to allow the many Dataset Sites that are created to be easily indexed by the [OpenActive Status Page](https://status.openactive.io) and other data users.
 
-A Data Catalog is very simply an array of the URLs of all your Dataset Sites \(the `dataset` array\), presented within a `DataCatalog` wrapper following a [specific format](https://schema.org/DataCatalog). An example of a live Data Catalog from the Gladstone system can be found [here](https://opendata.leisurecloud.live/api/datacatalog), and another example [here](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdata-catalogs%2Fsingular.jsonld&version=2.x&validationMode=DataCatalog).
+A Data Catalog is very simply an array of the URLs of all your Dataset Sites \(the `dataset` array\), presented within a `DataCatalog` wrapper following a [specific format](../data-model/types/datacatalog.md). An example of a live Data Catalog from the Gladstone system can be found [here](https://opendata.leisurecloud.live/api/datacatalog), and another example [here](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdata-catalogs%2Fsingular.jsonld&version=2.x&validationMode=DataCatalog).
 
 Please use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdata-catalogs%2Fsingular.jsonld&version=2.x&validationMode=DataCatalog) to check that your `DataCatalog` is conformant, using the "Data Catalog" mode.
 
-## Step 6: Adding your Dataset Site to the OpenActive Data Catalog Collection
+## Step 6: Adding your Dataset Site or Data Catalog to the OpenActive Data Catalog Collection
 
-OpenActive Data Catalogs provide a mechanism for registering OpenActive Datasite Sites so that they can be discovered and harvested by data users.
+OpenActive Data Catalogs provide a mechanism for registering OpenActive Datasite Sites so that they can be [discovered and harvested](https://www.openactive.io/data-catalogs/) by data users.
 
 ### Single database
 
@@ -163,7 +163,7 @@ If you have created a new Dataset Site, simply create a [Pull Request for the Op
 
 ### Multiple databases
 
-If you have created a new Data Catalog, simply create a [Pull Request for the OpenActive Data Catalog Collection](https://github.com/openactive/data-catalogs/edit/master/data-catalog-collection.jsonld) and add your Data Catalog's production URL to the `hasPart` array.
+If you have created a new Data Catalog that links to your Dataset Sites, simply create a [Pull Request for the OpenActive Data Catalog Collection](https://github.com/openactive/data-catalogs/edit/master/data-catalog-collection.jsonld) and add your Data Catalog's production URL to the `hasPart` array.
 
 
 
