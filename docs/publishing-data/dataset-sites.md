@@ -23,11 +23,11 @@ Example dataset sites: [GLL](http://data.better.org.uk), [Fusion Lifestyle](http
 * A place where the community can contribute with comments, and raise issues - all Dataset Sites are linked to a GitHub issues board \(e.g. [this one](https://github.com/gll-better/opendata/issues)\) that allows data users to raise issues in the open.
 
 {% hint style="warning" %}
-A machine-readable dataset site is essential when publishing open data, and every dataset published within the OpenActive community to date has had one. Despite this, the specification that describes a standard OpenActive dataset site is still yet to be formally defined, and has instead evolved as a de facto standard.
+A machine-readable dataset site is essential when publishing open data, and every dataset published within the OpenActive community to date has had one. However, the specification that describes a standard OpenActive dataset site is still yet to be formally defined, and has instead evolved as a de facto standard.
 
 As such, this documentation is still based on a [draft model](../data-model/types/dataset.md) that is designed to inform the OpenActive specification work with implementation feedback. It is mostly stable and has been largely unchanged for 2 years. However, it is still **subject to change**, as the [Dataset API Discovery specification](https://www.openactive.io/dataset-api-discovery/EditorsDraft/) is yet to be formally released.
 
-To minimise any uplift work required to conform to the formal specification when it is released, it is **strongly recommended** that you use [one of the libraries below](dataset-sites.md#net-php-and-ruby-libraries) if possible. These libraries will be updated to meet the latest specification, and when used in their simplest mode \([RenderSimpleDatasetSite](https://github.com/openactive/OpenActive.DatasetSite.NET/#simple-implementation), [renderSimpleDatasetSite](https://packagist.org/packages/openactive/dataset-site#user-content-rendersimpledatasetsitesettings-supportedfeedtypes) or [TemplateRenderer.new](https://www.rubydoc.info/gems/openactive-dataset_site/0.1.1#Usage)\) will only require a simple dependency update from you to do so.
+To minimise any uplift work required to conform to the formal specification when it is released, it is **recommended** that you use [one of the libraries below](dataset-sites.md#net-php-and-ruby-libraries) where possible. These libraries will be updated to meet the latest specification, and when used in their simplest mode \([RenderSimpleDatasetSite](https://github.com/openactive/OpenActive.DatasetSite.NET/#simple-implementation), [renderSimpleDatasetSite](https://packagist.org/packages/openactive/dataset-site#user-content-rendersimpledatasetsitesettings-supportedfeedtypes) or [TemplateRenderer.new](https://www.rubydoc.info/gems/openactive-dataset_site/0.1.1#Usage)\) will only require a simple dependency update from you to do so.
 {% endhint %}
 
 ## Step 1: Build Dataset Sites into your system
@@ -111,7 +111,7 @@ The `discussionUrl` is the url of the GitHub issues board for that specific data
 
 We recommend that you create each GitHub repository \(that will include a GitHub Issues Board\) within your own GitHub organisation either [manually](dataset-sites.md#manually) or via an [API call](dataset-sites.md#automatically).
 
-If you have multiple databases and customers with large data volumes, you should create one GitHub repository  \(that will include a GitHub Issues Board\) for each customer. Single database systems need only create one GitHub repository \(that will include a GitHub Issues Board\). 
+If you have multiple databases and customers with large data volumes, you should create one GitHub repository \(that will include a GitHub Issues Board\) for each customer. Single database systems need only create one GitHub repository \(that will include a GitHub Issues Board\).
 
 ### Helpdesk integration
 
@@ -151,7 +151,7 @@ The GitHub API provides a mechanism to [automatically create GitHub repositories
 
 Use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite) to check that the JSON-LD within your Dataset Site is conformant, by using the **Load URL** feature in the menu to load your **Dataset Site URL**, while in the "Dataset Sites" mode. The validator will automatically extract the JSON-LD from your Dataset Site's HTML and validate it.
 
-{% embed url="https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite" %}
+{% embed url="https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite" caption="" %}
 
 ## Step 5: Providing a Data Catalog \(multiple databases only\)
 
@@ -172,6 +172,4 @@ If you have created a new Dataset Site, simply create a [Pull Request for the Op
 ### Multiple databases
 
 If you have created a new Data Catalog that links to your Dataset Sites, simply create a [Pull Request for the OpenActive Data Catalog Collection](https://github.com/openactive/data-catalogs/edit/master/data-catalog-collection.jsonld) and add your Data Catalog's production URL to the `hasPart` array.
-
-
 
