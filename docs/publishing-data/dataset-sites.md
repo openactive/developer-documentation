@@ -133,13 +133,21 @@ The GitHub API provides a mechanism to [automatically create GitHub repositories
 }
 ```
 
-## Step 4: Providing a Data Catalog \(multiple databases only\)
+## Step 4: Validating your Dataset Site
+
+Use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite) to check that the JSON-LD within your Dataset Site is conformant, by using the **Load URL** feature in the menu to load your Dataset Site URL, while in the "Dataset Sites" mode. The validator will automatically extract the JSON-LD from your Dataset Site and validate it.
+
+{% embed url="https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite" %}
+
+## Step 5: Providing a Data Catalog \(multiple databases only\)
 
 For booking systems with **multiple databases**, a Data Catalog must also be provided to allow the many Dataset Sites that are created to be easily indexed by the [OpenActive Status Page](https://status.openactive.io) and other data users.
 
 A Data Catalog is very simply an array of the URLs of all your Dataset Sites \(the `dataset` array\), presented within a `DataCatalog` wrapper following a [specific format](https://schema.org/DataCatalog). An example of a live Data Catalog from the Gladstone system can be found [here](https://opendata.leisurecloud.live/api/datacatalog).
 
-## Step 5: Adding your Dataset Site to the OpenActive Data Catalog Collection
+Please use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdata-catalogs%2Fsingular.jsonld&version=2.x&validationMode=DataCatalog) to check that your `DataCatalog` is conformant, using the "Data Catalog" mode.
+
+## Step 6: Adding your Dataset Site to the OpenActive Data Catalog Collection
 
 OpenActive Data Catalogs provide a mechanism for registering OpenActive Datasite Sites so that they can be discovered and harvested by data users.
 
