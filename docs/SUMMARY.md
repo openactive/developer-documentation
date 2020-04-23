@@ -37,6 +37,8 @@
   * [CourseInstance](data-model/types/courseinstance.md)
   * [Course](data-model/types/course.md)
   * [Creche](data-model/types/creche.md)
+  * [DataCatalogCollection](data-model/types/datacatalogcollection.md)
+  * [DataCatalog](data-model/types/datacatalog.md)
   * [DataDownload](data-model/types/datadownload.md)
   * [Dataset](data-model/types/dataset.md)
   * [DropdownFormFieldSpecification](data-model/types/dropdownformfieldspecification.md)
