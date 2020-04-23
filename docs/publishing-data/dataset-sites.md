@@ -76,7 +76,7 @@ Note a single Dataset Site must only be used when all feeds it includes are part
 
 ### Multiple databases
 
-For large booking systems with **multiple databases**, usually a separate database for each customer, a **separate Dataset Site** may be created for each database. The list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#model-level-customisation) for how these map into the JSON data structure, for your reference - in practice the libraries supplied above [take care of this mapping for you](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#simple-configuration).
+For large booking systems with **multiple databases**, usually a separate database for each customer, a **separate Dataset Site** may be created for each database. The list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#model-level-customisation) for how these map into the JSON data structure, for your reference - in practice the libraries supplied above [take care of this mapping for you](https://github.com/openactive/OpenActive.DatasetSite.NET#simple-implementation).
 
 * `organisationName` e.g. "Better",
 * `datasetSiteUrl` e.g. "[https://halo-odi.legendonlineservices.co.uk/openactive/](https://halo-odi.legendonlineservices.co.uk/openactive/)",
