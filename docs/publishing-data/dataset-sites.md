@@ -22,6 +22,14 @@ Example dataset sites: [GLL](http://data.better.org.uk), [Fusion Lifestyle](http
 * Links to documentation relating to the format of the data, including the specifications it follows, and the data fields it contains.
 * A place where the community can contribute with comments, and raise issues - all Dataset Sites are linked to a GitHub issues board \(e.g. [this one](https://github.com/gll-better/opendata/issues)\) that allows data users to raise issues in the open.
 
+{% hint style="warning" %}
+A machine-readable dataset site is essential when publishing open data, and every dataset published within the OpenActive community to date has had one. Despite this, the specification that describes a standard OpenActive dataset site is still yet to be formally defined, and has instead evolved as a de facto standard.
+
+As such, this documentation is still based on a [draft model](../data-model/types/dataset.md) that is designed to inform the OpenActive specification work with implementation feedback. It is mostly stable and has been largely unchanged for 2 years. However, it is still **subject to change**, as the [Dataset API Discovery specification](https://www.openactive.io/dataset-api-discovery/EditorsDraft/) is yet to be formally released.
+
+To minimise any uplift work required to conform to the formal specification when it is released, it is **strongly recommended** that you use [one of the libraries below](dataset-sites.md#net-php-and-ruby-libraries) if possible. These libraries will be updated to meet the latest specification, and when used in their simplest mode \([RenderSimpleDatasetSite](https://github.com/openactive/OpenActive.DatasetSite.NET/#simple-implementation), [renderSimpleDatasetSite](https://packagist.org/packages/openactive/dataset-site#user-content-rendersimpledatasetsitesettings-supportedfeedtypes) or [TemplateRenderer.new](https://www.rubydoc.info/gems/openactive-dataset_site/0.1.1#Usage)\) will only require a simple dependency update from you to do so.
+{% endhint %}
+
 ## Step 1: Build Dataset Sites into your system
 
 The Dataset Site Template is very easy to use and quick to apply - it's essentially a single mustache template and associated JSON structure. It is designed to work with minimal effort with an extremely [wide range of platforms and languages](https://mustache.github.io/).
