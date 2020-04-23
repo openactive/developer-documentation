@@ -47,7 +47,7 @@ The [Dataset Site Template](https://github.com/openactive/dataset-site-template/
 
 Steps to render the template:
 
-1. Construct the JSON-LD found in [example.json](https://www.openactive.io/dataset-site-template/example.json).
+1. Construct the JSON-LD to match the format found in [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite), following [this documentation](../data-model/types/dataset.md).
 2. Find a [mustache library](https://mustache.github.io/) for your platform or language.
 3. Write code to do the following:
    * Stringify the input JSON, and place the contents of the string within the "json" property at the root of the JSON itself \(i.e. serialised JSON embedded in the original deserialised object\).
@@ -70,13 +70,13 @@ The Dataset Site Template is designed to carry the customer's brand with minimal
 
 ### Single database
 
-For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a **single Dataset Site** is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template, or hard-coding the settings passed to the library.
+For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a **single Dataset Site** is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template \(see [documentation](../data-model/types/dataset.md) and [example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite)\), or hard-coding the settings passed to the library \(see the [relevant library documentation](dataset-sites.md#net-php-and-ruby-libraries)\).
 
 Note a single Dataset Site must only be used when all feeds it includes are part of the same dataset - for example a SessionSeries feed and ScheduledSession feed that together constitute the dataset of all providers in the booking system. Where multiple feeds exist that represent distinct datasets \(e.g. SessionSeries feed for Provider A, SessionSeries feed for Provider B\), they must be referenced from distinct Dataset Sites, which can be constructed as per the instructions in [Multiple databases](dataset-sites.md#multiple-databases) below.
 
 ### Multiple databases
 
-For large booking systems with **multiple databases**, usually a separate database for each customer, a **separate Dataset Site** may be created for each database. The list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#model-level-customisation) for how these map into the JSON data structure, for your reference - in practice the libraries supplied above [take care of this mapping for you](https://github.com/openactive/OpenActive.DatasetSite.NET#simple-implementation).
+For large booking systems with **multiple databases**, usually a separate database for each customer, a **separate Dataset Site** may be created for each database. The list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#model-level-customisation) for how these map into the JSON data structure, for your reference - in practice the [libraries](dataset-sites.md#net-php-and-ruby-libraries) supplied above [take care of this mapping for you](https://github.com/openactive/OpenActive.DatasetSite.NET#simple-implementation).
 
 * `organisationName` e.g. "Better",
 * `datasetSiteUrl` e.g. "[https://halo-odi.legendonlineservices.co.uk/openactive/](https://halo-odi.legendonlineservices.co.uk/openactive/)",
@@ -94,14 +94,20 @@ We suggest if you can provide the customer with a means of customising the logo 
 
 Although the customer will likely be able to fill in most properties specific to them, there are two where they will require guidance:
 
-* `datasetDiscussionUrl` - the URL of the [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for the dataset.
-* `datasetDocumentationUrl` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer will have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct. If you do not have your own documentation page, you can just link to "[https://developer.openactive.io/](https://developer.openactive.io/)".
+* `datasetDiscussionUrl` - the URL of the [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for the dataset. If your customers are sufficiently large, you will need to create a GitHub issues board for each customer, either [manually](dataset-sites.md#manual-issues-board-creation) or [automatically](dataset-sites.md#automatic-issues-board-creation). See [here](https://github.com/gladstonemrm) for an example of Gladstone's GitHub organization containing a GitHub issues board for each customer.
+* `datasetDocumentationUrl` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer may have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct. If you do not have your own documentation page, you can just link to "[https://developer.openactive.io/](https://developer.openactive.io/)".
 
 ## Step 3: GitHub Issues Board creation
 
-The `discussionUrl` is the url of the GitHub issues board for that dataset site.
+The `discussionUrl` is the url of the GitHub issues board for that specific dataset site.
 
-We recommend that you create each repository within your own GitHub organisation either [manually](dataset-sites.md#manually) or via an [API call](dataset-sites.md#automatically). If you "follow" these repositories using a new GitHub account created with your support e-mail address then you will receive notifications for each query, and be able to reply via e-mail to the notifications from your support e-mail address - these replies then appear directly in GitHub. Note that any administrator accounts automatically follow newly created GitHub repositories within your organisation.
+We recommend that you create each repository \(that will include a GitHub Issues Board\) within your own GitHub organisation either [manually](dataset-sites.md#manually) or via an [API call](dataset-sites.md#automatically).
+
+If you have multiple databases and customers with large data volumes, you should create one repository  \(that will include a GitHub Issues Board\) for each customer. Single database systems need only create one repository \(that will include a GitHub Issues Board\). 
+
+### Helpdesk integration
+
+If you "follow" these repositories using a new GitHub account created with your support e-mail address then you will receive notifications for each query, and be able to reply via e-mail to the notifications from your support e-mail address - these replies then appear directly in GitHub. Note that any administrator accounts automatically follow newly created GitHub repositories within your organisation.
 
 ### GitHub Organisation Creation
 
