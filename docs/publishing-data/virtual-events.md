@@ -342,7 +342,7 @@ The following properties are **REQUIRED** \(inheriting from existing [Modelling 
 * `name`
 * `activity`
 * `organizer` - including a **required** `@id`, a **recommended** `sameAs` property for social media handles, and a **recommended** `beta:formalCriteriaMet` \([\#236](https://github.com/openactive/modelling-opportunity-data/issues/236)\).
-  * The `@id` is required to give each organizer a [globally unique identifier in the form of a URL](https://www.openactive.io/open-booking-api/EditorsDraft/#globally-unique-identifiers).
+  * The `@id` is required to give each organizer a [globally unique identifier in the form of a URL](../data-model/context-and-json-ld.md#contexts-properties-and-types).
   * The `@id` does not need to resolve to a functional endpoint, but **must** use a domain name owned by your booking or listing system. This allows applications with specific content approval requirements to register trusted organizers based on their `@id`.
   * An example of such an `@id` is `https://id.bookingsystem.com/organizers/123`.
 * `eventAttendanceMode` \([\#225](https://github.com/openactive/modelling-opportunity-data/issues/225)\)
