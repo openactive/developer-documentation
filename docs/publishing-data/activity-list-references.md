@@ -31,7 +31,7 @@ We recommend using [SKOS.js](https://www.npmjs.com/package/@openactive/skos) to 
 
 ### Activity List Dropdown Example
 
-Below is a copy-and-pastable example of a searchable hierarchical dropdown that can be used within the booking system to allow the user to select an activity from the activity list.
+Below is a copy-and-pastable example of a searchable hierarchical dropdown that can be used within your booking system to allow the user to select an activity from the activity list.
 
 See the "**Result**" tab below for a live demo.
 
