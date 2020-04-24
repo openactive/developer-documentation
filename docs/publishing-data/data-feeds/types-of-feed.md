@@ -92,6 +92,10 @@ For [**bookable**](https://www.openactive.io/open-booking-api/EditorsDraft/#dfn-
 
 ![](https://docs.google.com/drawings/u/0/d/sjJOI7mL_qflDQspoKgNUmw/image?w=636&h=440&rev=174&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
+Bookable data feed examples:
+
+* Events only: [Event](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fevent_example_1.json&version=2.x)
+
 ## Slot-based Events: FacilityUses
 
 These always have at least `activity` and`location` specified, where the activity can be booked in slots: so a Tennis at Downtown Leisure Centre with slots available hourly from 8am until 8pm.
