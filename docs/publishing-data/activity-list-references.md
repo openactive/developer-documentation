@@ -31,5 +31,17 @@ We recommend using [SKOS.js](https://www.npmjs.com/package/@openactive/skos) to 
 
 ### Activity List Dropdown Example
 
+Below is a copy-and-pastable example of a searchable hierarchical dropdown that can be used within the booking system to allow the user to select an activity from the activity list.
+
+See the "**Result**" tab below for a live demo.
+
 {% embed url="https://jsfiddle.net/nickevansuk/246d5s79/" caption="" %}
+
+### Activity List Dropdown Video Demo
+
+An example of the code above live in the Our Parks booking system is shown in the video below \(note "**OpenActive id**" and "**OpenActive prefLabel**" fields are displayed in the video for debugging purposes, but would ordinarily be hidden from the user\).
+
+{% embed url="https://youtu.be/5C1A-xZtqqo" %}
+
+
 
