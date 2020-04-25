@@ -6,6 +6,8 @@ In order to allow your data to be easily searchable across a wide range of appli
 
 A [JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) of the OpenActive Activity List is available for live integration into applications.
 
+{% embed url="https://openactive.io/activity-list/activity-list.jsonld" caption="Click here to view the JSON-LD definition of the activity list" %}
+
 Each opportunity within a booking or listing system must have an associated activity from the OpenActive Activity List. This is often achieved by providing a [dropdown list](activity-list-references.md#rendering-the-openactive-activity-list-with-skos-js) for the activity provider to select from when they are creating or updating an opportunity in the booking system.
 
 ### Including OpenActive Activity List references in your open data feed
