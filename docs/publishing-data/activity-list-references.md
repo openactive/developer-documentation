@@ -23,11 +23,13 @@ In the relevant [open data feed](data-feeds/types-of-feed.md), the `@id` and `pr
 ]
 ```
 
+See [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example_1.json&version=2.x) for a full feed example that references the OpenActive Activity List using the snippet above.
+
 {% hint style="warning" %}
 Please note that although the newer **`@id`** and **`@type`** are used here and throughout the rest of the OpenActive documentation and tooling, the OpenActive Activity List JSON-LD definition itself still uses **`id`** and **`type`** for backwards compatibility.
 {% endhint %}
 
-### Integration with existing "activity types"
+### Integration with an existing "activity types" controlled list
 
 If your booking system already has "activity types" available from a controlled list, these existing activity types should be mapped to the OpenActive Activity List.
 
@@ -35,7 +37,7 @@ This is usually achieved by adding additional fields "OpenActive @id" and "OpenA
 
 ### Loading the OpenActive Activity List within your application
 
-This [OpenActive Activity List JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) **SHOULD** be retrieved frequently \(recommended nightly\) using an HTTP GET and cached within an application. This ensures that the most up-to-date version is displayed to the user, while also protecting against network failure when accessing the underlying resource.
+This [OpenActive Activity List JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) **SHOULD** be retrieved at least nightly using an HTTP GET and cached within an application. This ensures that the most up-to-date version is displayed to the user, while also protecting against network failure when accessing the underlying resource.
 
 To access the JSON-LD definition the application **MUST** GET the URL `"https://openactive.io/activity-list/activity-list.jsonld"` which does not require a specific `Accept` header, and is cached via CDN.
 
@@ -50,6 +52,14 @@ The JSON-LD definition is also available via a GET of the URL `"https://openacti
 Within your application, it is advisable to store the full `@id` of an OpenActive Activity List `Concept` against each opportunity in your database, as the `prefLabel` and other properties are likely to change over time.
 
 Your application may also store the `prefLabel` alongside the `@id` at the point of the associating an OpenActive Activity List `Concept` with an opportunity, to remove the need to reference the activity list while outputting open data. It is the responsibility of the data user to use the latest `prefLabel` when rendering the open data it receives.
+
+### Hardcoding OpenActive Activity List references
+
+If your booking system is restricted to a small number of different activities \(e.g. [Run Together](https://data.runtogether.co.uk/) is restricted to just "Running"\), it is usually better to hardcode the activity list references into your booking system.
+
+To find the **`@id`** simply [find the relevant activity in the OpenActive Activity List](https://activity-list.openactive.io/en/basic_find.html), then scroll down to the bottom the page to view a full example JSON-LD snippet for that specific activity, such as the screenshot below. This can be included in your open data feed.
+
+![Screenshot of full example JSON-LD snippet from OpenActive Activity List website](../.gitbook/assets/screenshot-2020-04-25-at-17.19.22.png)
 
 ## Rendering the OpenActive Activity List with SKOS.js
 
@@ -99,5 +109,5 @@ Example: [Contribute](https://openactive.io/activity-list#72d19892-5f55-4e9c-87b
 
 An example of "Contribute" links within the Gladstone leisure management system is shown below.
 
-![An example of the &quot;Contribute&quot; links within the Gladstone system](../.gitbook/assets/screenshot-2020-04-25-at-13.59.09.png)
+![Screenshot of the &quot;Contribute&quot; links within the Gladstone system](../.gitbook/assets/screenshot-2020-04-25-at-13.59.09.png)
 
