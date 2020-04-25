@@ -6,11 +6,11 @@ Example dataset sites: [GLL](http://data.better.org.uk), [Fusion Lifestyle](http
 
 ## Overview
 
-* In order for data users to find your data feeds, and for your dataset to be featured on the [OpenActive status page](https://status.openactive.io/), you must deploy the [Dataset Site Template](dataset-sites.md#dataset-site-template) \(a simple mustache template\) within your codebase.
+* In order for data users to find your data feeds, and for your dataset to be featured on the [OpenActive status page](https://status.openactive.io/), you must deploy the [Dataset Site Template](dataset-sites.md#step-1-build-dataset-sites-into-your-system) \(a simple mustache template\) within your codebase.
 * For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a single Dataset Site is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template.
 * If you are a booking system with **multiple databases**, each of which has their own set of OpenActive data feeds, a Dataset Site is required for each customer. This can be achieved using customer configuration to drive the mustache template.
 * You need to create a [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for each Dataset Site.
-* If you are publishing multiple dataset sites you also need to provide a [Data Catalog](dataset-sites.md#step-3-providing-a-data-catalog-multiple-databases-only).
+* If you are publishing multiple dataset sites you also need to provide a [Data Catalog](dataset-sites.md#step-5-providing-a-data-catalog-multiple-databases-only).
 * Data publishers should be encouraged to provide links to their Dataset Site from their own website.
 
 ### What is a Dataset Site?
