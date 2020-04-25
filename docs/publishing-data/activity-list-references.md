@@ -49,15 +49,19 @@ The JSON-LD definition is also available via a GET of the URL `"https://openacti
 
 Within your application, it is advisable to store the full `@id` of an OpenActive Activity List `Concept` against each opportunity in your database, as the `prefLabel` and other properties are likely to change over time.
 
-Your application may also store the `prefLabel` alongside the `id` at the point of the associating an OpenActive Activity List `Concept` with an opportunity, to remove the need to reference the activity list while outputting open data. It is the responsibility of the data user to use the latest `prefLabel` when rendering the open data it receives.
+Your application may also store the `prefLabel` alongside the `@id` at the point of the associating an OpenActive Activity List `Concept` with an opportunity, to remove the need to reference the activity list while outputting open data. It is the responsibility of the data user to use the latest `prefLabel` when rendering the open data it receives.
 
 ## Rendering the OpenActive Activity List with SKOS.js
 
-We recommend using [SKOS.js](https://www.npmjs.com/package/@openactive/skos) to implement any activity list client-side rendering, to allow your users to select an activity from the hierarchical activity list to associate with an Event.
+We recommend using [SKOS.js](https://www.npmjs.com/package/@openactive/skos) to implement any activity list client-side rendering, to allow your users to select an activity from a hierarchical representation of the OpenActive Activity List to associate with an opportunity.
 
 ### Activity List Dropdown Example
 
-Below is a copy-and-pastable example of a searchable hierarchical dropdown that can be used within your booking system to allow the user to select an activity from the activity list.
+Below is a copy-and-pastable example of a searchable hierarchical dropdown that can be used within your booking system to allow the user to select an activity from the OpenActive Activity List.
+
+On load you may specify the **`@id`** to set the dropdown to an existing value. 
+
+On selection the dropdown provides both **`@id`** and **`prefLabel`**, which can then be stored in your database and later used within your open data feed\(s\).
 
 See the "**Result**" tab below for a live demo.
 
@@ -65,7 +69,9 @@ See the "**Result**" tab below for a live demo.
 
 ### Activity List Dropdown Video Demo
 
-An example of the code above live in the Our Parks booking system is shown in the video below \(note "**OpenActive id**" and "**OpenActive prefLabel**" fields are displayed in the video for debugging purposes, but would ordinarily be hidden from the user\).
+An example of the above code in the Our Parks booking system is shown in the video below.
+
+Note "**OpenActive id**" and "**OpenActive prefLabel**" fields are displayed in the video for debugging purposes, but would ordinarily be hidden from the user.
 
 {% embed url="https://youtu.be/5C1A-xZtqqo" %}
 
