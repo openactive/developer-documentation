@@ -97,7 +97,7 @@ Example: [Contribute](https://openactive.io/activity-list#72d19892-5f55-4e9c-87b
 
 ### Gladstone: Contribution links example
 
-An example of "Contribute" links within the Gladstone system is shown below.
+An example of "Contribute" links within the Gladstone leisure management system is shown below.
 
 ![An example of the &quot;Contribute&quot; links within the Gladstone system](../.gitbook/assets/screenshot-2020-04-25-at-13.59.09.png)
 
