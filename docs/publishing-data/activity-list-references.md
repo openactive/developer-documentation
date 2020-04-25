@@ -55,25 +55,49 @@ Your application may also store the `prefLabel` alongside the `@id` at the point
 
 We recommend using [SKOS.js](https://www.npmjs.com/package/@openactive/skos) to implement any activity list client-side rendering, to allow your users to select an activity from a hierarchical representation of the OpenActive Activity List to associate with an opportunity.
 
-### Activity List Dropdown Example
+### Activity List dropdown implementation example
 
 Below is a copy-and-pastable example of a searchable hierarchical dropdown that can be used within your booking system to allow the user to select an activity from the OpenActive Activity List.
 
-On load you may specify the **`@id`** to set the dropdown to an existing value. 
+On load you may specify the **`@id`** to set the dropdown to an existing value.
 
 On selection the dropdown provides both **`@id`** and **`prefLabel`**, which can then be stored in your database and later used within your open data feed\(s\).
+
+The dropdown also provides an activity **`definition`** that may be displayed to the user for disambiguation.
 
 See the "**Result**" tab below for a live demo.
 
 {% embed url="https://jsfiddle.net/nickevansuk/246d5s79/" caption="" %}
 
-### Activity List Dropdown Video Demo
+### Our Parks: Activity List dropdown video demo
 
 An example of the above code in the Our Parks booking system is shown in the video below.
 
 Note "**OpenActive id**" and "**OpenActive prefLabel**" fields are displayed in the video for debugging purposes, but would ordinarily be hidden from the user.
 
-{% embed url="https://youtu.be/5C1A-xZtqqo" %}
+{% embed url="https://youtu.be/5C1A-xZtqqo" caption="" %}
 
+## Contribution links
 
+It is recommended that you provide links to contribute to the OpenActive Activity List, which encourage activity providers to participate in its maintenance and curation.
+
+Two different types of links are available:
+
+#### Contribute to the list
+
+For general contribution simply link to "[`https://www.openactive.io/activity-list/`](https://www.openactive.io/activity-list/)". This will take the user to a page where they can make suggestions about the activity list.
+
+Example: [Can't find an activity? Contribute to the list](https://www.openactive.io/activity-list/)
+
+#### Contribute to a specific activity
+
+The link to contribute to a specific activity is simply the URL of the **`@id`**. This will take the user to a page specific to the activity where they can make suggestions about the activity, including updating the definition of an activity.
+
+Example: [Contribute](https://openactive.io/activity-list#72d19892-5f55-4e9c-87b0-a5433baa49c8)
+
+### Gladstone: Contribution links example
+
+An example of "Contribute" links within the Gladstone system is shown below.
+
+![An example of the &quot;Contribute&quot; links within the Gladstone system](../.gitbook/assets/screenshot-2020-04-25-at-13.59.09.png)
 
