@@ -2,26 +2,52 @@
 
 ## Using the OpenActive Activity List
 
-In order to allow your data to be easily searchable across a wide range of applications, it must contain references to the [OpenActive Activity List](https://www.openactive.io/activity-list/), taking the `id` and `prefLabel` from the list and using an `inScheme` of `"https://openactive.io/activity-list"`, as shown below:
+In order to allow your data to be easily searchable across a wide range of applications, it must contain references to the [OpenActive Activity List](https://www.openactive.io/activity-list/).
+
+A [JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) of the OpenActive Activity List is available for live integration into applications.
+
+Each opportunity within a booking or listing system must have an associated activity from the OpenActive Activity List. This is often achieved by providing a [dropdown](activity-list-references.md#rendering-the-openactive-activity-list-with-skos-js) list for the activity provider to select from when they are creating or updating an opportunity in the booking system.
+
+{% hint style="warning" %}
+Please note that although the newer **`@id`** and **`@type`** are used throughout the rest of the OpenActive documentation and tooling, the OpenActive Activity List still uses **`id`** and **`type`** for backwards compatibility.
+{% endhint %}
+
+### Including OpenActive Activity List references in your open data feed
+
+In the relevant [open data feed](data-feeds/types-of-feed.md), the `@id` and `prefLabel` of at least one activity from the OpenActive Activity List must be included with each opportunity, along with an `inScheme` of `"https://openactive.io/activity-list"`, as shown below:
 
 ```javascript
 "activity": [
   {
-    "type": "Concept",
-    "id": "https://openactive.io/activity-list#5e78bcbe-36db-425a-9064-bf96d09cc351",
+    "@type": "Concept",
+    "@id": "https://openactive.io/activity-list#5e78bcbe-36db-425a-9064-bf96d09cc351",
     "prefLabel": "Bodypump™",
     "inScheme": "https://openactive.io/activity-list"
   }
 ]
 ```
 
-A [JSON-LD definition](https://www.openactive.io/accessibility-support/accessibility-support.jsonld) of the OpenActive Activity List controlled vocabulary is available for live integration into applications.
+### Integration with existing "activity types"
 
-This controlled vocabulary **SHOULD** be retrieved frequently using an HTTP GET and cached within an application, to ensure that the most up-to-date version is displayed to the user, while also protecting against network failure when accessing the underlying resource. To access this controlled vocabulary the application **MUST** GET the URL `"https://openactive.io/activity-list/activity-list.jsonld"` \(note there is no `www` in the URL\) which does not require a specific `Accept` header, and is cached via CDN. The controlled vocabulary is also available via a GET of the URL `"https://openactive.io/activity-list"` using an `Accept` header of `application/ld+json`, for completeness, however this shorter URL **MUST NOT** be used in production.
+If your booking system already has "activity types" available from a controlled list, these existing activity types should be mapped to the OpenActive Activity List.
 
-## Storing references to the OpenActive Activity List
+This is usually achieved by adding additional fields "OpenActive @id" and "OpenActive prefLabel" to your existing activity types table, and providing a [dropdown](activity-list-references.md#rendering-the-openactive-activity-list-with-skos-js) in your activity type editor.
 
-Within your application, it is advisable to store the full `id` of an OpenActive Activity List `Concept` against each opportunity in your database, as the `prefLabel` and other properties are likely to change over time.
+### Loading the OpenActive Activity List within your application
+
+This [OpenActive Activity List JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) **SHOULD** be retrieved frequently \(recommended nightly\) using an HTTP GET and cached within an application. This ensures that the most up-to-date version is displayed to the user, while also protecting against network failure when accessing the underlying resource.
+
+To access the JSON-LD definition the application **MUST** GET the URL `"https://openactive.io/activity-list/activity-list.jsonld"` which does not require a specific `Accept` header, and is cached via CDN.
+
+Note: there is no `www` in the URLs.
+
+{% hint style="info" %}
+The JSON-LD definition is also available via a GET of the URL `"https://openactive.io/activity-list"` using an `Accept` header of `application/ld+json`, to conform with JSON-LD expectations, however this shorter URL **MUST NOT** be used in production.
+{% endhint %}
+
+### Storing references to the OpenActive Activity List
+
+Within your application, it is advisable to store the full `@id` of an OpenActive Activity List `Concept` against each opportunity in your database, as the `prefLabel` and other properties are likely to change over time.
 
 Your application may also store the `prefLabel` alongside the `id` at the point of the associating an OpenActive Activity List `Concept` with an opportunity, to remove the need to reference the activity list while outputting open data. It is the responsibility of the data user to use the latest `prefLabel` when rendering the open data it receives.
 
