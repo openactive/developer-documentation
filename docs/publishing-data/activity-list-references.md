@@ -4,7 +4,9 @@
 
 In order to allow your data to be easily searchable across a wide range of applications, it must contain references to the [OpenActive Activity List](https://www.openactive.io/activity-list/).
 
-A [JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) of the OpenActive Activity List is available for live integration into applications.
+The OpenActive Activity List is a standardised hierarchical list of physical activity types. It includes over 600 entries, each of which have a unique identifier in the form of a URL.
+
+A [JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) of the OpenActive Activity List is available for live integration into applications, together with a [JavaScript library](https://www.npmjs.com/package/@openactive/skos) for navigating the list.
 
 Each opportunity within a booking or listing system must have an associated activity from the OpenActive Activity List. This is often achieved by providing a [dropdown list](activity-list-references.md#rendering-the-openactive-activity-list-with-skos-js) for the activity provider to select from when they are creating or updating an opportunity in the booking system.
 
