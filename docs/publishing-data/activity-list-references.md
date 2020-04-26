@@ -6,8 +6,6 @@ In order to allow your data to be easily searchable across a wide range of appli
 
 A [JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) of the OpenActive Activity List is available for live integration into applications.
 
-{% embed url="https://openactive.io/activity-list/activity-list.jsonld" caption="Click here to view the JSON-LD definition of the activity list" %}
-
 Each opportunity within a booking or listing system must have an associated activity from the OpenActive Activity List. This is often achieved by providing a [dropdown list](activity-list-references.md#rendering-the-openactive-activity-list-with-skos-js) for the activity provider to select from when they are creating or updating an opportunity in the booking system.
 
 ### Including OpenActive Activity List references in your open data feed
@@ -61,11 +59,13 @@ If your booking system is restricted to a small number of different activities \
 
 To find the **`@id`** simply [find the relevant activity in the OpenActive Activity List](https://activity-list.openactive.io/en/basic_find.html), then scroll down to the bottom the page to view a full example JSON-LD snippet for that specific activity, such as the screenshot below. This can be included in your open data feed.
 
-![Screenshot of full example JSON-LD snippet from OpenActive Activity List website](../.gitbook/assets/screenshot-2020-04-25-at-17.19.22.png)
+![Screenshot of full example JSON-LD snippet from OpenActive Activity List website](../.gitbook/assets/screenshot-2020-04-25-at-17.19.22%20%281%29.png)
 
 ## Rendering the OpenActive Activity List with SKOS.js
 
 We recommend using [SKOS.js](https://www.npmjs.com/package/@openactive/skos) to implement any activity list client-side rendering, to allow your users to select an activity from a hierarchical representation of the OpenActive Activity List to associate with an opportunity.
+
+Maintaining the hierarchy and providing a typeahead search is important as with over 600 activities, and with many activities being more general terms, using an ordinary dropdown box becomes unwieldy for the user.
 
 ### Activity List dropdown implementation example
 
@@ -111,5 +111,5 @@ Example: [Contribute](https://openactive.io/activity-list#72d19892-5f55-4e9c-87b
 
 An example of "Contribute" links within the Gladstone leisure management system is shown below.
 
-![Screenshot of the &quot;Contribute&quot; links within the Gladstone system](../.gitbook/assets/screenshot-2020-04-25-at-13.59.09.png)
+![Screenshot of the &quot;Contribute&quot; links within the Gladstone system](../.gitbook/assets/screenshot-2020-04-25-at-13.59.09%20%281%29.png)
 
