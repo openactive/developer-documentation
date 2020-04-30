@@ -20,11 +20,11 @@ When using **types** and **properties** from a particular context, that context 
 ```javascript
 {
   "@context": [ "https://openactive.io/" ],
-  "type": "Event",
-  "id": "https://example.com/events/3",
+  "@type": "Event",
+  "@id": "https://example.com/events/3",
   "startDate": "startDate",
   "ageRange": {
-    "type": "QuantitativeValue",
+    "@type": "QuantitativeValue",
     "minValue": 16
   }
 }
@@ -75,7 +75,7 @@ The following example references the contexts OpenActive \(which automatically i
     "https://openactive.io/",
     "https://openactive.co/ns-beta"
   ],
-  "type": "SessionSeries",
+  "@type": "SessionSeries",
   "name": "Tai chi Class",
   "url": "http://www.example.org/events/1",
   "beta:attendeeCount": 4
@@ -126,7 +126,7 @@ In the example below the `"britishcycling:gpxFile"` field is defined by an exten
     "https://openactive.io/",
     "http://data.goskyride.com/opendata/britishcycling.jsonld"
   ],
-  "type": "Event",
+  "@type": "Event",
   "name": "Wheel Do It! - Blindside loop (with Betty-Ann)",
   ...
   "britishcycling:gpxFile": "https://lr-media.staging.phoenixdigital.agency/download/2c89c364a0738a26fde9b68eb35bfeb0",

@@ -134,11 +134,11 @@ Run the example below [here](https://www.tehplayground.com/bQZT9xjRC3ToXbPc) to 
 
 $testResponseStructure = array(
     "@context"=>"https://openactive.io/",
-    "id"=>"https://example.com/api/sessions/1402CBP20150217",
+    "@id"=>"https://example.com/api/sessions/1402CBP20150217",
     "identifier"=>"1402CBP20150217",
-    "type"=>"SessionSeries",
+    "@type"=>"SessionSeries",
     "organizer"=>array(
-        "type"=>"Organization",
+        "@type"=>"Organization",
         "name"=>"Everyone Active",
         "url"=>null,
         "logo"=>array(
