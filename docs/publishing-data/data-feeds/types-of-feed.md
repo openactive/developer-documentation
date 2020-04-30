@@ -64,7 +64,7 @@ When referencing data across feeds \(such as between [SessionSeries](https://val
 
 An **`@id`** is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
 
-So essentially you invent a URL pattern that includes your domain for use as your **`@id`**, such as:
+So for a minimal implementation simply invent a URL pattern that includes your domain for use as your **`@id`**, such as:
 
 > "`https://id.ourparks.org.uk/api/session-series/1234`"
 
@@ -157,7 +157,7 @@ When referencing data across feeds \(such as between [FacilityUse](https://valid
 
 An **`@id`** is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
 
-So essentially you invent a URL pattern that includes your domain for use as your **`@id`**, such as:
+So for a minimal implementation simply invent a URL pattern that includes your domain for use as your **`@id`**, such as:
 
 > "`https://id.bookingsystem.com/api/facility-uses/1402CBP20150217`"
 
