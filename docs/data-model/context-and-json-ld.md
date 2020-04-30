@@ -12,7 +12,7 @@ For example, the OpenActive **context,** which can be referenced using the globa
 {% hint style="info" %}
 **`@id`** properties are used as identifiers within the OpenActive models. For compatibility with [JSON-LD](https://www.w3.org/TR/json-ld/), the value of such a property **must** always be an absolute URI that provides a stable globally unique identifier.
 
-The primary purpose of the URI format in this context is to provide natural namespacing for the identifier. Hence, the URI itself **may** not resolve to a valid endpoint \(unless otherwise specified in this documentation\), but **must** use a domain name controlled by the system publishing the data.
+The primary purpose of the URI format in this context is to provide natural namespacing for the identifier. Hence, the URI itself **may** not resolve to a valid endpoint \(unless otherwise specified in this documentation\), but **must** be globally unique and use a domain name controlled by the organization or system publishing the data.
 {% endhint %}
 
 When using **types** and **properties** from a particular context, that context must be referenced using "`@context`" in the top-level JSON object as follows:

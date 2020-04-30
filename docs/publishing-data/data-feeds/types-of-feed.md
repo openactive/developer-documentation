@@ -58,6 +58,39 @@ Listings data feed examples:
 * Small provider: [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example_1.json&version=2.0)
 * Large provider: [SessionSeries with EventSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-eventseries-split_example_1.json&version=2.0)
 
+### Use of `@id` and `superEvent` for split feeds
+
+When referencing data across feeds \(such as between [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example_1.json&version=2.0) and [ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split_example_1.json&version=2.0)\), the value of the **`@id`** must be used.
+
+An **`@id`** is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
+
+So essentially you invent a URL pattern that includes your domain for use as your **`@id`**, such as:
+
+> "`https://id.ourparks.org.uk/api/session-series/1234`"
+
+For example within a `SessionSeries` feed, the `SessionSeries` **`@id`** is defined for each data item:
+
+```javascript
+"data": {
+  "@context": "https://openactive.io/",
+  "@type": "SessionSeries",
+  "@id": "https://id.ourparks.org.uk/api/session-series/1234",
+  ...
+}
+```
+
+And within a corresponding `ScheduledSession` feed, that `SessionSeries` **`@id`** is referenced by the `superEvent` property:
+
+```javascript
+"data": {
+  "@context": "https://openactive.io/",
+  "@type": "ScheduledSession",
+  "@id": "https://id.ourparks.org.uk/api/session-series/1234#/subEvent/C5EE1E55-2DE6-44F7-A865-42F268A82C63",
+  "superEvent": "https://id.ourparks.org.uk/api/session-series/1234",
+  ...
+}
+```
+
 ## Time-based Events: Ad-hoc Events
 
 The OpenActive model allows for ad-hoc events to be described using the pattern below. Ad-hoc events must only be used to describe truly ad-hoc events, and not to describe regular events such as those described in the previous section. See [here](../../data-model/data-model-overview.md#events) for further clarification of the types available. 
@@ -117,6 +150,39 @@ Additionally, to publish specific court availability they must also implement th
 
 * `http://www.example.org/feeds/individual-facility-uses`
 * `http://www.example.org/feeds/individual-facility-use-slots`
+
+### Use of `@id` and `facilityUse` for split feeds
+
+When referencing data across feeds \(such as between [FacilityUse](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Ffacilityuse_example_1.json&version=2.x) and [Slot](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fslot_example_1.json&version=2.x)\), the value of the **`@id`** must be used.
+
+An **`@id`** is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
+
+So essentially you invent a URL pattern that includes your domain for use as your **`@id`**, such as:
+
+> "`https://id.bookingsystem.com/api/facility-uses/1402CBP20150217`"
+
+For example within a `FacilityUse` feed, the `FacilityUse` **`@id`** is defined for each data item:
+
+```javascript
+"data": {
+  "@context": "https://openactive.io/",
+  "@type": "FacilityUse",
+  "@id": "https://id.bookingsystem.com/api/facility-uses/1402CBP20150217",
+  ...
+}
+```
+
+And within a corresponding `Slot` feed, that `FacilityUse` **`@id`** is referenced by the `facilityUse` property:
+
+```javascript
+"data": {
+  "@context": "https://openactive.io/",
+  "@type": "Slot",
+  "@id": "https://id.bookingsystem.com/api/facility-uses/1402CBP20150217#/event/2018-03-01T10:00:00Z",
+  "facilityUse": "https://id.bookingsystem.com/api/facility-uses/1402CBP20150217",
+  ...
+}
+```
 
 ## Other types of Time-based Events: Headline Events and Courses
 
