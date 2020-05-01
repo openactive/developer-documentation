@@ -62,12 +62,12 @@ Steps to render the template:
    * Use the resulting JSON with the [mustache template](https://www.openactive.io/dataset-site-template/datasetsite.mustache) to render the dataset site.
    * Keep in mind that OpenActive will be providing updates to the mustache template in the future, so it is best to write code that anticipates this.
 
-#### JavaScript Example
+#### JavaScript Prototype
 
-This [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/) demonstrates the Dataset Site Template render steps outlined above using plain JavaScript.
+The [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/) below **simply demonstrates** the Dataset Site Template render steps outlined above using plain JavaScript - it is **not intended for protection use**.
 
 {% hint style="danger" %}
-Please note **this is only an example to demonstrate the logic and is not intended for production**. The mustache template **must** be **copied locally** and **rendered server-side** for security - to prevent XSS attacks and as one of its primary purposes is SEO.
+Please note **this is only an example to demonstrate the logic and is not intended for production**. The mustache template **must** be **copied locally** and **rendered server-side** for production use, for security \(to prevent XSS attacks\) and as one of its primary purposes is SEO.
 {% endhint %}
 
 Click the **Result** tab below to see the result of a template render.
