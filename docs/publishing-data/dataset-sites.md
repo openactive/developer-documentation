@@ -66,7 +66,9 @@ Steps to render the template:
 
 This [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/) demonstrates the Dataset Site Template render steps outlined above using plain JavaScript.
 
-Please note this is only an example to demonstrate the logic and is not intended for production. The mustache template **must** be copied locally and rendered server-side for security - to prevent XSS attacks and as one of its primary purposes is SEO.
+{% hint style="danger" %}
+Please note **this is only an example to demonstrate the logic and is not intended for production**. The mustache template **must** be **copied locally** and **rendered server-side** for security - to prevent XSS attacks and as one of its primary purposes is SEO.
+{% endhint %}
 
 Click the **Result** tab below to see the result of a template render.
 
