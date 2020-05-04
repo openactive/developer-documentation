@@ -18,7 +18,7 @@ The [Realtime Paged Data Exchange specification](https://www.w3.org/2017/08/real
 The [high-volume proposal](https://github.com/openactive/realtime-paged-data-exchange/issues/93) for the RPDE specification is currently widely adopted, and hence it is recommended that `Slot` feeds that have a particularly high volume of small payload items wait 2 days before removing `"deleted"` items from the feed, in place of the specified 7 days.
 {% endhint %}
 
-### Option 1: Retention period to minimise storage requirements of the data publisher
+### Option 1: Retention period to minimise storage requirements
 
 If the objective of implementing a retention period is primarily to reduce the number of records stored, records representing events that occur in the past should be pruned by first setting their [`state` to the `"deleted"` state and updating the `modified` value](https://www.w3.org/2017/08/realtime-paged-data-exchange/#deleted-items), and then after 7 days removing them from the feed. This may be implemented via a regular CRON job, for example.
 
@@ -41,7 +41,7 @@ ORDER BY modified, id
    LIMIT 1
 ```
 
-Then include these values within there `WHERE` clause of the RPDE query. Hence the RPDE query must then **always** include the `WHERE` clause defined in the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id):
+Then, for the first page only, include these values within there `WHERE` clause of the RPDE query. Hence the RPDE query must **always** include the `WHERE` clause defined in the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id), either using the values supplied from the query above \(for the first page\) or using the values supplied as parameters \(for all other pages\):
 
 ```sql
    WHERE (modified = @afterTimestamp AND id > @afterId)
