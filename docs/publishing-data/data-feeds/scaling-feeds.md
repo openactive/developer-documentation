@@ -41,7 +41,7 @@ ORDER BY modified, id
    LIMIT 1
 ```
 
-Hence, for the first page only, include these values within there `WHERE` clause of the RPDE query. Consequently the RPDE query must **always** include the `WHERE` clause defined in the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id), either using the default values supplied from the query above \(for the first page\) or using the values supplied as parameters \(for all other pages\):
+Hence, for the first page only, include these values within the `WHERE` clause of the RPDE query. Consequently the RPDE query must **always** include the `WHERE` clause defined in the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id), either using the default values supplied from the query above \(for the first page\) or using the values supplied as parameters \(for all other pages\):
 
 ```sql
    WHERE (modified = @afterTimestamp AND id > @afterId)
