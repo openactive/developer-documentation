@@ -24,10 +24,8 @@ Please ensure that you have implemented [this query](https://www.openactive.io/r
 
 ```sql
 --include WHERE clause only if @afterTimestamp and @afterId provided
-   WHERE (modified = @afterTimestamp
-            AND id > @afterId)
+   WHERE (modified = @afterTimestamp AND id > @afterId)
       OR (modified > @afterTimestamp)
-ORDER BY modified,
-         id
+ORDER BY modified, id
 ```
 

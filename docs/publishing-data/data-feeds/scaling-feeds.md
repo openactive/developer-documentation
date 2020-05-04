@@ -14,9 +14,40 @@ The [Realtime Paged Data Exchange specification](https://www.w3.org/2017/08/real
 
 > If any record is added to the list or updated it must remain in the list in perpetuity while it is in an "updated" state, or remain in the list for at least 7 days from the point in time at which it transitioned to a "deleted" state
 
-In order to implement a retention period, records representing events that occur in the past should be pruned by first setting their [`state` to the `"deleted"` state](https://www.w3.org/2017/08/realtime-paged-data-exchange/#deleted-items), and then after 7 days removing them from the feed. This may be implemented via a regular CRON job, for example.
-
+{% hint style="info" %}
 The [high-volume proposal](https://github.com/openactive/realtime-paged-data-exchange/issues/93) for the RPDE specification is currently widely adopted, and hence it is recommended that `Slot` feeds that have a particularly high volume of small payload items wait 2 days before removing `"deleted"` items from the feed, in place of the specified 7 days.
+{% endhint %}
+
+### Option 1: Retention period to minimise storage requirements of the data publisher
+
+If the objective of implementing a retention period is primarily to reduce the number of records stored, records representing events that occur in the past should be pruned by first setting their [`state` to the `"deleted"` state and updating the `modified` value](https://www.w3.org/2017/08/realtime-paged-data-exchange/#deleted-items), and then after 7 days removing them from the feed. This may be implemented via a regular CRON job, for example.
+
+{% hint style="danger" %}
+Note that a CRON job or similar is **required** to ensure that the `modified` value is updated when the record transitions into the [`"deleted"` state](https://www.w3.org/2017/08/realtime-paged-data-exchange/#deleted-items). Hence it is **not possible** to implement a retention period by altering the RPDE query alone.
+{% endhint %}
+
+### Option 2: Retention period to reduce feed size
+
+If the objective of implementing a retention period is primarily to reduce the size of the feed, an effective retention period can be implemented by having the first page of the feed start from the first relevant record \(instead of from the beginning of time\). This approach is useful for simple cases where a CRON job is not desirable.
+
+The approach can be implemented as follows: if the `@afterTimestamp` and `@afterId` parameters are not supplied to the RPDE endpoint \(i.e. for the first page\), use the query below to get the `@afterTimestamp` and `@afterId` values:
+
+```sql
+--use ONLY if @afterTimestamp and @afterId NOT provided
+  SELECT @afterTimestamp = modified, @afterId = id
+    FROM ...
+   WHERE startDate >= @now
+ORDER BY modified, id
+   LIMIT 1
+```
+
+Then include these values within there `WHERE` clause of the RPDE query. Hence the RPDE query must then **always** include the `WHERE` clause defined in the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id):
+
+```sql
+   WHERE (modified = @afterTimestamp AND id > @afterId)
+      OR (modified > @afterTimestamp)
+ORDER BY modified, id
+```
 
 ## CDN Configuration
 
