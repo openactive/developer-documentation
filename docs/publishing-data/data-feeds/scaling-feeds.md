@@ -8,7 +8,7 @@ A CDN such as [CloudFlare](https://www.cloudflare.com/) is recommended to allow 
 
 ## Retention Period
 
-In order to minimise the total number of items within of RPDE feeds, it is recommended that data publishers apply a retention period - especially for  `Event,` `ScheduledSession` or `Slot` data items.
+In order to minimise the total number of items within of RPDE feeds, it is recommended that data publishers apply a retention period - especially for `Event,` `ScheduledSession` or `Slot` data items.
 
 The [Realtime Paged Data Exchange specification](https://www.w3.org/2017/08/realtime-paged-data-exchange/#deleted-items) specifies that:
 
@@ -30,7 +30,7 @@ Note that a CRON job or similar is **required** to ensure that the `modified` va
 
 If the objective of implementing a retention period is primarily to reduce the size of the feed, an effective retention period can be implemented by having the first page of the feed start from the first relevant record \(instead of from the beginning of time\). This approach is useful for simple cases where a CRON job is not desirable.
 
-The approach can be implemented as follows: if the `@afterTimestamp` and `@afterId` parameters are not supplied to the RPDE endpoint \(i.e. for the first page\), use the query below to get the `@afterTimestamp` and `@afterId` values:
+The approach can be implemented as follows: if the `@afterTimestamp` and `@afterId` parameters are **not** supplied to the RPDE endpoint \(i.e. for the first page\), use the query below to get the `@afterTimestamp` and `@afterId` and use these as default values:
 
 ```sql
 --use ONLY if @afterTimestamp and @afterId NOT provided
@@ -41,7 +41,7 @@ ORDER BY modified, id
    LIMIT 1
 ```
 
-Then, for the first page only, include these values within there `WHERE` clause of the RPDE query. Hence the RPDE query must **always** include the `WHERE` clause defined in the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id), either using the values supplied from the query above \(for the first page\) or using the values supplied as parameters \(for all other pages\):
+Hence, for the first page only, include these values within there `WHERE` clause of the RPDE query. Consequently the RPDE query must **always** include the `WHERE` clause defined in the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id), either using the default values supplied from the query above \(for the first page\) or using the values supplied as parameters \(for all other pages\):
 
 ```sql
    WHERE (modified = @afterTimestamp AND id > @afterId)
@@ -98,9 +98,9 @@ In order for [CloudFlare](https://www.cloudflare.com/) to respect your cache con
 
 #### 1\) Set up CloudFlare as your DNS provider and proxy
 
-After you've [set up CloudFlare](https://support.cloudflare.com/hc/en-us/categories/200275218-Getting-Started) as your DNS provider, check requests are being routed through CloudFlare by enabling the orange cloud button: ![](../../.gitbook/assets/screenshot-2019-01-29-at-23.10.09%20%281%29.png)
+After you've [set up CloudFlare](https://support.cloudflare.com/hc/en-us/categories/200275218-Getting-Started) as your DNS provider, check requests are being routed through CloudFlare by enabling the orange cloud button: ![](../../.gitbook/assets/screenshot-2019-01-29-at-23.10.09-1.png)
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.26.30.png)
+![](../../.gitbook/assets/screenshot-2019-01-29-at-23.26.30%20%282%29.png)
 
 #### 2\) Set up a page rule with a wildcard that covers your feeds
 
@@ -116,7 +116,7 @@ The page rule should have the following configuration:
 * **Origin Cache Control**: On
 * **SSL:** Flexible \(if you do not have SSL configured on your own server\)
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.01.57%20%281%29.png)
+![](../../.gitbook/assets/screenshot-2019-01-29-at-23.01.57-1.png)
 
 #### 3\) Set Browser Cache Expiration to Respect Existing Headers
 
@@ -138,7 +138,7 @@ A successfully cached page will return the following header:
 
 * **cf-cache-status: HIT**
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.19.16%20%281%29.png)
+![](../../.gitbook/assets/screenshot-2019-01-29-at-23.19.16-1.png)
 
 ### Further information
 
