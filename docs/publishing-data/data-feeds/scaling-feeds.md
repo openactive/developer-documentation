@@ -54,7 +54,7 @@ Hence the query either uses the default values supplied from the query above or 
    WHERE (modified = @firstTimestamp AND id >= @firstId)
       OR (modified > @firstTimestamp)
 -- include this WHERE clause only if @afterTimestamp and
--- @afterId are provided
+-- @afterId are provided (not first page)
    WHERE (modified = @afterTimestamp AND id > @afterId)
       OR (modified > @afterTimestamp)
 ORDER BY modified, id
