@@ -48,17 +48,17 @@ For the first page, if no default values are returned, the RPDE query must exclu
 Hence the query either uses the default values supplied from the query above or otherwise returns results from the beginning of time \(for the first page\), or uses the values supplied by the parameters \(for all other pages\):
 
 ```sql
--- Include this WHERE clause only only if @afterTimestamp 
--- and @afterId are NOT provided (first page),
+-- Include this WHERE clause only if @afterTimestamp and @afterId
+-- are NOT provided (first page),
 -- and if default values are available
    WHERE (modified = @firstTimestamp AND id >= @firstId)
       OR (modified > @firstTimestamp)
--- Include this WHERE clause only if @afterTimestamp and
--- @afterId are provided (not first page)
+-- Include this WHERE clause only if @afterTimestamp and @afterId
+-- are provided (not first page)
    WHERE (modified = @afterTimestamp AND id > @afterId)
       OR (modified > @afterTimestamp)
--- If @afterTimestamp and @afterId not provided, and default
--- values are not available, do not include WHERE clause
+-- If @afterTimestamp and @afterId not provided, and default values
+-- are not available, do not include WHERE clause
 ORDER BY modified, id
 ```
 
