@@ -11,6 +11,7 @@
   * [Testing RPDE feeds](publishing-data/data-feeds/testing-feeds.md)
   * [Scaling RPDE feeds](publishing-data/data-feeds/scaling-feeds.md)
 * [Activity list references](publishing-data/activity-list-references.md)
+* [Including geo coordinates](publishing-data/including-geo-coordinates.md)
 * [Dataset Sites](publishing-data/dataset-sites.md)
 * [Virtual Events](publishing-data/virtual-events.md)
 * [On-Demand Events](publishing-data/on-demand-events.md)
