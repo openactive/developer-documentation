@@ -61,6 +61,10 @@ Hence the query either uses the default values supplied from the query above or 
 ORDER BY modified, id
 ```
 
+{% hint style="info" %}
+Alternative approaches to implement this option are available in [this proposal](https://github.com/openactive/realtime-paged-data-exchange/issues/96). Feedback and thoughts very welcome.
+{% endhint %}
+
 ## CDN Configuration
 
 A CDN is simple to configure and requires a small amount of additional code within the RPDE endpoint.
