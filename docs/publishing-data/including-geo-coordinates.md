@@ -29,11 +29,11 @@ In order to maximise the usefulness of your data, it is highly recommended that 
 
 ## Licensing and republishing
 
-In order to publish geographic coordinates in your open data feed, you must ensure that the source of these coordinates \(usually your geocoder\) permits you to republish this data under an open license.
+In order to publish geographic coordinates in your open data feed, you must ensure that the source of these coordinates \(usually your geocoder\) permits you to republish this data under an open licence.
 
 The [OpenCage Geocoder](https://opencagedata.com/) is an example of a geocoder that [permits such republishing](https://opencagedata.com/why-use-open-data).
 
-The basic [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/policies) license **does not** permit open data republishing, and does not permit including the data in any externally facing API.
+The basic [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/policies) licence **does not** permit open data republishing, and does not permit including the data in any externally facing API.
 
 ## Rendering a geocoding user interface <a id="rendering-the-openactive-activity-list-with-skos-js"></a>
 
