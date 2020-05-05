@@ -45,7 +45,10 @@ For the first page only \(where `@afterTimestamp` and `@afterId` parameters are 
 
 For the first page, if no default values are returned, the RPDE query must exclude the `WHERE` clause as per the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id), and return results from the beginning of time.
 
-Hence the query either uses the default values supplied from the query above or otherwise returns results from the beginning of time \(for the first page\), or uses the values supplied by the parameters \(for all other pages\):
+Hence the query either uses:
+
+* For the first page: the default values supplied from the query above or otherwise returns results from the beginning of time
+* For all other pages: the values supplied by the parameters
 
 ```sql
 -- Include this WHERE clause only if @afterTimestamp and @afterId
@@ -140,7 +143,7 @@ On the Caching configuration page, ensure that following is set:
 
 * **Browser Cache Expiration:** Respect Existing Headers
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35%20%281%29.png)
+![](../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35-1.png)
 
 #### 4\) Ensure that your feed does not inadvertently set any cookies
 
