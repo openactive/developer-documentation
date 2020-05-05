@@ -225,8 +225,10 @@ The property can be set at the `SessionSeries`, `ScheduledSession` or `Event` le
  "@type": "SessionSeries",
  ...
  "beta:virtualLocation": {
-    "@type": "VirtualLocation",
-    "url": "https://zoom.us/j/1234567890/signup",
+   "@type": "VirtualLocation",
+   "name": "Zoom Video Chat",
+   "url": "https://zoom.us/j/1234567890/signup",
+   "description": "Please log into Zoom a few minutes before the event, and mute your mic while you wait for the session to start"
  }
  ...
 }
