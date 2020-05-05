@@ -48,7 +48,7 @@ For the first page, if no default values are returned, the RPDE query must exclu
 Hence the query either uses the default values supplied from the query above or otherwise returns results from the beginning of time \(for the first page\), or uses the values supplied by the parameters \(for all other pages\):
 
 ```sql
--- Include this WHERE clause only only if @afterTimestamp and @afterId
+-- Include this WHERE clause only if @afterTimestamp and @afterId
 -- are NOT provided (first page), and if default values are available
    WHERE (modified = @firstTimestamp AND id >= @firstId)
       OR (modified > @firstTimestamp)
@@ -136,7 +136,7 @@ On the Caching configuration page, ensure that following is set:
 
 * **Browser Cache Expiration:** Respect Existing Headers
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35.png)
+![](../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35%20%281%29.png)
 
 #### 4\) Ensure that your feed does not inadvertently set any cookies
 
