@@ -36,7 +36,7 @@ The approach can be implemented as follows: if the `@afterTimestamp` and `@after
 --use ONLY if @afterTimestamp and @afterId NOT provided
   SELECT @afterTimestamp = modified, @afterId = id
     FROM ...
-   WHERE startDate < @now
+   WHERE startDate < @now AND state <> "deleted"
 ORDER BY modified DESC, id DESC
    LIMIT 1
 ```
