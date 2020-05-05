@@ -33,7 +33,7 @@ If the objective of implementing a retention period is primarily to reduce the s
 The approach can be implemented as follows: if the `@afterTimestamp` and `@afterId` parameters are **not** supplied to the RPDE endpoint \(i.e. for the first page\), use the query below to try to get the `@firstTimestamp` and `@firstId` and use these as default values:
 
 ```sql
-  --get default values, to be executed ONLY if @afterTimestamp and @afterId NOT provided
+-- Execute ONLY if @afterTimestamp and @afterId NOT provided
   SELECT @firstTimestamp = modified, @firstId = id
     FROM ...
    WHERE startDate >= @now AND state <> "deleted"
@@ -48,15 +48,17 @@ For the first page, if no default values are returned, the RPDE query must exclu
 Hence the query either uses the default values supplied from the query above or otherwise returns results from the beginning of time \(for the first page\), or uses the values supplied by the parameters \(for all other pages\):
 
 ```sql
--- include this WHERE clause only only if @afterTimestamp 
+-- Include this WHERE clause only only if @afterTimestamp 
 -- and @afterId are NOT provided (first page),
 -- and if default values are available
    WHERE (modified = @firstTimestamp AND id >= @firstId)
       OR (modified > @firstTimestamp)
--- include this WHERE clause only if @afterTimestamp and
+-- Include this WHERE clause only if @afterTimestamp and
 -- @afterId are provided (not first page)
    WHERE (modified = @afterTimestamp AND id > @afterId)
       OR (modified > @afterTimestamp)
+-- If @afterTimestamp and @afterId not provided, and default
+-- values are not available, do not include WHERE clause
 ORDER BY modified, id
 ```
 
