@@ -30,21 +30,31 @@ Note that a CRON job or similar is **required** to ensure that the `modified` va
 
 If the objective of implementing a retention period is primarily to reduce the size of the feed, an effective retention period can be implemented by having the first page of the feed start from the first relevant record \(instead of from the beginning of time\). This approach is useful for simple cases where a CRON job is not desirable.
 
-The approach can be implemented as follows: if the `@afterTimestamp` and `@afterId` parameters are **not** supplied to the RPDE endpoint \(i.e. for the first page\), use the query below to try to get the `@afterTimestamp` and `@afterId` and use these as default values:
+The approach can be implemented as follows: if the `@afterTimestamp` and `@afterId` parameters are **not** supplied to the RPDE endpoint \(i.e. for the first page\), use the query below to try to get the `@firstTimestamp` and `@firstId` and use these as default values:
 
 ```sql
---use ONLY if @afterTimestamp and @afterId NOT provided
-  SELECT @afterTimestamp = modified, @afterId = id - 1
+  --get default values, to be executed ONLY if @afterTimestamp and @afterId NOT provided
+  SELECT @firstTimestamp = modified, @firstId = id
     FROM ...
    WHERE startDate >= @now AND state <> "deleted"
 ORDER BY modified, id
    LIMIT 1
 ```
 
-Hence, for the first page only, these default values are included within the `WHERE` clause of the RPDE query. If no default values are returned, the RPDE query must exclude the `WHERE` clause as per the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id), and return results from the beginning of time. Hence the query either uses the default values supplied from the query above or otherwise returns results from the beginning of time \(for the first page\), or uses the values supplied as parameters \(for all other pages\):
+For the first page only \(where `@afterTimestamp` and `@afterId` parameters are **not** supplied\), these default values are included within the `WHERE` clause of the RPDE query as below, with a slight change to the operands such that **`id >= @firstId`** to ensure the default value itself is included in the feed.
+
+For the first page, if no default values are returned, the RPDE query must exclude the `WHERE` clause as per the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id), and return results from the beginning of time.
+
+Hence the query either uses the default values supplied from the query above or otherwise returns results from the beginning of time \(for the first page\), or uses the values supplied by the parameters \(for all other pages\):
 
 ```sql
---include WHERE clause only if @afterTimestamp and @afterId provided or if default values exist
+-- include this WHERE clause only only if @afterTimestamp 
+-- and @afterId are NOT provided (first page),
+-- and if default values are available
+   WHERE (modified = @firstTimestamp AND id >= @firstId)
+      OR (modified > @firstTimestamp)
+-- include this WHERE clause only if @afterTimestamp and
+-- @afterId are provided
    WHERE (modified = @afterTimestamp AND id > @afterId)
       OR (modified > @afterTimestamp)
 ORDER BY modified, id
