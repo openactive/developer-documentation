@@ -34,17 +34,17 @@ The approach can be implemented as follows: if the `@afterTimestamp` and `@after
 
 ```sql
 --use ONLY if @afterTimestamp and @afterId NOT provided
-  SELECT @afterTimestamp = modified, @afterId = id
+  SELECT @afterTimestamp = modified, @afterId = id - 1
     FROM ...
-   WHERE startDate < @now AND state <> "deleted"
-ORDER BY modified DESC, id DESC
+   WHERE startDate >= @now AND state <> "deleted"
+ORDER BY modified, id
    LIMIT 1
 ```
 
 Hence, for the first page only, these default values are included within the `WHERE` clause of the RPDE query. If no default values are returned, the RPDE query must exclude the `WHERE` clause as per the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id), and return results from the beginning of time. Hence the query either uses the default values supplied from the query above or otherwise returns results from the beginning of time \(for the first page\), or uses the values supplied as parameters \(for all other pages\):
 
 ```sql
-   --include WHERE clause only if @afterTimestamp and @afterId provided or if default values exist
+--include WHERE clause only if @afterTimestamp and @afterId provided or if default values exist
    WHERE (modified = @afterTimestamp AND id > @afterId)
       OR (modified > @afterTimestamp)
 ORDER BY modified, id
@@ -99,9 +99,9 @@ In order for [CloudFlare](https://www.cloudflare.com/) to respect your cache con
 
 #### 1\) Set up CloudFlare as your DNS provider and proxy
 
-After you've [set up CloudFlare](https://support.cloudflare.com/hc/en-us/categories/200275218-Getting-Started) as your DNS provider, check requests are being routed through CloudFlare by enabling the orange cloud button: ![](../../.gitbook/assets/screenshot-2019-01-29-at-23.10.09-1.png)
+After you've [set up CloudFlare](https://support.cloudflare.com/hc/en-us/categories/200275218-Getting-Started) as your DNS provider, check requests are being routed through CloudFlare by enabling the orange cloud button: ![](https://github.com/openactive/developer-documentation/tree/7e623e7f2910636bec17733d38e7f0af613ab158/docs/.gitbook/assets/screenshot-2019-01-29-at-23.10.09-1.png)
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.26.30%20%282%29.png)
+![](https://github.com/openactive/developer-documentation/tree/7e623e7f2910636bec17733d38e7f0af613ab158/docs/.gitbook/assets/screenshot-2019-01-29-at-23.26.30%20%282%29.png)
 
 #### 2\) Set up a page rule with a wildcard that covers your feeds
 
@@ -117,7 +117,7 @@ The page rule should have the following configuration:
 * **Origin Cache Control**: On
 * **SSL:** Flexible \(if you do not have SSL configured on your own server\)
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.01.57-1.png)
+![](https://github.com/openactive/developer-documentation/tree/7e623e7f2910636bec17733d38e7f0af613ab158/docs/.gitbook/assets/screenshot-2019-01-29-at-23.01.57-1.png)
 
 #### 3\) Set Browser Cache Expiration to Respect Existing Headers
 
@@ -139,7 +139,7 @@ A successfully cached page will return the following header:
 
 * **cf-cache-status: HIT**
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.19.16-1.png)
+![](https://github.com/openactive/developer-documentation/tree/7e623e7f2910636bec17733d38e7f0af613ab158/docs/.gitbook/assets/screenshot-2019-01-29-at-23.19.16-1.png)
 
 ### Further information
 
