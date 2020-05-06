@@ -12,5 +12,5 @@ If you've just been sent this link without any context, check out this video bef
 
 ## Are you on Slack yet?
 
-The OpenActive community are all available on Slack, [click here](https://www.openactive.io/public-openactive-w3c/) to find out more. We'll be happy to help with any issues you have during your implementation, or hear any feedback.
+The OpenActive community are all available on Slack, [click here](https://openactive.io/public-openactive-w3c/) to find out more. We'll be happy to help with any issues you have during your implementation, or hear any feedback.
 
