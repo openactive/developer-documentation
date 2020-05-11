@@ -117,16 +117,14 @@ In order for [CloudFlare](https://www.cloudflare.com/) to respect your cache con
 
 #### 1\) Set up CloudFlare as your DNS provider and proxy
 
-After you've [set up CloudFlare](https://support.cloudflare.com/hc/en-us/categories/200275218-Getting-Started) as your DNS provider, check requests are being routed through CloudFlare by enabling the orange cloud button: ![](https://github.com/openactive/developer-documentation/tree/7e623e7f2910636bec17733d38e7f0af613ab158/docs/.gitbook/assets/screenshot-2019-01-29-at-23.10.09-1.png)
-
-![](https://github.com/openactive/developer-documentation/tree/7e623e7f2910636bec17733d38e7f0af613ab158/docs/.gitbook/assets/screenshot-2019-01-29-at-23.26.30%20%282%29.png)
+After you've [set up CloudFlare](https://support.cloudflare.com/hc/en-us/categories/200275218-Getting-Started) as your DNS provider, check requests are being routed through CloudFlare by enabling the orange cloud button.
 
 #### 2\) Set up a page rule with a wildcard that covers your feeds
 
 Use the wildcards to ensure the rule covers all your feeds, for example:
 
 ```text
-*opendata.leisurecloud.live/api/feeds/*
+*opendata.example.com/api/feeds/*
 ```
 
 The page rule should have the following configuration:
@@ -134,8 +132,6 @@ The page rule should have the following configuration:
 * **Cache Level:** Everything
 * **Origin Cache Control**: On
 * **SSL:** Flexible \(if you do not have SSL configured on your own server\)
-
-![](https://github.com/openactive/developer-documentation/tree/7e623e7f2910636bec17733d38e7f0af613ab158/docs/.gitbook/assets/screenshot-2019-01-29-at-23.01.57-1.png)
 
 #### 3\) Set Browser Cache Expiration to Respect Existing Headers
 
@@ -156,8 +152,6 @@ Inspect the headers returned by your page to see if CloudFlare is successfully c
 A successfully cached page will return the following header:
 
 * **cf-cache-status: HIT**
-
-![](https://github.com/openactive/developer-documentation/tree/7e623e7f2910636bec17733d38e7f0af613ab158/docs/.gitbook/assets/screenshot-2019-01-29-at-23.19.16-1.png)
 
 ### Further information
 
