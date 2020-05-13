@@ -31,6 +31,29 @@ See [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%
 Please note that although the newer **`@id`** and **`@type`** are used here and throughout the rest of the OpenActive documentation and tooling, the OpenActive Activity List JSON-LD definition itself still uses **`id`** and **`type`** for backwards compatibility.
 {% endhint %}
 
+### Multiple OpenActive Activity List references
+
+An opportunity may include multiple references to the OpenActive Activity List, however a limit on the total number of references \(for example, a maximum of 3\) is recommended to discourage "tag spamming".
+
+An example of multiple references to the OpenActive Activity List is shown below:
+
+```javascript
+"activity": [
+  {
+    "@type": "Concept",
+    "@id": "https://openactive.io/activity-list#eaa5a9bc-c23d-4643-80d9-8691646545be",
+    "prefLabel": "Pool",
+    "inScheme": "https://openactive.io/activity-list"
+  },
+  {
+    "@type": "Concept",
+    "@id": "https://openactive.io/activity-list#ee7fa47c-617b-44ac-88fa-ef7b7ae03516",
+    "prefLabel": "Snooker",
+    "inScheme": "https://openactive.io/activity-list"
+  }
+]
+```
+
 ### Integration with an existing "activity types" controlled list
 
 If your booking system already has "activity types" available from a controlled list, these existing activity types should be mapped to the OpenActive Activity List.
