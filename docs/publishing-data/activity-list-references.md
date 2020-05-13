@@ -122,9 +122,9 @@ Two different types of links are available:
 
 #### Contribute to the list
 
-For general contribution simply link to "[`https://www.openactive.io/activity-list/`](https://www.openactive.io/activity-list/)". This will take the user to a page where they can make suggestions about the activity list.
+For general contribution simply link to "[`https://openactive.io/activity-list/`](https://openactive.io/activity-list/)". This will take the user to a page where they can make suggestions about the activity list.
 
-Example: [Can't find an activity? Contribute to the list](https://www.openactive.io/activity-list/)
+Example: [Can't find an activity? Contribute to the list](https://openactive.io/activity-list/)
 
 #### Contribute to a specific activity
 
