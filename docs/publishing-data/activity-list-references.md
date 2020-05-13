@@ -66,7 +66,7 @@ This [OpenActive Activity List JSON-LD definition](https://openactive.io/activit
 
 To access the JSON-LD definition the application **MUST** GET the URL `"https://openactive.io/activity-list/activity-list.jsonld"` which does not require a specific `Accept` header, and is cached via CDN.
 
-Note: there is no `www` in the URLs.
+Note: there is no `www` in the URL.
 
 {% hint style="info" %}
 The JSON-LD definition is also available via a GET of the URL `"https://openactive.io/activity-list"` using an `Accept` header of `application/ld+json`, to conform with JSON-LD expectations, however this shorter URL **MUST NOT** be used in production.
