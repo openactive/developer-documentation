@@ -69,7 +69,7 @@ Hence the query either uses:
 ORDER BY modified, id
 ```
 
-To further reduce the number of records in the feed, any record for an opportunity in the past can be rendered as `"deleted"` in the feed without any change to the `updated` value \(note the record must not be removed from the feed\). This means that records representing past opportunities are effectively frozen after they have occurred, and by default will live on forever in downstream applications. If the record is edited, the `modified` value must still be updated, at which point the record will be removed from downstream applications, to ensure historical accuracy.
+To further reduce the number of records in the feed, any record for an opportunity in the past can be rendered as `"deleted"` in the feed without any change to the `updated` value \(note the record **must not** be removed from the feed\). This means that records representing past opportunities are effectively frozen after they have occurred, and by default will live on forever in downstream applications. If the record is edited, the `modified` value must still be updated, at which point the record will be removed from downstream applications, to ensure historical accuracy.
 
 {% hint style="info" %}
 Alternative approaches for implementing this option are available in [this proposal](https://github.com/openactive/realtime-paged-data-exchange/issues/96). Feedback and thoughts very welcome.

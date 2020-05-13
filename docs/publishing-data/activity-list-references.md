@@ -33,7 +33,7 @@ Please note that although the newer **`@id`** and **`@type`** are used here and 
 
 ### Multiple OpenActive Activity List references
 
-An opportunity may include multiple references to the OpenActive Activity List, however a limit on the total number of references \(for example, a maximum of 3\) is recommended to discourage "tag spamming".
+An opportunity may include multiple references to the OpenActive Activity List, however a limit on the total number of references permitted per opportunity \(for example, a maximum of 3\) is recommended to discourage "tag spamming".
 
 An example of multiple references to the OpenActive Activity List is shown below:
 
