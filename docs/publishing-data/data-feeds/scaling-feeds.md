@@ -20,10 +20,15 @@ The [high-volume proposal](https://github.com/openactive/realtime-paged-data-exc
 
 ### Option 1: Retention period to minimise storage requirements
 
-If the objective of implementing a retention period is primarily to reduce the number of records stored, records representing events that occur in the past should be pruned by first setting their [`state` to the `"deleted"` state and updating the `modified` value](https://www.w3.org/2017/08/realtime-paged-data-exchange/#deleted-items), and then after 7 days removing them from the feed. This may be implemented via a regular CRON job, for example.
+If the objective of implementing a retention period is primarily to reduce the number of records stored, records representing events that occur in the past should be pruned by:
+
+* First setting their [`state` to the `"deleted"` state and updating the `modified` value](https://www.w3.org/2017/08/realtime-paged-data-exchange/#deleted-items).
+* Then after 7 days removing them from the feed.
+
+This may be implemented via a regular CRON job, for example.
 
 {% hint style="danger" %}
-Note that a CRON job or similar is **required** to ensure that the `modified` value is updated when the record transitions into the [`"deleted"` state](https://www.w3.org/2017/08/realtime-paged-data-exchange/#deleted-items). Hence it is **not possible** to implement a retention period by altering the RPDE query alone.
+Simply filtering out or removing opportunities from the feed that are in the past is not sufficient, because any opportunity that is edited to have a `startDate` in the past would then disappear from the feed without first transitioning into the [`"deleted"` state](https://www.w3.org/2017/08/realtime-paged-data-exchange/#deleted-items) with an updated `modified` value. Hence the previous version of such a record would live on forever in the downstream applications.
 {% endhint %}
 
 ### Option 2: Retention period to reduce feed size
@@ -63,6 +68,8 @@ Hence the query either uses:
 -- are not available, do not include WHERE clause
 ORDER BY modified, id
 ```
+
+To further reduce the number of records in the feed, any record for an opportunity in the past can be rendered as `"deleted"` in the feed without any change to the `updated` value \(note the record must not be removed from the feed\). This means that records representing past opportunities are effectively frozen after they have occurred, and by default will live on forever in downstream applications. If the record is edited, the `modified` value must still be updated, at which point the record will be removed from downstream applications, to ensure historical accuracy.
 
 {% hint style="info" %}
 Alternative approaches for implementing this option are available in [this proposal](https://github.com/openactive/realtime-paged-data-exchange/issues/96). Feedback and thoughts very welcome.

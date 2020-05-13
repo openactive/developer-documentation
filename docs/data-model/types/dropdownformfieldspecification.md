@@ -9,97 +9,24 @@ This type is derived from [https://schema.org/PropertyValueSpecification](https:
 ## **Properties**
 
 ### **Required properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>@type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        Must always be present and set to <code>"@type": "DropdownFormFieldSpecification"</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>name</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Display label for the field.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>valueOption</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Specifies an array of display values for the dropdown.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Expected Type | Description |
+| :--- | :--- | :--- |
+| **@type** |  [`Text`](https://schema.org/Text) |  Must always be present and set to `"@type": "DropdownFormFieldSpecification"` |
+| **name** |  [`Text`](https://schema.org/Text) | Display label for the field. |
+| **valueOption** |  Array of [`Text`](https://schema.org/Text) | Specifies an array of display values for the dropdown. |
 
 ### **Recommended properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>description</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Descriptive help plain text for the field, which must not include HTML or other markup.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Expected Type | Description |
+| :--- | :--- | :--- |
+| **description** |  [`Text`](https://schema.org/Text) | Descriptive help plain text for the field, which must not include HTML or other markup. |
 
 ### **Optional properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>valueRequired</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Specifies that a value for the field is required to proceed with the booking.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property | Expected Type | Description |
+| :--- | :--- | :--- |
+| **valueRequired** |  [`Text`](https://schema.org/Text) | Specifies that a value for the field is required to proceed with the booking. |
 
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License \(CC-BY V4.0\)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
 
-
-
-
-Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
