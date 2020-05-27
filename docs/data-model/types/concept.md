@@ -136,7 +136,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
     <tr>
       <td style="text-align:left"><b>topConceptOf</b></td>
       <td style="text-align:left">
-        Array of <a href="https://schema.org/URL"><code>URL</code></a>
+        <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
         <p>A reference to the Scheme URI, the existence of which indicates that this Concept is at the top level of the hierarchy.</p><p></br><b>Example</b></p><p><code>"topConceptOf": "https://openactive.io/activity-list"</code></p>
