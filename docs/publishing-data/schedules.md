@@ -28,9 +28,9 @@ This constraint is necessary to prevent recurrence rules from creating a high vo
 
 In order to process a [`Schedule`](../data-model/types/schedule.md), the data user must do the following:
 
-1. Generate all occurrences from a `Schedule` in the future, taking into account the `exceptDate`.
+1. Generate all occurrences from a `Schedule` in the future, taking into account the `exceptDate` property.
    * Take the `scheduledEventType`, property and use it for the `@type` property of each occurrence.
-   * Render the `startDate` and `endDate` to UTC using a string format of `YYYY-MM-DDThh-mm-ssZ` \(e.g. `1997-07-16T19-20-00Z`\) for placeholder replacement.
+   * Render the generated `startDate` and `endDate` for each occurrence to UTC using a string format of `YYYY-MM-DDThh-mm-ssZ` \(e.g. `1997-07-16T19-20-00Z`\) for placeholder replacement.
    * Take the `idTemplate` property \(if provided\) and substitute the `startDate` placeholder with the calculated string value of `startDate` \(and do the same with `endDate`\). Use the resulting string as the value of the `@id` property for the occurrence.
    * Take the `urlTemplate` property \(if provided\) and substitute the `startDate` placeholder with the calculated string value of `startDate` \(and do the same with `endDate`\). Use the resulting string as the value of the `url` property for the occurrence.
 2. Completely overwrite any generated occurrences with any explicitly defined occurrences \(e.g.`ScheduledSession`s found in a `subEvent` or ScheduledSession feed\), replacing the entire occurrence.
