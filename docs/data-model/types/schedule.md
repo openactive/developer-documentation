@@ -156,7 +156,7 @@ While these properties are marked as optional, a data publisher must provide eit
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>An RFC6570 compliant URI template that can be used to generate a unique identifier (<code>@id</code>) for every event described by the schedule. This property is required if the data provider is supporting third-party booking via the Open Booking API, or providing complimentary individual <code>subEvent</code>s.</p><p></br><b>Example</b></p><p><code>"idTemplate": "https://example.com/event{/id}"</code></p>
+        <p>An RFC6570 compliant URI template that can be used to generate a unique identifier (<code>@id</code>) for every event described by the schedule. This property is required if the data provider is supporting third-party booking via the Open Booking API, or providing complimentary individual <code>subEvent</code>s.</p><p></br><b>Example</b></p><p><code>"idTemplate": "https://api.example.org/session-series/123/{startDate}"</code></p>
       </td>
     </tr>
     <tr>
@@ -174,7 +174,7 @@ While these properties are marked as optional, a data publisher must provide eit
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>An RFC6570 compliant URI template that can be used to generate a unique <code>url</code> for every event described by the schedule. This property is required if the data provider wants to provide participants with a unique URL to book to attend an event.</p><p></br><b>Example</b></p><p><code>"urlTemplate": "https://example.com/event{/id}"</code></p>
+        <p>An RFC6570 compliant URI template that can be used to generate a unique <code>url</code> for every event described by the schedule. This property is required if the data provider wants to provide participants with a unique URL to book to attend an event.</p><p></br><b>Example</b></p><p><code>"urlTemplate": "https://example.org/session-series/123/{startDate}"</code></p>
       </td>
     </tr>
   </tbody>
