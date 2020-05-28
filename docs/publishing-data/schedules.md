@@ -18,15 +18,19 @@ When `ScheduledSession`s are included in a feed or `subEvent`, they must not inc
 2. Are an exception to the recurrence rule defined in the `Schedule`.
 3. Have any other properties that differ from those defined in `SessionSeries`.
 
+Such events would need to have been materialised in a database within the booking system already, so **under no circumstances should new occurrence records be generated for the sole purpose of outputting them to an OpenActive `ScheduledSession`s feed**.
+
+This constraint is necessary to prevent recurrence rules from creating a high volume of redundant data in its `ScheduledSession` feed. For example: if a `SessionSeries` has a recurrence rule for a weekly event with an `endDate` in 2050, only the `ScheduledSession`s that have been booked at least once or have been manually edited would appear in the `ScheduledSession` feed.
+
+### Using templates
+
 When such `ScheduledSession`s are included, the `Schedule` **must** also include an `idTemplate`, such as the below, which matches the pattern of the `@id` of the `ScheduledSession`s \(noting the `startDate` placeholder **must** use a string format of `YYYY-MM-DDThh-mm-ssZ` \(e.g. `1997-07-16T19-20-00Z`\):
 
 ```javascript
 "idTemplate": "https://api.example.org/session-series/123/{startDate}"
 ```
 
-Such events would need to have been materialised in a database within the booking system already, so **under no circumstances should new occurrence records be generated for the sole purpose of outputting them to an OpenActive `ScheduledSession`s feed**.
-
-This constraint is necessary to prevent recurrence rules from creating a high volume of redundant data in its `ScheduledSession` feed. For example: if a `SessionSeries` has a recurrence rule for a weekly event with an `endDate` in 2050, only the `ScheduledSession`s that have been booked at least once or have been manually edited would appear in the `ScheduledSession` feed.
+A `urlTemplate` may also be included in the `Schedule` using the same `startDate` placeholder.
 
 ## Processing a `Schedule` found in a feed
 
