@@ -148,7 +148,7 @@ This property allows applications to present a filter for "no equipment required
 * `https://openactive.io/Optional` - Equipment is optional, and the participant can improvise
 * `https://openactive.io/Unavailable` - No equipment required
 
- The property is applicable to online, offline and mixed events.
+  The property is applicable to online, offline and mixed events.
 
 The existing `attendeeInstruction` and `description` properties may be used for activity providers to provide further clarification about equipment requirements.
 
@@ -258,7 +258,7 @@ To specify "Beginner-friendly" the value of the `level` property, must include t
     "Beginner"
   ]
  ...
-} 
+}
 ```
 
 ### `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
@@ -283,7 +283,7 @@ The property accepts a URL, the existence of which both indicates that an activi
  ...
   "beta:donationPaymentUrl": "https://www.paypal.com/donate/acme_fit"
  ...
-} 
+}
 ```
 
 ### `beta:formalCriteriaMet` \([\#236](https://github.com/openactive/modelling-opportunity-data/issues/236)\)
@@ -319,7 +319,7 @@ The property must be set on the `Organization` or `Person` within the `organizer
     "https://emduk.org/advice-on-how-instructors-can-continue-to-deliver-their-classes-online/"
   ]
  }
-} 
+}
 ```
 
 ## Conformance criteria

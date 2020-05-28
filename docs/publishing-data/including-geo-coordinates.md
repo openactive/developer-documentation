@@ -51,7 +51,7 @@ On pressing the geocode button, the geocoder provides both **`latitude`** and **
 
 See the "**Result**" tab below for a live demo.
 
-{% embed url="https://jsfiddle.net/nickevansuk/d1gn0h87/" %}
+{% embed url="https://jsfiddle.net/nickevansuk/d1gn0h87/" caption="" %}
 
 ### Gladstone: Implementation example
 

@@ -36,5 +36,3 @@ Information about Events, Places, Organizations and other types of resources sho
 * [PostalAddress](postaladdress.md)
 * [Schedule](schedule.md)
 
-
-

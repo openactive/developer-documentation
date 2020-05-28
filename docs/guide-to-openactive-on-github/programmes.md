@@ -9,5 +9,3 @@ A 'Programme' is defined formally in the [Opportunity specification](https://www
 * \*\*\*\*[**programmes**](https://github.com/openactive/programmes)**:** List of sources of Programme data. Work in progress.
 * \*\*\*\*[**les-mills-programme-page-example**](https://github.com/openactive/les-mills-programme-page-example)**:** Sample data from Les MILLS. 
 
-  
-

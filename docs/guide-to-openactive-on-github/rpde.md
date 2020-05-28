@@ -4,7 +4,7 @@ description: Code and other tools related to Real-Time Paged Data Exchange.
 
 # RPDE
 
-'RPDE' stands for 'Realtime Paged Data Exchange', a specification that outlines how [Opportunity](https://www.openactive.io/modelling-opportunity-data/) \(and to some extent [Booking](https://www.openactive.io/open-booking-api/EditorsDraft/)\) data is to be chunked and sequenced by publishers for consumption by OpenActive data clients.  
+'RPDE' stands for 'Realtime Paged Data Exchange', a specification that outlines how [Opportunity](https://www.openactive.io/modelling-opportunity-data/) \(and to some extent [Booking](https://www.openactive.io/open-booking-api/EditorsDraft/)\) data is to be chunked and sequenced by publishers for consumption by OpenActive data clients.
 
 Repos with the topic `rpde` include:
 

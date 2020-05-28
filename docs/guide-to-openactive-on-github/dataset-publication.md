@@ -4,7 +4,7 @@ description: Tools for publishing and reviewing OpenActive data.
 
 # Dataset Publication
 
-The `dataset-publication` topic tags all repos supporting OpenActive data providers in publishing their open data via so-called 'dataset sites'. 
+The `dataset-publication` topic tags all repos supporting OpenActive data providers in publishing their open data via so-called 'dataset sites'.
 
 * [**dataset-site-template**](https://github.com/openactive/dataset-site-template): A basic [Mustache template](https://mustache.github.io/) for publishing OpenActive data, along with instructions for use.
   * [**dataset-site-template-example-dotnet**](https://github.com/openactive/dataset-site-template-example-dotnet)**:** A simple .NET implementation producing output rendered by the Mustache template.

@@ -12,7 +12,3 @@ Repos tagged with the `activity-list` topic are used to power OpenActive's [Acti
 
 The Activity List Controlled Vocabulary is expressed in [SKOS](https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System). Developers working on the Activity List may thus also wish to investigate [OpenActive's `skos` repos](skos.md).
 
-
-
-
-

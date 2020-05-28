@@ -4,7 +4,7 @@ description: 'OpenActive standards, and the tools supporting these.'
 
 # Specifications
 
-The `specifications` topic includes specifications proper, ****mechanisms for extending these specifications as required, and tools supporting the development and creation of new specifications.
+The `specifications` topic includes specifications proper, _\*\*_mechanisms for extending these specifications as required, and tools supporting the development and creation of new specifications.
 
 ## OpenActive specifications
 
@@ -24,6 +24,4 @@ The `specifications` topic includes specifications proper, ****mechanisms for ex
 
 * \*\*\*\*[**ns**](https://github.com/openactive/ns)**:** Linked Data definitions and source for the OpenActive namespace
 * \*\*\*\*[**spec-template**](https://github.com/openactive/spec-template)**:** Template for the creation of OpenActive specifications.
-
-
 

@@ -17,5 +17,3 @@ The `implementation-support` topic is more varied than most, as it simply picks 
 * \*\*\*\*[**lorem-fitsum**](https://github.com/openactive/lorem-fitsum)**:** Generates random activities for testing purposes.
 * \*\*\*\*[**openactive-es-example**](https://github.com/openactive/openactive-es-example)**:** Sample code for harvesting and indexing OpenActive opportunity data using Ruby and ElasticSearch.
 
-
-

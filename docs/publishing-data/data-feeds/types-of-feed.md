@@ -2,7 +2,7 @@
 
 ## Time-based Events: **Regular Classes and Sessions**
 
-These always have at least `activity`, `location` and `startDate` specified: so a Yoga class in Downtown Leisure Centre, at 7pm, on a Tuesday. See [here](../../data-model/data-model-overview.md#classes-and-sessions) for further clarification of the types available. 
+These always have at least `activity`, `location` and `startDate` specified: so a Yoga class in Downtown Leisure Centre, at 7pm, on a Tuesday. See [here](../../data-model/data-model-overview.md#classes-and-sessions) for further clarification of the types available.
 
 The OpenActive Modelling Specification 2.0 represents regular events using a hierarchy of types: [`EventSeries`](https://www.openactive.io/modelling-opportunity-data/#grouping-together-events-eventseries-), [`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-), and [`ScheduledSession`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-), linked via the `superEvent` and `subEvent` properties. These are described by example in the diagram below:
 
@@ -28,7 +28,7 @@ A `SessionSeries` must always be supplied, including details that would otherwis
 
 In order for data to be [**bookable**](https://www.openactive.io/open-booking-api/EditorsDraft/#dfn-bookability) a `ScheduledSession` must be supplied, either embedded, within a separate feed, or generated through a `Schedule`.
 
-For large providers with many events that are described identically but occur in the same location or in different locations, an `EventSeries` should be used to group these together. This avoids seemingly duplicate search results from a single provider. 
+For large providers with many events that are described identically but occur in the same location or in different locations, an `EventSeries` should be used to group these together. This avoids seemingly duplicate search results from a single provider.
 
 ![](https://docs.google.com/drawings/u/0/d/sruVQes8cWV4JuLh6rHxt-A/image?w=602&h=321&rev=144&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
@@ -93,7 +93,7 @@ And within a corresponding `ScheduledSession` feed, that `SessionSeries` **`@id`
 
 ## Time-based Events: Ad-hoc Events
 
-The OpenActive model allows for ad-hoc events to be described using the pattern below. Ad-hoc events must only be used to describe truly ad-hoc events, and not to describe regular events such as those described in the previous section. See [here](../../data-model/data-model-overview.md#events) for further clarification of the types available. 
+The OpenActive model allows for ad-hoc events to be described using the pattern below. Ad-hoc events must only be used to describe truly ad-hoc events, and not to describe regular events such as those described in the previous section. See [here](../../data-model/data-model-overview.md#events) for further clarification of the types available.
 
 ### **Summary of ad-hoc event types**
 
@@ -119,7 +119,7 @@ For large providers with many events that are described identically but occur in
 
 ### **Exposing the model in feeds**
 
-Systems must include `Event`s in stand-alone feeds separate from `ScheduledSessions` and  `SessionSeries`.
+Systems must include `Event`s in stand-alone feeds separate from `ScheduledSessions` and `SessionSeries`.
 
 The `EventSeries` is unlikely to change frequently enough compared with the `Event` to warrant its own feed, and so can usually be embedded in the `Event`.
 
@@ -186,7 +186,7 @@ And within a corresponding `Slot` feed, that `FacilityUse` **`@id`** is referenc
 
 ## Other types of Time-based Events: Headline Events and Courses
 
-A feed of  [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/#headline-events-headlineevent-) can be used to represent whole day or multi-day events, such as mass participation events, family fun days, etc.
+A feed of [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/#headline-events-headlineevent-) can be used to represent whole day or multi-day events, such as mass participation events, family fun days, etc.
 
 * The OpenActive Modelling Specification 2.0 represents these events using a hierarchy of types: `HeadlineEvent` \(for the overall event\) and `Event` \(for small events within the overall event\) linked via the `superEvent` and `subEvent` properties.
 * See [here](../../data-model/data-model-overview.md#headline-events) for further clarification, and [here](http://data.britishtriathlon.org/) for an example.
