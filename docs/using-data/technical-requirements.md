@@ -14,7 +14,7 @@ A technology \(or tech\) "stack" is a combination of technologies that build on 
 
 A web-application stack that uses data from one or more Open Active data providers will likely include:
 
-A host **operating system** or server such as Windows or Linux. This can be a physical server operated by the app creator, or a virtual server offered by "cloud" companies such as AWS, Azure, Heroku or Digital Ocean.
+A host **operating system** or server such as Windows or Linux. This can be a physical server operated by the app creator, or a virtual server offered by "cloud" companies such as AWS, Azure, Heroku or Digital Ocean. Other technologies such as databases and software will run on this operating system.
 
 A **database** to store a copy of the providers' data plus any additional data relevant to the consumers app or service.
 
