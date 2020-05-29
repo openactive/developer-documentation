@@ -18,12 +18,11 @@
 
 ## Using data
 
-* [Landing Page](using-data/landing-page.md)
+* [Using Open Active Data](using-data/landing-page.md)
 * [Primer / Introduction](using-data/primer-introduction.md)
 * [Get the data](using-data/get-the-data.md)
-* [Specifications and Standards](using-data/specifications-and-standards.md)
 * [Technical Requirements](using-data/technical-requirements.md)
-* [Synchronising data tutorial](using-data/harvesting-opportunity-data.md)
+* [Synchronising data \(tutorial\)](using-data/harvesting-opportunity-data.md)
 * [Resources](using-data/resources.md)
 
 ## Data Model

@@ -277,7 +277,9 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
       <td style="text-align:left">The Value-added Tax ID of the of the Seller.</td>
     </tr>
   </tbody>
-</table>### **Beta Extension properties**
+</table>
+
+### **Beta Extension properties**
 
 These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
 
@@ -315,5 +317,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
       </td>
     </tr>
   </tbody>
-</table>Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License \(CC-BY V4.0\)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
+</table>
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License \(CC-BY V4.0\)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
 

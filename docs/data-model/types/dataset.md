@@ -201,7 +201,9 @@ This type is derived from [https://schema.org/Dataset](https://schema.org/Datase
       </td>
     </tr>
   </tbody>
-</table>### **Recommended properties**
+</table>
+
+### **Recommended properties**
 
 <table>
   <thead>
@@ -260,7 +262,9 @@ This type is derived from [https://schema.org/Dataset](https://schema.org/Datase
       </td>
     </tr>
   </tbody>
-</table>### **Optional properties**
+</table>
+
+### **Optional properties**
 
 | Property | Expected Type | Description |
 | :--- | :--- | :--- |

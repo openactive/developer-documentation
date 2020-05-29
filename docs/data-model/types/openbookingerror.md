@@ -64,7 +64,9 @@ description: This page describes the OpenBookingError type.
       </td>
     </tr>
   </tbody>
-</table>### **Optional properties**
+</table>
+
+### **Optional properties**
 
 | Property | Expected Type | Description |
 | :--- | :--- | :--- |

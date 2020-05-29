@@ -83,7 +83,9 @@ This type is derived from [https://schema.org/DataCatalog](https://schema.org/Da
       </td>
     </tr>
   </tbody>
-</table>### **Required options**
+</table>
+
+### **Required options**
 
 The `DataCatalog` must include either `hasPart` if it is a collection of smaller `DataCatalog`s, or `dataset` if it is a collection of dataset sites.
 
@@ -125,7 +127,9 @@ The `DataCatalog` must include either `hasPart` if it is a collection of smaller
       </td>
     </tr>
   </tbody>
-</table>### **Recommended properties**
+</table>
+
+### **Recommended properties**
 
 <table>
   <thead>
@@ -154,7 +158,9 @@ The `DataCatalog` must include either `hasPart` if it is a collection of smaller
       </td>
     </tr>
   </tbody>
-</table>### **Optional properties**
+</table>
+
+### **Optional properties**
 
 <table>
   <thead>
@@ -208,5 +214,7 @@ The `DataCatalog` must include either `hasPart` if it is a collection of smaller
       </td>
     </tr>
   </tbody>
-</table>Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License \(CC-BY V4.0\)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
+</table>
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License \(CC-BY V4.0\)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
 
