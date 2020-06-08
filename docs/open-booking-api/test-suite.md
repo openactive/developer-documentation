@@ -167,13 +167,23 @@ This will start to harvest the feeds from your running application.
 
 ### Run the Integration Tests
 
-With both your booking system and `openactive-broker-microservice` running, execute the following command in the `openactive-integration-tests` directory:
+With both your booking system and `openactive-broker-microservice` running, execute the following command in the `openactive-integration-tests` directory, to execute all configured tests:
 
 ```bash
 npm test
 ```
 
 This will execute tests against your booking system, using the `openactive-broker-microservice` as an intermediary.
+
+Individual features or tests can be run in isolation using the following commands, for example:
+
+```bash
+npm test --runInBand -- test/features/core/test-interface/
+```
+
+```bash
+npm test --runInBand -- test/features/core/test-interface/implemented/create-opportunity-test.js
+```
 
 ## Reading the test results and debugging
 
