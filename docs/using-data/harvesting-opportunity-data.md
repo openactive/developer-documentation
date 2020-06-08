@@ -120,7 +120,9 @@ In pseudocode, a very basic \(and unrobust\) page through the dataset for the fi
     </tr>
   </thead>
   <tbody></tbody>
-</table>\(Please note that in practice, because the endpoints don't tend to allow cross-origin access at the moment this example won’t run and is intended for illustration only. To see a working example you can visit [https://glitch.com/~oa-quickharvest](https://glitch.com/~oa-quickharvest) which employs a proxy\).
+</table>
+
+\(Please note that in practice, because the endpoints don't tend to allow cross-origin access at the moment this example won’t run and is intended for illustration only. To see a working example you can visit [https://glitch.com/~oa-quickharvest](https://glitch.com/~oa-quickharvest) which employs a proxy\).
 
 ![](https://lh3.googleusercontent.com/bvWnOyiZQkvEotmTiZsjbaIZb9jyp1Gj6fr8_2Xc-H0aK81iV74c_r6xkK1c_Tr4VTSK3QneTdak6GCsb5c9wjBQztKe6IFNY-k26mtLnv6dIJNCs1T1V2ha7vJRiSq1ww)
 
@@ -180,7 +182,9 @@ For our initial download of data, for now \(we’ll revisit this in the next sec
     </tr>
   </thead>
   <tbody></tbody>
-</table>## **Keeping data up to date** <a id="keeping-data-up-to-date"></a>
+</table>
+
+## **Keeping data up to date** <a id="keeping-data-up-to-date"></a>
 
 ### **Handling updates and deletions** <a id="handling-updates-and-deletions"></a>
 
@@ -243,7 +247,9 @@ Our pseudocode therefore becomes a little bit more detailed:
     </tr>
   </thead>
   <tbody></tbody>
-</table>Whilst we’ve reached the end of the feed, handled modifications and deletions, the changes don’t stop there. In order to keep your data updated in near real-time, you may wish to keep track of the URL for the last page, and infrequently poll this to check for updates. Revisiting the rules of what defines a page as the last page:
+</table>
+
+Whilst we’ve reached the end of the feed, handled modifications and deletions, the changes don’t stop there. In order to keep your data updated in near real-time, you may wish to keep track of the URL for the last page, and infrequently poll this to check for updates. Revisiting the rules of what defines a page as the last page:
 
 * The items property is an empty array.
 * The next property matches the URL of the current page.
@@ -330,7 +336,9 @@ If items are found, your harvester should resume the behaviour of the initial do
     </tr>
   </thead>
   <tbody></tbody>
-</table>As mentioned at the start of this tutorial, once you’ve mastered harvesting from a single source you may well wish to extend this by harvesting multiple sources.
+</table>
+
+As mentioned at the start of this tutorial, once you’ve mastered harvesting from a single source you may well wish to extend this by harvesting multiple sources.
 
 Whilst this is beyond the scope of this tutorial, we’ve included some pointers for areas that you will need to consider:
 

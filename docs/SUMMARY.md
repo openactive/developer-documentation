@@ -21,6 +21,10 @@
 
 * [Harvesting opportunity data](using-data/harvesting-opportunity-data.md)
 
+## Open Booking API
+
+* [Testing booking](open-booking-api/test-suite.md)
+
 ## Data Model
 
 * [Data Model Overview](data-model/data-model-overview.md)
