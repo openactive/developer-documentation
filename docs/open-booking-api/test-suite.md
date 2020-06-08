@@ -134,7 +134,7 @@ Configure the broker microservice with the authentication headers required for t
 Note such authentication [must not be specific to any particular seller](https://openactive.io/open-booking-api/EditorsDraft/#authentication).
 
 {% code title="./packages/openactive-broker-microservice/config/default.json \(extract\)" %}
-```text
+```javascript
   "ordersFeedRequestHeaders": {
     "X-OpenActive-Test-Client-Id": "test"
   }
@@ -148,7 +148,7 @@ The `datasetSiteUrl` must be set to the local dataset site URL of your booking s
 In addition to the standard dataset site, the JSON-LD of the page must include the `accessService` property, as specified in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-broker-microservice#datasetsiteurl). Note that the `endpointURL` within the `accessService` is most important, and must refer to your local Open Booking API [Base URI](https://openactive.io/open-booking-api/EditorsDraft/#dfn-base-uri).
 
 {% code title="./packages/openactive-broker-microservice/config/default.json \(extract\)" %}
-```text
+```javascript
   "datasetSiteUrl": "https://bookingsystemreferenceimplementation.azurewebsites.net/openactive",
 ```
 {% endcode %}
@@ -182,7 +182,7 @@ npm test --runInBand -- test/features/core/test-interface/
 ```
 
 ```bash
-npm test --runInBand -- test/features/core/test-interface/implemented/create-opportunity-test.js
+npm test --runInBand -- test/features/core/test-interface/implemented/create-opportunity-test.js 
 ```
 
 ## Reading the test results and debugging
