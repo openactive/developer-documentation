@@ -23,6 +23,7 @@
 
 ## Open Booking API
 
+* [Implementing booking](open-booking-api/implementing-booking.md)
 * [Testing booking](open-booking-api/test-suite.md)
 
 ## Data Model
