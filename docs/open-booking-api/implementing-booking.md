@@ -19,7 +19,7 @@ The table below lists the available OpenActive libraries:
 | Library | [.NET](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) | [PHP](https://www.php.net/releases/5_4_0.php) | [Ruby](https://www.ruby-lang.org/en/) |
 | :--- | :--- | :--- | :--- |
 | Booking Request/Response Serialisation and Deserialisation | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) | [openactive/models](https://packagist.org/packages/openactive/models) | [openactive](https://rubygems.org/gems/openactive) |
-| Booking Engine | [OpenActive.Server.NET](https://github.com/openactive/OpenActive.Server.NET) | N/A | N/A |
+| Open Booking SDK | [OpenActive.Server.NET](https://github.com/openactive/OpenActive.Server.NET) | N/A | N/A |
 
 
 
