@@ -31,7 +31,7 @@ For each optional feature, assess whether or not your implementation will includ
 
 Configure the test suite accordingly, as detailed in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#implementedfeatures), for example:
 
-{% code title="./packages/openactive-integration-tests/config/test.json \(extract\)" %}
+{% code title="./packages/openactive-integration-tests/config/default.json \(extract\)" %}
 ```javascript
  "implementedFeatures": {
     "opportunity-feed": true,
@@ -50,7 +50,7 @@ Note that not all Open Booking API features are currently supported by the test 
 
 Set up the Opportunity Types that your booking system will support, as detailed in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#bookableopportunitytypesinscope). The test suite will only attempt to book opportunity types that are configured here, for example:
 
-{% code title="./packages/openactive-integration-tests/config/test.json \(extract\)" %}
+{% code title="./packages/openactive-integration-tests/config/default.json \(extract\)" %}
 ```javascript
   "bookableOpportunityTypesInScope": {
     "ScheduledSession": true,
@@ -72,7 +72,7 @@ Choose which testing strategy to use. You can always start with one and switch t
 
 ### Random mode
 
-{% code title="./packages/openactive-integration-tests/config/test.json \(extract\)" %}
+{% code title="./packages/openactive-integration-tests/config/default.json \(extract\)" %}
 ```javascript
   "useRandomOpportunities": true
 ```
@@ -86,7 +86,7 @@ It is often straightforward to use Random mode for the more general features suc
 
 ### Controlled mode
 
-{% code title="./packages/openactive-integration-tests/config/test.json \(extract\)" %}
+{% code title="./packages/openactive-integration-tests/config/default.json \(extract\)" %}
 ```javascript
   "useRandomOpportunities": false
 ```
@@ -108,7 +108,7 @@ If your booking system only supports a single seller, only the “`primary`” s
 
 See the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#sellers) for more information.
 
-{% code title="./packages/openactive-integration-tests/config/test.json \(extract\)" %}
+{% code title="./packages/openactive-integration-tests/config/default.json \(extract\)" %}
 ```javascript
   "sellers": {
     "primary": {
