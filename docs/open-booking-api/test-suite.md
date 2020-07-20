@@ -155,7 +155,29 @@ In addition to the standard dataset site, the JSON-LD of the page must include t
 
 ## Step 8: Run the test suite
 
-### Run the Microservice
+### Option 1: Single console window
+
+With your booking system running, execute the following command in the root`openactive-test-suite` directory:
+
+```bash
+npm start
+```
+
+This will automatically start the microservice, run the integration tests, then kill the microservice. The output from the microservice and integration tests will be combined in the console.
+
+Individual features or tests can be run in isolation using the following commands, for example:
+
+```bash
+npm start --runInBand -- test/features/core/test-interface/
+```
+
+```bash
+npm start --runInBand -- test/features/core/test-interface/implemented/create-opportunity-test.js
+```
+
+### Option 2: Two separate console windows
+
+#### Start the Microservice
 
 With your booking system running, execute the following command in the `openactive-broker-microservice` directory:
 
@@ -165,12 +187,12 @@ npm start
 
 This will start to harvest the feeds from your running application.
 
-### Run the Integration Tests
+#### Run the Integration Tests
 
 With both your booking system and `openactive-broker-microservice` running, execute the following command in the `openactive-integration-tests` directory, to execute all configured tests:
 
 ```bash
-npm test
+npm start
 ```
 
 This will execute tests against your booking system, using the `openactive-broker-microservice` as an intermediary.
@@ -178,11 +200,11 @@ This will execute tests against your booking system, using the `openactive-broke
 Individual features or tests can be run in isolation using the following commands, for example:
 
 ```bash
-npm test --runInBand -- test/features/core/test-interface/
+npm start --runInBand -- test/features/core/test-interface/
 ```
 
 ```bash
-npm test --runInBand -- test/features/core/test-interface/implemented/create-opportunity-test.js 
+npm start --runInBand -- test/features/core/test-interface/implemented/create-opportunity-test.js 
 ```
 
 ## Reading the test results and debugging
@@ -200,9 +222,11 @@ A reference version of passing test results is also available for comparison, co
 
 ## Continuous Integration
 
-For continuous integration environments the harvester must be run in the background, using the `"waitForHarvestCompletion": true` configuration option, before the test suite is run.
+For continuous integration environments run `npm start` in the root`openactive-test-suite` directory. This will automatically start the microservice, run the integration tests, then kill the microservice.
+
+This always overrides the configuration option `"waitForHarvestCompletion": true` , to ensure the harvester is up-to-date with the feeds before the tests begin.
 
 A [sample CI script](https://github.com/openactive/openactive-test-suite/blob/master/simple-ci.sh) is available, and more details can be found [here](https://github.com/openactive/openactive-test-suite#continuous-integration).
 
-You can [see CI in action](https://travis-ci.org/github/openactive/openactive-test-suite) within the test suite itself, which runs CI against the reference implementation.
+You can [see CI in action](https://github.com/openactive/openactive-test-suite/actions?query=workflow%3A%22Reference+Implementation%22) within the test suite itself, which [runs CI](https://github.com/openactive/openactive-test-suite/blob/master/.github/workflows/reference-implementation.yml) against the reference implementation.
 
