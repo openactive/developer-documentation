@@ -168,11 +168,11 @@ This will automatically start the microservice, run the integration tests, then 
 Individual features or tests can be run in isolation using the following commands, for example:
 
 ```bash
-npm start --runInBand -- test/features/core/test-interface/
+npm start -- --runInBand test/features/core/test-interface/
 ```
 
 ```bash
-npm start --runInBand -- test/features/core/test-interface/implemented/create-opportunity-test.js
+npm start -- --runInBand test/features/core/test-interface/implemented/create-opportunity-test.js
 ```
 
 ### Option 2: Two separate console windows
@@ -200,11 +200,11 @@ This will execute tests against your booking system, using the `openactive-broke
 Individual features or tests can be run in isolation using the following commands, for example:
 
 ```bash
-npm start --runInBand -- test/features/core/test-interface/
+npm start -- --runInBand test/features/core/test-interface/
 ```
 
 ```bash
-npm start --runInBand -- test/features/core/test-interface/implemented/create-opportunity-test.js 
+npm start -- --runInBand test/features/core/test-interface/implemented/create-opportunity-test.js 
 ```
 
 ## Reading the test results and debugging
