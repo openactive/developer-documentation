@@ -34,7 +34,7 @@ To minimise any uplift work required to conform to the formal specification when
 
 The Dataset Site Template is very easy to use and quick to apply - it's essentially a single mustache template and associated JSON structure. It is designed to work with minimal effort with an extremely [wide range of platforms and languages](https://mustache.github.io/).
 
-The[ dataset site template repository](https://github.com/openactive/dataset-site-template) contains a [mustache template](https://www.openactive.io/dataset-site-template/datasetsite.mustache) for creating an OpenActive dataset site.
+The[ dataset site template repository](https://github.com/openactive/dataset-site-template) contains a [mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) for creating an OpenActive dataset site.
 
 ### .NET, PHP and Ruby Libraries
 
@@ -59,7 +59,7 @@ Steps to render the template:
 2. Find a [mustache library](https://mustache.github.io/) for your platform or language.
 3. Write code to do the following:
    * Stringify the input JSON, and place the contents of the string within the "json" property at the root of the JSON itself \(i.e. serialised JSON embedded in the original deserialised object\).
-   * Use the resulting JSON with the [mustache template](https://www.openactive.io/dataset-site-template/datasetsite.mustache) to render the dataset site.
+   * Use the resulting JSON with the [mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) to render the dataset site.
    * Keep in mind that OpenActive will be providing updates to the mustache template in the future, so it is best to write code that anticipates this.
 
 #### JavaScript Prototype
