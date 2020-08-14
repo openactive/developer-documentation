@@ -18,9 +18,9 @@
 
 ## Using data
 
-* [Using Open Active Data](using-data/landing-page.md)
+* [Using Open Active data](using-data/landing-page.md)
 * [Primer / Introduction](using-data/primer-introduction.md)
-* [Get the data](using-data/get-the-data.md)
+* [\[Get the data\]](using-data/get-the-data.md)
 * [Technical Requirements](using-data/technical-requirements.md)
 * [Synchronising data \(tutorial\)](using-data/harvesting-opportunity-data.md)
 * [Resources](using-data/resources.md)
