@@ -1,5 +1,7 @@
 # Implementing booking
 
+
+
 {% hint style="warning" %}
 Implementations of the Open Booking API are currently being developed through collaboration within the OpenActive technical community. This is especially important so that the current development work on the [OpenActive Test Suite](test-suite.md) can take into account feedback from real implementations. Please see the [\#openactive-test-suite slack channel for more information](https://slack.openactive.io/).
 
