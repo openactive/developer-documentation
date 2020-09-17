@@ -23,6 +23,12 @@ cd openactive-test-suite
 npm install
 ```
 
+You can check that the test suite works in your local environment by running it against the hosted [OpenActive Reference Implementation](https://github.com/openactive/OpenActive.Server.NET/), simply by using the default configuration:
+
+```bash
+npm start
+```
+
 ## Step 2: Configure features
 
 The list of Open Booking API features supported by the test suite can be found in the [Test Suite Feature Coverage](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/README.md) page.
