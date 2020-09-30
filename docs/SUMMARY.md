@@ -88,7 +88,6 @@
   * [ShortAnswerFormFieldSpecification](data-model/types/shortanswerformfieldspecification.md)
   * [Showers](data-model/types/showers.md)
   * [Slot](data-model/types/slot.md)
-  * [SportsActivityLocation](data-model/types/sportsactivitylocation.md)
   * [TaxChargeSpecification](data-model/types/taxchargespecification.md)
   * [TermsOfUse](data-model/types/termsofuse.md)
   * [Terms](data-model/types/terms.md)
