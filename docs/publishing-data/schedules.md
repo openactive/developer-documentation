@@ -24,7 +24,7 @@ This constraint is necessary to prevent recurrence rules from creating a high vo
 
 ### Using templates
 
-When such `ScheduledSession`s are included, the `Schedule` **must** also include an `idTemplate`, such as the below, which matches the pattern of the `@id` of the `ScheduledSession`s \(noting the `startDate` placeholder **must** use a string format of `YYYY-MM-DDThh-mm-ssZ` \(e.g. `1997-07-16T19-20-00Z`\):
+When such `ScheduledSession`s are included, the `Schedule` **must** also include an `idTemplate`, such as the below, which matches the pattern of the `@id` of the `ScheduledSession`s \(noting the `startDate` placeholder **must** use a string format of `YYYY-MM-DDThh:mm:ssZ` \(e.g. `1997-07-16T19:20:00Z`\):
 
 ```javascript
 "idTemplate": "https://api.example.org/session-series/123/{startDate}"
@@ -42,7 +42,7 @@ In order to process a [`Schedule`](../data-model/types/schedule.md) together wit
 
 1. Generate all occurrences from a `Schedule` in the future, taking into account the `exceptDate` property.
    * Take the `scheduledEventType`, property and use it for the `@type` property of each occurrence.
-   * Render the generated `startDate` and `endDate` for each occurrence to UTC using a string format of `YYYY-MM-DDThh-mm-ssZ` \(e.g. `1997-07-16T19-20-00Z`\) for placeholder replacement.
+   * Render the generated `startDate` and `endDate` for each occurrence to UTC using a string format of `YYYY-MM-DDThh:mm:ssZ` \(e.g. `1997-07-16T19:20:00Z`\) for placeholder replacement.
    * Take the `idTemplate` property \(if provided\) and substitute the `startDate` placeholder with the calculated string value of `startDate` \(and do the same with `endDate`\). Use the resulting string as the value of the `@id` property for the occurrence.
    * Take the `urlTemplate` property \(if provided\) and substitute the `startDate` placeholder with the calculated string value of `startDate` \(and do the same with `endDate`\). Use the resulting string as the value of the `url` property for the occurrence.
 2. To account for any changes in the `Schedule` since the last time it was updated, store the generated occurrences as follows:
@@ -93,7 +93,7 @@ Extract from `ScheduledSession` feed:
   "data": {
     "@context": "https://openactive.io/",
     "@type": "ScheduledSession",
-    "@id": "https://api.example.org/session-series/1402CBP20150217/2018-03-15T10-30-00Z",
+    "@id": "https://api.example.org/session-series/1402CBP20150217/2018-03-15T10:30:00Z",
     "identifier": "C5EE1E55-2DE6-44F7-A865-42F268A82C63",
     "superEvent": "https://example.com/api/session-series/1402CBP20150217",
     "startDate": "2018-03-15T10:30:00Z",
@@ -102,7 +102,7 @@ Extract from `ScheduledSession` feed:
     "eventStatus": "https://schema.org/EventScheduled",
     "maximumAttendeeCapacity": 10,
     "remainingAttendeeCapacity": 10,
-    "url": "https://example.org/session-series/1402CBP20150217/2018-03-15T10-30-00Z"
+    "url": "https://example.org/session-series/1402CBP20150217/2018-03-15T10:30:00Z"
   }
 },
 {
@@ -113,7 +113,7 @@ Extract from `ScheduledSession` feed:
   "data": {
     "@context": "https://openactive.io/",
     "@type": "ScheduledSession",
-    "@id": "https://api.example.org/session-series/1402CBP20150217/2018-03-22T08-30-00Z",
+    "@id": "https://api.example.org/session-series/1402CBP20150217/2018-03-22T08:30:00Z",
     "identifier": "C5EE1E55-2DE6-44F7-A865-42F268A82C64",
     "superEvent": "https://example.com/api/session-series/1402CBP20150217",
     "startDate": "2018-03-22T08:30:00Z",
@@ -122,7 +122,7 @@ Extract from `ScheduledSession` feed:
     "eventStatus": "https://schema.org/EventScheduled",
     "maximumAttendeeCapacity": 10,
     "remainingAttendeeCapacity": 3,
-    "url": "https://example.org/session-series/1402CBP20150217/2018-03-22T08-30-00Z"
+    "url": "https://example.org/session-series/1402CBP20150217/2018-03-22T08:30:00Z"
   }
 }
 ```
