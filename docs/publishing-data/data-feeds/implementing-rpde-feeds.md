@@ -127,54 +127,59 @@ We highly recommend using the [OpenActive PHP Models Library](https://packagist.
 
 The specification requires that no null or empty strings are present in the OpenActive feed. To achieve this, define the RPDE response structure as nested arrays, and recursively unset empty properties before using [json\_encode](http://php.net/manual/en/function.json-encode.php) to generate the response.
 
-Run the example below [here](https://www.tehplayground.com/bQZT9xjRC3ToXbPc) to see the result.
+Run the example below [here](https://www.tehplayground.com/yq8X04VLEF9ypc8Y) to see the result.
 
 ```php
 <?php
 
-$testResponseStructure = array(
-    "@context"=>"https://openactive.io/",
-    "@id"=>"https://example.com/api/sessions/1402CBP20150217",
-    "identifier"=>"1402CBP20150217",
-    "@type"=>"SessionSeries",
-    "organizer"=>array(
-        "@type"=>"Organization",
-        "name"=>"Everyone Active",
-        "url"=>null,
-        "logo"=>array(
-            "type"=>"ImageObject",
-            "url"=>"",
-        ),
-        "email"=>null,
-        "telephone"=> "01455 890508",
-        "sameAs"=>array(
+$testResponseStructure = [
+    "@context" => "https://openactive.io/",
+    "@id" => "https://example.com/api/sessions/1402CBP20150217",
+    "identifier" => "1402CBP20150217",
+    "@type" => "SessionSeries",
+    "organizer" => [
+        "@type" => "Organization",
+        "name" => "Everyone Active",
+        "url" => null,
+        "logo" => [
+            "type" => "ImageObject",
+            "url" => "",
+        ],
+        "email" => null,
+        "telephone" => "01455 890508",
+        "sameAs" => [
             null,
             ""
-        ),
-    ),
-);
+        ],
+    ],
+];
 
-print json_encode_without_null_or_empty($testResponseStructure);
+echo json_encode_without_null_or_empty($testResponseStructure);
 
 function json_encode_without_null_or_empty($nestedarr) {
-    array_unset_recursive($nestedarr);
-    return json_encode($nestedarr);
+    $nestedarr = array_filter_recursive($nestedarr);
+    return json_encode($nestedarr, JSON_PRETTY_PRINT);
 }
 
-function array_unset_recursive(&$array) {
-    foreach ($array as $key => &$value) {
+function array_filter_recursive($array) {
+    $clean = [];
+    foreach ($array as $key => $value) {
         // First clean the array, in case it ends up empty
         if (is_array($value)) {
-            array_unset_recursive($value, $remove);
+            $value = array_filter_recursive($value);
             // Remove arrays containing only a "type" property
-            if (count($value) == 1 && array_key_exists("type",$value))
-                $value = null;
+            if (count($value) === 1 && isset($value["type"])) {
+                continue;
+            }
         }
 
-        // Remove null values, empty strings, and empty lists
-        if ($value !== false && ($value === null || $value === "" || empty($value))) 
-            unset($array[$key]);
+        // ignore null values, empty strings, and empty lists
+        if ($value === null || $value === "" || $value === []) {
+            continue;
+        }
+        $clean[$key] = $value;
     }
+    return $clean;
 }
 ```
 
