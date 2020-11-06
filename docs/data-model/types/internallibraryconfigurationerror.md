@@ -1,8 +1,11 @@
 ---
-description: This page describes the OpenBookingError type.
+description: This page describes the InternalLibraryConfigurationError type.
 ---
 
-# OpenBookingError
+# InternalLibraryConfigurationError
+
+## **Error Use Case**
+An exception has been thrown due to the misconfiguration of an OpenActive SDK library or component.
 
 
 
@@ -25,7 +28,7 @@ description: This page describes the OpenBookingError type.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        Must always be present and set to <code>"@type": "OpenBookingError"</code>
+        Must always be present and set to <code>"@type": "InternalLibraryConfigurationError"</code>
       </td>
     </tr>
   </tbody>
@@ -67,7 +70,7 @@ description: This page describes the OpenBookingError type.
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.</p><p></br><b>Example</b></p><p><code>"name": "No customer details supplied"</code></p>
+        <p>A short, human-readable summary of the problem type. It should not change from occurrence to occurrence of the problem, except for purposes of localization.</p><p></br><b>Example</b></p><p><code>"name": "An exception has been thrown due to the misconfiguration of an OpenActive SDK library or component."</code></p>
       </td>
     </tr>
   </tbody>
@@ -100,7 +103,7 @@ description: This page describes the OpenBookingError type.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>An integer representing the HTTP status code.</p>
+        Must always be present and set to <code>"statusCode": 500</code>
       </td>
     </tr>
   </tbody>
