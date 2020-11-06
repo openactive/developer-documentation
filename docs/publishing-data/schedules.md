@@ -42,7 +42,27 @@ In order to process a [`Schedule`](../data-model/types/schedule.md) together wit
 
 1. Generate all occurrences from a `Schedule` in the future, taking into account the `exceptDate` property.
    * Take the `scheduledEventType`, property and use it for the `@type` property of each occurrence.
-   * Render the generated `startDate` and `endDate` for each occurrence to UTC using a string format of `YYYY-MM-DDThh:mm:ssZ` \(e.g. `1997-07-16T19:20:00Z`\) for placeholder replacement.
+   * Use an [RRULE](https://icalendar.org/iCalendar-RFC-5545/3-8-5-3-recurrence-rule.html) library to calculate the `startDate` of the occurrences based on the contents of the `Schedule`. `DTSTART` must be determined by using the `startDate`, `startTime`, and `scheduleTimezone` of the `Schedule` together, for example:
+   * ```text
+     {
+       "@type": "Schedule",
+       "startDate": "1997-09-02",
+       "startTime": "09:00",
+       "endTime": "10:00",
+       "duration": "PT1H",
+       "scheduleTimezone": "America/New_York",
+       "repeatFrequency": "P1D",
+       "repeatCount": 10
+     }
+     ```
+
+     ```text
+     DTSTART;TZID=America/New_York:19970902T090000
+     RRULE:FREQ=DAILY;COUNT=10
+     ```
+   * For the avoidance of doubt: the `startDate` and `startTime` of the `Schedule` are in "local time" based on the `scheduleTimezone`.
+   * Use the `duration` of the `Schedule` to calculate the `endDate` of each occurrence.
+   * Render the calculated `startDate` and `endDate` for each occurrence to UTC using a string format of `YYYY-MM-DDThh:mm:ssZ` \(e.g. `1997-07-16T19:20:00Z`\) for placeholder replacement.
    * Take the `idTemplate` property \(if provided\) and substitute the `startDate` placeholder with the calculated string value of `startDate` \(and do the same with `endDate`\). Use the resulting string as the value of the `@id` property for the occurrence.
    * Take the `urlTemplate` property \(if provided\) and substitute the `startDate` placeholder with the calculated string value of `startDate` \(and do the same with `endDate`\). Use the resulting string as the value of the `url` property for the occurrence.
 2. To account for any changes in the `Schedule` since the last time it was updated, store the generated occurrences as follows:
