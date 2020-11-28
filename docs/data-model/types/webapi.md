@@ -126,6 +126,15 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left"><b>authenticationAuthority</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The location of the OpenID Provider or other relevant authentication authority that may be used to access the API.</p><p></br><b>Example</b></p><p><code>"authenticationAuthority": "https://auth.bookingsystem.com"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>description</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
