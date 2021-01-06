@@ -92,6 +92,26 @@ We recommend using [SKOS.js](https://www.npmjs.com/package/@openactive/skos) to 
 
 Maintaining the hierarchy and providing a typeahead search is important as with over 600 activities, and with many activities being more general terms, using an ordinary dropdown box becomes unwieldy for the user.
 
+### Rendering a hierarchy from the JSON-LD definition of the OpenActive Activity List
+
+Although the use of [SKOS.js](https://www.npmjs.com/package/@openactive/skos) is recommended when reading the JSON-LD definition of the OpenActive Activity List in JavaScript, for other languages the JSON-LD may also be parsed directly. 
+
+The [JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) of the OpenActive Activity List includes the following key properties:
+
+| Property | Description |
+| :--- | :--- |
+| `id` | The unique ID of the Concept, which should be stored and used when referencing the Concept.  |
+| `prefLabel` | The primary display label for the Concept, in the English language. |
+| `altLabel` | The alternative display labels of the Concept, in the English language. When displaying the Concept to the user it is recommended that the array of `altLabel` be appended to the `prefLabel`, using the separator `" / "`. |
+| `topConceptOf` | Indicates that the Concept is at the top level of the hierarchy, when the value of this property is equal to `"https://openactive.io/activity-list"`. |
+| `broader` | An array of parent Concept IDs. Note this is a [polyhierarchical](https://en.wiktionary.org/wiki/polyhierarchy) list, and the same Concept may exist under multiple parents. |
+| `narrower` | An array of child Concept IDs. |
+
+To render a hierarchy:
+
+1. Filter the data to return only Concepts with `topConceptOf` set to `"https://openactive.io/activity-list"`, to produce an initial list of top-level Concepts.
+2. Recursively, for each Concept, lookup the `narrower` \(child\) Concept IDs.
+
 ### Activity List dropdown implementation example
 
 Below is a copy-and-pastable example of a searchable hierarchical dropdown that can be used within your booking system to allow the user to select an activity from the OpenActive Activity List.
