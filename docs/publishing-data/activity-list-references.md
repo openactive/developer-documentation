@@ -102,7 +102,7 @@ The [JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonl
 | :--- | :--- | :--- |
 | `id` | The unique ID of the Concept, which should be stored and used when referencing the Concept. | Yes |
 | `prefLabel` | The primary display label for the Concept, in the English language. | Yes |
-| `altLabel` | The alternative display labels of the Concept, in the English language. When displaying the Concept to the user it is recommended that the array of `altLabel` be appended to the `prefLabel`, using the separator `" / "`. | No |
+| `altLabel` | The alternative display labels of the Concept, in the English language. When displaying the Concept to the user it is recommended that the array of `altLabel` be appended to the `prefLabel`, using the separator `" / "`. This logic does not apply to the `prefLabel` included in the open data feed. | No |
 | `topConceptOf` | Indicates that the Concept is at the top level of the hierarchy, when the value of this property is equal to `"https://openactive.io/activity-list"`. | No |
 | `broader` | An array of parent Concept IDs. Note this is a [polyhierarchical](https://en.wiktionary.org/wiki/polyhierarchy) list, and the same Concept may exist under multiple parents. | No |
 | `narrower` | An array of child Concept IDs. | No |
