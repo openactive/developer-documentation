@@ -142,27 +142,31 @@ The `specialOpeningHoursSpecification` property of the [`Place`](../data-model/t
 
 Use `specialOpeningHoursSpecification` combined with `validFrom` and `validThrough` properties to specify opening hours for specific public holidays. This example shows a business closed on Christmas Day.
 
-```text
-"specialOpeningHoursSpecification": {
-  "@type": "OpeningHoursSpecification",
-  "opens": "00:00",
-  "closes": "00:00",
-  "validFrom": "2015-12-25",
-  "validThrough": "2015-12-25"
-}
+```javascript
+"specialOpeningHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "opens": "00:00",
+    "closes": "00:00",
+    "validFrom": "2015-12-25",
+    "validThrough": "2015-12-25"
+  }
+]
 ```
 
 ### COVID-19 Lockdown
 
 Use `specialOpeningHoursSpecification` combined with `validFrom` and `validThrough` properties to specify closure during specific dates.  This example shows a business closed completely for all of January:
 
-```text
-"specialOpeningHoursSpecification": {
-  "@type": "OpeningHoursSpecification",
-  "opens": "00:00",
-  "closes": "00:00",
-  "validFrom": "2021-01-01",
-  "validThrough": "2021-01-31"
-}
+```javascript
+"specialOpeningHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "opens": "00:00",
+    "closes": "00:00",
+    "validFrom": "2021-01-01",
+    "validThrough": "2021-01-31"
+  }
+]
 ```
 
