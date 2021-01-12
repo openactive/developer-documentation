@@ -106,13 +106,17 @@ This example shows a business open all day Saturday and closed all day Sunday:
 "openingHoursSpecification": [
   {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "https://schema.org/Saturday",
+    "dayOfWeek": [
+      "https://schema.org/Saturday"
+    ],
     "opens": "00:00",
     "closes": "23:59"
   },
   {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "https://schema.org/Sunday",
+    "dayOfWeek": [
+      "https://schema.org/Sunday"
+    ],
     "opens": "00:00",
     "closes": "00:00"
   }
@@ -127,7 +131,9 @@ For hours past midnight, define opening and closing hours using a single `Openin
 "specialOpeningHoursSpecification": [
   {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "https://schema.org/Saturday",
+    "dayOfWeek": [
+      "https://schema.org/Saturday"
+    ],
     "opens": "18:00",
     "closes": "03:00"
   }
