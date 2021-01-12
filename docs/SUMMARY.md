@@ -16,6 +16,7 @@
 * [Dataset Sites](publishing-data/dataset-sites.md)
 * [Virtual Events](publishing-data/virtual-events.md)
 * [On-Demand Events](publishing-data/on-demand-events.md)
+* [Opening Hours](publishing-data/opening-hours.md)
 
 ## Using data
 
