@@ -35,7 +35,7 @@ Excluding the `validFrom` and `validThrough` properties signifies that the hours
 
 ### Public holidays
 
-The `dayOfWeek` value of `https://schema.org/PublicHolidays` is defined as a placeholder for all official public holidays in the `location` in which the `Place` is located. It can be used to indicate opening hours on public holidays, overriding general opening hours for the day of the week on which a public holiday occurs.
+The `dayOfWeek` value of `https://schema.org/PublicHolidays` is defined as a placeholder for all official public holidays in the `location` in which the `Place` is located. It can be used to indicate opening hours on public holidays, overriding general opening hours for the day of the week on which a public holiday occurs:
 
 ```javascript
 "openingHoursSpecification": [
@@ -127,7 +127,7 @@ This example shows a business open all day Saturday and closed all day Sunday:
 
 ### Late night hours
 
-For hours past midnight, define opening and closing hours using a single `OpeningHoursSpecification` property. This example defines hours from Saturday at 6pm until Sunday at 3am.
+For hours past midnight, define opening and closing hours using a single `OpeningHoursSpecification` property. This example defines hours from Saturday at 6pm until Sunday at 3am:
 
 ```javascript
 "openingHoursSpecification": [
@@ -199,7 +199,7 @@ The `specialOpeningHoursSpecification` property of the [`Place`](../data-model/t
 
 ### Christmas and New Year
 
-Use `specialOpeningHoursSpecification` combined with `validFrom` and `validThrough` properties to specify opening hours for specific public holidays. This example shows a business closed on Christmas Day.
+Use `specialOpeningHoursSpecification` combined with `validFrom` and `validThrough` properties to specify opening hours for specific public holidays. This example shows a business closed on Christmas Day:
 
 ```javascript
 "specialOpeningHoursSpecification": [
