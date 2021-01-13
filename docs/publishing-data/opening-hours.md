@@ -1,5 +1,11 @@
 # Opening Hours
 
+Please also refer to the [reference documentation for the `OpeningHoursSpecification` type](../data-model/types/openinghoursspecification.md).
+
+{% hint style="warning" %}
+Implementation of the [proposal for OpeningHoursSpecification](https://github.com/openactive/modelling-opportunity-data/issues/258) within the tooling has been accelerated in response to the COVID-19 pandemic. The proposal follows [Google's documented usage](https://developers.google.com/search/docs/data-types/local-business#business_hours), and so is unlikely to change significantly, however we welcome your contribution to the [proposal](https://github.com/openactive/modelling-opportunity-data/issues/258) with any thoughts and feedback from your implementation.
+{% endhint %}
+
 ## Standard opening hours
 
 The standard opening hours of a [`Place`](../data-model/types/place.md#recommended-properties) may be described using the `openingHoursSpecification` property as documented below. Note this property **must not** be used to define exceptional hours, such as specific public holidays, closures due to bad weather, or a pandemic-related lockdown.
@@ -106,17 +112,13 @@ This example shows a business open all day Saturday and closed all day Sunday:
 "openingHoursSpecification": [
   {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "https://schema.org/Saturday"
-    ],
+    "dayOfWeek": "https://schema.org/Saturday",
     "opens": "00:00",
     "closes": "23:59"
   },
   {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "https://schema.org/Sunday"
-    ],
+    "dayOfWeek": "https://schema.org/Sunday",
     "opens": "00:00",
     "closes": "00:00"
   }
@@ -128,14 +130,65 @@ This example shows a business open all day Saturday and closed all day Sunday:
 For hours past midnight, define opening and closing hours using a single `OpeningHoursSpecification` property. This example defines hours from Saturday at 6pm until Sunday at 3am.
 
 ```javascript
-"specialOpeningHoursSpecification": [
+"openingHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": "https://schema.org/Saturday",
+    "opens": "18:00",
+    "closes": "03:00"
+  }
+]
+```
+
+### Multiple opening hours
+
+For days with multiple hours, these must be provided as separate instances of `OpeningHoursSpecification`.
+
+This example defines the following hours:
+
+![](../.gitbook/assets/image.png)
+
+```javascript
+"openingHoursSpecification": [
   {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": [
-      "https://schema.org/Saturday"
+      "https://schema.org/Monday",
+      "https://schema.org/Tuesday",
+      "https://schema.org/Wednesday",
+      "https://schema.org/Thursday"
     ],
-    "opens": "18:00",
-    "closes": "03:00"
+    "opens": "06:00",
+    "closes": "13:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "https://schema.org/Monday",
+      "https://schema.org/Tuesday",
+      "https://schema.org/Wednesday",
+      "https://schema.org/Thursday"
+    ],
+    "opens": "16:00",
+    "closes": "20:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "https://schema.org/Friday"
+    ],
+    "opens": "06:00",
+    "closes": "12:00"
+  },
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "https://schema.org/Saturday",
+      "https://schema.org/Sunday",
+      "https://schema.org/PublicHolidays"
+    ],
+    "opens": "08:00",
+    "closes": "12:00"
   }
 ]
 ```
@@ -162,7 +215,7 @@ Use `specialOpeningHoursSpecification` combined with `validFrom` and `validThrou
 
 ### COVID-19 Lockdown
 
-Use `specialOpeningHoursSpecification` combined with `validFrom` and `validThrough` properties to specify closure during specific dates.  This example shows a business closed completely for all of January:
+Use `specialOpeningHoursSpecification` combined with `validFrom` and `validThrough` properties to specify closure during specific dates. This example shows a business closed completely for all of January:
 
 ```javascript
 "specialOpeningHoursSpecification": [
