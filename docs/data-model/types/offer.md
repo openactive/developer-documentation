@@ -70,7 +70,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://developer.openactive.io/data-model/types/quantitativevalue"><code>QuantitativeValue</code></a>
       </td>
       <td style="text-align:left">
-        <p>Indicates that an Offer is only applicable to a specific age range. Specified as a QuantitativeValue with minValue and maxValue properties. This must be displayed prominently to the user when selecting an <code>Offer</code> or before booking.</p><p></br><b>Example</b></p><p><code>"ageRestriction": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;QuantitativeValue&quot;,<br/>&nbsp;&nbsp;&quot;minValue&quot;:&nbsp;15,<br/>&nbsp;&nbsp;&quot;maxValue&quot;:&nbsp;60<br/>}</code></p>
+        <p>Indicates that an Offer can only be purchased by participants within a specific age range. Specified as a QuantitativeValue with minValue and maxValue properties. This must be displayed prominently to the user when selecting an <code>Offer</code> or before booking.</p><p></br><b>Example</b></p><p><code>"ageRestriction": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;QuantitativeValue&quot;,<br/>&nbsp;&nbsp;&quot;minValue&quot;:&nbsp;15,<br/>&nbsp;&nbsp;&quot;maxValue&quot;:&nbsp;60<br/>}</code></p>
       </td>
     </tr>
     <tr>
