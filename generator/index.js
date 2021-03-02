@@ -350,7 +350,7 @@ function createDescriptionWithExample(field) {
   if (field.requiredContent) {
     return "Must always be present and set to " + renderCode(field.requiredContent, field.fieldName, field.requiredType);
   } else {
-    var deprecationNotice = field.deprecated ? [`**DEPRECATED**: ${field.deprecationGuidance}`] : [];
+    var deprecationNotice = field.deprecated ? [`**DEPRECATED**: ${field.deprecationGuidance}`,''] : [];
     return [].concat(deprecationNotice, field.description).map(text => md.render(text).replace(/\r?\n\r?/g, "")).join("") 
       + (field.example ? "<p></br><b>Example</b></p><p>" + renderCode(field.example, field.fieldName, field.requiredType) + "</p>" : "");
   }
