@@ -93,6 +93,7 @@ function generateTypeDocumentation(dataModelDirectory, extensions) {
 function augmentWithExtension(extModelGraph, models, extensionUrl, extensionPrefix, namespaces) {
   extModelGraph.forEach(function(node) {
     if (node['@type'] === 'Property') {
+      var deprecationNotice = node.supersededBy ? `Please use \`${getPropNameFromFQP(node.supersededBy)}\` instead.` : '';
       var field = {
         "fieldName": node['@id'],
         "alternativeTypes": node.rangeIncludes.map(type => expandPrefix(type, node['@container'] == '@list', namespaces)),
@@ -100,7 +101,9 @@ function augmentWithExtension(extModelGraph, models, extensionUrl, extensionPref
           (node.discussionUrl ? renderGitHubIssueLink(node.discussionUrl) + '\n\n' : '') + node.comment
         ],
         "example": node.example,
-        "extensionPrefix": extensionPrefix
+        "extensionPrefix": extensionPrefix,
+        "deprecated": !!deprecationNotice,
+        "deprecationGuidance": deprecationNotice
       };
       node.domainIncludes.forEach(function(prop) {
         var model = models[getPropNameFromFQP(prop)];
@@ -347,7 +350,8 @@ function createDescriptionWithExample(field) {
   if (field.requiredContent) {
     return "Must always be present and set to " + renderCode(field.requiredContent, field.fieldName, field.requiredType);
   } else {
-    return field.description.map(text => md.render(text).replace(/\r?\n\r?/g, "")).join("") 
+    var deprecationNotice = field.deprecated ? [`[**DEPRECATED**: ${field.deprecationGuidance}]`] : [];
+    return [].concat(deprecationNotice, field.description).map(text => md.render(text).replace(/\r?\n\r?/g, "")).join("") 
       + (field.example ? "<p></br><b>Example</b></p><p>" + renderCode(field.example, field.fieldName, field.requiredType) + "</p>" : "");
   }
 }
