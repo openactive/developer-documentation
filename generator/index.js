@@ -93,7 +93,6 @@ function generateTypeDocumentation(dataModelDirectory, extensions) {
 function augmentWithExtension(extModelGraph, models, extensionUrl, extensionPrefix, namespaces) {
   extModelGraph.forEach(function(node) {
     if (node['@type'] === 'Property') {
-      var deprecationNotice = node.supersededBy ? `Please use \`${getPropNameFromFQP(node.supersededBy)}\` instead.` : '';
       var field = {
         "fieldName": node['@id'],
         "alternativeTypes": node.rangeIncludes.map(type => expandPrefix(type, node['@container'] == '@list', namespaces)),
@@ -102,7 +101,7 @@ function augmentWithExtension(extModelGraph, models, extensionUrl, extensionPref
         ],
         "example": node.example,
         "extensionPrefix": extensionPrefix,
-        "deprecationGuidance": deprecationNotice
+        "deprecationGuidance": node.supersededBy ? `Please use \`${getPropNameFromFQP(node.supersededBy)}\` instead.` : ''
       };
       node.domainIncludes.forEach(function(prop) {
         var model = models[getPropNameFromFQP(prop)];
