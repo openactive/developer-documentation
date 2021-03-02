@@ -61,7 +61,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://developer.openactive.io/data-model/types/quantitativevalue"><code>QuantitativeValue</code></a>
       </td>
       <td style="text-align:left">
-        <p>[<strong>DEPRECATED</strong>: Use <code>ageRestriction</code> instead of <code>ageRange</code> within the <code>Offer</code> for cases where the <code>Offer</code> is age restricted.]</p><p>DEPRECATED: Please use <code>oa:ageRestriction</code> instead when describing an <code>Offer</code>.</p><p>Indicates that an Offer is only applicable to a specific age range.</p>
+        <p><strong>DEPRECATED</strong>: Use <code>ageRestriction</code> instead of <code>ageRange</code> within the <code>Offer</code> for cases where the <code>Offer</code> is age restricted.</p><p>DEPRECATED: Please use <code>oa:ageRestriction</code> instead when describing an <code>Offer</code>.</p><p>Indicates that an Offer is only applicable to a specific age range.</p>
       </td>
     </tr>
     <tr>
