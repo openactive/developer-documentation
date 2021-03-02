@@ -38,6 +38,15 @@ This type is derived from [https://schema.org/OrderItem](https://schema.org/Orde
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>accessChannel</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/virtuallocation"><code>VirtualLocation</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Channel through which the user can participate in the Opportunity. Not applicable for an OrderQuote.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>accessCode</b></td>
       <td style="text-align:left">
         Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a>
@@ -56,21 +65,12 @@ This type is derived from [https://schema.org/OrderItem](https://schema.org/Orde
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>allowCustomerCancellationFullRefund</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Whether the event can be cancelled.</p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>attendee</b></td>
       <td style="text-align:left">
         <a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
       <td style="text-align:left">
-        
+        <p>The person attending the Opportunity related to the OrderItem.</p>
       </td>
     </tr>
     <tr>
@@ -79,7 +79,7 @@ This type is derived from [https://schema.org/OrderItem](https://schema.org/Orde
         Array of <a href="https://schema.org/Property"><code>Property</code></a>
       </td>
       <td style="text-align:left">
-        
+        <p>The properties of <code>schema:Person</code> that are required to describe an <code>attendee</code> for this <code>OrderItem</code>.</p>
       </td>
     </tr>
     <tr>
@@ -88,7 +88,7 @@ This type is derived from [https://schema.org/OrderItem](https://schema.org/Orde
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A message set by the Seller in the event of Opportunity cancellation, only applicable for an  Order and where the OrderItem has  orderItemStatus set to  <a href="https://openactive.io/SellerCancelled">https://openactive.io/SellerCancelled</a></p>
+        <p>A message set by the Seller in the event of Opportunity cancellation, only applicable for an  <code>Order</code> and where the <code>OrderItem</code> has <code>orderItemStatus</code> set to <code>https://openactive.io/SellerCancelled</code></p>
       </td>
     </tr>
     <tr>
@@ -97,7 +97,7 @@ This type is derived from [https://schema.org/OrderItem](https://schema.org/Orde
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A message set by the Seller to trigger a notification to the Customer, only applicable for an Order and where the OrderItem has  orderItemStatus set to  <a href="https://openactive.io/OrderItemConfirmed">https://openactive.io/OrderItemConfirmed</a> or  <a href="https://openactive.io/CustomerAttended">https://openactive.io/CustomerAttended</a></p>
+        <p>A message set by the Seller to trigger a notification to the Customer, only applicable for an <code>Order</code> and where the <code>OrderItem</code> has <code>orderItemStatus</code> set to  <code>https://openactive.io/OrderItemConfirmed</code> or <code>https://openactive.io/CustomerAttended</code></p>
       </td>
     </tr>
     <tr>

@@ -43,7 +43,7 @@ This type is derived from [https://schema.org/Course](https://schema.org/Course)
         <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
       <td style="text-align:left">
-        <p>The person or organization who have created the Course. An author might be an schema:Organization or a schema:Person.</p><p></br><b>Example</b></p><p><code>"author": {<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
+        <p>The person or organization who have created the Course. An author might be an schema:Organization or a schema:Person.</p><p></br><b>Example</b></p><p><code>"author": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
       </td>
     </tr>
     <tr>

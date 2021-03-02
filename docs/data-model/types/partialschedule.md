@@ -199,7 +199,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/197">Proposal #197</a></p><p>[DEPRECATED: This beta property is now deprecated, please use <code>schema:scheduleTimezone</code> instead.] The time zone used to generate occurrences, same as iCal TZID. E.g. 'Europe/London'.</p>
+        <p>[<strong>DEPRECATED</strong>: Please use <code>scheduleTimezone</code> instead.]</p><p><a href="https://github.com/openactive/modelling-opportunity-data/issues/197">Proposal #197</a></p><p>The time zone used to generate occurrences, same as iCal TZID. E.g. 'Europe/London'.</p>
       </td>
     </tr>
     <tr>
@@ -208,7 +208,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/197">Proposal #197</a></p><p>[DEPRECATED: This beta property is now deprecated, please use <code>schema:scheduleTimezone</code> instead.] The time zone used to generate occurrences, same as iCal TZID. E.g. 'Europe/London'.</p>
+        <p>[<strong>DEPRECATED</strong>: Please use <code>scheduleTimezone</code> instead.]</p><p><a href="https://github.com/openactive/modelling-opportunity-data/issues/197">Proposal #197</a></p><p>The time zone used to generate occurrences, same as iCal TZID. E.g. 'Europe/London'.</p>
       </td>
     </tr>
   </tbody>

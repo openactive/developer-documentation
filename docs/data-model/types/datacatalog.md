@@ -65,7 +65,7 @@ This type is derived from [https://schema.org/DataCatalog](https://schema.org/Da
         <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a>
       </td>
       <td style="text-align:left">
-        <p>The organization ultimately responsible for maintaining this <code>DataCatalog</code>.</p><p></br><b>Example</b></p><p><code>"publisher": {<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
+        <p>The organization ultimately responsible for maintaining this <code>DataCatalog</code>.</p><p></br><b>Example</b></p><p><code>"publisher": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
       </td>
     </tr>
   </tbody>
