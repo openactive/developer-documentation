@@ -76,10 +76,10 @@ This type is derived from [https://schema.org/Order](https://schema.org/Order), 
     <tr>
       <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
+        <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
+        <p>The Order UUID of the Order, OrderQuote or OrderProposal, which is required within the Orders feed.</p><p></br><b>Example</b></p><p><code>"identifier": "123e4567-e89b-12d3-a456-426614174000"</code></p>
       </td>
     </tr>
     <tr>

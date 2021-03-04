@@ -8,7 +8,7 @@ This type is derived from [https://schema.org/PropertyValue](https://schema.org/
 
 ## **Properties**
 
-### **Required properties**
+### **Optional properties**
     
 <table>
   <thead>
@@ -29,39 +29,6 @@ This type is derived from [https://schema.org/PropertyValue](https://schema.org/
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>name</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The name of this PropertyValue</p><p></br><b>Example</b></p><p><code>"name": "Vendor ID"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>value</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The actual value of this identifier</p><p></br><b>Example</b></p><p><code>"value": "SB1234"</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-### **Optional properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
       <td style="text-align:left"><b>description</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
@@ -71,12 +38,30 @@ This type is derived from [https://schema.org/PropertyValue](https://schema.org/
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The name of this PropertyValue</p><p></br><b>Example</b></p><p><code>"name": "Vendor ID"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>propertyID</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/URL"><code>URL</code></a><br/> - or - <br/><a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A commonly used identifier for the characteristic represented by the property</p><p></br><b>Example</b></p><p><code>"propertyID": "ActivePlaces"</code></p>
+        <p>A commonly used identifier for the characteristic represented by the property</p><p></br><b>Example</b></p><p><code>"propertyID": "https://example.com/photoconsent"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>value</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The actual value of this identifier</p><p></br><b>Example</b></p><p><code>"value": "SB1234"</code></p>
       </td>
     </tr>
   </tbody>

@@ -158,15 +158,6 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>scheduledEventType</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The type of event this schedule related to.</p><p></br><b>Example</b></p><p><code>"scheduledEventType": "Event"</code></p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>startDate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Date"><code>Date</code></a>
