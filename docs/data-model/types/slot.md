@@ -40,7 +40,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>facilityUse</b></td>
       <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/facilityuse"><code>FacilityUse</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/individualfacilityuse"><code>IndividualFacilityUse</code></a><br/> - or - <br/><a href="https://schema.org/URL"><code>URL</code></a>
+        <a href="https://developer.openactive.io/data-model/types/facilityuse"><code>FacilityUse</code></a>
       </td>
       <td style="text-align:left">
         <p><code>FacilityUse</code> or <code>IndividualFacilityUse</code> that has this <code>Slot</code>, either directly embedded or referenced by its <code>@id</code></p><p></br><b>Example</b></p><p><code>"facilityUse": "https://example.com/facility-use/1"</code></p>
