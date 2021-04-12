@@ -23,13 +23,47 @@ cd openactive-test-suite
 npm install
 ```
 
-You can check that the test suite works in your local environment by running it against the hosted [OpenActive Reference Implementation](https://github.com/openactive/OpenActive.Server.NET/), simply by using the default configuration:
+You can check that the test suite works in your local environment by running it against the hosted [OpenActive Reference Implementation](https://reference-implementation.openactive.io/), simply by using the default configuration:
 
 ```bash
-npm start
+npm start -- core
 ```
 
-## Step 2: Configure features
+Note that the above command only runs the "core" tests within the test suite, which should take around 60 seconds to complete.
+
+{% hint style="info" %}
+The hosted [OpenActive Reference Implementation](https://reference-implementation.openactive.io/) is running on a basic developer tier Azure instance with a burst quota, so if the application shuts down, simply wait 5 minutes and try again.
+
+The quota is sufficient for the most common use cases: running a small subset of tests or individual tests against the reference implementation.
+
+This quota is insufficient for running all tests in the test suite at once. If you are interested in viewing the results of all tests passing against the reference implementation, the results are published for both [random](https://openactive.io/openactive-test-suite/example-output/random/summary) and [controlled](https://openactive.io/openactive-test-suite/example-output/controlled/summary) mode.
+{% endhint %}
+
+## Step 2: Create a local configuration file
+
+Copy the file `./config/default.json` to `./config/dev.json` and configure it to point to the local development environment of your own booking system using the steps on the rest of this page.
+
+Set the environment variable `NODE_ENV` to `dev` to instruct the test suite to use `dev.json` file to override each of the values in `default.json`:
+
+{% tabs %}
+{% tab title="Bash" %}
+```bash
+export NODE_ENV=dev
+npm start -- core
+```
+{% endtab %}
+
+{% tab title="Windows Command Line" %}
+```
+set NODE_ENV=dev
+npm start -- core
+```
+{% endtab %}
+{% endtabs %}
+
+Adding other `./config/{NODE_ENV}.json` files allows you to override the default configuration. For more information see this [documentation](https://github.com/lorenwest/node-config/wiki/Environment-Variables#node_env).
+
+## Step 3: Configure features
 
 The list of Open Booking API features supported by the test suite can be found in the [Test Suite Feature Coverage](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/README.md) page.
 
@@ -37,14 +71,18 @@ For each optional feature, assess whether or not your implementation will includ
 
 Configure the test suite accordingly, as detailed in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#implementedfeatures), for example:
 
-{% code title="./packages/openactive-integration-tests/config/default.json \(extract\)" %}
+{% code title="./config/dev.json \(extract\)" %}
 ```javascript
- "implementedFeatures": {
+"integrationTests": {  
+  ...
+  "implementedFeatures": {
     "opportunity-feed": true,
     "dataset-site": true,
     "availability-check": true,
     ...
   }
+  ...
+}
 ```
 {% endcode %}
 
@@ -52,12 +90,14 @@ Configure the test suite accordingly, as detailed in the [reference documentatio
 Note that not all Open Booking API features are currently supported by the test suite. For a list of supported features, please see the [Test Suite Feature Coverage](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/README.md) page.
 {% endhint %}
 
-## Step 3: Configure Opportunity Types
+## Step 4: Configure Opportunity Types
 
 Set up the Opportunity Types that your booking system will support, as detailed in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#bookableopportunitytypesinscope). The test suite will only attempt to book opportunity types that are configured here, for example:
 
-{% code title="./packages/openactive-integration-tests/config/default.json \(extract\)" %}
+{% code title="./config/dev.json \(extract\)" %}
 ```javascript
+"integrationTests": {  
+  ...
   "bookableOpportunityTypesInScope": {
     "ScheduledSession": true,
     "FacilityUseSlot": false,
@@ -69,18 +109,24 @@ Set up the Opportunity Types that your booking system will support, as detailed 
     "Event": false,
     "OnDemandEvent": false
   },
+  ...
+}
 ```
 {% endcode %}
 
-## Step 4: Choose Controlled vs Random testing mode
+## Step 5: Choose Controlled vs Random testing mode
 
 Choose which testing strategy to use. You can always start with one and switch to the other later.
 
 ### Random mode
 
-{% code title="./packages/openactive-integration-tests/config/default.json \(extract\)" %}
+{% code title="./config/dev.json \(extract\)" %}
 ```javascript
+"integrationTests": {  
+  ...
   "useRandomOpportunities": true
+  ...
+}
 ```
 {% endcode %}
 
@@ -92,9 +138,13 @@ It is often straightforward to use Random mode for the more general features suc
 
 ### Controlled mode
 
-{% code title="./packages/openactive-integration-tests/config/default.json \(extract\)" %}
+{% code title="./config/dev.json \(extract\)" %}
 ```javascript
+"integrationTests": {  
+  ...
   "useRandomOpportunities": false
+  ...
+}
 ```
 {% endcode %}
 
@@ -106,7 +156,7 @@ Your implementation of the OpenActive Test Interface itself can be tested using 
 
 The `testDatasetIdentifier` setting is used in all calls in the test interface. It allows any test data that was created with this identifier to be cleared before a new test run begins.
 
-## Step 5: Configure Sellers and Booking Authentication
+## Step 6: Configure Sellers and Booking Authentication
 
 The test suite will making all bookings under a specific `primary` Seller provided in the configuration, using the authentication request headers provided for that Seller.
 
@@ -114,52 +164,67 @@ If your booking system only supports a single seller, only the “`primary`” s
 
 See the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#sellers) for more information.
 
-{% code title="./packages/openactive-integration-tests/config/default.json \(extract\)" %}
+{% code title="./config/dev.json \(extract\)" %}
 ```javascript
-  "sellers": {
-    "primary": {
-      "@type": "Organization",
-      "@id": "https://bookingsystemreferenceimplementation.azurewebsites.net/api/identifiers/sellers/0",
-      "requestHeaders": {
-        "X-OpenActive-Test-Client-Id": "test",
-        "X-OpenActive-Test-Seller-Id": "https://bookingsystemreferenceimplementation.azurewebsites.net/api/identifiers/sellers/0"
-      }
-    },
-    "secondary": {
-      "@type": "Person",
-      "@id": "https://bookingsystemreferenceimplementation.azurewebsites.net/api/identifiers/sellers/1"
+"sellers": {
+  "primary": {
+    "@type": "Organization",
+    "@id": "https://bookingsystemreferenceimplementation.azurewebsites.net/api/identifiers/sellers/0",
+    "requestHeaders": {
+      "X-OpenActive-Test-Client-Id": "test",
+      "X-OpenActive-Test-Seller-Id": "https://bookingsystemreferenceimplementation.azurewebsites.net/api/identifiers/sellers/0"
     }
+  },
+  "secondary": {
+    "@type": "Person",
+    "@id": "https://bookingsystemreferenceimplementation.azurewebsites.net/api/identifiers/sellers/1"
   }
+}
 ```
 {% endcode %}
 
-## Step 6: Configure Orders Feed Authentication
+## Step 7: Configure Orders Feed Authentication
 
 Configure the broker microservice with the authentication headers required for the Orders Feed.
 
 Note such authentication [must not be specific to any particular seller](https://openactive.io/open-booking-api/EditorsDraft/#authentication).
 
-{% code title="./packages/openactive-broker-microservice/config/default.json \(extract\)" %}
+{% code title="./config/dev.json \(extract\)" %}
 ```javascript
-  "ordersFeedRequestHeaders": {
-    "X-OpenActive-Test-Client-Id": "test"
+"broker": {
+  ...
+  "bookingPartners": {
+    "primary": {
+      "authentication": {
+        "initialAccessToken": null,
+        "ordersFeedRequestHeaders": {
+          "X-OpenActive-Test-Client-Id": "test"
+        }
+      }
+    }
   }
+  ...
+}
 ```
 {% endcode %}
 
-## Step 7: Configure Dataset Site
+## Step 8: Configure Dataset Site
 
 The `datasetSiteUrl` must be set to the local dataset site URL of your booking system. If you have not yet implemented a dataset site, details for creating it can be found [here](../publishing-data/dataset-sites.md).
 
 In addition to the standard dataset site, the JSON-LD of the page must include the `accessService` property, as specified in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-broker-microservice#datasetsiteurl). Note that the `endpointURL` within the `accessService` is most important, and must refer to your local Open Booking API [Base URI](https://openactive.io/open-booking-api/EditorsDraft/#dfn-base-uri).
 
-{% code title="./packages/openactive-broker-microservice/config/default.json \(extract\)" %}
+{% code title="./config/dev.json \(extract\)" %}
 ```javascript
-  "datasetSiteUrl": "https://bookingsystemreferenceimplementation.azurewebsites.net/openactive",
+"broker": {
+  ...
+  "datasetSiteUrl": "https://reference-implementation.openactive.io/openactive"
+  ...
+}
 ```
 {% endcode %}
 
-## Step 8: Run the test suite
+## Step 9: Run the test suite
 
 ### Option 1: Single console window
 
