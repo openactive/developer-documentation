@@ -41,13 +41,13 @@ jobs:
         npm ls @openactive/data-models
       working-directory: generator
         
-    - name: Generating data model documentation  
+    - name: Generate data model documentation  
       run: npm start
       working-directory: generator
 
-    - name: Commit Generated Files
+    - name: Commit generated files
       run: |
-        git add ./docs/data-model/types/*
-        git add ./docs/SUMMARY.md
+        git add docs/data-model/types/*
+        git add docs/SUMMARY.md
         git status
         git commit --message "Updating auto-generated model documentation [ci skip]"
