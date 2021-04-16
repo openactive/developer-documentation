@@ -47,7 +47,7 @@ jobs:
 
     - name: Commit generated files
       run: |
-        git add docs/data-model/types/*
+        git add docs/data-model/types/
         git add docs/SUMMARY.md
         git status
         git commit --message "Updating auto-generated model documentation [ci skip]"
