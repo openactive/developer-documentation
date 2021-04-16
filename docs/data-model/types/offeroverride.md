@@ -88,7 +88,7 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://schema.org/Number"><code>Number</code></a>
       </td>
       <td style="text-align:left">
-        <p>The offer price of the activity.</p><p>This price should be specified without currency symbols and as a floating point number with two decimal places.</p><p>The currency of the price should be expressed in the priceCurrency field.</p><p>Includes or excludes tax depending on the taxMode of the seller.</p><p></br><b>Example</b></p><p><code>"price": "33"</code></p>
+        <p>The offer price of the activity.</p><p>This price should be specified without currency symbols and as a floating point number with two decimal places.</p><p>The currency of the price should be expressed in the priceCurrency field.</p><p>Includes or excludes tax depending on the taxMode of the seller.</p><p></br><b>Example</b></p><p><code>"price": 33</code></p>
       </td>
     </tr>
     <tr>
