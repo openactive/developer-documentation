@@ -1,0 +1,54 @@
+name: Documentation Generator
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [data-models-update]
+  push:
+    branches: [ master ]
+
+jobs:
+  documentation-generator:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout master branch
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.PUBLIC_REPO_ACCESS_TOKEN }}
+        
+    - name: Identify
+      run: |
+        git config user.name OpenActive Bot
+        git config user.email hello@openactive.io
+    
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14.x
+        
+    - name: Erase existing docs except README.md
+      run: find ./docs/data-model/types -type f -maxdepth 1 ! -name README.md -delete
+      
+    - run: npm install
+      working-directory: generator
+    
+    - name: Update data models
+      run: |
+        npm install @openactive/data-models@latest
+        npm ls @openactive/data-models
+      working-directory: generator
+        
+    - name: Generate data model documentation  
+      run: npm start
+      working-directory: generator
+
+    - name: Commit generated files
+      run: |
+        git add docs/data-model/types/
+        git add docs/SUMMARY.md
+        git status
+        git commit --message "Updating auto-generated model documentation [ci skip]"
+
+    - name: Push generated files
+      run: git push
