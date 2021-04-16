@@ -1,14 +1,16 @@
 name: Documentation Generator
 
 on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [data-models-update]
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
 jobs:
-  build:
-
+  documentation-generator:
     runs-on: ubuntu-latest
 
     steps:
