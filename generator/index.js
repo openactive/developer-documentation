@@ -369,7 +369,7 @@ function renderCode(code, fieldName, requiredType) {
       .replace(/"/g, "&quot;")
       .replace(/\n/g, "<br/>") + "</code>";
   } else {
-    var isNumber = requiredType && (requiredType.indexOf("Integer") > -1 || requiredType.indexOf("Float") > -1);
+    var isNumber = requiredType && (requiredType.indexOf("Integer") > -1 || requiredType.indexOf("Number") > -1);
     return "<code>" + (fieldName ? `"` + convertToJsonLd(fieldName) + `": ` : "") + (isNumber ? code : `"` + code + `"`) + "</code>";
   }
 }
