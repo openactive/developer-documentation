@@ -58,7 +58,7 @@ Steps to render the template:
 1. Construct the JSON-LD to match the format found in [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite), following [this documentation](../data-model/types/dataset.md).
 2. Find a [mustache library](https://mustache.github.io/) for your platform or language.
 3. Write code to do the following:
-   * Stringify the input JSON, and place the contents of the string within the "json" property at the root of the JSON itself \(i.e. serialised JSON embedded in the original deserialised object\).
+   * Stringify the input JSON, and place the contents of the string within the "json" property at the root of the JSON itself \(i.e. serialised JSON embedded in the original deserialised object\). This is important as it is used to populate the machine-readable `<script type="application/ld+json">` tag within the generated HTML.
    * Use the resulting JSON with the [mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) to render the dataset site.
    * Keep in mind that OpenActive will be providing updates to the mustache template in the future, so it is best to write code that anticipates this.
 
