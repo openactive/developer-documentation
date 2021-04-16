@@ -6,8 +6,6 @@ on:
     types: [data-models-update]
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   documentation-generator:
@@ -51,3 +49,6 @@ jobs:
         git add docs/SUMMARY.md
         git status
         git commit --message "Updating auto-generated model documentation [ci skip]"
+
+    - name: Push generated files
+      run: git push
