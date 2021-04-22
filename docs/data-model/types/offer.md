@@ -47,15 +47,6 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>advanceBooking</b></td>
-      <td style="text-align:left">
-        <a href="https://openactive.io/RequiredStatusType"><code>RequiredStatusType</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Indicates whether to accept this offer, a participant must book in advance, whether they must pay on attending, or have option to do either. Values must be one of  <a href="https://openactive.io/Required">https://openactive.io/Required</a>,  <a href="https://openactive.io/Optional">https://openactive.io/Optional</a> or  <a href="https://openactive.io/Unavailable">https://openactive.io/Unavailable</a>.</p><p></br><b>Example</b></p><p><code>"advanceBooking": "https://openactive.io/Required"</code></p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>ageRange</b></td>
       <td style="text-align:left">
         <a href="https://developer.openactive.io/data-model/types/quantitativevalue"><code>QuantitativeValue</code></a>
@@ -80,15 +71,6 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
       <td style="text-align:left">
         <p>Whether the opportunity can be cancelled with a full refund at any time before the <code>startDate</code>, or before the <code>latestCancellationBeforeStartDate</code> if provided.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>availableChannel</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://openactive.io/AvailableChannelType"><code>AvailableChannelType</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The channels through which a booking can be made.</p>
       </td>
     </tr>
     <tr>
@@ -137,12 +119,21 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>prepayment</b></td>
+      <td style="text-align:left"><b>openBookingInAdvance</b></td>
       <td style="text-align:left">
         <a href="https://openactive.io/RequiredStatusType"><code>RequiredStatusType</code></a>
       </td>
       <td style="text-align:left">
-        <p>Indicates whether to accept this offer, a participant must pay in advance, pay when attending, or have the option to do either. Values must be one of  <a href="https://openactive.io/Required">https://openactive.io/Required</a>,  <a href="https://openactive.io/Optional">https://openactive.io/Optional</a> or  <a href="https://openactive.io/Unavailable">https://openactive.io/Unavailable</a>.</p><p></br><b>Example</b></p><p><code>"prepayment": "https://openactive.io/Required"</code></p>
+        <p>Indicates whether to accept this offer, a participant must book in advance, whether they must pay on attending, or have option to do either. Values must be one of  <a href="https://openactive.io/Required">https://openactive.io/Required</a>,  <a href="https://openactive.io/Optional">https://openactive.io/Optional</a> or  <a href="https://openactive.io/Unavailable">https://openactive.io/Unavailable</a>.</p><p></br><b>Example</b></p><p><code>"openBookingInAdvance": "https://openactive.io/Required"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>openBookingPrepayment</b></td>
+      <td style="text-align:left">
+        <a href="https://openactive.io/RequiredStatusType"><code>RequiredStatusType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Indicates whether to accept this offer, a participant must pay in advance, pay when attending, or have the option to do either. Values must be one of  <a href="https://openactive.io/Required">https://openactive.io/Required</a>,  <a href="https://openactive.io/Optional">https://openactive.io/Optional</a> or  <a href="https://openactive.io/Unavailable">https://openactive.io/Unavailable</a>.</p><p></br><b>Example</b></p><p><code>"openBookingPrepayment": "https://openactive.io/Required"</code></p>
       </td>
     </tr>
     <tr>

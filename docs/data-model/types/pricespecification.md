@@ -29,12 +29,12 @@ This type is derived from [https://schema.org/PriceSpecification](https://schema
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>prepayment</b></td>
+      <td style="text-align:left"><b>openBookingPrepayment</b></td>
       <td style="text-align:left">
         <a href="https://openactive.io/RequiredStatusType"><code>RequiredStatusType</code></a>
       </td>
       <td style="text-align:left">
-        <p>Indicates if proceeding with booking requires a Customer to pay in advance, pay when attending, or have the option to do either. Values must be one of  <a href="https://openactive.io/Required">https://openactive.io/Required</a>,  <a href="https://openactive.io/Optional">https://openactive.io/Optional</a> or  <a href="https://openactive.io/Unavailable">https://openactive.io/Unavailable</a>.</p><p></br><b>Example</b></p><p><code>"prepayment": "https://openactive.io/Required"</code></p>
+        <p>Indicates if proceeding with booking requires a Customer to pay in advance, pay when attending, or have the option to do either. Values must be one of  <a href="https://openactive.io/Required">https://openactive.io/Required</a>,  <a href="https://openactive.io/Optional">https://openactive.io/Optional</a> or  <a href="https://openactive.io/Unavailable">https://openactive.io/Unavailable</a>.</p><p></br><b>Example</b></p><p><code>"openBookingPrepayment": "https://openactive.io/Required"</code></p>
       </td>
     </tr>
     <tr>

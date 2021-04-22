@@ -47,6 +47,15 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>allowOpenBooking</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Indicates whether the Seller allows open booking</p><p></br><b>Example</b></p><p><code>"allowOpenBooking": "true"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>description</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>

@@ -185,6 +185,15 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>bookingChannel</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://openactive.io/BookingChannelType"><code>BookingChannelType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The channels through which a booking can be made.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>category</b></td>
       <td style="text-align:left">
         Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
