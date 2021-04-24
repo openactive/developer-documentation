@@ -248,6 +248,15 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left"><b>beta:bookingChannel</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://openactive.io/ns-beta#BookingChannelType"><code>BookingChannelType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/161">Proposal #161</a></p><p>The channels through which a booking can be made.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>beta:facilitySetting</b></td>
       <td style="text-align:left">
         <a href="https://openactive.io/ns-beta#FacilitySettingType"><code>FacilitySettingType</code></a>
