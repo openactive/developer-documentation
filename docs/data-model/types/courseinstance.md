@@ -468,7 +468,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p><a href="https://github.com/openactive/ns-beta/issues/12">Proposal #12</a></p><p>For events that have an unlimited number of tickets, captures the number of attendees (actual attendance).</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/274">Proposal #274</a></p><p>For events that have an unlimited number of tickets, captures the number of attendees (actual attendance).</p>
       </td>
     </tr>
     <tr>
@@ -504,7 +504,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/QuantitativeValue"><code>QuantitativeValue</code></a>
       </td>
       <td style="text-align:left">
-        <p><a href="https://github.com/openactive/ns-beta/issues/3">Proposal #3</a></p><p>The distance of a run, cycle or other activity. Must also include units.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/275">Proposal #275</a></p><p>The distance of a run, cycle or other activity. Must also include units.</p>
       </td>
     </tr>
     <tr>
@@ -540,7 +540,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p><a href="https://github.com/openactive/ns-beta/issues/2">Proposal #2</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers. This property must contain HTML.</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/276">Proposal #276</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers. This property must contain HTML.</p>
       </td>
     </tr>
     <tr>
@@ -603,7 +603,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p><a href="https://github.com/openactive/ns-beta/issues/13">Proposal #13</a></p><p>For events that have an unlimited number of tickets, captures the number of registrations (intention to attend).</p>
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/273">Proposal #273</a></p><p>For events that have an unlimited number of tickets, captures the number of registrations (intention to attend).</p>
       </td>
     </tr>
     <tr>
