@@ -145,7 +145,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
       </td>
       <td style="text-align:left">
-        <p>Indicates whether the Seller allows open booking</p><p></br><b>Example</b></p><p><code>"isOpenBookingAllowed": "true"</code></p>
+        <p>Indicates whether the Seller allows open booking or not</p><p></br><b>Example</b></p><p><code>"isOpenBookingAllowed": "true"</code></p>
       </td>
     </tr>
     <tr>
