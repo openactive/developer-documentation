@@ -118,6 +118,10 @@ Set up the Opportunity Types that your booking system will support, as detailed 
 
 Choose which testing strategy to use. You can always start with one and switch to the other later.
 
+{% hint style="warning" %}
+When using OpenActive Test Suite during development, it is far more efficient to run test suite with a small number of items in your opportunity feeds and using "[controlled mode](test-suite.md#controlled-mode)". Although implementing the [OpenActive Test Interface](https://openactive.io/test-interface) to support controlled mode might seem like extra work, it will result in a much more efficient development, testing and debugging cycle, that will allow your implementation of the Open Booking API to be built much more quickly overall.
+{% endhint %}
+
 ### Random mode
 
 {% code title="./config/dev.json \(extract\)" %}
@@ -134,7 +138,7 @@ Selects random opportunities from the feeds that match the [prerequisite criteri
 
 If using random mode, you must ensure that enough opportunities exist that cover the required criteria for all features that you are implementing. See [the features list](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/README.md) for a summary of how many opportunities are required for each criteria to test a specific feature. Please note that opportunities are not reused between tests within the same run of the test suite.
 
-It is often straightforward to use Random mode for the more general features such as those in the `core` category. More specific features, that have more selective criteria for their opportunities, generally benefit from using Controlled mode.
+As you implement the Open Booking API features, more test data will need to be added, and the OpenActive Test Suite will need to download all of this data each time it is started, before it is able to run tests. For this reason, controlled mode offers a much more efficient developer experience: it auto-populates test data, and only creates the test data that is required for a particular test run when it is needed.
 
 ### Controlled mode
 
