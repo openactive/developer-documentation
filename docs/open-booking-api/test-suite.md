@@ -264,6 +264,8 @@ npm start
 
 This will automatically start the microservice, run the integration tests, then kill the microservice. The output from the microservice and integration tests will be combined in the console.
 
+This mode also offers the ability to rerun the tests interactively, for specific flows, which can be useful for debugging. When running in this mode, press "esc" at any time to cancel the currently running test and return to the interactive prompt.
+
 Individual features or tests can be run in isolation using the following commands, for example:
 
 ```bash
@@ -271,27 +273,41 @@ npm start -- --runInBand test/features/core/test-interface/
 ```
 
 ```bash
-npm start -- --runInBand test/features/core/test-interface/implemented/create-opportunity-test.js
+npm start -- test/features/core/test-interface/implemented/create-opportunity-test.js
 ```
+
+The following shorthand may also be used, as these strings are unique within the path:
+
+```bash
+npm start test-interface
+```
+
+```bash
+npm start create-opportunity-test
+```
+
+{% hint style="info" %}
+`--runInBand` limits the test suite to running all tests in series. This ensures that each test is executed one at a time, which slows down the test suite, and can be helpful when debugging issues relating to faulty transactions.
+{% endhint %}
 
 ### Option 2: Two separate console windows
 
 #### Start the Microservice
 
-With your booking system running, execute the following command in the `openactive-broker-microservice` directory:
+With your booking system running, execute the following command:
 
 ```bash
-npm start
+npm run start-broker
 ```
 
 This will start to harvest the feeds from your running application.
 
 #### Run the Integration Tests
 
-With both your booking system and `openactive-broker-microservice` running, execute the following command in the `openactive-integration-tests` directory, to execute all configured tests:
+With both your booking system and `openactive-broker-microservice` running, execute the following command, to execute all configured tests:
 
 ```bash
-npm start
+npm run start-tests
 ```
 
 This will execute tests against your booking system, using the `openactive-broker-microservice` as an intermediary.
@@ -299,11 +315,11 @@ This will execute tests against your booking system, using the `openactive-broke
 Individual features or tests can be run in isolation using the following commands, for example:
 
 ```bash
-npm start -- --runInBand test/features/core/test-interface/
+npm run start-tests -- --runInBand test/features/core/test-interface/
 ```
 
 ```bash
-npm start -- --runInBand test/features/core/test-interface/implemented/create-opportunity-test.js 
+npm run start-tests -- --runInBand test/features/core/test-interface/implemented/create-opportunity-test.js 
 ```
 
 ## Reading the test results and debugging
