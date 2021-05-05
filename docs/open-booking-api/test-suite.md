@@ -63,7 +63,31 @@ npm start -- core
 
 Adding other `./config/{NODE_ENV}.json` files allows you to override the default configuration. For more information see this [documentation](https://github.com/lorenwest/node-config/wiki/Environment-Variables#node_env).
 
-## Step 3: Configure features
+## Step 3: Configure flows
+
+The Open Booking API includes two flows:
+
+* [Simple Booking Flow](https://openactive.io/open-booking-api/EditorsDraft/1.0CR3/#simple-booking-flow)
+* [Booking Flow with Approval](https://openactive.io/open-booking-api/EditorsDraft/1.0CR3/#booking-flow-with-approval)
+
+Assess whether or not your implementation will include either or both of these flows, and configure the test suite accordingly, as detailed in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#bookingflowsinscope), for example:
+
+{% code title="./config/dev.json \(extract\)" %}
+```javascript
+"integrationTests": {  
+  ...
+  "bookingFlowsInScope": {
+    "OpenBookingSimpleFlow": true,
+    "OpenBookingApprovalFlow": true
+  },
+  ...
+}
+```
+{% endcode %}
+
+## Step 4: Configure features
+
+Before you start your implementation, it is good to configure your config file to match your aspirations. You can then use different test suite commands to run only a subset of the tests during development, and then run `npm start` to run all tests.
 
 The list of Open Booking API features supported by the test suite can be found in the [Test Suite Feature Coverage](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/README.md) page.
 
@@ -90,7 +114,7 @@ Configure the test suite accordingly, as detailed in the [reference documentatio
 Note that not all Open Booking API features are currently supported by the test suite. For a list of supported features, please see the [Test Suite Feature Coverage](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/README.md) page.
 {% endhint %}
 
-## Step 4: Configure Opportunity Types
+## Step 5: Configure Opportunity Types
 
 Set up the Opportunity Types that your booking system will support, as detailed in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#bookableopportunitytypesinscope). The test suite will only attempt to book opportunity types that are configured here, for example:
 
@@ -114,7 +138,7 @@ Set up the Opportunity Types that your booking system will support, as detailed 
 ```
 {% endcode %}
 
-## Step 5: Choose Controlled vs Random testing mode
+## Step 6: Choose Controlled vs Random testing mode
 
 Choose which testing strategy to use. You can always start with one and switch to the other later.
 
@@ -160,7 +184,7 @@ Your implementation of the OpenActive Test Interface itself can be tested using 
 
 The `testDatasetIdentifier` setting is used in all calls in the test interface. It allows any test data that was created with this identifier to be cleared before a new test run begins.
 
-## Step 6: Configure Sellers and Booking Authentication
+## Step 7: Configure Sellers and Booking Authentication
 
 The test suite will making all bookings under a specific `primary` Seller provided in the configuration, using the authentication request headers provided for that Seller.
 
@@ -187,7 +211,7 @@ See the [reference documentation](https://github.com/openactive/openactive-test-
 ```
 {% endcode %}
 
-## Step 7: Configure Orders Feed Authentication
+## Step 8: Configure Orders Feed Authentication
 
 Configure the broker microservice with the authentication headers required for the Orders Feed.
 
@@ -212,7 +236,7 @@ Note such authentication [must not be specific to any particular seller](https:/
 ```
 {% endcode %}
 
-## Step 8: Configure Dataset Site
+## Step 9: Configure Dataset Site
 
 The `datasetSiteUrl` must be set to the local dataset site URL of your booking system. If you have not yet implemented a dataset site, details for creating it can be found [here](../publishing-data/dataset-sites.md).
 
@@ -228,7 +252,7 @@ In addition to the standard dataset site, the JSON-LD of the page must include t
 ```
 {% endcode %}
 
-## Step 9: Run the test suite
+## Step 10: Run the test suite
 
 ### Option 1: Single console window
 
