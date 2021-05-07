@@ -197,7 +197,7 @@ See the [reference documentation](https://github.com/openactive/openactive-test-
 "sellers": {
   "primary": {
     "@type": "Organization",
-    "@id": "https://reference-implementation.openactive.io/api/identifiers/sellers/1",
+    "@id": "https://localhost:5001/api/identifiers/sellers/1",
     "authentication": {
       "loginCredentials": null,
       "requestHeaders": {
@@ -208,7 +208,7 @@ See the [reference documentation](https://github.com/openactive/openactive-test-
   },
   "secondary": {
     "@type": "Organization",
-    "@id": "https://reference-implementation.openactive.io/api/identifiers/sellers/2",
+    "@id": "https://localhost:5001/api/identifiers/sellers/2",
     "authentication": {
       "loginCredentials": null,
       "requestHeaders": {
