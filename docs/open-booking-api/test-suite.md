@@ -197,15 +197,25 @@ See the [reference documentation](https://github.com/openactive/openactive-test-
 "sellers": {
   "primary": {
     "@type": "Organization",
-    "@id": "https://bookingsystemreferenceimplementation.azurewebsites.net/api/identifiers/sellers/0",
-    "requestHeaders": {
-      "X-OpenActive-Test-Client-Id": "test",
-      "X-OpenActive-Test-Seller-Id": "https://bookingsystemreferenceimplementation.azurewebsites.net/api/identifiers/sellers/0"
+    "@id": "https://reference-implementation.openactive.io/api/identifiers/sellers/1",
+    "authentication": {
+      "loginCredentials": null,
+      "requestHeaders": {
+        "X-OpenActive-Test-Client-Id": "test",
+        "X-OpenActive-Test-Seller-Id": "https://localhost:5001/api/identifiers/sellers/1"
+      }
     }
   },
   "secondary": {
-    "@type": "Person",
-    "@id": "https://bookingsystemreferenceimplementation.azurewebsites.net/api/identifiers/sellers/1"
+    "@type": "Organization",
+    "@id": "https://reference-implementation.openactive.io/api/identifiers/sellers/2",
+    "authentication": {
+      "loginCredentials": null,
+      "requestHeaders": {
+        "X-OpenActive-Test-Client-Id": "test",
+        "X-OpenActive-Test-Seller-Id": "https://localhost:5001/api/identifiers/sellers/2"
+      }
+    }
   }
 }
 ```
@@ -229,7 +239,8 @@ Note such authentication [must not be specific to any particular seller](https:/
           "X-OpenActive-Test-Client-Id": "test"
         }
       }
-    }
+    },
+    "secondary": null
   }
   ...
 }
