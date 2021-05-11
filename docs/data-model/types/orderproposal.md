@@ -9,7 +9,7 @@ This type is derived from [https://schema.org/Order](https://schema.org/Order), 
 ## **Properties**
 
 ### **Optional properties**
-
+    
 <table>
   <thead>
     <tr>
@@ -20,181 +20,191 @@ This type is derived from [https://schema.org/Order](https://schema.org/Order), 
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>@type</b>
-      </td>
-      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">Must always be present and set to <code>&quot;@type&quot;: &quot;OrderProposal&quot;</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>@id</b>
-      </td>
-      <td style="text-align:left"> <a href="https://schema.org/URL"><code>URL</code></a>
+      <td style="text-align:left"><b>@type</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p>
-        <p>
-          <br /><b>Example</b>
-        </p>
-        <p><code>&quot;@id&quot;: &quot;https://example.com/Order/a4bf0373270be80312345&quot;</code>
-        </p>
+        Must always be present and set to <code>"@type": "OrderProposal"</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>bookingService</b>
-      </td>
-      <td style="text-align:left"> <a href="https://developer.openactive.io/data-model/types/bookingservice"><code>BookingService</code></a>
-      </td>
-      <td style="text-align:left">Details about the Booking System</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>broker</b>
-      </td>
-      <td style="text-align:left"> <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a>
-      </td>
-      <td style="text-align:left">The organisation or developer providing an application that allows Customers
-        to make bookings. Those applications will be clients of the API defined
-        in this specification. If brokerRole is set to <a href="https://openactive.io/NoBroker">https://openactive.io/NoBroker</a> this
-        is not required.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>brokerRole</b>
-      </td>
-      <td style="text-align:left"> <a href="https://openactive.io/BrokerType"><code>BrokerType</code></a>
-      </td>
-      <td style="text-align:left">Either <a href="https://openactive.io/AgentBroker">https://openactive.io/AgentBroker</a>,
-        <a
-        href="https://openactive.io/ResellerBroker">https://openactive.io/ResellerBroker</a>or <a href="https://openactive.io/NoBroker">https://openactive.io/NoBroker</a>,
-          as agreed in advance between the Broker and Seller.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>customer</b>
-      </td>
-      <td style="text-align:left"> <a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
-        <br
-        />- or -
-        <br /><a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a>
-      </td>
-      <td style="text-align:left">The person or organization purchasing the Order.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>identifier</b>
-      </td>
-      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
+      <td style="text-align:left"><b>@id</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>The Order UUID of the Order, OrderQuote or OrderProposal, which is required
-          within the Orders feed.</p>
-        <p>
-          <br /><b>Example</b>
-        </p>
-        <p><code>&quot;identifier&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;</code>
-        </p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/Order/a4bf0373270be80312345"</code></p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>lease</b>
+      <td style="text-align:left"><b>bookingService</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/bookingservice"><code>BookingService</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://developer.openactive.io/data-model/types/lease"><code>Lease</code></a>
+      <td style="text-align:left">
+        <p>Details about the Booking System</p>
       </td>
-      <td style="text-align:left">The Lease on the OrderItems which lasts for the duration specified by
-        the Booking System.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>orderCreationStatus</b>
+      <td style="text-align:left"><b>broker</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://openactive.io/OrderCreationStatus"><code>OrderCreationStatus</code></a>
+      <td style="text-align:left">
+        <p>The organisation or developer providing an application that allows Customers to make bookings. Those applications will be clients of the API defined in this specification. If brokerRole is set to <a href="https://openactive.io/NoBroker">https://openactive.io/NoBroker</a> this is not required.</p>
       </td>
-      <td style="text-align:left">This property is internal to the Broker in this version of the specification.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>orderCustomerNote</b>
+      <td style="text-align:left"><b>brokerRole</b></td>
+      <td style="text-align:left">
+        <a href="https://openactive.io/BrokerType"><code>BrokerType</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
+      <td style="text-align:left">
+        <p>Either <a href="https://openactive.io/AgentBroker">https://openactive.io/AgentBroker</a>,  <a href="https://openactive.io/ResellerBroker">https://openactive.io/ResellerBroker</a> or  <a href="https://openactive.io/NoBroker">https://openactive.io/NoBroker</a>, as agreed in advance between the Broker and Seller.</p>
       </td>
-      <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>orderNumber</b>
+      <td style="text-align:left"><b>customer</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
+      <td style="text-align:left">
+        <p>The person or organization purchasing the Order.</p>
       </td>
-      <td style="text-align:left">The Customer-facing identifier of the Order.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>orderProposalStatus</b>
+      <td style="text-align:left"><b>identifier</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://openactive.io/OrderProposalStatus"><code>OrderProposalStatus</code></a>
+      <td style="text-align:left">
+        <p>The Order UUID of the Order, OrderQuote or OrderProposal, which is required within the Orders feed.</p><p></br><b>Example</b></p><p><code>"identifier": "123e4567-e89b-12d3-a456-426614174000"</code></p>
       </td>
-      <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>orderProposalVersion</b>
+      <td style="text-align:left"><b>lease</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/lease"><code>Lease</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://schema.org/URL"><code>URL</code></a>
+      <td style="text-align:left">
+        <p>The Lease on the OrderItems which lasts for the duration specified by the Booking System.</p>
       </td>
-      <td style="text-align:left">The unique URL representing this version of the OrderProposal, or the
-        version of the OrderProposal to which this Order is related.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>orderSellerNote</b>
+      <td style="text-align:left"><b>orderCreationStatus</b></td>
+      <td style="text-align:left">
+        <a href="https://openactive.io/OrderCreationStatus"><code>OrderCreationStatus</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://schema.org/Text"><code>Text</code></a>
+      <td style="text-align:left">
+        <p>This property is internal to the Broker in this version of the specification.</p>
       </td>
-      <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>orderedItem</b>
+      <td style="text-align:left"><b>orderCustomerNote</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
-      <td style="text-align:left">Array of <a href="https://developer.openactive.io/data-model/types/orderitem"><code>OrderItem</code></a>
+      <td style="text-align:left">
+        
       </td>
-      <td style="text-align:left">The items that constitute the Order.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>payment</b>
+      <td style="text-align:left"><b>orderNumber</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://developer.openactive.io/data-model/types/payment"><code>Payment</code></a>
+      <td style="text-align:left">
+        <p>The Customer-facing identifier of the Order.</p>
       </td>
-      <td style="text-align:left">The payment associated with the Order by the Broker. It is required for
-        cases where a payment has been taken.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>seller</b>
+      <td style="text-align:left"><b>orderProposalStatus</b></td>
+      <td style="text-align:left">
+        <a href="https://openactive.io/OrderProposalStatus"><code>OrderProposalStatus</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a>
-        <br
-        />- or -
-        <br /><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
+      <td style="text-align:left">
+        
       </td>
-      <td style="text-align:left">The organisation (schema:Organization) or person (schema:Person) providing
-        access to events or facilities via a Booking System. e.g. a leisure provider
-        or independent instructor running a yoga classes.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>taxCalculationExcluded</b>
+      <td style="text-align:left"><b>orderProposalVersion</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      <td style="text-align:left">
+        <p>The unique URL representing this version of the  OrderProposal, or the version of the OrderProposal to which this Order is related.</p>
       </td>
-      <td style="text-align:left">Set to true when business-to-business tax calculation is required by the
-        seller or brokerRole settings, but not supported by the Broker.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>totalPaymentDue</b>
+      <td style="text-align:left"><b>orderSellerNote</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
-      <td style="text-align:left"> <a href="https://developer.openactive.io/data-model/types/pricespecification"><code>PriceSpecification</code></a>
+      <td style="text-align:left">
+        
       </td>
-      <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>totalPaymentTax</b>
+      <td style="text-align:left"><b>orderedItem</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/orderitem"><code>OrderItem</code></a>
       </td>
-      <td style="text-align:left">Array of <a href="https://developer.openactive.io/data-model/types/taxchargespecification"><code>TaxChargeSpecification</code></a>
+      <td style="text-align:left">
+        <p>The items that constitute the Order.</p>
       </td>
-      <td style="text-align:left">Breakdown of tax payable for the Order.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>payment</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/payment"><code>Payment</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The payment associated with the Order by the Broker. It is required for cases where a payment has been taken.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>seller</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The organisation (schema:Organization) or person (schema:Person) providing access to events or facilities via a Booking System. e.g. a leisure provider or independent instructor running a yoga classes.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>taxCalculationExcluded</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Set to true when business-to-business tax calculation is required by the seller or brokerRole settings, but not supported by the Broker.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>totalPaymentDue</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/pricespecification"><code>PriceSpecification</code></a>
+      </td>
+      <td style="text-align:left">
+        
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>totalPaymentTax</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/taxchargespecification"><code>TaxChargeSpecification</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Breakdown of tax payable for the Order.</p>
+      </td>
     </tr>
   </tbody>
 </table>
 
-Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License \(CC-BY V4.0\)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
 
+
+
+
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
