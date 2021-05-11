@@ -171,6 +171,15 @@ OpenActive Data Catalogs provide a mechanism for registering OpenActive Datasite
 
 If you have created a new Dataset Site, simply create a [Pull Request for the OpenActive Data Catalog for Singular Datasets](https://github.com/openactive/data-catalogs/edit/master/singular.jsonld) and add your Dataset Site's production URL to the `dataset` array.
 
+The pull request will trigger GitHub Actions to run the OpenActive Test Suite to validate the live feeds within dataset. OpenActive Test Suite validation must pass before the PR can be merged.
+
+To force the validation to re-run, please submit an empty commit to the PR:
+
+```text
+git commit --allow-empty -m "trigger GitHub actions"
+git push
+```
+
 ### Multiple databases
 
 If you have created a new Data Catalog that links to your Dataset Sites, simply create a [Pull Request for the OpenActive Data Catalog Collection](https://github.com/openactive/data-catalogs/edit/master/data-catalog-collection.jsonld) and add your Data Catalog's production URL to the `hasPart` array.
