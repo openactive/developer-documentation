@@ -15,7 +15,7 @@ The [OpenActive Test Suite](https://github.com/openactive/openactive-test-suite/
 
 Clone the test suite repository locally, and install its dependencies.
 
-[Node.js](https://nodejs.org/en/download/) version 14 or above is required.
+[Node.js](https://nodejs.org/en/download/) version **14** or above is required \([which version am I using?](https://support.invisionapp.com/hc/en-us/articles/360033641372-How-do-I-check-my-version-of-Node-js-)\).
 
 ```bash
 git clone git@github.com:openactive/openactive-test-suite.git
