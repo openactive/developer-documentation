@@ -1,10 +1,35 @@
 # Testing RPDE feeds
 
-## Validator
+## OpenActive Validator
 
-A validator is available which attempts to consume an RPDE feed and check for common errors.
+The interactive online [OpenActive Validator](https://validator.openactive.io) provides two key features:
 
-{% embed url="https://validator.openactive.io/rpde" caption="" %}
+* [RPDE validation](https://validator.openactive.io/rpde): attempt to consume an RPDE feed and check for common errors
+* [JSON-LD validation](https://validator.openactive.io/): check a single feed page or request/response for validity 
+
+## OpenActive Test Suite
+
+The downloadable [OpenActive Test Suite](https://github.com/openactive/openactive-test-suite/) includes an option for comprehensively validating OpenActive open data feeds. It runs the [OpenActive Validator](https://validator.openactive.io/) for every item in the feed, and also performs basic RPDE validation.
+
+### Step 1: Install the test suite
+
+Clone the test suite repository locally, and install its dependencies.
+
+[Node.js](https://nodejs.org/en/download/) version 14 or above is required.
+
+```bash
+git clone git@github.com:openactive/openactive-test-suite.git
+cd openactive-test-suite
+npm install
+```
+
+### Step 2: Run validation
+
+Validation mode does not require any specific configuration, simply run the following command with the URL of the dataset site to be tested:
+
+```bash
+npm run validate-feeds "http://reference-implementation.openactive.io/OpenActive"
+```
 
 ## Manual Testing Checklist
 
