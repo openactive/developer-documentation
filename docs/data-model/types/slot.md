@@ -157,6 +157,15 @@ While these properties are marked as optional/recommended in the Modelling Speci
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left"><b>additionalAdmissionRestriction</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Free text restrictions that must be displayed prominently to the user before booking. This property must only contain restrictions not described by <code>oa:ageRestriction</code> or <code>oa:genderRestriction</code>.</p><p></br><b>Example</b></p><p><code>"additionalAdmissionRestriction": [<br/>&nbsp;&nbsp;&quot;Participants&nbsp;younger&nbsp;than&nbsp;12&nbsp;must&nbsp;be&nbsp;accompanied&nbsp;by&nbsp;an&nbsp;adult&quot;,<br/>&nbsp;&nbsp;&quot;Participants&nbsp;must&nbsp;be&nbsp;comfortable&nbsp;standing&nbsp;for&nbsp;long&nbsp;periods&nbsp;of&nbsp;time&quot;<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>endDate</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/DateTime"><code>DateTime</code></a>
