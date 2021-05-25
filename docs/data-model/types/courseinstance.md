@@ -123,7 +123,7 @@ A data publisher must provide either a `subEvent` or specify an `eventSchedule` 
         Array of <a href="https://developer.openactive.io/data-model/types/event"><code>Event</code></a>
       </td>
       <td style="text-align:left">
-        <p>Relates a parent event to a child event. Properties describing the parent event can be assumed to apply to the child, unless otherwise specified. A child event might be a specific instance of an Event within a schedule</p>
+        <p>The occurrences of this CourseInstance.</p>
       </td>
     </tr>
     <tr>
@@ -414,7 +414,7 @@ A data publisher must provide either a `subEvent` or specify an `eventSchedule` 
         Array of <a href="https://developer.openactive.io/data-model/types/event"><code>Event</code></a>
       </td>
       <td style="text-align:left">
-        <p>Relates a parent event to a child event. Properties describing the parent event can be assumed to apply to the child, unless otherwise specified. A child event might be a specific instance of an Event within a schedule</p>
+        <p>The occurrences of this CourseInstance.</p>
       </td>
     </tr>
     <tr>
