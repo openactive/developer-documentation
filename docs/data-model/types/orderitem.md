@@ -29,6 +29,15 @@ This type is derived from [https://schema.org/OrderItem](https://schema.org/Orde
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>@id</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/OrderItem/12345"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>acceptedOffer</b></td>
       <td style="text-align:left">
         <a href="https://developer.openactive.io/data-model/types/offer"><code>Offer</code></a>
