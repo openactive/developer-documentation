@@ -357,7 +357,7 @@ A data publisher must provide either a `subEvent` or specify an `eventSchedule` 
     <tr>
       <td style="text-align:left"><b>instanceOfCourse</b></td>
       <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/course"><code>Course</code></a>
+        <a href="https://developer.openactive.io/data-model/types/course"><code>Course</code></a>
       </td>
       <td style="text-align:left">
         <p>The description of the Course for which this is a distinct instance.</p>
