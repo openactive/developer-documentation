@@ -486,7 +486,7 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <a href="https://schema.org/Course"><code>Course</code></a>
       </td>
       <td style="text-align:left">
-        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/164">Proposal #164</a></p><p>This course for which this is an offering.</p>
+        <p><strong>DEPRECATED</strong>: Please use <code>instanceOfCourse</code> instead.</p><p><a href="https://github.com/openactive/modelling-opportunity-data/issues/164">Proposal #164</a></p><p>This course for which this is an offering.</p>
       </td>
     </tr>
     <tr>
