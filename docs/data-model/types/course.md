@@ -114,15 +114,6 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>beta:logo</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/ImageObject"><code>ImageObject</code></a>
-      </td>
-      <td style="text-align:left">
-        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/164">Proposal #164</a></p><p>An associated logo for a course.</p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>beta:video</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
