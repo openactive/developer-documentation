@@ -29,6 +29,24 @@ This type is derived from [https://schema.org/Course](https://schema.org/Course)
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>accessibilityInformation</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Provide additional, specific documentation for participants about how disabilities are, or can be supported at the Event.</p><p></br><b>Example</b></p><p><code>"accessibilityInformation": "This route has been British Cycling assessed as an accessible route, meaning it is suitable for the majority of adaptive bikes. The route will have no or low levels of traffic, there will be plenty of space and will have a good surface throughout. If you have any questions about using this route on an adaptive bike on this ride, please use visit https://www.letsride.co.uk/accessibility or call 0123 456 7000 and ask for the Recreation team."</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>accessibilitySupport</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Used to specify the types of disabilities or impairments that are supported at an event.</p><p></br><b>Example</b></p><p><code>"accessibilitySupport": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://openactive.io/accessibility-support#1393f2dc-3fcc-4be9-a99f-f1e51f5ad277&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Visual&nbsp;impairment&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://openactive.io/accessibility-support&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>activity</b></td>
       <td style="text-align:left">
         Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
@@ -38,12 +56,30 @@ This type is derived from [https://schema.org/Course](https://schema.org/Course)
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>ageRange</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/quantitativevalue"><code>QuantitativeValue</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Indicates that an event is recommended as being suitable for or is targetted at a specific age range.</p><p></br><b>Example</b></p><p><code>"ageRange": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;QuantitativeValue&quot;,<br/>&nbsp;&nbsp;&quot;minValue&quot;:&nbsp;50,<br/>&nbsp;&nbsp;&quot;maxValue&quot;:&nbsp;60<br/>}</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>author</b></td>
       <td style="text-align:left">
         <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
       </td>
       <td style="text-align:left">
-        <p>The person or organization who have created the Course. An author might be an schema:Organization or a schema:Person.</p><p></br><b>Example</b></p><p><code>"author": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
+        <p>The person or organization who designed the Course. An author might be an schema:Organization or a schema:Person.</p><p>This property may reference the <code>@id</code> of the <code>organizer</code> of the <code>CourseInstance</code> within which this <code>Course</code> is embedded, to reduce data duplication.</p><p></br><b>Example</b></p><p><code>"author": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://id.bookingsystem.example.com/organizers/1&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>category</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Provides a set of tags that help categorise and describe an event, e.g. its intensity, purpose, etc.</p><p></br><b>Example</b></p><p><code>"category": [<br/>&nbsp;&nbsp;&quot;High&nbsp;Intensity&quot;<br/>]</code></p>
       </td>
     </tr>
     <tr>
@@ -60,6 +96,15 @@ If you are a junior netball lover (or the parent of one!) these are an unmissabl
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>genderRestriction</b></td>
+      <td style="text-align:left">
+        <a href="https://openactive.io/GenderRestrictionType"><code>GenderRestrictionType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Indicates that an event is restricted to male, female or a mixed audience. This information must be displayed prominently to the user before booking. If a gender restriction isn't specified then applications should assume that an event is suitable for a mixed audience.</p><p></br><b>Example</b></p><p><code>"genderRestriction": "https://openactive.io/FemaleOnly"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
@@ -69,12 +114,21 @@ If you are a junior netball lover (or the parent of one!) these are an unmissabl
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>logo</b></td>
+      <td style="text-align:left"><b>image</b></td>
       <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
+        Array of <a href="https://developer.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
       </td>
       <td style="text-align:left">
-        <p>A logo for the Course.</p><p></br><b>Example</b></p><p><code>"logo": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code></p>
+        <p>An image or photo that depicts the event, e.g. a photo taken at a previous event.</p><p></br><b>Example</b></p><p><code>"image": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;thumbnail&quot;:&nbsp;[<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_thumbnail.jpg&quot;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>level</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A general purpose property for specifying the suitability of an event for different participant “levels”. E.g. <code>Beginner</code>, <code>Intermediate</code>, <code>Advanced</code>. Or in the case of martial arts, specific belt requirements.</p><p></br><b>Example</b></p><p><code>"level": [<br/>&nbsp;&nbsp;&quot;Beginner&quot;<br/>]</code></p>
       </td>
     </tr>
     <tr>
