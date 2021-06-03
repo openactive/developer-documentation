@@ -36,7 +36,7 @@ The Dataset Site Template is very easy to use and quick to apply - it's essentia
 
 The[ dataset site template repository](https://github.com/openactive/dataset-site-template) contains a [mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) for creating an OpenActive dataset site.
 
-### .NET, PHP and Ruby Libraries
+### .NET, PHP, Ruby and JavaScript/TypeScript Libraries
 
 Several libraries are available that make it really easy to render the dataset site template, accepting basic settings to configure your dataset site automatically.
 
