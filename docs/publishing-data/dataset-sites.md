@@ -42,10 +42,12 @@ Several libraries are available that make it really easy to render the dataset s
 
 The table below lists the available OpenActive libraries:
 
-| Library | [.NET](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) | [PHP](https://www.php.net/releases/5_4_0.php) | [Ruby](https://www.ruby-lang.org/en/) |
-| :--- | :--- | :--- | :--- |
-| Open Opportunity Data Feeds | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) | [openactive/models](https://packagist.org/packages/openactive/models) | [openactive](https://rubygems.org/gems/openactive) |
-| Dataset Site | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/) | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site) | [openactive-dataset\_site](https://rubygems.org/gems/openactive-dataset_site) |
+| Language | Open Opportunity Data Feeds | Dataset Site |
+| :--- | :--- | :--- |
+| .NET | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/) |
+| PHP | [openactive/models](https://packagist.org/packages/openactive/models) | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site) |
+| Ruby | [openactive](https://rubygems.org/gems/openactive) | [openactive-dataset\_site](https://rubygems.org/gems/openactive-dataset_site) |
+| JavaScript / TypeScript | [@openactive/models-ts](https://www.npmjs.com/package/@openactive/models-ts) | - |
 
 ### Other Languages
 
