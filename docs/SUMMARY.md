@@ -53,6 +53,7 @@
   * [EventSeries](data-model/types/eventseries.md)
   * [Event](data-model/types/event.md)
   * [FacilityUse](data-model/types/facilityuse.md)
+  * [FileUploadFormFieldSpecification](data-model/types/fileuploadformfieldspecification.md)
   * [GeoCoordinates](data-model/types/geocoordinates.md)
   * [HeadlineEvent](data-model/types/headlineevent.md)
   * [ImageObject](data-model/types/imageobject.md)
