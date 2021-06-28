@@ -53,9 +53,8 @@ ORDER BY modified,
 ### Feed integrity checks
 
 * Does the `next` url work as expected and return a valid page - it should never result in a 500 error.
-* If `afterTimestamp` is used, and "modified" is an integer, `afterTimestamp` must also be an integer.
-* If afterChangeNumber is used it must be an integer and "modified" must be an integer.
-* Does the `afterTimestamp` or `afterChangeNumber` of the next url always increase with each new page - if not the query has likely been badly implemented. Most feeds should use integer for this, so you can check they increase numerically afterTimestamp \(for integer "modified"\) or lexicographically \(for string "modified"\).
+* "`modified`" must always be an integer, `afterTimestamp` / `afterChangeNumber` must also be an integer.
+* Does the `afterTimestamp` or `afterChangeNumber` of the next url always increase with each new page - if not the query has likely been badly implemented.
 * There should be "`deleted`" items in the feed. If these are missing, it is likely the feed has not been implemented correctly.
 * The `next` URL should be an absolute not relative URL.
 * Are all responses returned with header `Content-Type: application/json`
