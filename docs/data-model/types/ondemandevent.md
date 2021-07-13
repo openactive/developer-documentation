@@ -34,7 +34,7 @@ This type is derived from [https://schema.org/OnDemandEvent](https://schema.org/
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/event/1234512345"</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://api.example.com/events/1234512345"</code></p>
       </td>
     </tr>
     <tr>
