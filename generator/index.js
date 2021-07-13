@@ -189,12 +189,16 @@ function augmentWithParentFields(augFields, model, models, notInSpec) {
   if (model.hasId && !augFields['id']) {
     augFields['id'] = {
         'fieldName': 'id',
-        'requiredType': model['idFormat'] || 'http://schema.org/url',
-        'description': ['A unique url based identifier for the record'],
+        'requiredType': 'https://schema.org/URL',
+        'description': [
+          'A unique URI-based identifier for the record. The value of `@id` must always be an absolute URI.',
+          '`@id` properties are used as identifiers for compatibility with JSON-LD. The value of such a property must always be an absolute URI that provides a stable globally unique identifier for the resource, as described in [RFC3986](https://tools.ietf.org/html/rfc3986).',
+          'The primary purpose of the URI format in this context is to provide natural namespacing for the identifier. Hence, the URI itself may not resolve to a valid endpoint, but must use a domain name controlled by the resource owner (the organisation responsible for the OpenActive open data feed).'
+        ],
         'example': ''
     };
-    if (model.hasId && model.sampleId) {
-      augFields['id']['example'] = model['sampleId'] + '12345';
+    if (model.sampleId) {
+      augFields['id']['example'] = model.sampleId;
     }
   }
 
