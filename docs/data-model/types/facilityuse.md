@@ -29,6 +29,15 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>@id</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/facility-use/112345"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>activity</b></td>
       <td style="text-align:left">
         Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
@@ -88,15 +97,6 @@ description: This page describes the FacilityUse type.
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td style="text-align:left"><b>@id</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/facility-use/112345"</code></p>
-      </td>
-    </tr>
     <tr>
       <td style="text-align:left"><b>description</b></td>
       <td style="text-align:left">

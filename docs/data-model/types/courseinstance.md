@@ -29,6 +29,15 @@ This type is derived from [https://schema.org/CourseInstance](https://schema.org
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>@id</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/event/1234512345"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>activity</b></td>
       <td style="text-align:left">
         Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
@@ -150,15 +159,6 @@ A data publisher must provide either a `subEvent` or specify an `eventSchedule` 
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td style="text-align:left"><b>@id</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/event/1234512345"</code></p>
-      </td>
-    </tr>
     <tr>
       <td style="text-align:left"><b>ageRange</b></td>
       <td style="text-align:left">

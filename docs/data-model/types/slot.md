@@ -29,6 +29,15 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>@id</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/slot/12345"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>duration</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Duration"><code>Duration</code></a>
@@ -77,41 +86,6 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
 </table>
 
 
-### ** Required options **
-
-While these properties are marked as optional/recommended in the Modelling Specification, one of these must be provided when surfacing a slot through an RPDE feed to ensure that the slots can be processed correctly by data consumers.
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>@id</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/slot/12345"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>identifier</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
 ### **Recommended properties**
     
 <table>
@@ -123,15 +97,6 @@ While these properties are marked as optional/recommended in the Modelling Speci
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td style="text-align:left"><b>@id</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/slot/12345"</code></p>
-      </td>
-    </tr>
     <tr>
       <td style="text-align:left"><b>maximumUses</b></td>
       <td style="text-align:left">
