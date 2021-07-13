@@ -75,10 +75,10 @@ An `id` and/or `identifier` must be provided in order to allow data users to gro
     <tr>
       <td style="text-align:left"><b>@id</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
+        <a href="http://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://api.example.com/events/1234512345"</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://api.example.com/event-series/1234512345"</code></p>
       </td>
     </tr>
     <tr>
@@ -108,10 +108,10 @@ An `id` and/or `identifier` must be provided in order to allow data users to gro
     <tr>
       <td style="text-align:left"><b>@id</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
+        <a href="http://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://api.example.com/events/1234512345"</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://api.example.com/event-series/1234512345"</code></p>
       </td>
     </tr>
     <tr>
