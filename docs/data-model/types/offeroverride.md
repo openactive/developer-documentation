@@ -31,10 +31,10 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
     <tr>
       <td style="text-align:left"><b>@id</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
+        <a href="http://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
-        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/offer/fc8f8c37e70ae50b12345"</code></p>
+        <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://api.example.com/session-series/12345#/offers/212345"</code></p>
       </td>
     </tr>
     <tr>

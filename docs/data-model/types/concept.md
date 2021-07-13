@@ -31,7 +31,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
     <tr>
       <td style="text-align:left"><b>@id</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
+        <a href="http://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
         <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://openactive.io/activity-list#a454c7e6-52da-426d-9bd1-743e9d7d266d12345"</code></p>

@@ -31,7 +31,7 @@ This type is derived from [https://schema.org/Course](https://schema.org/Course)
     <tr>
       <td style="text-align:left"><b>@id</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
+        <a href="http://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
         <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://api.example.com/courses/1234512345"</code></p>

@@ -90,7 +90,7 @@ While these properties are marked as recommended in the specification, a data pu
     <tr>
       <td style="text-align:left"><b>@id</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
+        <a href="http://schema.org/url"><code>url</code></a>
       </td>
       <td style="text-align:left">
         <p>A unique url based identifier for the record</p><p></br><b>Example</b></p><p><code>"@id": "https://example.com/place/12345"</code></p>
