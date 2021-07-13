@@ -34,7 +34,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>The <code>@id</code> of a Concept from the OpenActive Activity List. This value <a href="https://developer.openactive.io/publishing-data/activity-list-references">must always exactly match</a> an <code>id</code> from the OpenActive Activity List.</p><p></br><b>Example</b></p><p><code>"@id": "https://openactive.io/activity-list#a454c7e6-52da-426d-9bd1-743e9d7d266d"</code></p>
+        <p>The <code>@id</code> of a Concept from the <a href="https://github.com/openactive/activity-list">OpenActive Activity List</a>. This value <a href="https://developer.openactive.io/publishing-data/activity-list-references">must always exactly match</a> an <code>id</code> from the <a href="https://github.com/openactive/activity-list">OpenActive Activity List</a>.</p><p></br><b>Example</b></p><p><code>"@id": "https://openactive.io/activity-list#a454c7e6-52da-426d-9bd1-743e9d7d266d"</code></p>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ This type is derived from [http://www.w3.org/2004/02/skos/core#Concept](http://w
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>A stable URL reference for the taxonomy, which must be <code>https://openactive.io/activity-list</code> to reference the OpenActive Activity List.</p><p></br><b>Example</b></p><p><code>"inScheme": "https://openactive.io/activity-list"</code></p>
+        <p>A stable URL reference for the taxonomy, which must be <code>https://openactive.io/activity-list</code> to <a href="https://developer.openactive.io/publishing-data/activity-list-references">reference the OpenActive Activity List</a>.</p><p></br><b>Example</b></p><p><code>"inScheme": "https://openactive.io/activity-list"</code></p>
       </td>
     </tr>
     <tr>
