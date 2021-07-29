@@ -190,7 +190,7 @@ The test suite will making all bookings under a specific `primary` Seller provid
 
 If your booking system only supports a single seller, only the “`primary`” seller is required. If your booking system supports multiple sellers, the “`secondary`” seller must also be set to support the “[multiple-sellers](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/core/multiple-sellers/README.md)” tests. 
 
-See the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#configuration-for-sellers-within-confignode_envjson) for more information.
+See the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#sellers) for more information.
 
 {% code title="./config/dev.json \(extract\)" %}
 ```javascript
