@@ -16,7 +16,7 @@ In order to build the Open Booking API, you must first have built both [Open Opp
 
 For .NET, a full implementation tutorial is available: [https://tutorials.openactive.io/open-booking-sdk/](https://tutorials.openactive.io/open-booking-sdk/).
 
-For other languages, it is best to use the [Open Booking API CR2](https://openactive.io/open-booking-api/EditorsDraft) specification as an implementation reference.
+For other languages, it is best to use the [Open Booking API CR](https://openactive.io/open-booking-api/EditorsDraft/1.0CR3/)3 specification as an implementation reference.
 
 ### .NET, PHP and Ruby Libraries
 
