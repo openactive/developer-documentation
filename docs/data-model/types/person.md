@@ -76,10 +76,10 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
     <tr>
       <td style="text-align:left"><b>gender</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/GenderType"><code>GenderType</code></a>
+        <a href="https://schema.org/GenderType"><code>GenderType</code></a><br/> - or - <br/><a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
-        <p>Indicates the gender of the person.</p><p></br><b>Example</b></p><p><code>"gender": "https://schema.org/Female"</code></p>
+        <p>Indicates the gender of the person. While <code>https://schema.org/Male</code> and <code>https://schema.org/Female</code> may be used, text strings are also acceptable for people who do not identify as a binary gender.</p><p></br><b>Example</b></p><p><code>"gender": "https://schema.org/Female"</code></p>
       </td>
     </tr>
     <tr>
