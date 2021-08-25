@@ -65,6 +65,15 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>emergencyContact</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Person to contact in case of emergencies related to this Person.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>familyName</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
