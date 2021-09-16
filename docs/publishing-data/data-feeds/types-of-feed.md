@@ -44,6 +44,10 @@ For [**bookable**](https://www.openactive.io/open-booking-api/EditorsDraft/#dfn-
 
 ![](https://docs.google.com/drawings/u/0/d/sVvrks8vK_gfSRejrIIIMGw/image?w=636&h=206&rev=363&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
+{% hint style="warning" %}
+Please note that the first two "combined feed" options given above are no longer recommended for new OpenActive implementations. These options increase complexity for data users, and create unnecessary additional load on all systems.
+{% endhint %}
+
 Bookable data feed examples:
 
 * Small provider: [SessionSeries with ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries_example_1.json&version=2.0)
