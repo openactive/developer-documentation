@@ -180,7 +180,7 @@ Automatically creates new opportunities in the booking system before each test r
 
 In order to enable controlled testing, you must implement the [OpenActive Test Interface](https://openactive.io/test-interface) within your booking system. This interface allows the test suite to create opportunities that conform to specific criteria.
 
-Your implementation of the OpenActive Test Interface itself can be tested using the [test-interface](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/core/test-interface/README.md) feature.
+Your implementation of the [OpenActive Test Interface](https://openactive.io/test-interface) itself can be tested using the [test-interface](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/core/test-interface/README.md) feature.
 
 The `testDatasetIdentifier` setting is used in all calls in the test interface. It allows any test data that was created with this identifier to be cleared before a new test run begins.
 
