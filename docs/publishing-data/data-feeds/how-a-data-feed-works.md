@@ -2,11 +2,11 @@
 
 ## RPDE feeds explained
 
-The following video is a beta explainer animation for Realtime Paged Data Exchange \(RPDE\) feeds. If you find this short video useful, please drop any feedback to hello@openactive.io, and we will extend it into a full explanation.
+The following video is a beta explainer animation for Realtime Paged Data Exchange (RPDE) feeds. If you find this short video useful, please drop any feedback to hello@openactive.io, and we will extend it into a full explanation.
 
 For a full explanation of how to create an RPDE feed, please see the [specification](https://www.openactive.io/realtime-paged-data-exchange/#paging).
 
-{% embed url="https://youtu.be/yHZS24xzY-8" caption="" %}
+{% embed url="https://youtu.be/yHZS24xzY-8" %}
 
 ## Must Read: Principles of Feeds
 
@@ -28,4 +28,3 @@ Please ensure that you have implemented [this query](https://www.openactive.io/r
       OR (modified > @afterTimestamp)
 ORDER BY modified, id
 ```
-

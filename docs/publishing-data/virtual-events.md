@@ -14,13 +14,13 @@ Online classes and events are part of an [ongoing discussion](https://github.com
 
 ## Implementation guidance
 
-In order to upgrade your booking or listing system to support virtual events, consider implementing the following properties. The [OpenActive libraries](data-feeds/implementing-rpde-feeds.md#net-php-and-ruby-libraries), [types reference documentation](../data-model/types/#event-types-also-used-for-virtual-events), and [validator](http://validator.openactive.io/) have been updated to support these properties.
+In order to upgrade your booking or listing system to support virtual events, consider implementing the following properties. The [OpenActive libraries](data-feeds/implementing-rpde-feeds.md#net-php-and-ruby-libraries), [types reference documentation](../data-model/types/#event-types-also-used-for-virtual-events), and [validator](http://validator.openactive.io) have been updated to support these properties.
 
 {% hint style="info" %}
 Please see the "**Updated Proposal**" within each of the referenced GitHub issues in the headings below for further specific guidance on each property. Please comment on these GitHub issue if you require any specific clarifications.
 {% endhint %}
 
-### `eventAttendanceMode` \([\#225](https://github.com/openactive/modelling-opportunity-data/issues/225)\)
+### `eventAttendanceMode` ([#225](https://github.com/openactive/modelling-opportunity-data/issues/225))
 
 #### **Definition**
 
@@ -53,7 +53,7 @@ If `eventAttendanceMode` is set to `https://schema.org/OnlineEventAttendanceMode
 }
 ```
 
-### `beta:affiliatedLocation` \([\#227](https://github.com/openactive/modelling-opportunity-data/issues/227)\)
+### `beta:affiliatedLocation` ([#227](https://github.com/openactive/modelling-opportunity-data/issues/227))
 
 #### **Definition**
 
@@ -96,11 +96,11 @@ The property is identical to the existing `location` property, requiring a `Plac
 }
 ```
 
-### `beta:isInteractivityPreferred` \([\#230](https://github.com/openactive/modelling-opportunity-data/issues/230)\)
+### `beta:isInteractivityPreferred` ([#230](https://github.com/openactive/modelling-opportunity-data/issues/230))
 
 **Definition**
 
-A property that indicates whether the virtual event is interactive \(e.g. Zoom with participant microphones and cameras on\), or is just a one-way broadcast \(e.g. Facebook Live, Instagram Live, Zoom with participant microphones and cameras off\).
+A property that indicates whether the virtual event is interactive (e.g. Zoom with participant microphones and cameras on), or is just a one-way broadcast (e.g. Facebook Live, Instagram Live, Zoom with participant microphones and cameras off).
 
 #### **Why implement this property?**
 
@@ -112,7 +112,7 @@ This property allows applications to present a filter for "interactive classes",
 
 The existing `attendeeInstruction` and `description` properties may be used for activity providers to provide further clarification about interactivity preferences.
 
-Additionally, this may optionally be combined with the boolean `beta:isVirtuallyCoached` \([\#71](https://github.com/openactive/modelling-opportunity-data/issues/71)\) for the cases where the virtual class instruction is pre-recorded - e.g. for the common use case where Zoom is used for a group of participants to share in a pre-recorded class. If `beta:isVirtuallyCoached` is unspecified, it is assumed to be `false`.
+Additionally, this may optionally be combined with the boolean `beta:isVirtuallyCoached` ([#71](https://github.com/openactive/modelling-opportunity-data/issues/71)) for the cases where the virtual class instruction is pre-recorded - e.g. for the common use case where Zoom is used for a group of participants to share in a pre-recorded class. If `beta:isVirtuallyCoached` is unspecified, it is assumed to be `false`.
 
 `beta:isInteractivityPreferred` **must not** be present when `eventAttendanceMode` is set to `https://schema.org/OfflineEventAttendanceMode` or is unspecified.
 
@@ -130,7 +130,7 @@ Additionally, this may optionally be combined with the boolean `beta:isVirtually
 }
 ```
 
-### `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
+### `beta:participantSuppliedEquipment` ([#229](https://github.com/openactive/modelling-opportunity-data/issues/229))
 
 **Definition**
 
@@ -165,7 +165,7 @@ The existing `attendeeInstruction` and `description` properties may be used for 
 }
 ```
 
-### `maximumVirtualAttendeeCapacity` \([\#226](https://github.com/openactive/modelling-opportunity-data/issues/226)\)
+### `maximumVirtualAttendeeCapacity` ([#226](https://github.com/openactive/modelling-opportunity-data/issues/226))
 
 **Definition**
 
@@ -194,7 +194,7 @@ The property can be set at either the `SessionSeries`, `ScheduledSession`or `Eve
 }
 ```
 
-### `beta:virtualLocation` \([\#224](https://github.com/openactive/modelling-opportunity-data/issues/224)\)
+### `beta:virtualLocation` ([#224](https://github.com/openactive/modelling-opportunity-data/issues/224))
 
 **Definition**
 
@@ -210,7 +210,7 @@ The value of `beta:virtualLocation`, must be a `VirtualLocation` object, which m
 
 The `url` must provide direct access to participate in a free virtual event, which could be used for e.g. a "View Livestream" button.
 
-Note where the virtual location is private \(e.g. behind a paywall\), the `VirtualLocation` `url` should **not** be included.
+Note where the virtual location is private (e.g. behind a paywall), the `VirtualLocation` `url` should **not** be included.
 
 From the existing [Modelling Opportunity Data specification](https://www.openactive.io/modelling-opportunity-data/), the `Offer` `url` can be used for the link to purchase access or registration, and the `Event` `url` can signpost to a general page about the session.
 
@@ -234,7 +234,7 @@ The property can be set at the `SessionSeries`, `ScheduledSession` or `Event` le
 }
 ```
 
-### `level` for "Beginner-friendly" \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\)
+### `level` for "Beginner-friendly" ([#82](https://github.com/openactive/modelling-opportunity-data/issues/82))
 
 **Definition**
 
@@ -261,7 +261,7 @@ To specify "Beginner-friendly" the value of the `level` property, must include t
 } 
 ```
 
-### `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
+### `beta:donationPaymentUrl` ([#234](https://github.com/openactive/modelling-opportunity-data/issues/234))
 
 **Definition**
 
@@ -286,7 +286,7 @@ The property accepts a URL, the existence of which both indicates that an activi
 } 
 ```
 
-### `beta:formalCriteriaMet` \([\#236](https://github.com/openactive/modelling-opportunity-data/issues/236)\)
+### `beta:formalCriteriaMet` ([#236](https://github.com/openactive/modelling-opportunity-data/issues/236))
 
 **Definition**
 
@@ -294,7 +294,7 @@ An array of URLs, each of which describe the formal criteria that are met by the
 
 #### **Why implement this property?**
 
-It is the activity provider’s responsibility to ensure they have adequate insurance in place for virtual classes \(and correct music licences, where relevant\). Booking systems that wish to allow their customers to be part of Sport England's [Join the Movement](https://www.sportengland.org/stayinworkout) campaign must provide assurance that activity providers have met these criteria, by either including the `beta:formalCriteriaMet` property per-organizer, or by demonstrating system-level safeguards are in place.
+It is the activity provider’s responsibility to ensure they have adequate insurance in place for virtual classes (and correct music licences, where relevant). Booking systems that wish to allow their customers to be part of Sport England's [Join the Movement](https://www.sportengland.org/stayinworkout) campaign must provide assurance that activity providers have met these criteria, by either including the `beta:formalCriteriaMet` property per-organizer, or by demonstrating system-level safeguards are in place.
 
 #### **Values**
 
@@ -339,39 +339,39 @@ Note that in order to make use of "beta" properties, `"@context"` must include t
 
 ### SessionSeries, HeadlineEvent, CourseInstance and Event
 
-The following properties are **REQUIRED** \(inheriting from existing [Modelling Opportunity Data specification](https://www.openactive.io/modelling-opportunity-data/)\):
+The following properties are **REQUIRED** (inheriting from existing [Modelling Opportunity Data specification](https://www.openactive.io/modelling-opportunity-data/)):
 
 * `name`
 * `activity`
-* `organizer` - including a **required** `@id`, a **recommended** `sameAs` property for social media handles, and a **recommended** `beta:formalCriteriaMet` \([\#236](https://github.com/openactive/modelling-opportunity-data/issues/236)\).
+* `organizer` - including a **required** `@id`, a **recommended** `sameAs` property for social media handles, and a **recommended** `beta:formalCriteriaMet` ([#236](https://github.com/openactive/modelling-opportunity-data/issues/236)).
   * The `@id` is required to give each organizer a [globally unique identifier in the form of a URL](../data-model/context-and-json-ld.md#contexts-properties-and-types).
   * The `@id` does not need to resolve to a functional endpoint, but **must** use a domain name owned by your booking or listing system. This allows applications with specific content approval requirements to register trusted organizers based on their `@id`.
   * An example of such an `@id` is `https://id.bookingsystem.com/organizers/123`.
-* `eventAttendanceMode` \([\#225](https://github.com/openactive/modelling-opportunity-data/issues/225)\)
-* `offers` \(including a recommended `url` that links straight to the purchase page\)
-* `url` \(to a page describing the session\)
+* `eventAttendanceMode` ([#225](https://github.com/openactive/modelling-opportunity-data/issues/225))
+* `offers` (including a recommended `url` that links straight to the purchase page)
+* `url` (to a page describing the session)
 
 The following properties **MUST NOT** be included when `eventAttendanceMode` is set to `https://schema.org/OnlineEventAttendanceMode`:
 
-* `location` \([\#227](https://github.com/openactive/modelling-opportunity-data/issues/227)\)
+* `location` ([#227](https://github.com/openactive/modelling-opportunity-data/issues/227))
 
 The following properties are **RECOMMENDED**:
 
 * `description`
 * `image`
-* `level` \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\) - using the string "`Beginner`" for beginner friendly classes
+* `level` ([#82](https://github.com/openactive/modelling-opportunity-data/issues/82)) - using the string "`Beginner`" for beginner friendly classes
 * `ageRange`
 * `genderRestriction`
-* `beta:isFirstSessionAccessibleForFree` \([\#232](https://github.com/openactive/modelling-opportunity-data/issues/232)\)
-* `beta:isInteractivityPreferred` \([\#230](https://github.com/openactive/modelling-opportunity-data/issues/230)\)
-* `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
-* `beta:affiliatedLocation` \([\#227](https://github.com/openactive/modelling-opportunity-data/issues/227)\)
-* `maximumVirtualAttendeeCapacity` \([\#226](https://github.com/openactive/modelling-opportunity-data/issues/226)\)
-* `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
+* `beta:isFirstSessionAccessibleForFree` ([#232](https://github.com/openactive/modelling-opportunity-data/issues/232))
+* `beta:isInteractivityPreferred` ([#230](https://github.com/openactive/modelling-opportunity-data/issues/230))
+* `beta:participantSuppliedEquipment` ([#229](https://github.com/openactive/modelling-opportunity-data/issues/229))
+* `beta:affiliatedLocation` ([#227](https://github.com/openactive/modelling-opportunity-data/issues/227))
+* `maximumVirtualAttendeeCapacity` ([#226](https://github.com/openactive/modelling-opportunity-data/issues/226))
+* `beta:donationPaymentUrl` ([#234](https://github.com/openactive/modelling-opportunity-data/issues/234))
 
 ### ScheduledSession and Event
 
-The following properties are **REQUIRED** \(inheriting from existing [Modelling Opportunity Data specification](https://www.openactive.io/modelling-opportunity-data/)\):
+The following properties are **REQUIRED** (inheriting from existing [Modelling Opportunity Data specification](https://www.openactive.io/modelling-opportunity-data/)):
 
 * `startDate`
 
@@ -379,7 +379,7 @@ The following properties are **RECOMMENDED**:
 
 * `duration`
 * `endDate`
-* `beta:virtualLocation` \([\#224](https://github.com/openactive/modelling-opportunity-data/issues/224)\) \(including a `url` to the live class itself, e.g. a Facebook Live or Zoom URL\)
+* `beta:virtualLocation` ([#224](https://github.com/openactive/modelling-opportunity-data/issues/224)) (including a `url` to the live class itself, e.g. a Facebook Live or Zoom URL)
 
 ## **Examples**
 
@@ -387,8 +387,8 @@ The following properties are **RECOMMENDED**:
 
 The validator includes complete examples for:
 
-* [Virtual SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split-virtual_example_1.json&version=2.x)
-* [Virtual ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split-virtual_example_1.json&version=2.x)
+* [Virtual SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split-virtual_example\_1.json\&version=2.x)
+* [Virtual ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split-virtual_example\_1.json\&version=2.x)
 
 ### Illustrative examples
 
@@ -452,4 +452,3 @@ The examples below only include new properties specific to virtual events, for t
   }
 }
 ```
-

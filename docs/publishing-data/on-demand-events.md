@@ -2,9 +2,9 @@
 
 On-Demand Events are recordings of events that do not occur at a specific time, and are available to watch at any time - similar to content on Netflix or iPlayer.
 
-These might be pre-recorded fitness classes, workouts, sessions which are provided via an online product, such as Les Mills On Demand and Racefully. They include on-demand video content and sessions which can be participated in virtually using an app or run-tracker \(e.g. live virtual 5k\).
+These might be pre-recorded fitness classes, workouts, sessions which are provided via an online product, such as Les Mills On Demand and Racefully. They include on-demand video content and sessions which can be participated in virtually using an app or run-tracker (e.g. live virtual 5k).
 
-The [**`OnDemandEvent`**](../data-model/types/ondemandevent.md) type is used to represent such events, and they must be published using a **separate RPDE feed**, as per [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent_example_1.json&version=2.x).
+The [**`OnDemandEvent`**](../data-model/types/ondemandevent.md) type is used to represent such events, and they must be published using a **separate RPDE feed**, as per [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent_example\_1.json\&version=2.x).
 
 {% hint style="warning" %}
 Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71) that has been [accelerated](https://w3c.openactive.io/meetings/2020-03-25-virtual-events) in response to the COVID-19 pandemic, and any properties suggested in the associated proposals are subject to change after the pandemic has ended. We welcome your contribution to the [discussion and various proposals](https://github.com/openactive/modelling-opportunity-data/labels/virtual%20events) with any thoughts and feedback from your implementation.
@@ -12,13 +12,13 @@ Online classes and events are part of an [ongoing discussion](https://github.com
 
 ## Implementation guidance
 
-In order to upgrade your booking or listing system to support virtual events, consider implementing the following properties, in addition to the [standard required and recommended properties](../data-model/types/ondemandevent.md), within your **new RPDE feed specific to** [**`OnDemandEvent`**](../data-model/types/ondemandevent.md). The [OpenActive libraries](data-feeds/implementing-rpde-feeds.md#net-php-and-ruby-libraries), [types reference documentation](../data-model/types/#event-types-also-used-for-virtual-events), and [validator](http://validator.openactive.io/) have been updated to support these properties.
+In order to upgrade your booking or listing system to support virtual events, consider implementing the following properties, in addition to the [standard required and recommended properties](../data-model/types/ondemandevent.md), within your **new RPDE feed specific to** [**`OnDemandEvent`**](../data-model/types/ondemandevent.md). The [OpenActive libraries](data-feeds/implementing-rpde-feeds.md#net-php-and-ruby-libraries), [types reference documentation](../data-model/types/#event-types-also-used-for-virtual-events), and [validator](http://validator.openactive.io) have been updated to support these properties.
 
 {% hint style="info" %}
 Please see the "**Updated Proposal**" within each of the referenced GitHub issues in the headings below for further specific guidance on each property. Please comment on these GitHub issue if you require any specific clarifications.
 {% endhint %}
 
-### `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
+### `beta:participantSuppliedEquipment` ([#229](https://github.com/openactive/modelling-opportunity-data/issues/229))
 
 **Definition**
 
@@ -51,7 +51,7 @@ The existing `attendeeInstruction` and `description` properties may be used for 
 }
 ```
 
-### `level` for "Beginner-friendly" \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\)
+### `level` for "Beginner-friendly" ([#82](https://github.com/openactive/modelling-opportunity-data/issues/82))
 
 **Definition**
 
@@ -78,7 +78,7 @@ To specify "Beginner-friendly" the value of the `level` property must include th
 }
 ```
 
-### `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
+### `beta:donationPaymentUrl` ([#234](https://github.com/openactive/modelling-opportunity-data/issues/234))
 
 **Definition**
 
@@ -103,7 +103,7 @@ The property accepts a URL, the existence of which both indicates that an activi
 }
 ```
 
-### `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\)
+### `workFeatured`([#228](https://github.com/openactive/modelling-opportunity-data/issues/228))
 
 **Definition**
 
@@ -157,12 +157,12 @@ The following properties are **REQUIRED** for [`OnDemandEvent`](../data-model/ty
 
 * `activity`
 * `name`
-* `offers` \(including a recommended `url` that links straight to the purchase page\)
-* `organizer` \(including a **required** `@id`, and a **recommended** `sameAs` property for social media handles\)
+* `offers` (including a recommended `url` that links straight to the purchase page)
+* `organizer` (including a **required** `@id`, and a **recommended** `sameAs` property for social media handles)
   * The `@id` is required to give each organizer a [globally unique identifier in the form of a URL](https://www.openactive.io/open-booking-api/EditorsDraft/#globally-unique-identifiers).
   * The `@id` does not need to resolve to a functional endpoint, but **must** use a domain name owned by your booking or listing system. This allows applications with specific content approval requirements to register trusted organizers based on their `@id`.
   * An example of such an `@id` is `https://id.bookingsystem.com/organizers/123`.
-* `url` \(to a page describing the session\)
+* `url` (to a page describing the session)
 
 The following properties are **RECOMMENDED** for [`OnDemandEvent`](../data-model/types/ondemandevent.md):
 
@@ -171,11 +171,11 @@ The following properties are **RECOMMENDED** for [`OnDemandEvent`](../data-model
 * `duration`
 * `genderRestriction`
 * `image`
-* `level` \([\#82](https://github.com/openactive/modelling-opportunity-data/issues/82)\) - using the string "`Beginner`" for beginner friendly classes
-* `workFeatured`\([\#228](https://github.com/openactive/modelling-opportunity-data/issues/228)\) - which could could be a [`VideoObject`](../data-model/types/videoobject.md), [`AudioObject`](../data-model/types/audioobject.md), or a more general [`MediaObject`](../data-model/types/mediaobject.md).
-* `beta:donationPaymentUrl` \([\#234](https://github.com/openactive/modelling-opportunity-data/issues/234)\)
-* `beta:isFirstSessionAccessibleForFree` \([\#232](https://github.com/openactive/modelling-opportunity-data/issues/232)\)
-* `beta:participantSuppliedEquipment` \([\#229](https://github.com/openactive/modelling-opportunity-data/issues/229)\)
+* `level` ([#82](https://github.com/openactive/modelling-opportunity-data/issues/82)) - using the string "`Beginner`" for beginner friendly classes
+* `workFeatured`([#228](https://github.com/openactive/modelling-opportunity-data/issues/228)) - which could could be a [`VideoObject`](../data-model/types/videoobject.md), [`AudioObject`](../data-model/types/audioobject.md), or a more general [`MediaObject`](../data-model/types/mediaobject.md).
+* `beta:donationPaymentUrl` ([#234](https://github.com/openactive/modelling-opportunity-data/issues/234))
+* `beta:isFirstSessionAccessibleForFree` ([#232](https://github.com/openactive/modelling-opportunity-data/issues/232))
+* `beta:participantSuppliedEquipment` ([#229](https://github.com/openactive/modelling-opportunity-data/issues/229))
 
 ## **Examples**
 
@@ -183,7 +183,7 @@ The following properties are **RECOMMENDED** for [`OnDemandEvent`](../data-model
 
 The validator includes a complete example for:
 
-* [OnDemandEvent](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent_example_1.json&version=2.x)
+* [OnDemandEvent](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent_example\_1.json\&version=2.x)
 
 ### Illustrative examples
 
@@ -212,4 +212,3 @@ The example below only include new properties specific to on-demand events, for 
   "beta:donationPaymentUrl": "https://www.paypal.com/donate/acme_fit"
 }
 ```
-

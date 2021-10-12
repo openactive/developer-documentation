@@ -5,11 +5,11 @@
 The interactive online [OpenActive Validator](https://validator.openactive.io) provides two key features:
 
 * [RPDE validation](https://validator.openactive.io/rpde): attempt to consume an RPDE feed and check for common errors
-* [JSON-LD validation](https://validator.openactive.io/): check a single feed page or request/response for validity 
+* [JSON-LD validation](https://validator.openactive.io): check a single feed page or request/response for validity 
 
 ## OpenActive Test Suite
 
-The downloadable [OpenActive Test Suite](https://github.com/openactive/openactive-test-suite/) includes an option for comprehensively validating OpenActive open data feeds. It runs the [OpenActive Validator](https://validator.openactive.io/) for every item in the feed, and also performs basic RPDE validation.
+The downloadable [OpenActive Test Suite](https://github.com/openactive/openactive-test-suite/) includes an option for comprehensively validating OpenActive open data feeds. It runs the [OpenActive Validator](https://validator.openactive.io) for every item in the feed, and also performs basic RPDE validation.
 
 ### Step 1: Install the test suite
 
@@ -59,7 +59,7 @@ ORDER BY modified,
 * The `next` URL should be an absolute not relative URL.
 * Are all responses returned with header `Content-Type: application/json`
 * Check for duplicate IDs: items should not appear more than once in the feed if the source data is unchanging.
-* Pages should contain at least 500 items \(this is a warning rather than an error\).
+* Pages should contain at least 500 items (this is a warning rather than an error).
 * Are the next URL parameters urlencoded?
 
 ### Last Page checks
@@ -69,12 +69,11 @@ ORDER BY modified,
 
 To quickly access the last page:
 
-* **afterTimestamp**: If "modified" is an integer, put a high integer in for afterTimestamp to return the last page. \(N.B. the spec currently allows for strings to be used for "modified", but a future spec will likely [make integers a must here](https://github.com/openactive/realtime-paged-data-exchange/issues/89)\).
+* **afterTimestamp**: If "modified" is an integer, put a high integer in for afterTimestamp to return the last page. (N.B. the spec currently allows for strings to be used for "modified", but a future spec will likely [make integers a must here](https://github.com/openactive/realtime-paged-data-exchange/issues/89)).
 * **afterChangeNumber**: Put a high integer in for afterChangeNumber to return last page
 
 ### Data quality checks
 
 * Does the feed include all historical data from the beginning of time and not just data in the future or from today's date?
-* Does the endpoint without any parameters return the first page \(from the beginning of time\)?
+* Does the endpoint without any parameters return the first page (from the beginning of time)?
 * Does each page contain a "license" key?
-

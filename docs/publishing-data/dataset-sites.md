@@ -6,7 +6,7 @@ Example dataset sites: [GLL](http://data.better.org.uk), [Fusion Lifestyle](http
 
 ## Overview
 
-* In order for data users to find your data feeds, and for your dataset to be featured on the [OpenActive status page](https://status.openactive.io/), you must deploy the [Dataset Site Template](dataset-sites.md#step-1-build-dataset-sites-into-your-system) \(a simple mustache template\) within your codebase.
+* In order for data users to find your data feeds, and for your dataset to be featured on the [OpenActive status page](https://status.openactive.io), you must deploy the [Dataset Site Template](dataset-sites.md#step-1-build-dataset-sites-into-your-system) (a simple mustache template) within your codebase.
 * For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a single Dataset Site is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template.
 * If you are a booking system with **multiple databases**, each of which has their own set of OpenActive data feeds, a Dataset Site is required for each customer. This can be achieved using customer configuration to drive the mustache template.
 * You need to create a [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for each Dataset Site.
@@ -16,23 +16,23 @@ Example dataset sites: [GLL](http://data.better.org.uk), [Fusion Lifestyle](http
 ### What is a Dataset Site?
 
 * A web page that can be referenced when discussing the dataset.
-* A human and machine readable licence associated with the data \(the Dataset Site contains invisible metadata which allows its details to be read automatically\).
-* A human and machine readable rights statement to specify how dataset users \(innovators who want to build on top of/use your data\) should attribute your data.
+* A human and machine readable licence associated with the data (the Dataset Site contains invisible metadata which allows its details to be read automatically).
+* A human and machine readable rights statement to specify how dataset users (innovators who want to build on top of/use your data) should attribute your data.
 * An accessible "single point of truth" that explains where the data can be found.
 * Links to documentation relating to the format of the data, including the specifications it follows, and the data fields it contains.
-* A place where the community can contribute with comments, and raise issues - all Dataset Sites are linked to a GitHub issues board \(e.g. [this one](https://github.com/gll-better/opendata/issues)\) that allows data users to raise issues in the open.
+* A place where the community can contribute with comments, and raise issues - all Dataset Sites are linked to a GitHub issues board (e.g. [this one](https://github.com/gll-better/opendata/issues)) that allows data users to raise issues in the open.
 
 {% hint style="warning" %}
 A machine-readable dataset site is essential when publishing open data, and every dataset published within the OpenActive community to date has had one. However, the specification that describes a standard OpenActive dataset site is still yet to be formally defined, and has instead evolved as a de facto standard.
 
 As such, this documentation is still based on a [draft model](../data-model/types/dataset.md) that is designed to inform the OpenActive specification work with implementation feedback. It is mostly stable and has been largely unchanged for 2 years. However, it is still **subject to change**, as the [Dataset API Discovery specification](https://www.openactive.io/dataset-api-discovery/EditorsDraft/) is yet to be formally released, and feedback is very welcome, both within the relevant OpenActive [repository](https://github.com/openactive/dataset-api-discovery/issues/) and on the related schema.org [PR](https://github.com/schemaorg/schemaorg/pull/2635) and [issue](https://github.com/schemaorg/schemaorg/issues/1423).
 
-To minimise any uplift work required to conform to the formal specification when it is released, it is **recommended** that you use [one of the libraries below](dataset-sites.md#net-php-and-ruby-libraries) where possible. These libraries will be updated to meet the latest specification, and when used in their simplest mode \([RenderSimpleDatasetSite](https://github.com/openactive/OpenActive.DatasetSite.NET/#simple-implementation), [renderSimpleDatasetSite](https://packagist.org/packages/openactive/dataset-site#user-content-rendersimpledatasetsitesettings-supportedfeedtypes) or [TemplateRenderer.new](https://www.rubydoc.info/gems/openactive-dataset_site/0.1.1#Usage)\) will only require a simple dependency update from you to do so.
+To minimise any uplift work required to conform to the formal specification when it is released, it is **recommended** that you use [one of the libraries below](dataset-sites.md#net-php-and-ruby-libraries) where possible. These libraries will be updated to meet the latest specification, and when used in their simplest mode ([RenderSimpleDatasetSite](https://github.com/openactive/OpenActive.DatasetSite.NET/#simple-implementation), [renderSimpleDatasetSite](https://packagist.org/packages/openactive/dataset-site#user-content-rendersimpledatasetsitesettings-supportedfeedtypes) or [TemplateRenderer.new](https://www.rubydoc.info/gems/openactive-dataset_site/0.1.1#Usage)) will only require a simple dependency update from you to do so.
 {% endhint %}
 
 ## Step 1: Build Dataset Sites into your system
 
-The Dataset Site Template is very easy to use and quick to apply - it's essentially a single mustache template and associated JSON structure. It is designed to work with minimal effort with an extremely [wide range of platforms and languages](https://mustache.github.io/).
+The Dataset Site Template is very easy to use and quick to apply - it's essentially a single mustache template and associated JSON structure. It is designed to work with minimal effort with an extremely [wide range of platforms and languages](https://mustache.github.io).
 
 The[ dataset site template repository](https://github.com/openactive/dataset-site-template) contains a [mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) for creating an OpenActive dataset site.
 
@@ -42,25 +42,25 @@ Several libraries are available that make it really easy to render the dataset s
 
 The table below lists the available OpenActive libraries:
 
-| Language | Open Opportunity Data Feeds | Dataset Site |
-| :--- | :--- | :--- |
-| .NET | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/) |
-| PHP | [openactive/models](https://packagist.org/packages/openactive/models) | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site) |
-| Ruby | [openactive](https://rubygems.org/gems/openactive) | [openactive-dataset\_site](https://rubygems.org/gems/openactive-dataset_site) |
-| JavaScript / TypeScript | [@openactive/models-ts](https://www.npmjs.com/package/@openactive/models-ts) | - |
+| Language                | Open Opportunity Data Feeds                                                  | Dataset Site                                                                             |
+| ----------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| .NET                    | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/)             | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/) |
+| PHP                     | [openactive/models](https://packagist.org/packages/openactive/models)        | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site)        |
+| Ruby                    | [openactive](https://rubygems.org/gems/openactive)                           | [openactive-dataset_site](https://rubygems.org/gems/openactive-dataset_site)             |
+| JavaScript / TypeScript | [@openactive/models-ts](https://www.npmjs.com/package/@openactive/models-ts) | -                                                                                        |
 
 ### Other Languages
 
 A basic example of following the below render steps can be found [here](https://github.com/openactive/dataset-site-template-example-dotnet/blob/master/DatasetSiteTemplateExample/Program.cs), and can be readily ported into other languages. An explanation of how this works is included below.
 
-The [Dataset Site Template](https://github.com/openactive/dataset-site-template/) is a single self-contained mustache template of an HTML page that contains embedded CSS, an embedded encoded image, and references to CDNs of [Font Awesome](https://fontawesome.com/) and [Google Fonts](https://fonts.google.com/). It works across all browsers, and includes fully compliant DCAT and schema.org machine-readable metadata to ensure it is compatible with [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
+The [Dataset Site Template](https://github.com/openactive/dataset-site-template/) is a single self-contained mustache template of an HTML page that contains embedded CSS, an embedded encoded image, and references to CDNs of [Font Awesome](https://fontawesome.com) and [Google Fonts](https://fonts.google.com). It works across all browsers, and includes fully compliant DCAT and schema.org machine-readable metadata to ensure it is compatible with [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
 
 Steps to render the template:
 
-1. Construct the JSON-LD to match the format found in [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite), following [this documentation](../data-model/types/dataset.md).
-2. Find a [mustache library](https://mustache.github.io/) for your platform or language.
+1. Construct the JSON-LD to match the format found in [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json\&version=2.x\&validationMode=DatasetSite), following [this documentation](../data-model/types/dataset.md).
+2. Find a [mustache library](https://mustache.github.io) for your platform or language.
 3. Write code to do the following:
-   * Stringify the input JSON, and place the contents of the string within the "json" property at the root of the JSON itself \(i.e. serialised JSON embedded in the original deserialised object\). This is important as it is used to populate the machine-readable `<script type="application/ld+json">` tag within the generated HTML - view the source of [this page](https://reference-implementation.openactive.io/OpenActive) to see an example.
+   * Stringify the input JSON, and place the contents of the string within the "json" property at the root of the JSON itself (i.e. serialised JSON embedded in the original deserialised object). This is important as it is used to populate the machine-readable `<script type="application/ld+json">` tag within the generated HTML - view the source of [this page](https://reference-implementation.openactive.io/OpenActive) to see an example.
    * Use the resulting JSON with the [mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) to render the dataset site.
    * Keep in mind that OpenActive will be providing updates to the mustache template in the future, so it is best to write code that anticipates this.
 
@@ -69,12 +69,12 @@ Steps to render the template:
 The [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/) below **simply demonstrates** the Dataset Site Template render steps outlined above using plain JavaScript - it is **not intended for protection use**.
 
 {% hint style="danger" %}
-Please note **this is only an example to demonstrate the logic and is not intended for production use**. The mustache template **must** be **copied locally** and **rendered server-side** for production use, for security \(to prevent XSS attacks\) and as one of its primary purposes is SEO.
+Please note **this is only an example to demonstrate the logic and is not intended for production use**. The mustache template **must** be **copied locally** and **rendered server-side** for production use, for security (to prevent XSS attacks) and as one of its primary purposes is SEO.
 {% endhint %}
 
 Click the **Result** tab below to see the result of a template render.
 
-{% embed url="https://jsfiddle.net/nickevansuk/msby0vqg/" caption="" %}
+{% embed url="https://jsfiddle.net/nickevansuk/msby0vqg/" %}
 
 ## Step 2: Personalising the Dataset Site
 
@@ -82,9 +82,9 @@ The Dataset Site Template is designed to carry the customer's brand with minimal
 
 ### Single database
 
-For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a **single Dataset Site** is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template \(see [documentation](../data-model/types/dataset.md) and [example](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite)\), or hard-coding the settings passed to the library \(see the [relevant library documentation](dataset-sites.md#net-php-and-ruby-libraries)\).
+For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a **single Dataset Site** is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template (see [documentation](../data-model/types/dataset.md) and [example](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdataset-site-template%2Fexample.json\&version=2.x\&validationMode=DatasetSite)), or hard-coding the settings passed to the library (see the [relevant library documentation](dataset-sites.md#net-php-and-ruby-libraries)).
 
-Note a single Dataset Site must only be used when all feeds it includes are part of the same dataset - for example a SessionSeries feed and ScheduledSession feed that together constitute the dataset of all providers in the booking system. Where multiple feeds exist that represent distinct datasets \(e.g. SessionSeries feed for Provider A, SessionSeries feed for Provider B\), they must be referenced from distinct Dataset Sites, which can be constructed as per the instructions in [Multiple databases](dataset-sites.md#multiple-databases) below.
+Note a single Dataset Site must only be used when all feeds it includes are part of the same dataset - for example a SessionSeries feed and ScheduledSession feed that together constitute the dataset of all providers in the booking system. Where multiple feeds exist that represent distinct datasets (e.g. SessionSeries feed for Provider A, SessionSeries feed for Provider B), they must be referenced from distinct Dataset Sites, which can be constructed as per the instructions in [Multiple databases](dataset-sites.md#multiple-databases) below.
 
 ### Multiple databases
 
@@ -93,29 +93,29 @@ For large booking systems with **multiple databases**, usually a separate databa
 * `organisationName` e.g. "Better",
 * `datasetSiteUrl` e.g. "[https://halo-odi.legendonlineservices.co.uk/openactive/](https://halo-odi.legendonlineservices.co.uk/openactive/)",
 * `datasetDiscussionUrl` e.g. "[https://github.com/gll-better/opendata](https://github.com/gll-better/opendata)",
-* `datasetDocumentationUrl` e.g. "[https://docs.acmebooker.example.com/](https://docs.acmebooker.example.com/)",
+* `datasetDocumentationUrl` e.g. "[https://docs.acmebooker.example.com/](https://docs.acmebooker.example.com)",
 * `organisationLegalEntity` e.g. "GLL",
 * `organisationPlainTextDescription` e.g. "Established in 1993, GLL is the largest UK-based charitable social enterprise delivering leisure, health and community services. Under the consumer facing brand Better, we operate 258 public Sports and Leisure facilities, 88 libraries, 10 children’s centres and 5 adventure playgrounds in partnership with 50 local councils, public agencies and sporting organisations. Better leisure facilities enjoy 46 million visitors a year and have more than 650,000 members.",
 * `organisationEmail` e.g. "info@better.org.uk",
-* `organisationUrl` e.g. "[https://www.better.org.uk/](https://www.better.org.uk/)",
+* `organisationUrl` e.g. "[https://www.better.org.uk/](https://www.better.org.uk)",
 * `organisationLogoUrl` e.g. "[http://data.better.org.uk/images/logo.png](http://data.better.org.uk/images/logo.png)",
 * `backgroundImageUrl` e.g. "[https://data.better.org.uk/images/bg.jpg](https://data.better.org.uk/images/bg.jpg)",
 * `openDataFeedBaseUrl` e.g. "[https://halo-odi.legendonlineservices.co.uk/api/](https://halo-odi.legendonlineservices.co.uk/api/)"
 
-We suggest if you can provide the customer with a means of customising the logo and background image \(e.g. via uploading an image to the [cloudinary.com](https://cloudinary.com) CDN, using [their widget](https://jsfiddle.net/nickevansuk/ugpnxmby/), which is free at low volume\), these have the largest effect on the brand feel of the page.
+We suggest if you can provide the customer with a means of customising the logo and background image (e.g. via uploading an image to the [cloudinary.com](https://cloudinary.com) CDN, using [their widget](https://jsfiddle.net/nickevansuk/ugpnxmby/), which is free at low volume), these have the largest effect on the brand feel of the page.
 
 Although the customer will likely be able to fill in most properties specific to them, there are two where they will require guidance:
 
 * `datasetDiscussionUrl` - the URL of the [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for the dataset. If your customers are sufficiently large, you will need to create a GitHub issues board for each customer, either [manually](dataset-sites.md#manual-issues-board-creation) or [automatically](dataset-sites.md#automatic-issues-board-creation). See [here](https://github.com/gladstonemrm) for an example of Gladstone's GitHub organization containing a GitHub issues board for each customer.
-* `datasetDocumentationUrl` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer may have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct. If you do not have your own documentation page, you can just link to "[https://developer.openactive.io/](https://developer.openactive.io/)".
+* `datasetDocumentationUrl` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer may have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct. If you do not have your own documentation page, you can just link to "[https://developer.openactive.io/](https://developer.openactive.io)".
 
 ## Step 3: GitHub Issues Board creation
 
 The `discussionUrl` is the url of the GitHub issues board for that specific dataset site.
 
-We recommend that you create each GitHub repository \(that will include a GitHub Issues Board\) within your own GitHub organisation either [manually](dataset-sites.md#manually) or via an [API call](dataset-sites.md#automatically).
+We recommend that you create each GitHub repository (that will include a GitHub Issues Board) within your own GitHub organisation either [manually](dataset-sites.md#manually) or via an [API call](dataset-sites.md#automatically).
 
-If you have multiple databases and customers with large data volumes, you should create one GitHub repository \(that will include a GitHub Issues Board\) for each customer. Single database systems need only create one GitHub repository \(that will include a GitHub Issues Board\).
+If you have multiple databases and customers with large data volumes, you should create one GitHub repository (that will include a GitHub Issues Board) for each customer. Single database systems need only create one GitHub repository (that will include a GitHub Issues Board).
 
 ### Helpdesk integration
 
@@ -132,7 +132,7 @@ You must first [create a parent GitHub organisation](https://help.github.com/en/
 
 A guide for creating a new GitHub repository for each customer can be found below.
 
-{% embed url="https://docs.google.com/document/d/1GO4HLYgrwpXH\_qxVuaAWXw\_HIr2Hn4KB7cl973Q1M4M/edit" caption="" %}
+{% embed url="https://docs.google.com/document/d/1GO4HLYgrwpXH_qxVuaAWXw_HIr2Hn4KB7cl973Q1M4M/edit" %}
 
 ### Automatic Issues Board Creation
 
@@ -153,17 +153,17 @@ The GitHub API provides a mechanism to [automatically create GitHub repositories
 
 ## Step 4: Validating your Dataset Site
 
-Use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite) to check that the JSON-LD within your Dataset Site is conformant, by using the **Load URL** feature in the menu to load your **Dataset Site URL**, while in the "Dataset Sites" mode. The validator will automatically extract the JSON-LD from your Dataset Site's HTML and validate it.
+Use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json\&version=2.x\&validationMode=DatasetSite) to check that the JSON-LD within your Dataset Site is conformant, by using the **Load URL** feature in the menu to load your **Dataset Site URL**, while in the "Dataset Sites" mode. The validator will automatically extract the JSON-LD from your Dataset Site's HTML and validate it.
 
-{% embed url="https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite" caption="" %}
+{% embed url="https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite" %}
 
-## Step 5: Providing a Data Catalog \(multiple databases only\)
+## Step 5: Providing a Data Catalog (multiple databases only)
 
 For booking systems with **multiple databases**, a Data Catalog must also be provided to allow the many Dataset Sites that are created to be easily indexed by the [OpenActive Status Page](https://status.openactive.io) and other data users.
 
-A Data Catalog is very simply an array of the URLs of all your Dataset Sites \(the `dataset` array\), presented within a `DataCatalog` wrapper following a [specific format](../data-model/types/datacatalog.md). An example of a live Data Catalog from the Gladstone system can be found [here](https://opendata.leisurecloud.live/api/datacatalog), and another example [here](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdata-catalogs%2Fsingular.jsonld&version=2.x&validationMode=DataCatalog).
+A Data Catalog is very simply an array of the URLs of all your Dataset Sites (the `dataset` array), presented within a `DataCatalog` wrapper following a [specific format](../data-model/types/datacatalog.md). An example of a live Data Catalog from the Gladstone system can be found [here](https://opendata.leisurecloud.live/api/datacatalog), and another example [here](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdata-catalogs%2Fsingular.jsonld\&version=2.x\&validationMode=DataCatalog).
 
-Please use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdata-catalogs%2Fsingular.jsonld&version=2.x&validationMode=DataCatalog) to check that your `DataCatalog` is conformant, using the "Data Catalog" mode.
+Please use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdata-catalogs%2Fsingular.jsonld\&version=2.x\&validationMode=DataCatalog) to check that your `DataCatalog` is conformant, using the "Data Catalog" mode.
 
 ## Step 6: Adding your Dataset Site or Data Catalog to the OpenActive Data Catalog Collection
 
@@ -177,7 +177,7 @@ The pull request will trigger GitHub Actions to run the OpenActive Test Suite to
 
 To force the validation to re-run, please submit an empty commit to the PR:
 
-```text
+```
 git commit --allow-empty -m "trigger GitHub actions"
 git push
 ```
@@ -187,4 +187,3 @@ The OpenActive Test Suite can be used to run the same test locally, [as shown he
 ### Multiple databases
 
 If you have created a new Data Catalog that links to your Dataset Sites, simply create a [Pull Request for the OpenActive Data Catalog Collection](https://github.com/openactive/data-catalogs/edit/master/data-catalog-collection.jsonld) and add your Data Catalog's production URL to the `hasPart` array.
-

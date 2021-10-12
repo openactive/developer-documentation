@@ -4,7 +4,7 @@
 
 A retention period should be applied to your data, so that sessions in the past are removed from the feed, while respecting the [RPDE invariants](https://www.w3.org/2017/08/realtime-paged-data-exchange/#core-concept).
 
-A CDN such as [CloudFlare](https://www.cloudflare.com/) is recommended to allow your RPDE endpoint to scale to millions of requests inbound.
+A CDN such as [CloudFlare](https://www.cloudflare.com) is recommended to allow your RPDE endpoint to scale to millions of requests inbound.
 
 ## Retention Period
 
@@ -33,9 +33,9 @@ Simply filtering out or removing opportunities from the feed that are in the pas
 
 ### Option 2: Retention period to reduce feed size
 
-If the objective of implementing a retention period is primarily to reduce the size of the feed, an effective retention period can be implemented by having the first page of the feed start from the first relevant record \(instead of from the beginning of time\). This approach is useful for simple cases where a CRON job is not desirable.
+If the objective of implementing a retention period is primarily to reduce the size of the feed, an effective retention period can be implemented by having the first page of the feed start from the first relevant record (instead of from the beginning of time). This approach is useful for simple cases where a CRON job is not desirable.
 
-The approach can be implemented as follows: if the `@afterTimestamp` and `@afterId` parameters are **not** supplied to the RPDE endpoint \(i.e. for the first page\), use the query below to try to get the `@firstTimestamp` and `@firstId` and use these as default values:
+The approach can be implemented as follows: if the `@afterTimestamp` and `@afterId` parameters are **not** supplied to the RPDE endpoint (i.e. for the first page), use the query below to try to get the `@firstTimestamp` and `@firstId` and use these as default values:
 
 ```sql
 -- Execute ONLY if @afterTimestamp and @afterId NOT provided
@@ -46,7 +46,7 @@ ORDER BY modified, id
    LIMIT 1
 ```
 
-For the first page only \(where `@afterTimestamp` and `@afterId` parameters are **not** supplied\), these default values are included within the `WHERE` clause of the RPDE query as below, with a slight change to the operands such that **`id >= @firstId`** to ensure the default value itself is included in the feed.
+For the first page only (where `@afterTimestamp` and `@afterId` parameters are **not** supplied), these default values are included within the `WHERE` clause of the RPDE query as below, with a slight change to the operands such that **`id >= @firstId`** to ensure the default value itself is included in the feed.
 
 For the first page, if no default values are returned, the RPDE query must exclude the `WHERE` clause as per the [specification](https://www.openactive.io/realtime-paged-data-exchange/#sql-query-example-for-timestamp-id), and return results from the beginning of time.
 
@@ -69,7 +69,7 @@ Hence the query either uses:
 ORDER BY modified, id
 ```
 
-To further reduce the number of records in the feed, any record for an opportunity in the past can be rendered as `"deleted"` in the feed without any change to the `updated` value \(note the record **must not** be removed from the feed\). This means that records representing past opportunities are effectively frozen after they have occurred, and by default will live on forever in downstream applications. If the record is edited, the `modified` value must still be updated, at which point the record will be removed from downstream applications, to ensure historical accuracy.
+To further reduce the number of records in the feed, any record for an opportunity in the past can be rendered as `"deleted"` in the feed without any change to the `updated` value (note the record **must not** be removed from the feed). This means that records representing past opportunities are effectively frozen after they have occurred, and by default will live on forever in downstream applications. If the record is edited, the `modified` value must still be updated, at which point the record will be removed from downstream applications, to ensure historical accuracy.
 
 {% hint style="info" %}
 Alternative approaches for implementing this option are available in [this proposal](https://github.com/openactive/realtime-paged-data-exchange/issues/96). Feedback and thoughts very welcome.
@@ -98,9 +98,9 @@ The settings in the CDN Configuration section will create the behaviour describe
 
 #### Scenario
 
-* In this scenario, 200 data consumers are tracking the RPDE feed by polling at the end of the list \(the last `next` URL\).
+* In this scenario, 200 data consumers are tracking the RPDE feed by polling at the end of the list (the last `next` URL).
 * Although each data consumer can choose a polling frequency arbitrarily, that frequency is not relevant to the calculations here, as it is the settings of the cache header that dictate the load on the origin server. It should also be noted that during normal operation the number of data consumers also does not impact the load on the origin server, and that 200 is used illustratively.
-* When the last page is requested, the first consumer would request the live page \(creating one hit on the origin server\), and the subsiquent 199 data consumers would receive a cached version. 
+* When the last page is requested, the first consumer would request the live page (creating one hit on the origin server), and the subsiquent 199 data consumers would receive a cached version. 
 
 #### **"Sleep" mode**
 
@@ -120,17 +120,17 @@ If a data consumer decides to "resync" their data from the beginning of your fee
 
 ### CloudFlare Walkthrough
 
-In order for [CloudFlare](https://www.cloudflare.com/) to respect your cache control headers, there are five simple steps to follow:
+In order for [CloudFlare](https://www.cloudflare.com) to respect your cache control headers, there are five simple steps to follow:
 
-#### 1\) Set up CloudFlare as your DNS provider and proxy
+#### 1) Set up CloudFlare as your DNS provider and proxy
 
 After you've [set up CloudFlare](https://support.cloudflare.com/hc/en-us/categories/200275218-Getting-Started) as your DNS provider, check requests are being routed through CloudFlare by enabling the orange cloud button.
 
-#### 2\) Set up a page rule with a wildcard that covers your feeds
+#### 2) Set up a page rule with a wildcard that covers your feeds
 
 Use the wildcards to ensure the rule covers all your feeds, for example:
 
-```text
+```
 *opendata.example.com/api/feeds/*
 ```
 
@@ -138,21 +138,21 @@ The page rule should have the following configuration:
 
 * **Cache Level:** Everything
 * **Origin Cache Control**: On
-* **SSL:** Flexible \(if you do not have SSL configured on your own server\)
+* **SSL:** Flexible (if you do not have SSL configured on your own server)
 
-#### 3\) Set Browser Cache Expiration to Respect Existing Headers
+#### 3) Set Browser Cache Expiration to Respect Existing Headers
 
 On the Caching configuration page, ensure that following is set:
 
 * **Browser Cache Expiration:** Respect Existing Headers
 
-![](../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35-1%20%282%29.png)
+![](<../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35-1 (2) (4).png>)
 
-#### 4\) Ensure that your feed does not inadvertently set any cookies
+#### 4) Ensure that your feed does not inadvertently set any cookies
 
-Ensure that your web application or web server infrastructure does not set any cookies on the feed pages \(for example load balancer [affinity cookies](https://azure.microsoft.com/en-gb/blog/disabling-arrs-instance-affinity-in-windows-azure-web-sites/)\), as these will prevent CloudFlare from caching pages.
+Ensure that your web application or web server infrastructure does not set any cookies on the feed pages (for example load balancer [affinity cookies](https://azure.microsoft.com/en-gb/blog/disabling-arrs-instance-affinity-in-windows-azure-web-sites/)), as these will prevent CloudFlare from caching pages.
 
-#### 5\) Test your configuration
+#### 5) Test your configuration
 
 Inspect the headers returned by your page to see if CloudFlare is successfully caching your feed.
 
@@ -164,9 +164,8 @@ A successfully cached page will return the following header:
 
 The following articles will help you dive deeper into this in case you have any issues:
 
-* [Understanding and Configuring Cloudflare Page Rules \(Page Rules Tutorial\)](https://support.cloudflare.com/hc/en-us/articles/218411427-Understanding-and-Configuring-Cloudflare-Page-Rules-Page-Rules-Tutorial-)
+* [Understanding and Configuring Cloudflare Page Rules (Page Rules Tutorial)](https://support.cloudflare.com/hc/en-us/articles/218411427-Understanding-and-Configuring-Cloudflare-Page-Rules-Page-Rules-Tutorial-)
 * [How Do I Tell Cloudflare What to Cache?](https://support.cloudflare.com/hc/en-us/articles/202775670-How-Do-I-Tell-Cloudflare-What-to-Cache-)
 * [Origin Cache-Control](https://support.cloudflare.com/hc/en-us/articles/115003206852-Origin-Cache-Control)
-* [What do the various Cloudflare cache responses \(HIT, Expired, etc.\) mean?](https://support.cloudflare.com/hc/en-us/articles/200168266-What-do-the-various-Cloudflare-cache-responses-HIT-Expired-etc-mean-)
+* [What do the various Cloudflare cache responses (HIT, Expired, etc.) mean?](https://support.cloudflare.com/hc/en-us/articles/200168266-What-do-the-various-Cloudflare-cache-responses-HIT-Expired-etc-mean-)
 * [View HTTP headers in Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers)
-

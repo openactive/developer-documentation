@@ -25,7 +25,7 @@ In the relevant [open data feed](data-feeds/types-of-feed.md), the `@id` and `pr
 ]
 ```
 
-See [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example_1.json&version=2.x) for a full feed example that references the OpenActive Activity List using the snippet above.
+See [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example\_1.json\&version=2.x) for a full feed example that references the OpenActive Activity List using the snippet above.
 
 {% hint style="warning" %}
 Please note that although the newer **`@id`** and **`@type`** are used here and throughout the rest of the OpenActive documentation and tooling, the OpenActive Activity List JSON-LD definition itself still uses **`id`** and **`type`** for backwards compatibility.
@@ -33,7 +33,7 @@ Please note that although the newer **`@id`** and **`@type`** are used here and 
 
 ### Multiple OpenActive Activity List references
 
-A booking system may choose to allow an opportunity to include multiple references to the OpenActive Activity List. If such a feature is implemented, a limit on the total number of references permitted per opportunity is recommended to discourage "tag spamming" \(for example, a maximum of 3\).
+A booking system may choose to allow an opportunity to include multiple references to the OpenActive Activity List. If such a feature is implemented, a limit on the total number of references permitted per opportunity is recommended to discourage "tag spamming" (for example, a maximum of 3).
 
 An example of multiple references to the OpenActive Activity List is shown below:
 
@@ -80,11 +80,11 @@ Your application may also store the `prefLabel` alongside the `@id` at the point
 
 ### Hardcoding OpenActive Activity List references
 
-If your booking system is restricted to a small number of different activities \(e.g. [Run Together](https://data.runtogether.co.uk/) is restricted to just "Running"\), it is usually better to hardcode the activity list references into your booking system.
+If your booking system is restricted to a small number of different activities (e.g. [Run Together](https://data.runtogether.co.uk) is restricted to just "Running"), it is usually better to hardcode the activity list references into your booking system.
 
 To find the **`@id`** simply [find the relevant activity in the OpenActive Activity List](https://activity-list.openactive.io/en/basic_find.html), then scroll down to the bottom the page to view a full example JSON-LD snippet for that specific activity, such as the screenshot below. This can be included in your open data feed.
 
-![Screenshot of full example JSON-LD snippet from OpenActive Activity List website](../.gitbook/assets/screenshot-2020-04-25-at-17.19.22%20%281%29.png)
+![Screenshot of full example JSON-LD snippet from OpenActive Activity List website](<../.gitbook/assets/screenshot-2020-04-25-at-17.19.22 (1).png>)
 
 ## Rendering the OpenActive Activity List with SKOS.js
 
@@ -98,19 +98,19 @@ Although the use of [SKOS.js](https://www.npmjs.com/package/@openactive/skos) is
 
 The [JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) of the OpenActive Activity List includes the following key properties:
 
-| Property | Description | Include in open data feed |
-| :--- | :--- | :--- |
-| `id` | The unique ID of the Concept, which should be stored and used when referencing the Concept. | Yes |
-| `prefLabel` | The primary display label for the Concept, in the English language. | Yes |
-| `altLabel` | The alternative display labels of the Concept, in the English language. When displaying the Concept to the user it is recommended that the array of `altLabel` be appended to the `prefLabel`, using the separator `" / "`. This logic does not apply to the `prefLabel` included in the open data feed. | No |
-| `topConceptOf` | Indicates that the Concept is at the top level of the hierarchy, when the value of this property is equal to `"https://openactive.io/activity-list"`. | No |
-| `broader` | An array of parent Concept IDs. Note this is a [polyhierarchical](https://en.wiktionary.org/wiki/polyhierarchy) list, and the same Concept may exist under multiple parents. | No |
-| `narrower` | An array of child Concept IDs. | No |
+| Property       | Description                                                                                                                                                                                                                                                                                              | Include in open data feed |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| `id`           | The unique ID of the Concept, which should be stored and used when referencing the Concept.                                                                                                                                                                                                              | Yes                       |
+| `prefLabel`    | The primary display label for the Concept, in the English language.                                                                                                                                                                                                                                      | Yes                       |
+| `altLabel`     | The alternative display labels of the Concept, in the English language. When displaying the Concept to the user it is recommended that the array of `altLabel` be appended to the `prefLabel`, using the separator `" / "`. This logic does not apply to the `prefLabel` included in the open data feed. | No                        |
+| `topConceptOf` | Indicates that the Concept is at the top level of the hierarchy, when the value of this property is equal to `"https://openactive.io/activity-list"`.                                                                                                                                                    | No                        |
+| `broader`      | An array of parent Concept IDs. Note this is a [polyhierarchical](https://en.wiktionary.org/wiki/polyhierarchy) list, and the same Concept may exist under multiple parents.                                                                                                                             | No                        |
+| `narrower`     | An array of child Concept IDs.                                                                                                                                                                                                                                                                           | No                        |
 
 To render a hierarchy:
 
 1. Filter the data to return only Concepts with `topConceptOf` set to `"https://openactive.io/activity-list"`, to produce an initial list of top-level Concepts.
-2. Recursively, for each Concept, lookup the `narrower` \(child\) Concept IDs.
+2. Recursively, for each Concept, lookup the `narrower` (child) Concept IDs.
 
 ### Activity List dropdown implementation example
 
@@ -118,13 +118,13 @@ Below is a copy-and-pastable example of a searchable hierarchical dropdown that 
 
 On load you may specify the **`@id`** to set the dropdown to an existing value.
 
-On selection the dropdown provides both **`@id`** and **`prefLabel`**, which can then be stored in your database and later used within your open data feed\(s\).
+On selection the dropdown provides both **`@id`** and **`prefLabel`**, which can then be stored in your database and later used within your open data feed(s).
 
 The dropdown also provides an activity **`definition`** that may be displayed to the user for disambiguation.
 
 See the "**Result**" tab below for a live demo.
 
-{% embed url="https://jsfiddle.net/nickevansuk/246d5s79/" caption="" %}
+{% embed url="https://jsfiddle.net/nickevansuk/246d5s79/" %}
 
 ### Our Parks: Activity List dropdown video demo
 
@@ -132,7 +132,7 @@ An example of the above code in the Our Parks booking system is shown in the vid
 
 Note "**OpenActive id**" and "**OpenActive prefLabel**" fields are displayed in the video for debugging purposes, but would ordinarily be hidden from the user.
 
-{% embed url="https://youtu.be/5C1A-xZtqqo" caption="" %}
+{% embed url="https://youtu.be/5C1A-xZtqqo" %}
 
 ## Contribution links
 
@@ -156,5 +156,4 @@ Example: [Contribute](https://openactive.io/activity-list#72d19892-5f55-4e9c-87b
 
 An example of "Contribute" links within the Gladstone leisure management system is shown below.
 
-![Screenshot of the &quot;Contribute&quot; links within the Gladstone system](../.gitbook/assets/screenshot-2020-04-25-at-13.59.09%20%281%29.png)
-
+![Screenshot of the "Contribute" links within the Gladstone system](<../.gitbook/assets/screenshot-2020-04-25-at-13.59.09 (1).png>)

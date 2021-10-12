@@ -9,91 +9,19 @@ This type is derived from [https://schema.org/OpeningHoursSpecification](https:/
 ## **Properties**
 
 ### **Required properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>@type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        Must always be present and set to <code>"@type": "OpeningHoursSpecification"</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>closes</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Time"><code>Time</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The closing time. Set &quot;00:00&quot; for the value of <code>opens</code> and <code>closes</code> to indicated the <code>Place</code> is closed on the specified days.</p><p></br><b>Example</b></p><p><code>"closes": "17:00"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>dayOfWeek</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://schema.org/DayOfWeek"><code>DayOfWeek</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Defines the days of the week upon which the <code>opens</code> and <code>closes</code> values are specified. Note this property is optional when used within <code>specialOpeningHoursSpecification</code>.</p><p></br><b>Example</b></p><p><code>"dayOfWeek": [<br/>&nbsp;&nbsp;&quot;https://schema.org/Saturday&quot;,<br/>&nbsp;&nbsp;&quot;https://schema.org/Sunday&quot;<br/>]</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>opens</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Time"><code>Time</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The opening time. Set &quot;00:00&quot; for the value of <code>opens</code> and <code>closes</code> to indicated the <code>Place</code> is closed on the specified days.</p><p></br><b>Example</b></p><p><code>"opens": "09:00"</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property      | Expected Type                                         | Description                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **@type**     |  [`Text`](https://schema.org/Text)                    |  Must always be present and set to `"@type": "OpeningHoursSpecification"`                                                                                                                                                                                                                                                                                                                                |
+| **closes**    |  [`Time`](https://schema.org/Time)                    | <p>The closing time. Set "00:00" for the value of <code>opens</code> and <code>closes</code> to indicated the <code>Place</code> is closed on the specified days.</p><p><br><strong>Example</strong></p><p><code>"closes": "17:00"</code></p>                                                                                                                                                            |
+| **dayOfWeek** |  Array of [`DayOfWeek`](https://schema.org/DayOfWeek) | <p>Defines the days of the week upon which the <code>opens</code> and <code>closes</code> values are specified. Note this property is optional when used within <code>specialOpeningHoursSpecification</code>.</p><p><br><strong>Example</strong></p><p><code>"dayOfWeek": [</code><br><code>  "https://schema.org/Saturday",</code><br><code>  "https://schema.org/Sunday"</code><br><code>]</code></p> |
+| **opens**     |  [`Time`](https://schema.org/Time)                    | <p>The opening time. Set "00:00" for the value of <code>opens</code> and <code>closes</code> to indicated the <code>Place</code> is closed on the specified days.</p><p><br><strong>Example</strong></p><p><code>"opens": "09:00"</code></p>                                                                                                                                                             |
 
 ### **Optional properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>validFrom</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Date"><code>Date</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The date when the item becomes valid. The item will be valid at the beginning of the specified day. Note this property is required when used within <code>specialOpeningHoursSpecification</code>.</p><p></br><b>Example</b></p><p><code>"validFrom": "2018-01-22"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>validThrough</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Date"><code>Date</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The date after which the item is no longer valid. The item will cease to be valid at the end of the specified day. Note this property is required when used within <code>specialOpeningHoursSpecification</code>.</p><p></br><b>Example</b></p><p><code>"validThrough": "2018-01-27"</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property         | Expected Type                      | Description                                                                                                                                                                                                                                                                                                 |
+| ---------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **validFrom**    |  [`Date`](https://schema.org/Date) | <p>The date when the item becomes valid. The item will be valid at the beginning of the specified day. Note this property is required when used within <code>specialOpeningHoursSpecification</code>.</p><p><br><strong>Example</strong></p><p><code>"validFrom": "2018-01-22"</code></p>                   |
+| **validThrough** |  [`Date`](https://schema.org/Date) | <p>The date after which the item is no longer valid. The item will cease to be valid at the end of the specified day. Note this property is required when used within <code>specialOpeningHoursSpecification</code>.</p><p><br><strong>Example</strong></p><p><code>"validThrough": "2018-01-27"</code></p> |
 
-
-
-
-
-Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io)".

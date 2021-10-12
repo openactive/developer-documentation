@@ -8,14 +8,14 @@ description: A guide for setting up the OpenActive Test Suite for the Open Booki
 
 The [OpenActive Test Suite](https://github.com/openactive/openactive-test-suite/) consists of two key components:
 
-* \*\*\*\*[**openactive-broker-microservice**](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-broker-microservice) - harvests feeds and provides an interface to extract specific items from the feeds.
-* \*\*\*\*[**openactive-integration-tests**](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests) - a suite of Jest integration tests that exercise an Open Booking API implementation.
+* ****[**openactive-broker-microservice**](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-broker-microservice) - harvests feeds and provides an interface to extract specific items from the feeds.
+* ****[**openactive-integration-tests**](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests) - a suite of Jest integration tests that exercise an Open Booking API implementation.
 
 ## Step 1: Install the test suite
 
 Clone the test suite repository locally, and install its dependencies.
 
-[Node.js](https://nodejs.org/en/download/) version **14** or above is required \([which version am I using?](https://support.invisionapp.com/hc/en-us/articles/360033641372-How-do-I-check-my-version-of-Node-js-)\).
+[Node.js](https://nodejs.org/en/download/) version **14** or above is required ([which version am I using?](https://support.invisionapp.com/hc/en-us/articles/360033641372-How-do-I-check-my-version-of-Node-js-)).
 
 ```bash
 git clone git@github.com:openactive/openactive-test-suite.git
@@ -23,7 +23,7 @@ cd openactive-test-suite
 npm install
 ```
 
-You can check that the test suite works in your local environment by running it against the hosted [OpenActive Reference Implementation](https://reference-implementation.openactive.io/), simply by using the default configuration:
+You can check that the test suite works in your local environment by running it against the hosted [OpenActive Reference Implementation](https://reference-implementation.openactive.io), simply by using the default configuration:
 
 ```bash
 npm start -- core
@@ -32,7 +32,7 @@ npm start -- core
 Note that the above command only runs the "core" tests within the test suite, which should take around 60 seconds to complete.
 
 {% hint style="info" %}
-The hosted [OpenActive Reference Implementation](https://reference-implementation.openactive.io/) is running on a basic developer tier Azure instance with a burst quota, so if the application shuts down, simply wait 5 minutes and try again.
+The hosted [OpenActive Reference Implementation](https://reference-implementation.openactive.io) is running on a basic developer tier Azure instance with a burst quota, so if the application shuts down, simply wait 5 minutes and try again.
 
 The quota is sufficient for the most common use cases: running a small subset of tests or individual tests against the reference implementation.
 
@@ -72,7 +72,7 @@ The Open Booking API includes two flows:
 
 Assess whether or not your implementation will include either or both of these flows, and configure the test suite accordingly, as detailed in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#bookingflowsinscope), for example:
 
-{% code title="./config/dev.json \(extract\)" %}
+{% code title="./config/dev.json (extract)" %}
 ```javascript
 "integrationTests": {  
   ...
@@ -95,7 +95,7 @@ For each optional feature, assess whether or not your implementation will includ
 
 Configure the test suite accordingly, as detailed in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#implementedfeatures), for example:
 
-{% code title="./config/dev.json \(extract\)" %}
+{% code title="./config/dev.json (extract)" %}
 ```javascript
 "integrationTests": {  
   ...
@@ -118,7 +118,7 @@ Note that not all Open Booking API features are currently supported by the test 
 
 Set up the Opportunity Types that your booking system will support, as detailed in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#bookableopportunitytypesinscope). The test suite will only attempt to book opportunity types that are configured here, for example:
 
-{% code title="./config/dev.json \(extract\)" %}
+{% code title="./config/dev.json (extract)" %}
 ```javascript
 "integrationTests": {  
   ...
@@ -148,7 +148,7 @@ When using OpenActive Test Suite during development, it is far more efficient to
 
 ### Random mode
 
-{% code title="./config/dev.json \(extract\)" %}
+{% code title="./config/dev.json (extract)" %}
 ```javascript
 "integrationTests": {  
   ...
@@ -166,7 +166,7 @@ As you implement the Open Booking API features, more test data will need to be a
 
 ### Controlled mode
 
-{% code title="./config/dev.json \(extract\)" %}
+{% code title="./config/dev.json (extract)" %}
 ```javascript
 "integrationTests": {  
   ...
@@ -192,7 +192,7 @@ If your booking system only supports a single seller, only the “`primary`” s
 
 See the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#sellers) for more information.
 
-{% code title="./config/dev.json \(extract\)" %}
+{% code title="./config/dev.json (extract)" %}
 ```javascript
 "sellers": {
   "primary": {
@@ -227,7 +227,7 @@ Configure the broker microservice with the authentication headers required for t
 
 Note such authentication [must not be specific to any particular seller](https://openactive.io/open-booking-api/EditorsDraft/#authentication).
 
-{% code title="./config/dev.json \(extract\)" %}
+{% code title="./config/dev.json (extract)" %}
 ```javascript
 "broker": {
   ...
@@ -253,7 +253,7 @@ The `datasetSiteUrl` must be set to the local dataset site URL of your booking s
 
 In addition to the standard dataset site, the JSON-LD of the page must include the `accessService` property, as specified in the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-broker-microservice#datasetsiteurl). Note that the `endpointURL` within the `accessService` is most important, and must refer to your local Open Booking API [Base URI](https://openactive.io/open-booking-api/EditorsDraft/#dfn-base-uri).
 
-{% code title="./config/dev.json \(extract\)" %}
+{% code title="./config/dev.json (extract)" %}
 ```javascript
 "broker": {
   ...
@@ -355,4 +355,3 @@ This always overrides the configuration option `"waitForHarvestCompletion": true
 A [sample CI script](https://github.com/openactive/openactive-test-suite/blob/master/simple-ci.sh) is available, and more details can be found [here](https://github.com/openactive/openactive-test-suite#continuous-integration).
 
 You can [see CI in action](https://github.com/openactive/openactive-test-suite/actions?query=workflow%3A%22Reference+Implementation%22) within the test suite itself, which [runs CI](https://github.com/openactive/openactive-test-suite/blob/master/.github/workflows/reference-implementation.yml) against the reference implementation.
-

@@ -6,7 +6,7 @@ These always have at least `activity`, `location` and `startDate` specified: so 
 
 The OpenActive Modelling Specification 2.0 represents regular events using a hierarchy of types: [`EventSeries`](https://www.openactive.io/modelling-opportunity-data/#grouping-together-events-eventseries-), [`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-), and [`ScheduledSession`](https://www.openactive.io/modelling-opportunity-data/#regular-sessions-sessionseries-and-scheduledsession-), linked via the `superEvent` and `subEvent` properties. These are described by example in the diagram below:
 
-![](https://docs.google.com/drawings/u/0/d/s78NrrrLPOgQHs-TaXftQdg/image?w=602&h=268&rev=325&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
+![](https://docs.google.com/drawings/u/0/d/s78NrrrLPOgQHs-TaXftQdg/image?w=602\&h=268\&rev=325\&ac=1\&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
 ### **Property inheritance**
 
@@ -14,13 +14,13 @@ The `ScheduledSession` will inherit the properties of the `SessionSeries`, and t
 
 This means that if an `EventSeries` is not supplied, its details must be included on the `SessionSeries`.
 
-![](https://docs.google.com/drawings/u/0/d/sC3OM5Gc26L84_nUVy7uWhA/image?w=602&h=181&rev=2&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
+![](https://docs.google.com/drawings/u/0/d/sC3OM5Gc26L84\_nUVy7uWhA/image?w=602\&h=181\&rev=2\&ac=1\&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
 ### **Property inheritance overrides**
 
 The OpenActive Modelling Specification 2.0 represents regular events using a hierarchy of types: `EventSeries`, `SessionSeries`, and `ScheduledSession`. These are described by example in the diagram below:
 
-![](https://docs.google.com/drawings/u/0/d/sNuN0HrwIIJduzHZ-_PIMCw/image?w=602&h=268&rev=24&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
+![](https://docs.google.com/drawings/u/0/d/sNuN0HrwIIJduzHZ-\_PIMCw/image?w=602\&h=268\&rev=24\&ac=1\&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
 ### **Permissible configurations**
 
@@ -30,7 +30,7 @@ In order for data to be [**bookable**](https://www.openactive.io/open-booking-ap
 
 For large providers with many events that are described identically but occur in the same location or in different locations, an `EventSeries` should be used to group these together. This avoids seemingly duplicate search results from a single provider. 
 
-![](https://docs.google.com/drawings/u/0/d/sruVQes8cWV4JuLh6rHxt-A/image?w=602&h=321&rev=144&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
+![](https://docs.google.com/drawings/u/0/d/sruVQes8cWV4JuLh6rHxt-A/image?w=602\&h=321\&rev=144\&ac=1\&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
 ### **Exposing the model in feeds**
 
@@ -42,7 +42,7 @@ The `EventSeries` is unlikely to change frequently enough compared with the `Ses
 
 For [**bookable**](https://www.openactive.io/open-booking-api/EditorsDraft/#dfn-bookability) data, the possible feed combinations are described in the diagram below:
 
-![](https://docs.google.com/drawings/u/0/d/sVvrks8vK_gfSRejrIIIMGw/image?w=636&h=206&rev=363&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
+![](https://docs.google.com/drawings/u/0/d/sVvrks8vK_gfSRejrIIIMGw/image?w=636\&h=206\&rev=363\&ac=1\&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
 {% hint style="warning" %}
 Please note that the first two "combined feed" options given above are no longer recommended for new OpenActive implementations. These options increase complexity for data users, and create unnecessary additional load on all systems.
@@ -50,23 +50,23 @@ Please note that the first two "combined feed" options given above are no longer
 
 Bookable data feed examples:
 
-* Small provider: [SessionSeries with ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries_example_1.json&version=2.0)
-* Small provider \(inverted\): [ScheduledSession with SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession_example_1.json&version=2.0)
-* Small provider \(high volume\):
-  * [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example_1.json&version=2.0) and [ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split_example_1.json&version=2.0) \(physical\)
-  * [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split-virtual_example_1.json&version=2.x) and [ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split-virtual_example_1.json&version=2.x) \(virtual\)
-* Large provider: [SessionSeries with EventSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-eventseries-split_example_1.json&version=2.0), and [ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split_example_1.json&version=2.0)
+* Small provider: [SessionSeries with ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries_example\_1.json\&version=2.0)
+* Small provider (inverted): [ScheduledSession with SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession_example\_1.json\&version=2.0)
+* Small provider (high volume):
+  * [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example\_1.json\&version=2.0) and [ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split_example\_1.json\&version=2.0) (physical)
+  * [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split-virtual_example\_1.json\&version=2.x) and [ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split-virtual_example\_1.json\&version=2.x) (virtual)
+* Large provider: [SessionSeries with EventSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-eventseries-split_example\_1.json\&version=2.0), and [ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split_example\_1.json\&version=2.0)
 
 Listings data feed examples:
 
-* Small provider: [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example_1.json&version=2.0)
-* Large provider: [SessionSeries with EventSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-eventseries-split_example_1.json&version=2.0)
+* Small provider: [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example\_1.json\&version=2.0)
+* Large provider: [SessionSeries with EventSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-eventseries-split_example\_1.json\&version=2.0)
 
 ### Use of `@id` and `superEvent` for split feeds
 
-When referencing data across feeds \(such as between [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example_1.json&version=2.0) and [ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split_example_1.json&version=2.0)\), the value of the **`@id`** must be used.
+When referencing data across feeds (such as between [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example\_1.json\&version=2.0) and [ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split_example\_1.json\&version=2.0)), the value of the **`@id`** must be used.
 
-An **`@id`** is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
+An **`@id` **is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
 
 So for a minimal implementation simply invent a URL pattern that includes your domain for use as your **`@id`**, such as:
 
@@ -103,7 +103,7 @@ The OpenActive model allows for ad-hoc events to be described using the pattern 
 
 The OpenActive Modelling Specification 2.0 represents ad-hoc events using a hierarchy of types: `EventSeries` and `Event`, linked via the `superEvent` and `subEvent` properties. These are described by example in the diagram below:
 
-![](https://docs.google.com/drawings/u/0/d/soe-8CJhGcRo3o-w3Njk_4g/image?w=602&h=168&rev=64&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
+![](https://docs.google.com/drawings/u/0/d/soe-8CJhGcRo3o-w3Njk\_4g/image?w=602\&h=168\&rev=64\&ac=1\&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
 ### **Property inheritance**
 
@@ -111,7 +111,7 @@ The Event will inherit the properties of the `EventSeries`.
 
 This means that if an `EventSeries` is not supplied, its details must be included on the `Event`.
 
-![](https://docs.google.com/drawings/u/0/d/sQajrOUrhJ4eXWsfayekEtA/image?w=602&h=94&rev=14&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
+![](https://docs.google.com/drawings/u/0/d/sQajrOUrhJ4eXWsfayekEtA/image?w=602\&h=94\&rev=14\&ac=1\&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
 ### **Permissible configurations**
 
@@ -119,7 +119,7 @@ An Event must always be supplied, including details that would otherwise be pres
 
 For large providers with many events that are described identically but occur in the same location or in different locations, an `EventSeries` should be used to group these together. This avoids seemingly duplicate search results from a single provider.
 
-![](https://docs.google.com/drawings/u/0/d/skh7gEfjLUh9HTcLbH2RItw/image?w=259&h=205&rev=14&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
+![](https://docs.google.com/drawings/u/0/d/skh7gEfjLUh9HTcLbH2RItw/image?w=259\&h=205\&rev=14\&ac=1\&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
 ### **Exposing the model in feeds**
 
@@ -129,11 +129,11 @@ The `EventSeries` is unlikely to change frequently enough compared with the `Eve
 
 For [**bookable**](https://www.openactive.io/open-booking-api/EditorsDraft/#dfn-bookability) data, example feed combinations are described in the diagram below:
 
-![](https://docs.google.com/drawings/u/0/d/sjJOI7mL_qflDQspoKgNUmw/image?w=636&h=440&rev=174&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
+![](https://docs.google.com/drawings/u/0/d/sjJOI7mL_qflDQspoKgNUmw/image?w=636\&h=440\&rev=174\&ac=1\&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
 
 Bookable data feed examples:
 
-* Events only: [Event](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fevent_example_1.json&version=2.x)
+* Events only: [Event](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fevent_example\_1.json\&version=2.x)
 
 ## Slot-based Events: FacilityUses
 
@@ -146,9 +146,9 @@ The OpenActive Modelling Specification 2.0 represents slot-based events using a 
 For facilities a publisher must implement the following two independent feeds:
 
 * `http://www.example.org/feeds/facility-uses` 
-  * [FacilityUse example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Ffacilityuse_example_1.json&version=2.x)
+  * [FacilityUse example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Ffacilityuse_example\_1.json\&version=2.x)
 * `http://www.example.org/feeds/facility-use-slots`
-  * [Slot example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fslot_example_1.json&version=2.x)
+  * [Slot example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fslot_example\_1.json\&version=2.x)
 
 Additionally, to publish specific court availability they must also implement the following two feeds:
 
@@ -157,9 +157,9 @@ Additionally, to publish specific court availability they must also implement th
 
 ### Use of `@id` and `facilityUse` for split feeds
 
-When referencing data across feeds \(such as between [FacilityUse](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Ffacilityuse_example_1.json&version=2.x) and [Slot](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fslot_example_1.json&version=2.x)\), the value of the **`@id`** must be used.
+When referencing data across feeds (such as between [FacilityUse](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Ffacilityuse_example\_1.json\&version=2.x) and [Slot](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fslot_example\_1.json\&version=2.x)), the value of the **`@id`** must be used.
 
-An **`@id`** is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
+An **`@id` **is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
 
 So for a minimal implementation simply invent a URL pattern that includes your domain for use as your **`@id`**, such as:
 
@@ -192,13 +192,13 @@ And within a corresponding `Slot` feed, that `FacilityUse` **`@id`** is referenc
 
 A feed of  [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/#headline-events-headlineevent-) can be used to represent whole day or multi-day events, such as mass participation events, family fun days, etc.
 
-* The OpenActive Modelling Specification 2.0 represents these events using a hierarchy of types: `HeadlineEvent` \(for the overall event\) and `Event` \(for small events within the overall event\) linked via the `superEvent` and `subEvent` properties.
-* See [here](../../data-model/data-model-overview.md#headline-events) for further clarification, and [here](http://data.britishtriathlon.org/) for an example.
+* The OpenActive Modelling Specification 2.0 represents these events using a hierarchy of types: `HeadlineEvent` (for the overall event) and `Event` (for small events within the overall event) linked via the `superEvent` and `subEvent` properties.
+* See [here](../../data-model/data-model-overview.md#headline-events) for further clarification, and [here](http://data.britishtriathlon.org) for an example.
 
 A feed of [`CourseInstance`](https://www.openactive.io/modelling-opportunity-data/#courses-courseinstance-) can be used to represent a fixed-length course.
 
-* The OpenActive Modelling Specification 2.0 represents these events using a hierarchy of types: `CourseInstance` \(for the whole course\) and `Event` \(for the individual occurrences\) linked via the `superEvent` and `subEvent` properties.
-* See [here](../../data-model/data-model-overview.md#courses) for further clarification, and [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fcourseinstance_event_example_1.json&version=2.x) for an example.
+* The OpenActive Modelling Specification 2.0 represents these events using a hierarchy of types: `CourseInstance` (for the whole course) and `Event` (for the individual occurrences) linked via the `superEvent` and `subEvent` properties.
+* See [here](../../data-model/data-model-overview.md#courses) for further clarification, and [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fcourseinstance_event_example\_1.json\&version=2.x) for an example.
 
 ## **Event relationship overview**
 
@@ -206,7 +206,7 @@ The following diagram illustrates the relationships between the event types avai
 
 ![](../../.gitbook/assets/untitled-document-2.png)
 
-Note the use of aliases \(e.g. "IndividualFacilityUseSlot"\) which are useful when referring to a specific type that is being used in a particular context.
+Note the use of aliases (e.g. "IndividualFacilityUseSlot") which are useful when referring to a specific type that is being used in a particular context.
 
 The relationship between all types is represented via the `superEvent` and `subEvent` properties, with the exception of:
 
@@ -215,11 +215,10 @@ The relationship between all types is represented via the `superEvent` and `subE
 
 ## **Schema.org type inheritance overview**
 
-The model itself \(the properties within the types\) follows a _different inheritance structure_ to the property inheritance structure described above.
+The model itself (the properties within the types) follows a _different inheritance structure _to the property inheritance structure described above.
 
 `EventSeries`, `SessionSeries`, `ScheduledSession`, `HeadlineEvent`, `CourseInstance`, and `Slot` all **sub-class** `Event`.
 
 This can be useful for modelling the entities within certain frameworks**.**
 
-![](https://docs.google.com/drawings/u/0/d/sHnIqB65tCLtqxkTO0dBaVA/image?w=602&h=272&rev=181&ac=1&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)
-
+![](https://docs.google.com/drawings/u/0/d/sHnIqB65tCLtqxkTO0dBaVA/image?w=602\&h=272\&rev=181\&ac=1\&parent=1C_eO6JC8tt7-K-XiilHzPKXKenjjHiiOS7nCW07tlLk)

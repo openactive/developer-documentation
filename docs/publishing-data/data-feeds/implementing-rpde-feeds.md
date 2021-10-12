@@ -10,12 +10,12 @@ Several libraries are available that make it really easy to create open opportun
 
 The table below lists the available OpenActive libraries:
 
-| Language | Open Opportunity Data Feeds | Dataset Site |
-| :--- | :--- | :--- |
-| .NET | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/) | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/) |
-| PHP | [openactive/models](https://packagist.org/packages/openactive/models) | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site) |
-| Ruby | [openactive](https://rubygems.org/gems/openactive) | [openactive-dataset\_site](https://rubygems.org/gems/openactive-dataset_site) |
-| JavaScript / TypeScript | [@openactive/models-ts](https://www.npmjs.com/package/@openactive/models-ts) | - |
+| Language                | Open Opportunity Data Feeds                                                  | Dataset Site                                                                             |
+| ----------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| .NET                    | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/)             | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/) |
+| PHP                     | [openactive/models](https://packagist.org/packages/openactive/models)        | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site)        |
+| Ruby                    | [openactive](https://rubygems.org/gems/openactive)                           | [openactive-dataset_site](https://rubygems.org/gems/openactive-dataset_site)             |
+| JavaScript / TypeScript | [@openactive/models-ts](https://www.npmjs.com/package/@openactive/models-ts) | -                                                                                        |
 
 ## Transactions: Preventing delayed item interleaving
 
@@ -47,13 +47,13 @@ In order to prevent this race condition, one solution is to simply separate the 
 
 1. First commit the transaction, then update the timestamps or change numbers after the transaction has been committed as an atomic operation, outside of a transaction, using `GETDATE()` or similar
 2. Ensure the RPDE endpoint filters out all items with a "modified" date after 2 seconds in the past, to delay items appearing in the feed
-3. If using the [Modified Timestamp and ID](https://www.w3.org/2017/08/realtime-paged-data-exchange/#modified-timestamp-and-id) ordering strategy, use a timestamp column with a high degree of accuracy \(e.g. `datetime2` in SQL Server\).
+3. If using the [Modified Timestamp and ID](https://www.w3.org/2017/08/realtime-paged-data-exchange/#modified-timestamp-and-id) ordering strategy, use a timestamp column with a high degree of accuracy (e.g. `datetime2` in SQL Server).
 
 Updating items in the feed without updating their timestamp/change number immediately does not have any negative effects, as data consumers who are reading the feed will read the updated item earlier than they would otherwise instead of an older version, then read it again after the timestamp/change number is updated as they would normally.
 
 Using the RPDE endpoint filter to delay items appearing is a belt-and-braces measure that ensures that [small variances](https://stackoverflow.com/questions/30301302/identity-and-getdate-out-of-order) between timestamp and change number update order are accounted for under high database load, by only presenting data to the data consumer after a small delay, when all timestamp/change number updates have commited.
 
-## C\# and .NET Framework
+## C# and .NET Framework
 
 ### OpenActive.NET Library
 
@@ -127,7 +127,7 @@ We highly recommend using the [OpenActive PHP Models Library](https://packagist.
 
 ### Manual Implementation
 
-The specification requires that no null or empty strings are present in the OpenActive feed. To achieve this, define the RPDE response structure as nested arrays, and recursively unset empty properties before using [json\_encode](http://php.net/manual/en/function.json-encode.php) to generate the response.
+The specification requires that no null or empty strings are present in the OpenActive feed. To achieve this, define the RPDE response structure as nested arrays, and recursively unset empty properties before using [json_encode](http://php.net/manual/en/function.json-encode.php) to generate the response.
 
 Run the example below [here](https://www.tehplayground.com/yq8X04VLEF9ypc8Y) to see the result.
 
@@ -184,4 +184,3 @@ function array_filter_recursive($array) {
     return $clean;
 }
 ```
-

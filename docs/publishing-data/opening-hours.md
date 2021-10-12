@@ -73,7 +73,7 @@ The `dayOfWeek` value of `https://schema.org/PublicHolidays` is defined as a pla
 
 ### Open seasonally
 
-For Places that are open only seasonally \(for example an Ice Rink\), both the `validFrom` and `validThrough` may be used. This example shows a business open only during weekends during the winter holidays:
+For Places that are open only seasonally (for example an Ice Rink), both the `validFrom` and `validThrough` may be used. This example shows a business open only during weekends during the winter holidays:
 
 ```javascript
 "openingHoursSpecification": [
@@ -112,13 +112,17 @@ This example shows a business open all day Saturday and closed all day Sunday:
 "openingHoursSpecification": [
   {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "https://schema.org/Saturday",
+    "dayOfWeek": [
+      "https://schema.org/Saturday"
+    ],
     "opens": "00:00",
     "closes": "23:59"
   },
   {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "https://schema.org/Sunday",
+    "dayOfWeek": [
+      "https://schema.org/Sunday"
+    ],
     "opens": "00:00",
     "closes": "00:00"
   }
@@ -133,7 +137,9 @@ For hours past midnight, define opening and closing hours using a single `Openin
 "openingHoursSpecification": [
   {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "https://schema.org/Saturday",
+    "dayOfWeek": [
+      "https://schema.org/Saturday"
+    ],
     "opens": "18:00",
     "closes": "03:00"
   }
@@ -228,4 +234,3 @@ Use `specialOpeningHoursSpecification` combined with `validFrom` and `validThrou
   }
 ]
 ```
-
