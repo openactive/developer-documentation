@@ -9,16 +9,64 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
 ## **Properties**
 
 ### **Required properties**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>@type</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        Must always be present and set to <code>"@type": "QuantitativeValue"</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property  | Expected Type                      | Description                                                       |
-| --------- | ---------------------------------- | ----------------------------------------------------------------- |
-| **@type** |  [`Text`](https://schema.org/Text) |  Must always be present and set to `"@type": "QuantitativeValue"` |
 
 ### **Optional properties**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>maxValue</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The maximum value.</p><p></br><b>Example</b></p><p><code>"maxValue": 60</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>minValue</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The minimum value.</p><p></br><b>Example</b></p><p><code>"minValue": 16</code></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property     | Expected Type                            | Description                                                                                    |
-| ------------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| **maxValue** |  [`Integer`](https://schema.org/Integer) | <p>The maximum value.</p><p><br><strong>Example</strong></p><p><code>"maxValue": 60</code></p> |
-| **minValue** |  [`Integer`](https://schema.org/Integer) | <p>The minimum value.</p><p><br><strong>Example</strong></p><p><code>"minValue": 16</code></p> |
 
-Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io)".
+
+
+
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".

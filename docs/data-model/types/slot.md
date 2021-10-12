@@ -9,57 +9,358 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
 ## **Properties**
 
 ### **Required properties**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>@type</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        Must always be present and set to <code>"@type": "Slot"</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>@id</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A unique URI-based identifier for the record.</p><p><code>@id</code> properties are used as identifiers for compatibility with JSON-LD. The value of such a property must always be an absolute URI that provides a stable globally unique identifier for the resource, as described in <a href="https://tools.ietf.org/html/rfc3986">RFC3986</a>.</p><p>The primary purpose of the URI format in this context is to provide natural namespacing for the identifier. Hence, the URI itself may not resolve to a valid endpoint, but must use a domain name controlled by the resource owner (the organisation responsible for the OpenActive open data feed).</p><p></br><b>Example</b></p><p><code>"@id": "https://api.example.com/slots/12345"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>duration</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Duration"><code>Duration</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The duration of the slot given in [ISO8601] format.</p><p></br><b>Example</b></p><p><code>"duration": "PT1H"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>facilityUse</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/facilityuse"><code>FacilityUse</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><code>FacilityUse</code> or <code>IndividualFacilityUse</code> that has this <code>Slot</code>, either directly embedded or referenced by its <code>@id</code></p><p></br><b>Example</b></p><p><code>"facilityUse": "https://example.com/facility-use/1"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>offers</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/offer"><code>Offer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>An array of schema:Offer that include the price of booking.</p><p></br><b>Example</b></p><p><code>"offers": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Offer&quot;,<br/>&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;&quot;OX-AD&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Adult&quot;,<br/>&nbsp;&nbsp;&quot;price&quot;:&nbsp;7.5,<br/>&nbsp;&nbsp;&quot;priceCurrency&quot;:&nbsp;&quot;GBP&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://profile.everyoneactive.com/booking?Site=0140&Activities=1402CBP20150217&Culture=en-GB&quot;<br/>}</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>remainingUses</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The remaining available courts or pitches at this time. Must be 0 or 1 for an IndividualFacilityUse.</p><p></br><b>Example</b></p><p><code>"remainingUses": 5</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>startDate</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The start date and time of the slot.</p><p></br><b>Example</b></p><p><code>"startDate": "2018-01-27T12:00:00Z"</code></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property          | Expected Type                                                                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **@type**         |  [`Text`](https://schema.org/Text)                                             |  Must always be present and set to `"@type": "Slot"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **@id**           |  [`URL`](https://schema.org/URL)                                               | <p>A unique URI-based identifier for the record.</p><p><code>@id</code> properties are used as identifiers for compatibility with JSON-LD. The value of such a property must always be an absolute URI that provides a stable globally unique identifier for the resource, as described in <a href="https://tools.ietf.org/html/rfc3986">RFC3986</a>.</p><p>The primary purpose of the URI format in this context is to provide natural namespacing for the identifier. Hence, the URI itself may not resolve to a valid endpoint, but must use a domain name controlled by the resource owner (the organisation responsible for the OpenActive open data feed).</p><p><br><strong>Example</strong></p><p><code>"@id": "https://api.example.com/slots/12345"</code></p> |
-| **duration**      |  [`Duration`](https://schema.org/Duration)                                     | <p>The duration of the slot given in [ISO8601] format.</p><p><br><strong>Example</strong></p><p><code>"duration": "PT1H"</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **facilityUse**   |  [`FacilityUse`](https://developer.openactive.io/data-model/types/facilityuse) | <p><code>FacilityUse</code> or <code>IndividualFacilityUse</code> that has this <code>Slot</code>, either directly embedded or referenced by its <code>@id</code></p><p><br><strong>Example</strong></p><p><code>"facilityUse": "https://example.com/facility-use/1"</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| **offers**        |  Array of [`Offer`](https://developer.openactive.io/data-model/types/offer)    | <p>An array of schema:Offer that include the price of booking.</p><p><br><strong>Example</strong></p><p><code>"offers": {</code><br><code>  "@type": "Offer",</code><br><code>  "identifier": "OX-AD",</code><br><code>  "name": "Adult",</code><br><code>  "price": 7.5,</code><br><code>  "priceCurrency": "GBP",</code><br><code>  "url": "https://profile.everyoneactive.com/booking?Site=0140&#x26;Activities=1402CBP20150217&#x26;Culture=en-GB"</code><br><code>}</code></p>                                                                                                                                                                                                                                                                                     |
-| **remainingUses** |  [`Integer`](https://schema.org/Integer)                                       | <p>The remaining available courts or pitches at this time. Must be 0 or 1 for an IndividualFacilityUse.</p><p><br><strong>Example</strong></p><p><code>"remainingUses": 5</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **startDate**     |  [`DateTime`](https://schema.org/DateTime)                                     | <p>The start date and time of the slot.</p><p><br><strong>Example</strong></p><p><code>"startDate": "2018-01-27T12:00:00Z"</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ### **Recommended properties**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>maximumUses</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The maximum available courts or pitches at this time. Must be 0 or 1 for an IndividualFacilityUse.</p><p></br><b>Example</b></p><p><code>"maximumUses": 16</code></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property        | Expected Type                            | Description                                                                                                                                                                       |
-| --------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **maximumUses** |  [`Integer`](https://schema.org/Integer) | <p>The maximum available courts or pitches at this time. Must be 0 or 1 for an IndividualFacilityUse.</p><p><br><strong>Example</strong></p><p><code>"maximumUses": 16</code></p> |
 
 ### **Optional properties**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>additionalAdmissionRestriction</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Free text restrictions that must be displayed prominently to the user before booking. This property must only contain restrictions not described by <code>oa:ageRestriction</code> or <code>oa:genderRestriction</code>.</p><p></br><b>Example</b></p><p><code>"additionalAdmissionRestriction": [<br/>&nbsp;&nbsp;&quot;Participants&nbsp;younger&nbsp;than&nbsp;12&nbsp;must&nbsp;be&nbsp;accompanied&nbsp;by&nbsp;an&nbsp;adult&quot;,<br/>&nbsp;&nbsp;&quot;Participants&nbsp;must&nbsp;be&nbsp;comfortable&nbsp;standing&nbsp;for&nbsp;long&nbsp;periods&nbsp;of&nbsp;time&quot;<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>endDate</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The end date and time of the slot.</p><p>It is recommended that publishers provide either an schema:endDate or a schema:duration for an slot.</p><p></br><b>Example</b></p><p><code>"endDate": "2018-01-27T12:00:00Z"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>identifier</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>organizer</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The person or organization ultimately responsible for an event. An organizer might be an  schema:Organization or a schema:Person.</p><p></br><b>Example</b></p><p><code>"organizer": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://id.bookingsystem.example.com/organizers/1&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property                           | Expected Type                                                                                                                                                                                                                                                                                                                                                                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **additionalAdmissionRestriction** |  Array of [`Text`](https://schema.org/Text)                                                                                                                                                                                                                                                                                                                                                      | <p>Free text restrictions that must be displayed prominently to the user before booking. This property must only contain restrictions not described by <code>oa:ageRestriction</code> or <code>oa:genderRestriction</code>.</p><p><br><strong>Example</strong></p><p><code>"additionalAdmissionRestriction": [</code><br><code>  "Participants younger than 12 must be accompanied by an adult",</code><br><code>  "Participants must be comfortable standing for long periods of time"</code><br><code>]</code></p> |
-| **endDate**                        |  [`DateTime`](https://schema.org/DateTime)                                                                                                                                                                                                                                                                                                                                                       | <p>The end date and time of the slot.</p><p>It is recommended that publishers provide either an schema:endDate or a schema:duration for an slot.</p><p><br><strong>Example</strong></p><p><code>"endDate": "2018-01-27T12:00:00Z"</code></p>                                                                                                                                                                                                                                                                         |
-| **identifier**                     | <p> <a href="https://schema.org/Text"><code>Text</code></a><br> - or -<br><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br> - or -<br>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br> - or -<br><a href="https://schema.org/Integer"><code>Integer</code></a></p> | <p>A local non-URI identifier for the resource</p><p><br><strong>Example</strong></p><p><code>"identifier": "SB1234"</code></p>                                                                                                                                                                                                                                                                                                                                                                                      |
-| **organizer**                      | <p> <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a><br> - or -<br><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a></p>                                                                                                                                                                            | <p>The person or organization ultimately responsible for an event. An organizer might be an schema:Organization or a schema:Person.</p><p><br><strong>Example</strong></p><p><code>"organizer": {</code><br><code>  "@type": "Organization",</code><br><code>  "@id": "https://id.bookingsystem.example.com/organizers/1",</code><br><code>  "name": "Central Speedball Association",</code><br><code>  "url": "http://www.speedball-world.com"</code><br><code>}</code></p>                                         |
 
 ### **Beta Extension properties**
-
+    
 These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
 
-| Property                                 | Expected Type                                                                                | Description                                                                                                                                                                                                                                                                                                                                      |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **beta:affiliatedLocation**              |  [`Place`](https://schema.org/Place)                                                         | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/227">Proposal #227</a></p><p>The physical location affiliated with the virtual event, for example the original location of the event before it was moved online.</p>                                                                                                 |
-| **beta:attendeeCount**                   |  [`Integer`](https://schema.org/Integer)                                                     | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/274">Proposal #274</a></p><p>For events that have an unlimited number of tickets, captures the number of attendees (actual attendance).</p>                                                                                                                          |
-| **beta:bookingChannel**                  |  Array of [`BookingChannelType`](https://openactive.io/ns-beta#BookingChannelType)           | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/161">Proposal #161</a></p><p>The channels through which a booking can be made.</p>                                                                                                                                                                                   |
-| **beta:contactPoint**                    |  [`ContactPoint`](https://schema.org/ContactPoint)                                           | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/113">Proposal #113</a></p><p>Contact details for an Event, where they are not specifically related to the <code>organizer</code> or <code>leader</code>.</p>                                                                                                         |
-| **beta:distance**                        |  [`QuantitativeValue`](https://schema.org/QuantitativeValue)                                 | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/275">Proposal #275</a></p><p>The distance of a run, cycle or other activity. Must also include units.</p>                                                                                                                                                            |
-| **beta:donationPaymentUrl**              |  [`URL`](https://schema.org/URL)                                                             | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/234">Proposal #234</a></p><p>The URL of the webpage where the activity provider accepts donations.</p>                                                                                                                                                               |
-| **beta:estimatedDuration**               |  [`QuantitativeValue`](https://schema.org/QuantitativeValue)                                 | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/201">Proposal #201</a></p><p>A property that allows an Event duration to be represented as a range (e.g. 0-30mins, 30-60mins, 60-90mins, 90+).</p>                                                                                                                   |
-| **beta:facilitySetting**                 |  [`FacilitySettingType`](https://openactive.io/ns-beta#FacilitySettingType)                  | <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>Whether the event or facility is indoor or outdoor.</p>                                                                                                                                                                                                 |
-| **beta:formattedDescription**            |  [`Text`](https://schema.org/Text)                                                           | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/276">Proposal #276</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers. This property must contain HTML.</p>                                           |
-| **beta:isFirstSessionAccessibleForFree** |  [`Boolean`](https://schema.org/Boolean)                                                     | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/232">Proposal #232</a></p><p>A property that indicates whether the first session is free.</p>                                                                                                                                                                        |
-| **beta:isInteractivityPreferred**        |  [`Boolean`](https://schema.org/Boolean)                                                     | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/230">Proposal #230</a></p><p>Indicates whether the virtual event is interactive (e.g. Zoom with participant microphones and cameras on), or is just a one-way broadcast (e.g. Facebook Live, Instagram Live, Zoom with participant microphones and cameras off).</p> |
-| **beta:isVirtuallyCoached**              |  [`Boolean`](https://schema.org/Boolean)                                                     | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/71">Proposal #71</a></p><p>A property that indicates whether the event is led by a virtual coach. Only relevant if an event <code>isCoached</code>. If not provided is assumed to be <code>false</code>.</p>                                                         |
-| **beta:isWheelchairAccessible**          |  [`Boolean`](https://schema.org/Boolean)                                                     | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/166">Proposal #166</a></p><p>A property that details whether the event is suitable for wheelchair access. Placed on Event as this field could be used to detail whether the Event is suitable, as well as the Place.</p>                                             |
-| **beta:offerValidityPeriod**             |  [`Duration`](https://schema.org/Duration)                                                   | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/204">Proposal #204</a></p><p>Duration before the event for which the associated Offers are valid</p>                                                                                                                                                                 |
-| **beta:participantSuppliedEquipment**    |  [`RequiredStatusType`](https://developer.openactive.io/data-model/types/requiredstatustype) | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/229">Proposal #229</a></p><p>Indicates whether the participant must or may supply equipment for use in the Event.</p>                                                                                                                                                |
-| **beta:registrationCount**               |  [`Integer`](https://schema.org/Integer)                                                     | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/273">Proposal #273</a></p><p>For events that have an unlimited number of tickets, captures the number of registrations (intention to attend).</p>                                                                                                                    |
-| **beta:sportsActivityLocation**          |  Array of [`SportsActivityLocation`](https://schema.org/SportsActivityLocation)              | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/110">Proposal #110</a></p><p>Internal location of the event, e.g. Court 1</p>                                                                                                                                                                                        |
-| **beta:sportsActivityLocation**          |  Array of [`SportsActivityLocation`](https://schema.org/SportsActivityLocation)              | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/110">Proposal #110</a></p><p>Internal location of the event, e.g. Court 1</p>                                                                                                                                                                                        |
-| **beta:video**                           |  Array of [`VideoObject`](https://schema.org/VideoObject)                                    | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>A related video object.</p>                                                                                                                                                                                                               |
-| **beta:virtualLocation**                 |  [`VirtualLocation`](https://pending.schema.org/VirtualLocation)                             | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/224">Proposal #224</a></p><p>Describes a means of electronic access to a shared virtual space.</p>                                                                                                                                                                   |
 
-Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io)".
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>beta:affiliatedLocation</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Place"><code>Place</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/227">Proposal #227</a></p><p>The physical location affiliated with the virtual event, for example the original location of the event before it was moved online.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:attendeeCount</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/274">Proposal #274</a></p><p>For events that have an unlimited number of tickets, captures the number of attendees (actual attendance).</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:bookingChannel</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://openactive.io/ns-beta#BookingChannelType"><code>BookingChannelType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/161">Proposal #161</a></p><p>The channels through which a booking can be made.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:contactPoint</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/ContactPoint"><code>ContactPoint</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/113">Proposal #113</a></p><p>Contact details for an Event, where they are not specifically related to the <code>organizer</code> or <code>leader</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:distance</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/QuantitativeValue"><code>QuantitativeValue</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/275">Proposal #275</a></p><p>The distance of a run, cycle or other activity. Must also include units.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:donationPaymentUrl</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/234">Proposal #234</a></p><p>The URL of the webpage where the activity provider accepts donations.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:estimatedDuration</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/QuantitativeValue"><code>QuantitativeValue</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/201">Proposal #201</a></p><p>A property that allows an Event duration to be represented as a range (e.g. 0-30mins, 30-60mins, 60-90mins, 90+).</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:facilitySetting</b></td>
+      <td style="text-align:left">
+        <a href="https://openactive.io/ns-beta#FacilitySettingType"><code>FacilitySettingType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>Whether the event or facility is indoor or outdoor.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:formattedDescription</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/276">Proposal #276</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers. This property must contain HTML.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:isFirstSessionAccessibleForFree</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/232">Proposal #232</a></p><p>A property that indicates whether the first session is free.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:isInteractivityPreferred</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/230">Proposal #230</a></p><p>Indicates whether the virtual event is interactive (e.g. Zoom with participant microphones and cameras on), or is just a one-way broadcast (e.g. Facebook Live, Instagram Live, Zoom with participant microphones and cameras off).</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:isVirtuallyCoached</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/71">Proposal #71</a></p><p>A property that indicates whether the event is led by a virtual coach. Only relevant if an event <code>isCoached</code>. If not provided is assumed to be <code>false</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:isWheelchairAccessible</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/166">Proposal #166</a></p><p>A property that details whether the event is suitable for wheelchair access. Placed on Event as this field could be used to detail whether the Event is suitable, as well as the Place.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:offerValidityPeriod</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Duration"><code>Duration</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/204">Proposal #204</a></p><p>Duration before the event for which the associated Offers are valid</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:participantSuppliedEquipment</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/requiredstatustype"><code>RequiredStatusType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/229">Proposal #229</a></p><p>Indicates whether the participant must or may supply equipment for use in the Event.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:registrationCount</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/273">Proposal #273</a></p><p>For events that have an unlimited number of tickets, captures the number of registrations (intention to attend).</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:sportsActivityLocation</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/SportsActivityLocation"><code>SportsActivityLocation</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/110">Proposal #110</a></p><p>Internal location of the event, e.g. Court 1</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:sportsActivityLocation</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/SportsActivityLocation"><code>SportsActivityLocation</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/110">Proposal #110</a></p><p>Internal location of the event, e.g. Court 1</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:video</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>A related video object.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:virtualLocation</b></td>
+      <td style="text-align:left">
+        <a href="https://pending.schema.org/VirtualLocation"><code>VirtualLocation</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/224">Proposal #224</a></p><p>Describes a means of electronic access to a shared virtual space.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
