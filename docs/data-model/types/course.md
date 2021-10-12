@@ -177,6 +177,15 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
   </thead>
   <tbody>
     <tr>
+      <td style="text-align:left"><b>beta:formattedDescription</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/276">Proposal #276</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers. This property must contain HTML.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>beta:video</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
