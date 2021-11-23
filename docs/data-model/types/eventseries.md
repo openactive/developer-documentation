@@ -256,6 +256,15 @@ An `id` and/or `identifier` must be provided in order to allow data users to gro
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>customerAccountBookingRestriction</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Free text restrictions to display to the Customer at the browse stage, that may apply when using a Customer Account to make the booking.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p></br><b>Example</b></p><p><code>"customerAccountBookingRestriction": [<br/>&nbsp;&nbsp;&quot;Gold&nbsp;members&nbsp;only&quot;,<br/>&nbsp;&nbsp;&quot;Gym&nbsp;induction&nbsp;required&quot;<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>duration</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Duration"><code>Duration</code></a>
@@ -298,6 +307,15 @@ An `id` and/or `identifier` must be provided in order to allow data users to gro
       </td>
       <td style="text-align:left">
         <p>Whether the Event is accessible without charge.</p><p></br><b>Example</b></p><p><code>"isAccessibleForFree": "true"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>isOpenBookingWithCustomerAccountAllowed</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Indicates that a Customer Account may be used to book that opportunity.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p></br><b>Example</b></p><p><code>"isOpenBookingWithCustomerAccountAllowed": "true"</code></p>
       </td>
     </tr>
     <tr>

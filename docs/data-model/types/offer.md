@@ -83,6 +83,15 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>eligibleEntitlementType</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Offers in open data can be marked as requiring an entitlement type via <code>eligibleEntitlementType</code>. The same Offer may be applicable to multiple entitlement types, and the Customer must have at least one matching entitlement type to qualify for the Offer.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p></br><b>Example</b></p><p><code>"eligibleEntitlementType": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://data.mcractive.com/openactive/entitlement-list#5e78bcbe-36db-425a-9064-bf96d09cc351&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;MCRactive&nbsp;Adult&nbsp;Resident&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://data.mcractive.com/openactive/entitlement-list&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>

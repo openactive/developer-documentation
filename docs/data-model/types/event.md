@@ -284,6 +284,15 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>customerAccountBookingRestriction</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Free text restrictions to display to the Customer at the browse stage, that may apply when using a Customer Account to make the booking.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p></br><b>Example</b></p><p><code>"customerAccountBookingRestriction": [<br/>&nbsp;&nbsp;&quot;Gold&nbsp;members&nbsp;only&quot;,<br/>&nbsp;&nbsp;&quot;Gym&nbsp;induction&nbsp;required&quot;<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>duration</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Duration"><code>Duration</code></a>
@@ -326,6 +335,15 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
       </td>
       <td style="text-align:left">
         <p>A boolean property that indicates whether an Event will be coached. This flag allows an Event to be marked as being coached without having to specify a named individual as a coach. This addresses both privacy concerns and also scenarios where the actual coach may only be decided on the day.</p><p></br><b>Example</b></p><p><code>"isCoached": "true"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>isOpenBookingWithCustomerAccountAllowed</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Indicates that a Customer Account may be used to book that opportunity.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p></br><b>Example</b></p><p><code>"isOpenBookingWithCustomerAccountAllowed": "true"</code></p>
       </td>
     </tr>
     <tr>

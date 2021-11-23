@@ -101,6 +101,15 @@ This type is derived from [https://schema.org/Person](https://schema.org/Person)
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>hasAccount</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/customeraccount"><code>CustomerAccount</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Reference to the CustomerAccount associated with this Customer, for use within the Open Booking API flow.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>

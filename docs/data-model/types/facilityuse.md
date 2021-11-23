@@ -194,6 +194,15 @@ description: This page describes the FacilityUse type.
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>customerAccountBookingRestriction</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Free text restrictions to display to the Customer at the browse stage, that may apply when using a Customer Account to make the booking.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p></br><b>Example</b></p><p><code>"customerAccountBookingRestriction": [<br/>&nbsp;&nbsp;&quot;Gold&nbsp;members&nbsp;only&quot;,<br/>&nbsp;&nbsp;&quot;Gym&nbsp;induction&nbsp;required&quot;<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>event</b></td>
       <td style="text-align:left">
         Array of <a href="https://developer.openactive.io/data-model/types/slot"><code>Slot</code></a>
@@ -218,6 +227,15 @@ description: This page describes the FacilityUse type.
       </td>
       <td style="text-align:left">
         <p>Inverse of the oa:aggregateFacilityUse property. Relates a oa:FacilityUse (e.g. an opportunity to play tennis at a specific location) to an oa:IndividualFacilityUse (e.g. an opportunity to play tennis on a specific court).</p><p></br><b>Example</b></p><p><code>"individualFacilityUse": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;IndividualFacilityUse&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;http://www.example.org/facility-uses/1&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Tennis&nbsp;Court&nbsp;1&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>isOpenBookingWithCustomerAccountAllowed</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Indicates that a Customer Account may be used to book that opportunity.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p></br><b>Example</b></p><p><code>"isOpenBookingWithCustomerAccountAllowed": "true"</code></p>
       </td>
     </tr>
   </tbody>
