@@ -1,15 +1,23 @@
 # Testing RPDE feeds
 
+{% hint style="warning" %}
+Please note that all feeds must pass the **OpenActive Test Suite** in order to be usable by the largest number of data users. As described below, the interactive OpenActive Validator only validates the first 10 items / first 20 pages of a feed, whereas the OpenActive Test Suite runs the same checks over all items, in all pages, of all feeds.
+{% endhint %}
+
 ## OpenActive Validator
 
-The interactive online [OpenActive Validator](https://validator.openactive.io) provides two key features:
+The interactive online [OpenActive Validator](https://validator.openactive.io) allows the user to perform two types of validation:
 
-* [RPDE validation](https://validator.openactive.io/rpde): attempt to consume an RPDE feed and check for common errors
-* [JSON-LD validation](https://validator.openactive.io): check a single feed page or request/response for validity 
+* [RPDE validation](https://validator.openactive.io/rpde): attempt to consume **only the** **first 20 RPDE pages** of an RPDE feed and check for common errors with the RPDE implementation
+* [JSON-LD validation](https://validator.openactive.io): depending on the data supplied, check either (i) an individual item, (ii) **only the first 10 JSON-LD items** in a single feed page, or (iii) an Open Booking API request/response for validity
+
+The OpenActive Validator is useful during development to get instant feedback on the basic data structure and feed implementation, however it is not designed to comprehensively validate a complete implementation.
 
 ## OpenActive Test Suite
 
-The downloadable [OpenActive Test Suite](https://github.com/openactive/openactive-test-suite/) includes an option for comprehensively validating OpenActive open data feeds. It runs the [OpenActive Validator](https://validator.openactive.io) for every item in the feed, and also performs basic RPDE validation.
+The downloadable [OpenActive Test Suite](https://github.com/openactive/openactive-test-suite/) includes an option for comprehensively validating OpenActive open data feeds. Behind the scenes it runs the same checks as the [OpenActive Validator](https://validator.openactive.io) for** every RPDE page** in the feed, and for** every JSON-LD item** in the feed.
+
+The OpenActive Test Suite produces a results page that allows the user to explore specific errors with individual data items, by loading those items into the interactive OpenActive Validator.
 
 ### Step 1: Install the test suite
 
