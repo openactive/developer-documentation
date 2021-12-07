@@ -32,7 +32,7 @@ This type is derived from [https://pending.schema.org/VirtualLocation](https://p
 </table>
 
 
-### ** Required options **
+### **Required options**
 
 A data publisher must provide either a `name`, `description` or `url` for the `VirtualLocation`.
 

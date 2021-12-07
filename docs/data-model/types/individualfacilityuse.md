@@ -77,7 +77,7 @@ description: This page describes the IndividualFacilityUse type.
 </table>
 
 
-### ** Required options **
+### **Required options**
 
 Support for the `facilityType` property has been added to tooling and documentation ahead of inclusion in the next point release of the OpenActive Modelling Opportunity Data specification, as agreed on [the W3C call 2021-06-02](https://github.com/openactive/facility-types/issues/1#issuecomment-853759213). On this basis of this discussion, following the next point release, only `facilityType` will be required.
 

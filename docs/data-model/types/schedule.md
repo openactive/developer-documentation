@@ -68,7 +68,7 @@ This type is derived from [https://pending.schema.org/Schedule](https://pending.
 </table>
 
 
-### ** Required options **
+### **Required options**
 
 While these properties are marked as optional, a data publisher must provide either a `byDay`, `byMonth`, `byMonthDay` or `repeatFrequency` for a schedule.
 

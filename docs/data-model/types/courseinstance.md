@@ -113,7 +113,7 @@ This type is derived from [https://schema.org/CourseInstance](https://schema.org
 </table>
 
 
-### ** Required options **
+### **Required options**
 
 A data publisher must provide either a `subEvent` or specify an `eventSchedule` for a CourseInstance.
 

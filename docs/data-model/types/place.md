@@ -41,7 +41,7 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
 </table>
 
 
-### ** Required options **
+### **Required options**
 
 While these properties are marked as recommended in the specification, a data publisher must provide as much detail in both `address` and `geo` for an event as possible.
 

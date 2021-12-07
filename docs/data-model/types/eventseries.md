@@ -59,7 +59,7 @@ This type is derived from [https://pending.schema.org/EventSeries](https://pendi
 </table>
 
 
-### ** Required options **
+### **Required options**
 
 An `id` and/or `identifier` must be provided in order to allow data users to group `EventSeries` together consistently.
 

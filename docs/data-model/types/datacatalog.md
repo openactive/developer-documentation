@@ -72,7 +72,7 @@ This type is derived from [https://schema.org/DataCatalog](https://schema.org/Da
 </table>
 
 
-### ** Required options **
+### **Required options**
 
 The `DataCatalog` must include either `hasPart` if it is a collection of smaller `DataCatalog`s, or `dataset` if it is a collection of dataset sites.
 
