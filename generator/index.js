@@ -240,7 +240,7 @@ Except as otherwise noted, the content of this page is licensed under the [Creat
 
 function createRequiredOptionsIfFields(requiredOptions, fields) {
   if (requiredOptions.length > 0) {
-    return "### ** Required options **\n\n"
+    return "### **Required options**\n\n"
     + requiredOptions.map(requiredOption => 
         requiredOption.description.join("\n") + "\n" + createTableFromFields(requiredOption.options, fields) + "\n\n"
       ).join("\n\n");
