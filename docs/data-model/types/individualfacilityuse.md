@@ -98,30 +98,12 @@ description: This page describes the IndividualFacilityUse type.
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>aggregateFacilityUse</b></td>
-      <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/facilityuse"><code>FacilityUse</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Inverse of the oa:individualFacilityUse property. Relates an oa:IndividualFacilityUse (e.g. an opportunity to play tennis on a specific court) to a oa:FacilityUse (e.g. an opportunity to play tennis at a specific location).</p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>description</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
       </td>
       <td style="text-align:left">
         <p>A plain text description of the facility use, which must not include HTML or other markup.</p><p></br><b>Example</b></p><p><code>"description": "An fast paced game that incorporates netball, handball and football."</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>event</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/slot"><code>Slot</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>An array of slots of availability of this IndividualFacilityUse.</p><p></br><b>Example</b></p><p><code>"event": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Slot&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;http://www.example.org/api/individual-facility-uses/432#/event/2018-03-01T10:00:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;startDate&quot;:&nbsp;&quot;2018-03-01T11:00:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;endDate&quot;:&nbsp;&quot;2018-03-01T11:30:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;duration&quot;:&nbsp;&quot;PT30M&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;remainingUses&quot;:&nbsp;0,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;maximumUses&quot;:&nbsp;1<br/>&nbsp;&nbsp;}<br/>]</code></p>
       </td>
     </tr>
     <tr>
@@ -194,6 +176,15 @@ description: This page describes the IndividualFacilityUse type.
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>aggregateFacilityUse</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/facilityuse"><code>FacilityUse</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Inverse of the oa:individualFacilityUse property. Relates an oa:IndividualFacilityUse (e.g. an opportunity to play tennis on a specific court) to a oa:FacilityUse (e.g. an opportunity to play tennis at a specific location).</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>attendeeInstructions</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
@@ -218,6 +209,15 @@ description: This page describes the IndividualFacilityUse type.
       </td>
       <td style="text-align:left">
         <p>Free text restrictions to display to the Customer at the browse stage, that may apply when using a Customer Account to make the booking.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p></br><b>Example</b></p><p><code>"customerAccountBookingRestriction": [<br/>&nbsp;&nbsp;&quot;Gold&nbsp;members&nbsp;only&quot;,<br/>&nbsp;&nbsp;&quot;Gym&nbsp;induction&nbsp;required&quot;<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>event</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/slot"><code>Slot</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>An array of slots of availability of this IndividualFacilityUse.</p><p></br><b>Example</b></p><p><code>"event": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Slot&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;http://www.example.org/api/individual-facility-uses/432#/event/2018-03-01T10:00:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;startDate&quot;:&nbsp;&quot;2018-03-01T11:00:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;endDate&quot;:&nbsp;&quot;2018-03-01T11:30:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;duration&quot;:&nbsp;&quot;PT30M&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;remainingUses&quot;:&nbsp;0,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;maximumUses&quot;:&nbsp;1<br/>&nbsp;&nbsp;}<br/>]</code></p>
       </td>
     </tr>
     <tr>
