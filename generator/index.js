@@ -394,7 +394,7 @@ function createFullModel(fields, partialModel, models) {
       return map;
   }, {});
   // Set all known fields to false
-  model.requiredFields.concat(model.recommendedFields).concat(model.extensionFields)
+  model.requiredFields.concat(model.recommendedFields).concat(model.requiredOptions?.flatMap(o => o.options)).concat(model.extensionFields)
     .forEach(field => optionalFieldsMap[field] = false);
   // Create array of optional fields
   var optionalFields = Object.keys(optionalFieldsMap).filter(field => optionalFieldsMap[field]);
