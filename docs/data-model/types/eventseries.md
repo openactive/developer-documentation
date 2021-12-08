@@ -292,15 +292,6 @@ An `id` and/or `identifier` must be provided in order to allow data users to gro
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>identifier</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>isAccessibleForFree</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>

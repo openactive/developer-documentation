@@ -193,15 +193,6 @@ Support for the `facilityType` property has been added to tooling and documentat
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>activity</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
-      </td>
-      <td style="text-align:left">
-        <p><strong>DEPRECATED</strong>: Use <code>facilityType</code> instead of <code>activity</code> within <code>FacilityUse</code> and <code>IndividualFacilityUse</code>, as the <code>facilityType</code> controlled vocabulary has been designed specifically for facilities.</p><p>Specifies the physical activity or activities that will take place during a facility use.</p><p></br><b>Example</b></p><p><code>"activity": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://openactive.io/activity-list#c0360db0-a817-4bae-9167-40f89b49fc9e&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Badminton&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://openactive.io/activity-list&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>additionalAdmissionRestriction</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Text"><code>Text</code></a>
@@ -244,15 +235,6 @@ Support for the `facilityType` property has been added to tooling and documentat
       </td>
       <td style="text-align:left">
         <p>An array of slots of availability of this FacilityUse.</p><p></br><b>Example</b></p><p><code>"event": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Slot&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;http://www.example.org/api/facility-uses/432#/event/2018-03-01T10:00:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;startDate&quot;:&nbsp;&quot;2018-03-01T11:00:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;endDate&quot;:&nbsp;&quot;2018-03-01T11:30:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;duration&quot;:&nbsp;&quot;PT30M&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;remainingUses&quot;:&nbsp;3,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;maximumUses&quot;:&nbsp;6<br/>&nbsp;&nbsp;}<br/>]</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>facilityType</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Specifies the types of facility being described.</p><p>NOTE: this property has been added to tooling and documentation ahead of inclusion in the next point release of the OpenActive Modelling Opportunity Data specification, as agreed on <a href="https://github.com/openactive/facility-types/issues/1#issuecomment-853759213">the W3C call 2021-06-02</a>.</p><p></br><b>Example</b></p><p><code>"facilityType": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://openactive.io/facility-types#bba8ae59-d152-40bc-85cc-88c5375696d4&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Tennis&nbsp;Court&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://openactive.io/facility-types&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
       </td>
     </tr>
     <tr>

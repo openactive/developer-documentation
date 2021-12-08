@@ -143,30 +143,12 @@ The `DataCatalog` must include either `hasPart` if it is a collection of smaller
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>dataset</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The URLs of the dataset sites within this <code>DataCatalog</code>.</p><p></br><b>Example</b></p><p><code>"dataset": [<br/>&nbsp;&nbsp;&quot;https://opendata.exercise-anywhere.com/&quot;,<br/>&nbsp;&nbsp;&quot;https://www.participant.co.uk/participant/openactive/&quot;<br/>]</code></p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>dateModified</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/DateTime"><code>DateTime</code></a>
       </td>
       <td style="text-align:left">
         <p>The date this <code>DataCatalog</code> was last updated.</p><p></br><b>Example</b></p><p><code>"dateModified": "2018-01-27T12:00:00Z"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>hasPart</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The URLs of each smaller <code>DataCatalog</code> within this <code>DataCatalog</code> collection.</p><p></br><b>Example</b></p><p><code>"hasPart": [<br/>&nbsp;&nbsp;&quot;https://opendata.leisurecloud.live/api/datacatalog&quot;,<br/>&nbsp;&nbsp;&quot;https://openactivedatacatalog.legendonlineservices.co.uk/api/DataCatalog&quot;<br/>]</code></p>
       </td>
     </tr>
   </tbody>

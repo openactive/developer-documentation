@@ -193,33 +193,6 @@ While these properties are marked as optional, a data publisher must provide eit
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>byDay</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://schema.org/DayOfWeek"><code>DayOfWeek</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Defines the day of the week upon which the Event takes place.</p><p>When using string values, this MUST conform to iCal BYDAY rule.</p><p></br><b>Example</b></p><p><code>"byDay": [<br/>&nbsp;&nbsp;&quot;https://schema.org/Monday&quot;<br/>]</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>byMonth</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Defines the months of the year on which the Event takes place. Specified as an integer between 1 and 12, with 1 representing January.</p><p></br><b>Example</b></p><p><code>"byMonth": [<br/>&nbsp;&nbsp;2<br/>]</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>byMonthDay</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://schema.org/Integer"><code>Integer</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Defines the days of the month on which the Event takes place. Specified as an integer between 1 and 31</p><p></br><b>Example</b></p><p><code>"byMonthDay": [<br/>&nbsp;&nbsp;28<br/>]</code></p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>exceptDate</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/Date"><code>Date</code></a><br/> - or - <br/>Array of <a href="https://schema.org/DateTime"><code>DateTime</code></a>
@@ -235,15 +208,6 @@ While these properties are marked as optional, a data publisher must provide eit
       </td>
       <td style="text-align:left">
         <p>Defines the number of times a recurring Event will take place.</p><p></br><b>Example</b></p><p><code>"repeatCount": 3</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>repeatFrequency</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Duration"><code>Duration</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Defines the frequency at which Events will occur according to a Schedule. The intervals between events should be defined as a Duration of time.</p><p></br><b>Example</b></p><p><code>"repeatFrequency": "P1D"</code></p>
       </td>
     </tr>
   </tbody>

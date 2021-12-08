@@ -105,33 +105,6 @@ A data publisher must provide either a `name`, `description` or `url` for the `V
         <p>The identifier required to access the <code>VirtualLocation</code> from any device, without requiring the URL, e.g. the meeting ID.</p><p></br><b>Example</b></p><p><code>"accessId": "123456789"</code></p>
       </td>
     </tr>
-    <tr>
-      <td style="text-align:left"><b>description</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A plain text description of the live stream, including any instructions to join. This description must not include HTML or other markup.</p><p></br><b>Example</b></p><p><code>"description": "Please log into Zoom a few minutes before the event, and mute your mic while you wait for the session to start."</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>name</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The name of the service that is providing remote access to the Opportunity.</p><p></br><b>Example</b></p><p><code>"name": "Zoom"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>url</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The URL that enables remote access to the Opportunity, which should include encoded access credentials where possible.</p><p></br><b>Example</b></p><p><code>"url": "https://zoom.us/room/3fbCs0GVjgQ"</code></p>
-      </td>
-    </tr>
   </tbody>
 </table>
 

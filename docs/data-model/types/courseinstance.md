@@ -346,15 +346,6 @@ A data publisher must provide either a `subEvent` or specify an `eventSchedule` 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>eventSchedule</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/schedule"><code>Schedule</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A an array of oa:Schedule or oa:PartialSchedule, which represents a recurrence pattern.</p><p></br><b>Example</b></p><p><code>"eventSchedule": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;PartialSchedule&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;repeatFrequency&quot;:&nbsp;&quot;P1W&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;startTime&quot;:&nbsp;&quot;20:15&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;endTime&quot;:&nbsp;&quot;20:45&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;byDay&quot;:&nbsp;[<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;http://schema.org/Tuesday&quot;<br/>&nbsp;&nbsp;&nbsp;&nbsp;],<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;scheduleTimezone&quot;:&nbsp;&quot;Europe/London&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>identifier</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
@@ -433,15 +424,6 @@ A data publisher must provide either a `subEvent` or specify an `eventSchedule` 
       </td>
       <td style="text-align:left">
         <p>Provides a note from an organizer relating to how this Event is scheduled.</p><p></br><b>Example</b></p><p><code>"schedulingNote": "This event doesn't run during school holidays"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>subEvent</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/event"><code>Event</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The occurrences of this CourseInstance.</p>
       </td>
     </tr>
   </tbody>

@@ -166,15 +166,6 @@ While these properties are marked as recommended in the specification, a data pu
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>address</b></td>
-      <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/postaladdress"><code>PostalAddress</code></a><br/> - or - <br/><a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A structured PostalAddress object for the Place.</p><p>Ideally the address should be provided using the PostalAddress structured format. Google Reserve requires <a href="https://schema.org/PostalAddress">https://schema.org/PostalAddress</a> and will not accept plain text addresses.</p><p></br><b>Example</b></p><p><code>"address": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;PostalAddress&quot;,<br/>&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&quot;addressCountry&quot;:&nbsp;&quot;GB&quot;<br/>}</code></p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><b>containedInPlace</b></td>
       <td style="text-align:left">
         <a href="https://developer.openactive.io/data-model/types/place"><code>Place</code></a>
@@ -190,15 +181,6 @@ While these properties are marked as recommended in the specification, a data pu
       </td>
       <td style="text-align:left">
         <p>Places that exist within this place</p><p></br><b>Example</b></p><p><code>"containsPlace": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Place&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://www.everyoneactive.com/centres/Center-Parcs-Sports-Plaza&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Center&nbsp;Parcs&nbsp;Sports&nbsp;Plaza&quot;<br/>}</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>geo</b></td>
-      <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/geocoordinates"><code>GeoCoordinates</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The geo coordinates of the Place.</p><p></br><b>Example</b></p><p><code>"geo": {<br/>&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>}</code></p>
       </td>
     </tr>
     <tr>
