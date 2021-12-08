@@ -48,7 +48,7 @@ jobs:
         git add docs/data-model/types/
         git add docs/SUMMARY.md
         git status
-        git commit --message "Updating auto-generated model documentation [ci skip]"
+        git commit --message "Updating auto-generated model documentation [ci skip]" || echo "No changes to commit"
 
     - name: Push generated files
       run: git push
