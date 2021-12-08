@@ -319,6 +319,15 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>beta:facilityType</b></td>
+      <td style="text-align:left">
+        Array of <a href="http://www.w3.org/2004/02/skos/core#Concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>The type of facility in use. See <a href="https://openactive.io/facility-types/">https://openactive.io/facility-types/</a>.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>beta:formattedDescription</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
