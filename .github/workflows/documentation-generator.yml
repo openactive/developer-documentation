@@ -10,12 +10,13 @@ on:
 jobs:
   documentation-generator:
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout master branch
       uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.PUBLIC_REPO_ACCESS_TOKEN }}
         
     - name: Identify
       run: |
