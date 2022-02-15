@@ -53,7 +53,7 @@ IT IS STILL SUBJECT TO CHANGE, as the [Customer Accounts proposal](https://githu
     <tr>
       <td style="text-align:left"><b>validFrom</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+        <a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
         <p>The date the entitlement becomes valid. This must be in the past.</p>
@@ -62,7 +62,7 @@ IT IS STILL SUBJECT TO CHANGE, as the [Customer Accounts proposal](https://githu
     <tr>
       <td style="text-align:left"><b>validUntil</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+        <a href="https://schema.org/Date"><code>Date</code></a>
       </td>
       <td style="text-align:left">
         <p>The date that the entitlement is no longer valid. This must be in the future.</p>

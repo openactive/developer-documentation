@@ -178,7 +178,16 @@ This type is derived from [https://schema.org/Offer](https://schema.org/Offer), 
         <a href="https://schema.org/Duration"><code>Duration</code></a>
       </td>
       <td style="text-align:left">
-        <p>The duration before the startDate for which this Offer is valid, given in ISO 8601 format. This is a relatively-defined equivalent of schema:validFrom, to allow for Offer inheritance.</p>
+        <p>The duration before the <code>startDate</code> for which this <code>Offer</code> is valid, given in ISO 8601 format. This is a relatively-defined equivalent of <code>schema:validFrom</code>, to allow for <code>Offer</code> inheritance.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>validThroughBeforeStartDate</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Duration"><code>Duration</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The duration before the <code>startDate</code> after which the <code>Offer</code> is no longer valid, given in ISO 8601 format. This is a relatively-defined equivalent of <code>schema:validThrough</code>, to allow for <code>Offer</code> inheritance.</p>
       </td>
     </tr>
   </tbody>

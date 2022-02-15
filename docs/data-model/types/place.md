@@ -228,6 +228,15 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/276">Proposal #276</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers. This property must contain HTML.</p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:placeType</b></td>
+      <td style="text-align:left">
+        Array of <a href="http://www.w3.org/2004/02/skos/core#Concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/place-types/issues/1">Proposal #1</a></p><p>The type of Place. See <a href="https://openactive.io/place-types/">https://openactive.io/place-types/</a>.</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 

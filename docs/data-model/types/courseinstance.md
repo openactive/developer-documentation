@@ -553,6 +553,15 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>beta:isScheduledAsSlots</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/301">Proposal #301</a></p><p>A property that indicates whether the event contains a high frequency of occurrences. Intended as a UI hint for interfaces that represent these occurrences.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>beta:isVirtuallyCoached</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Boolean"><code>Boolean</code></a>
