@@ -175,6 +175,15 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
         <p>The person or organization ultimately responsible for an event. An organizer might be an  schema:Organization or a schema:Person.</p><p></br><b>Example</b></p><p><code>"organizer": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://id.bookingsystem.example.com/organizers/1&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>url</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A URL to a web page (or section of a page) that describes the specific Slot.</p><p></br><b>Example</b></p><p><code>"url": "https://example.com/slots/1234"</code></p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
