@@ -237,6 +237,15 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <p><a href="https://github.com/openactive/place-types/issues/1">Proposal #1</a></p><p>The type of Place. See <a href="https://openactive.io/place-types/">https://openactive.io/place-types/</a>.</p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:video</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>A related video object.</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
