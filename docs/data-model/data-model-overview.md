@@ -6,7 +6,7 @@ for OpenActive.
 ## Classes and Sessions
 
 {% hint style="info" %}
-Represented in the model by [`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#regular-sessions-sessionseries-and-scheduledsession-) and [`ScheduledSession`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#regular-sessions-sessionseries-and-scheduledsession-)
+Represented in the model by [`SessionSeries`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#regular-sessions-sessionseries-and-scheduledsession) and [`ScheduledSession`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#regular-sessions-sessionseries-and-scheduledsession)
 {% endhint %}
 
 This is an event (usually 1 or 2 hours in duration), that happens with some regularity. It is expected that if a user attends one of these events, that they would find another event in the series happening soon afterwards. They are not just attending a one-off event, as there is an implication of also being part of a community of regular attendees. Note that although the events might be frequent, they do not necessarily conform to a rigid Schedule (though many do). For example click the "Rides" tab in this group [https://www.letsride.co.uk/groups/central-london-outdoor-group](https://www.letsride.co.uk/groups/central-london-outdoor-group) there is no regularity here.
@@ -18,7 +18,7 @@ Typical opportunities in this category are provided by clubs, community provider
 ## Ad-hoc Facility Bookings
 
 {% hint style="info" %}
-Represented in the model by [`FacilityUse`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-facility-use-code-oa-facilityuse-code-code-oa-individualfacilityuse-code-), [`IndividualFacilityUse`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-facility-use-code-oa-facilityuse-code-code-oa-individualfacilityuse-code-), and [`Slot`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-facility-use-code-oa-facilityuse-code-code-oa-individualfacilityuse-code-)
+Represented in the model by [`FacilityUse`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-facility-use-oa-facilityuse-oa-individualfacilityuse), [`IndividualFacilityUse`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-facility-use-oa-facilityuse-oa-individualfacilityuse), and [`Slot`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#describing-slots-oa-slot)
 {% endhint %}
 
 These are activities which are bookable based on slots of availability for a particular activity (e.g. Badminton) at a facility within a venue (e.g. a sports hall). These include squash courts, a running track, community facilities such as youth centres, school halls, or church halls. If you book "Badminton in School Hall" you can expect the appropriate equipment to be available to allow you to carry out this activity (e.g. a badminton net). In this example the Facility is "School Hall", and the Use is "Badminton".
@@ -26,7 +26,7 @@ These are activities which are bookable based on slots of availability for a par
 ## Events
 
 {% hint style="info" %}
-Represented in the model by `Event`
+Represented in the model by [`Event`](https://openactive.io/modelling-opportunity-data/EditorsDraft/#describing-events-schema-event)
 {% endhint %}
 
 These events are one-off occurrences, e.g. a fun run organised by a local group may run as a standalone event on a particular date or an organisation that runs many individual events e.g. Human Race, Race for Life, International Women's Day.
@@ -34,7 +34,7 @@ These events are one-off occurrences, e.g. a fun run organised by a local group 
 ## Headline Events
 
 {% hint style="info" %}
-Represented in the model by [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#headline-events-headlineevent-)
+Represented in the model by [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#headline-events-headlineevent)
 {% endhint %}
 
 These are large scale events such as London Marathon or a Triathlon "Hebridean Cycle Challenge", which are typically all day with specific start times for sub-events happening within them.
@@ -46,7 +46,7 @@ Headline Events also include festivals, such as the [Lambeth Country Show](http:
 ## Courses
 
 {% hint style="info" %}
-Represented in the model by [`CourseInstance`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#courses-courseinstance-)
+Represented in the model by [`CourseInstance`](https://www.openactive.io/modelling-opportunity-data/EditorsDraft/#courses-courseinstance)
 {% endhint %}
 
 Courses generally involve an upfront commitment to a number of sessions, with a consistent attendee group and/or organisers for the duration of the course.
