@@ -4,7 +4,7 @@ On-Demand Events are recordings of events that do not occur at a specific time, 
 
 These might be pre-recorded fitness classes, workouts, sessions which are provided via an online product, such as Les Mills On Demand and Racefully. They include on-demand video content and sessions which can be participated in virtually using an app or run-tracker (e.g. live virtual 5k).
 
-The [**`OnDemandEvent`**](../data-model/types/ondemandevent.md) type is used to represent such events, and they must be published using a **separate RPDE feed**, as per [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent_example\_1.json\&version=2.x).
+The [**`OnDemandEvent`**](../data-model/types/ondemandevent.md) type is used to represent such events, and they must be published using a **separate RPDE feed**, as per [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent\_example\_1.json\&version=2.x).
 
 {% hint style="warning" %}
 Online classes and events are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/71) that has been [accelerated](https://w3c.openactive.io/meetings/2020-03-25-virtual-events) in response to the COVID-19 pandemic, and any properties suggested in the associated proposals are subject to change after the pandemic has ended. We welcome your contribution to the [discussion and various proposals](https://github.com/openactive/modelling-opportunity-data/labels/virtual%20events) with any thoughts and feedback from your implementation.
@@ -12,7 +12,7 @@ Online classes and events are part of an [ongoing discussion](https://github.com
 
 ## Implementation guidance
 
-In order to upgrade your booking or listing system to support virtual events, consider implementing the following properties, in addition to the [standard required and recommended properties](../data-model/types/ondemandevent.md), within your **new RPDE feed specific to** [**`OnDemandEvent`**](../data-model/types/ondemandevent.md). The [OpenActive libraries](data-feeds/implementing-rpde-feeds.md#net-php-and-ruby-libraries), [types reference documentation](../data-model/types/#event-types-also-used-for-virtual-events), and [validator](http://validator.openactive.io) have been updated to support these properties.
+In order to upgrade your booking or listing system to support virtual events, consider implementing the following properties, in addition to the [standard required and recommended properties](../data-model/types/ondemandevent.md), within your **new RPDE feed specific to** [**`OnDemandEvent`**](../data-model/types/ondemandevent.md). The [OpenActive libraries](data-feeds/implementing-rpde-feeds.md#net-php-and-ruby-libraries), [types reference documentation](../data-model/types/#event-types-also-used-for-virtual-events), and [validator](http://validator.openactive.io/) have been updated to support these properties.
 
 {% hint style="info" %}
 Please see the "**Updated Proposal**" within each of the referenced GitHub issues in the headings below for further specific guidance on each property. Please comment on these GitHub issue if you require any specific clarifications.
@@ -183,7 +183,7 @@ The following properties are **RECOMMENDED** for [`OnDemandEvent`](../data-model
 
 The validator includes a complete example for:
 
-* [OnDemandEvent](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent_example\_1.json\&version=2.x)
+* [OnDemandEvent](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fondemandevent\_example\_1.json\&version=2.x)
 
 ### Illustrative examples
 

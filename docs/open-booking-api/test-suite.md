@@ -23,7 +23,7 @@ cd openactive-test-suite
 npm install
 ```
 
-You can check that the test suite works in your local environment by running it against the hosted [OpenActive Reference Implementation](https://reference-implementation.openactive.io), simply by using the default configuration:
+You can check that the test suite works in your local environment by running it against the hosted [OpenActive Reference Implementation](https://reference-implementation.openactive.io/), simply by using the default configuration:
 
 ```bash
 npm start -- core
@@ -32,7 +32,7 @@ npm start -- core
 Note that the above command only runs the "core" tests within the test suite, which should take around 60 seconds to complete.
 
 {% hint style="info" %}
-The hosted [OpenActive Reference Implementation](https://reference-implementation.openactive.io) is running on a basic developer tier Azure instance with a burst quota, so if the application shuts down, simply wait 5 minutes and try again.
+The hosted [OpenActive Reference Implementation](https://reference-implementation.openactive.io/) is running on a basic developer tier Azure instance with a burst quota, so if the application shuts down, simply wait 5 minutes and try again.
 
 The quota is sufficient for the most common use cases: running a small subset of tests or individual tests against the reference implementation.
 
@@ -61,7 +61,7 @@ npm start -- core
 {% endtab %}
 {% endtabs %}
 
-Adding other `./config/{NODE_ENV}.json` files allows you to override the default configuration. For more information see this [documentation](https://github.com/lorenwest/node-config/wiki/Environment-Variables#node_env).
+Adding other `./config/{NODE_ENV}.json` files allows you to override the default configuration. For more information see this [documentation](https://github.com/lorenwest/node-config/wiki/Environment-Variables#node\_env).
 
 ## Step 3: Configure flows
 
@@ -188,7 +188,7 @@ The `testDatasetIdentifier` setting is used in all calls in the test interface. 
 
 The test suite will making all bookings under a specific `primary` Seller provided in the configuration, using the authentication request headers provided for that Seller.
 
-If your booking system only supports a single seller, only the “`primary`” seller is required. If your booking system supports multiple sellers, the “`secondary`” seller must also be set to support the “[multiple-sellers](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/core/multiple-sellers/README.md)” tests. 
+If your booking system only supports a single seller, only the “`primary`” seller is required. If your booking system supports multiple sellers, the “`secondary`” seller must also be set to support the “[multiple-sellers](https://github.com/openactive/openactive-test-suite/blob/master/packages/openactive-integration-tests/test/features/core/multiple-sellers/README.md)” tests.&#x20;
 
 See the [reference documentation](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#sellers) for more information.
 

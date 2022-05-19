@@ -41,7 +41,7 @@ These are large scale events such as London Marathon or a Triathlon "Hebridean C
 
 For example, the "Big South East Aquathlon" contains "Big South East Aquathlon Long Course", "Big South East Aquathlon Sprint", and "Dartford Bridge Aquathlon". All these events happen together, or at offset times during the day. The same is true of any marathon or half-marathon, which might include different races such as the "Elite Wheelchair Marathon".
 
-Headline Events also include festivals, such as the [Lambeth Country Show](http://lambethcountryshow.co.uk), which may include a range of different short activities within its programme (such sessions of "try wheelchair basketball").
+Headline Events also include festivals, such as the [Lambeth Country Show](http://lambethcountryshow.co.uk/), which may include a range of different short activities within its programme (such sessions of "try wheelchair basketball").
 
 ## Courses
 
@@ -85,7 +85,7 @@ Online classes and events are part of an [ongoing discussion](https://github.com
 Leagues and ringers are part of an [ongoing discussion](https://github.com/openactive/modelling-opportunity-data/issues/144), and any properties suggested in the associated proposals are subject to change. We welcome your contribution to the discussion to help expedite building these into the OpenActive specifications.
 {% endhint %}
 
-Leagues could be informal, social, turn up and play or structured opportunities that have a set frequency and play in some sort of competition format e.g. [Go Mammoth](https://gomammoth.co.uk), [Simple Netball](https://www.simplenetball.co.uk).
+Leagues could be informal, social, turn up and play or structured opportunities that have a set frequency and play in some sort of competition format e.g. [Go Mammoth](https://gomammoth.co.uk/), [Simple Netball](https://www.simplenetball.co.uk/).
 
 Ringer opportunities are spaces available in teams already scheduled to play due to drop-outs, which give participants a chance to try out the league mid-season.
 

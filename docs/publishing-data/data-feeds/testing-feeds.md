@@ -9,13 +9,13 @@ Please note that all feeds must pass the **OpenActive Test Suite** in order to b
 The interactive online [OpenActive Validator](https://validator.openactive.io) allows the user to perform two types of validation:
 
 * [RPDE validation](https://validator.openactive.io/rpde): attempt to consume **only the** **first 20 RPDE pages** of an RPDE feed and check for common errors with the RPDE implementation
-* [JSON-LD validation](https://validator.openactive.io): depending on the data supplied, check either (i) an individual item, (ii) **only the first 10 JSON-LD items** in a single feed page, or (iii) an Open Booking API request/response for validity
+* [JSON-LD validation](https://validator.openactive.io/): depending on the data supplied, check either (i) an individual item, (ii) **only the first 10 JSON-LD items** in a single feed page, or (iii) an Open Booking API request/response for validity
 
 The OpenActive Validator is useful during development to get instant feedback on the basic data structure and feed implementation, however it is not designed to comprehensively validate a complete implementation.
 
 ## OpenActive Test Suite
 
-The downloadable [OpenActive Test Suite](https://github.com/openactive/openactive-test-suite/) includes an option for comprehensively validating OpenActive open data feeds. Behind the scenes it runs the same checks as the [OpenActive Validator](https://validator.openactive.io) for** every RPDE page** in the feed, and for** every JSON-LD item** in the feed.
+The downloadable [OpenActive Test Suite](https://github.com/openactive/openactive-test-suite/) includes an option for comprehensively validating OpenActive open data feeds. Behind the scenes it runs the same checks as the [OpenActive Validator](https://validator.openactive.io/) for **every RPDE page** in the feed, and for **every JSON-LD item** in the feed.
 
 The OpenActive Test Suite produces a results page that allows the user to explore specific errors with individual data items, by loading those items into the interactive OpenActive Validator.
 

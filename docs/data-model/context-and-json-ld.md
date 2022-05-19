@@ -32,19 +32,19 @@ When using **types** and **properties** from a particular context, that context 
 }
 ```
 
-The OpenActive context "[https://openactive.io/](https://openactive.io)" brings together several standards, including [schema.org](https://schema.org) and [SKOS](http://www.w3.org/2004/02/skos/core) define some standard properties, which we can use to describe our data.
+The OpenActive context "[https://openactive.io/](https://openactive.io/)" brings together several standards, including [schema.org](https://schema.org) and [SKOS](http://www.w3.org/2004/02/skos/core) define some standard properties, which we can use to describe our data.
 
 There are four primary contexts which are used within OpenActive data. These are listed below. Clicking on the name of each context will take you to a list of properties within it. Additionally data publishers can define their own properties and publish their own context, which is known as an extension context.
 
 OpenActive data is valid JSON-LD, which means that properties published in OpenActive data will always exist in one of the specified contexts included in`"@context"`).
 
-| Context                                              | Prefix | URL                                                                          | Bundles          | Prefix Required | Status          |
-| ---------------------------------------------------- | ------ | ---------------------------------------------------------------------------- | ---------------- | --------------- | --------------- |
-| [schema.org](http://schema.org)                      | schema | [https://schema.org/](https://schema.org)                                    |                  | No              | Living Standard |
-| [SKOS](http://www.w3.org/2004/02/skos/core#)         | skos   | [http://www.w3.org/2004/02/skos/core#](http://www.w3.org/2004/02/skos/core#) |                  | No              | Stable          |
-| [OpenActive](https://www.openactive.io/ns)           | oa     | [https://openactive.io/](https://openactive.io)                              | schema.org, SKOS | No              | Stable          |
-| [OpenActive Beta](https://www.openactive.io/ns-beta) | beta   | [https://openactive.io/ns-beta](https://openactive.io/ns-beta)               |                  | Yes             | Experimental    |
-| \[[Extensions](context-and-json-ld.md)]              | \*     | \*                                                                           |                  | Yes             | Experimental    |
+| Context                                              | Prefix | URL                                                                         | Bundles          | Prefix Required | Status          |
+| ---------------------------------------------------- | ------ | --------------------------------------------------------------------------- | ---------------- | --------------- | --------------- |
+| [schema.org](http://schema.org/)                     | schema | [https://schema.org/](https://schema.org/)                                  |                  | No              | Living Standard |
+| [SKOS](http://www.w3.org/2004/02/skos/core)          | skos   | [http://www.w3.org/2004/02/skos/core#](http://www.w3.org/2004/02/skos/core) |                  | No              | Stable          |
+| [OpenActive](https://www.openactive.io/ns)           | oa     | [https://openactive.io/](https://openactive.io/)                            | schema.org, SKOS | No              | Stable          |
+| [OpenActive Beta](https://www.openactive.io/ns-beta) | beta   | [https://openactive.io/ns-beta](https://openactive.io/ns-beta)              |                  | Yes             | Experimental    |
+| \[[Extensions](context-and-json-ld.md)]              | \*     | \*                                                                          |                  | Yes             | Experimental    |
 
 The [OpenActive modelling specification](https://www.openactive.io/modelling-opportunity-data/) includes a "profile" (subset) of schema.org and SKOS which has been defined for OpenActive use, along with the specification for additional OpenActive-specific properties.
 
@@ -88,7 +88,7 @@ The following example references the contexts OpenActive (which automatically in
 
 #### schema.org
 
-[Schema.org](https://schema.org) is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. It was founded by Google, Microsoft, Yahoo and Yandex, Schema.org vocabularies.
+[Schema.org](https://schema.org/) is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. It was founded by Google, Microsoft, Yahoo and Yandex, Schema.org vocabularies.
 
 The terms of schema.org continue to evolve through lively discussions on their [mailing list](https://www.w3.org/community/schemaorg/) and [GitHub issues](https://github.com/schemaorg/schemaorg/issues). Often properties are added for some specific use case, and their potential relationship to other areas of schema.org only becomes clear later. This gives rise to changes in textual definition and property-to-type associations that gradually make schema.org more coherent, without introducing radical changes in meaning. Consumers of schema.org data can generally rely on schema.org term meanings not changing dramatically; however term definitions often evolve gradually over time, to accommodate new usage scenarios or to improve usability. When schema.org properties are occasionally deprecated, they stay in the context so that they can still be used and are simply referenced to their replacement property.
 

@@ -14,7 +14,7 @@ Online classes and events are part of an [ongoing discussion](https://github.com
 
 ## Implementation guidance
 
-In order to upgrade your booking or listing system to support virtual events, consider implementing the following properties. The [OpenActive libraries](data-feeds/implementing-rpde-feeds.md#net-php-and-ruby-libraries), [types reference documentation](../data-model/types/#event-types-also-used-for-virtual-events), and [validator](http://validator.openactive.io) have been updated to support these properties.
+In order to upgrade your booking or listing system to support virtual events, consider implementing the following properties. The [OpenActive libraries](data-feeds/implementing-rpde-feeds.md#net-php-and-ruby-libraries), [types reference documentation](../data-model/types/#event-types-also-used-for-virtual-events), and [validator](http://validator.openactive.io/) have been updated to support these properties.
 
 {% hint style="info" %}
 Please see the "**Updated Proposal**" within each of the referenced GitHub issues in the headings below for further specific guidance on each property. Please comment on these GitHub issue if you require any specific clarifications.
@@ -148,7 +148,7 @@ This property allows applications to present a filter for "no equipment required
 * `https://openactive.io/Optional` - Equipment is optional, and the participant can improvise
 * `https://openactive.io/Unavailable` - No equipment required
 
- The property is applicable to online, offline and mixed events.
+&#x20;The property is applicable to online, offline and mixed events.
 
 The existing `attendeeInstruction` and `description` properties may be used for activity providers to provide further clarification about equipment requirements.
 
@@ -387,8 +387,8 @@ The following properties are **RECOMMENDED**:
 
 The validator includes complete examples for:
 
-* [Virtual SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split-virtual_example\_1.json\&version=2.x)
-* [Virtual ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split-virtual_example\_1.json\&version=2.x)
+* [Virtual SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split-virtual\_example\_1.json\&version=2.x)
+* [Virtual ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split-virtual\_example\_1.json\&version=2.x)
 
 ### Illustrative examples
 

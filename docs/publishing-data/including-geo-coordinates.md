@@ -31,19 +31,19 @@ In order to maximise the usefulness of your data, it is highly recommended that 
 
 In order to publish geographic coordinates in your open data feed, you must ensure that the source of these coordinates (usually your geocoder) permits you to republish this data under an open licence.
 
-The [OpenCage Geocoder](https://opencagedata.com) is an example of a geocoder that [permits such republishing](https://opencagedata.com/why-use-open-data).
+The [OpenCage Geocoder](https://opencagedata.com/) is an example of a geocoder that [permits such republishing](https://opencagedata.com/why-use-open-data).
 
 The basic [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/policies) licence **does not** permit open data republishing, and does not permit including the data in any externally facing API.
 
-## Rendering a geocoding user interface <a href="rendering-the-openactive-activity-list-with-skos-js" id="rendering-the-openactive-activity-list-with-skos-js"></a>
+## Rendering a geocoding user interface <a href="#rendering-the-openactive-activity-list-with-skos-js" id="rendering-the-openactive-activity-list-with-skos-js"></a>
 
-Given the inaccuracy of geocoding for sports venues, we recommend using [leaflet.js](https://leafletjs.com) (or a similar service) to implement a map to allow your users to move a pin to a specific location.
+Given the inaccuracy of geocoding for sports venues, we recommend using [leaflet.js](https://leafletjs.com/) (or a similar service) to implement a map to allow your users to move a pin to a specific location.
 
-### Leaflet.js and OpenCage implementation example <a href="activity-list-dropdown-implementation-example" id="activity-list-dropdown-implementation-example"></a>
+### Leaflet.js and OpenCage implementation example <a href="#activity-list-dropdown-implementation-example" id="activity-list-dropdown-implementation-example"></a>
 
 Below is a copy-and-pastable example of a drag-and-drop map pin and geocoder, that can be used within your booking system to allow the user to enter reliable latitude and longitude data.‌
 
-It is powered by [OpenStreetMap](https://www.openstreetmap.org), [open data compatible geocoding](https://opencagedata.com), and [open source libraries](https://leafletjs.com).
+It is powered by [OpenStreetMap](https://www.openstreetmap.org/), [open data compatible geocoding](https://opencagedata.com/), and [open source libraries](https://leafletjs.com/).
 
 On load you may specify the **`map.centerMap(lat, lng)`** to set the initial position of the map.‌
 

@@ -197,7 +197,7 @@ And within a corresponding `Slot` feed, that `IndividualFacilityUse` **`@id`** i
 A feed of  [`HeadlineEvent`](https://www.openactive.io/modelling-opportunity-data/#headline-events-headlineevent-) can be used to represent whole day or multi-day events, such as mass participation events, family fun days, etc.
 
 * The OpenActive Modelling Specification 2.0 represents these events using a hierarchy of types: `HeadlineEvent` (for the overall event) and `Event` (for small events within the overall event) linked via the `superEvent` and `subEvent` properties.
-* See [here](../../data-model/data-model-overview.md#headline-events) for further clarification, and [here](http://data.britishtriathlon.org) for an example.
+* See [here](../../data-model/data-model-overview.md#headline-events) for further clarification, and [here](http://data.britishtriathlon.org/) for an example.
 
 A feed of [`CourseInstance`](https://www.openactive.io/modelling-opportunity-data/#courses-courseinstance-) can be used to represent a fixed-length course.
 

@@ -25,7 +25,7 @@ In the relevant [open data feed](data-feeds/types-of-feed.md), the `@id` and `pr
 ]
 ```
 
-See [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split_example\_1.json\&version=2.x) for a full feed example that references the OpenActive Activity List using the snippet above.
+See [here](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split\_example\_1.json\&version=2.x) for a full feed example that references the OpenActive Activity List using the snippet above.
 
 {% hint style="warning" %}
 Please note that although the newer **`@id`** and **`@type`** are used here and throughout the rest of the OpenActive documentation and tooling, the OpenActive Activity List JSON-LD definition itself still uses **`id`** and **`type`** for backwards compatibility.
@@ -80,9 +80,9 @@ Your application may also store the `prefLabel` alongside the `@id` at the point
 
 ### Hardcoding OpenActive Activity List references
 
-If your booking system is restricted to a small number of different activities (e.g. [Run Together](https://data.runtogether.co.uk) is restricted to just "Running"), it is usually better to hardcode the activity list references into your booking system.
+If your booking system is restricted to a small number of different activities (e.g. [Run Together](https://data.runtogether.co.uk/) is restricted to just "Running"), it is usually better to hardcode the activity list references into your booking system.
 
-To find the **`@id`** simply [find the relevant activity in the OpenActive Activity List](https://activity-list.openactive.io/en/basic_find.html), then scroll down to the bottom the page to view a full example JSON-LD snippet for that specific activity, such as the screenshot below. This can be included in your open data feed.
+To find the **`@id`** simply [find the relevant activity in the OpenActive Activity List](https://activity-list.openactive.io/en/basic\_find.html), then scroll down to the bottom the page to view a full example JSON-LD snippet for that specific activity, such as the screenshot below. This can be included in your open data feed.
 
 ![Screenshot of full example JSON-LD snippet from OpenActive Activity List website](<../.gitbook/assets/screenshot-2020-04-25-at-17.19.22 (1).png>)
 
@@ -94,7 +94,7 @@ Maintaining the hierarchy and providing a typeahead search is important as with 
 
 ### Rendering a hierarchy from the JSON-LD definition of the OpenActive Activity List
 
-Although the use of [SKOS.js](https://www.npmjs.com/package/@openactive/skos) is recommended when reading the JSON-LD definition of the OpenActive Activity List in JavaScript, for other languages the JSON-LD may also be parsed directly. 
+Although the use of [SKOS.js](https://www.npmjs.com/package/@openactive/skos) is recommended when reading the JSON-LD definition of the OpenActive Activity List in JavaScript, for other languages the JSON-LD may also be parsed directly.&#x20;
 
 The [JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) of the OpenActive Activity List includes the following key properties:
 

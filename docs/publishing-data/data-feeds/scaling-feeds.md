@@ -4,7 +4,7 @@
 
 A retention period should be applied to your data, so that sessions in the past are removed from the feed, while respecting the [RPDE invariants](https://www.w3.org/2017/08/realtime-paged-data-exchange/#core-concept).
 
-A CDN such as [CloudFlare](https://www.cloudflare.com) is recommended to allow your RPDE endpoint to scale to millions of requests inbound.
+A CDN such as [CloudFlare](https://www.cloudflare.com/) is recommended to allow your RPDE endpoint to scale to millions of requests inbound.
 
 ## Retention Period
 
@@ -100,7 +100,7 @@ The settings in the CDN Configuration section will create the behaviour describe
 
 * In this scenario, 200 data consumers are tracking the RPDE feed by polling at the end of the list (the last `next` URL).
 * Although each data consumer can choose a polling frequency arbitrarily, that frequency is not relevant to the calculations here, as it is the settings of the cache header that dictate the load on the origin server. It should also be noted that during normal operation the number of data consumers also does not impact the load on the origin server, and that 200 is used illustratively.
-* When the last page is requested, the first consumer would request the live page (creating one hit on the origin server), and the subsiquent 199 data consumers would receive a cached version. 
+* When the last page is requested, the first consumer would request the live page (creating one hit on the origin server), and the subsiquent 199 data consumers would receive a cached version.&#x20;
 
 #### **"Sleep" mode**
 
@@ -120,7 +120,7 @@ If a data consumer decides to "resync" their data from the beginning of your fee
 
 ### CloudFlare Walkthrough
 
-In order for [CloudFlare](https://www.cloudflare.com) to respect your cache control headers, there are five simple steps to follow:
+In order for [CloudFlare](https://www.cloudflare.com/) to respect your cache control headers, there are five simple steps to follow:
 
 #### 1) Set up CloudFlare as your DNS provider and proxy
 
@@ -146,7 +146,7 @@ On the Caching configuration page, ensure that following is set:
 
 * **Browser Cache Expiration:** Respect Existing Headers
 
-![](<../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35-1 (2) (4).png>)
+![](<../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35-1 (2) (2) (3).png>)
 
 #### 4) Ensure that your feed does not inadvertently set any cookies
 

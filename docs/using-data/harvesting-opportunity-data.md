@@ -1,6 +1,6 @@
 # Harvesting opportunity data
 
-## **Introduction** <a href="introduction" id="introduction"></a>
+## **Introduction** <a href="#introduction" id="introduction"></a>
 
 To follow along you’ll need some existing knowledge of programming, including familiarity with HTTP, JSON, and APIs.
 
@@ -15,19 +15,19 @@ By the end of this tutorial you’ll have:
 
 Whilst you’ll be able to follow along with this tutorial as your sole guide, you may wish to refer to the OpenActive [Realtime Paged Data Exchange](https://www.openactive.io/realtime-paged-data-exchange/) specification for greater detail at points.
 
-## **Before we begin** <a href="before-we-begin" id="before-we-begin"></a>
+## **Before we begin** <a href="#before-we-begin" id="before-we-begin"></a>
 
-Before we dive into implementation, let’s start with a bit of background. [OpenActive](https://www.openactive.io) intends to facilitate the sharing and use of physical activity opportunity data. To date, a number of datasets have been made available for use. You can find out more about them in our upcoming guide ‘How to find physical activity opportunity data using the OpenActive Opportunity Data Dashboard’, or through the [status dashboard](https://status.openactive.io) itself.
+Before we dive into implementation, let’s start with a bit of background. [OpenActive](https://www.openactive.io/) intends to facilitate the sharing and use of physical activity opportunity data. To date, a number of datasets have been made available for use. You can find out more about them in our upcoming guide ‘How to find physical activity opportunity data using the OpenActive Opportunity Data Dashboard’, or through the [status dashboard](https://status.openactive.io/) itself.
 
 This is a tutorial which aims to cover how to harvest the data from these feeds. For simplicity, we’re going to focus on harvesting data from a single source, however at the end of this tutorial we’ll include some prompters for how to approach combining data from multiple sources.
 
-## **Data transport** <a href="data-transport" id="data-transport"></a>
+## **Data transport** <a href="#data-transport" id="data-transport"></a>
 
 First of all, it’s important to understand the general approach to how the data is transported.
 
-Each dataset has a URL endpoint. You can find these by visiting [status.openactive.io](http://status.openactive.io) and selecting one of the links under the Endpoint column. For this tutorial, we’re going to use the London Sport endpoint, so find it and navigate through the link.
+Each dataset has a URL endpoint. You can find these by visiting [status.openactive.io](http://status.openactive.io/) and selecting one of the links under the Endpoint column. For this tutorial, we’re going to use the London Sport endpoint, so find it and navigate through the link.
 
-![](https://lh3.googleusercontent.com/38w0HRDd-i7zjzqAhu2nbbeyH62-jAGY1hfPyyAlO5slWJnJVkQQXFwaTSazASwUpPqTXR_SoAEmj0Jh_Iyf5IXfy9rW2dJM5CZ0jAS9KOmLLspqdBsS_RR2h1RZz59zbw)
+![](https://lh3.googleusercontent.com/38w0HRDd-i7zjzqAhu2nbbeyH62-jAGY1hfPyyAlO5slWJnJVkQQXFwaTSazASwUpPqTXR\_SoAEmj0Jh\_Iyf5IXfy9rW2dJM5CZ0jAS9KOmLLspqdBsS\_RR2h1RZz59zbw)
 
 The OpenActive opportunity data dashboard, showing available endpoints
 
@@ -39,15 +39,15 @@ The RPDE specification recommends use of standard HTTP status codes. So your cod
 
 To harvest all of the data from a feed your code will need to make repeated HTTP requests until it has fetched all the data. There’s no need for any authentication as all of the endpoints are freely available.Now that we understand the mechanic for transferring data, let’s move on to understanding the content of what’s returned from a request, and how we navigate through all of the content.
 
-## **Understanding paging** <a href="understanding-paging" id="understanding-paging"></a>
+## **Understanding paging** <a href="#understanding-paging" id="understanding-paging"></a>
 
 Before we grab the data there are a few key concepts that are important to understand.
 
-### **Data is returned as pages** <a href="data-is-returned-as-pages" id="data-is-returned-as-pages"></a>
+### **Data is returned as pages** <a href="#data-is-returned-as-pages" id="data-is-returned-as-pages"></a>
 
 Looking at the [URL we previously visited](https://opensessions.io/api/Session/GetSessionsForOpenActive), you’ll notice that the data isn’t extensive - there are only 10 items in the items array.
 
-![](https://lh5.googleusercontent.com/7mdF_pYa-nEB1c-2gLlKsE0xQbMnzHIMqE7rkkLLUD8txXq181UiPwdizyOttNxBXeBqok7RamlmkmYhcdpIaO89RJ3D5yt3qVd-LzrfbYvlH1Xl7bQWHrVEgx2DIuQXkw)
+![](https://lh5.googleusercontent.com/7mdF\_pYa-nEB1c-2gLlKsE0xQbMnzHIMqE7rkkLLUD8txXq181UiPwdizyOttNxBXeBqok7RamlmkmYhcdpIaO89RJ3D5yt3qVd-LzrfbYvlH1Xl7bQWHrVEgx2DIuQXkw)
 
 An in-browser view of the London Sport endpoint, with individual items collapsed
 
@@ -57,7 +57,7 @@ From the link we opened (and the image above), you’ll notice the property next
 
 Follow the links a couple of times to get a feel for this, but there’s no need to go to the end (we’ll come on to that shortly).
 
-### **How items appear in the overall list (and pages)** <a href="how-items-appear-in-the-overall-list-and-pages" id="how-items-appear-in-the-overall-list-and-pages"></a>
+### **How items appear in the overall list (and pages)** <a href="#how-items-appear-in-the-overall-list-and-pages" id="how-items-appear-in-the-overall-list-and-pages"></a>
 
 If you’ve looked into some of the items that have been returned, you may notice that some opportunities are in the past. The next important point to understand here is that the specification requires strict chronological ordering of items, with newly added and modified data added to the end of the feed. There are some simple rules that govern items in the overall list:
 
@@ -72,11 +72,11 @@ A conceptual view of a first page of items, followed by the rest of the list. No
 
 Let’s move on to putting this into practice, to understand it in context.
 
-## **Doing our initial download** <a href="doing-our-initial-download" id="doing-our-initial-download"></a>
+## **Doing our initial download** <a href="#doing-our-initial-download" id="doing-our-initial-download"></a>
 
 When consuming the data for the first time, pages are initially downloaded sequentially to catch up with the current state of the data publisher. As we’ve seen, this is achieved by following the next property of each page until the last page is reached.
 
-### **The last page** <a href="the-last-page" id="the-last-page"></a>
+### **The last page** <a href="#the-last-page" id="the-last-page"></a>
 
 According to the spec definition, the last page of data must have both of the following properties:
 
@@ -92,11 +92,11 @@ In pseudocode, a very basic (and unrobust) page through the dataset for the firs
 
 (Please note that in practice, because the endpoints don't tend to allow cross-origin access at the moment this example won’t run and is intended for illustration only. To see a working example you can visit [https://glitch.com/\~oa-quickharvest](https://glitch.com/\~oa-quickharvest) which employs a proxy).
 
-![](https://lh3.googleusercontent.com/bvWnOyiZQkvEotmTiZsjbaIZb9jyp1Gj6fr8\_2Xc-H0aK81iV74c_r6xkK1c_Tr4VTSK3QneTdak6GCsb5c9wjBQztKe6IFNY-k26mtLnv6dIJNCs1T1V2ha7vJRiSq1ww)
+![](https://lh3.googleusercontent.com/bvWnOyiZQkvEotmTiZsjbaIZb9jyp1Gj6fr8\_2Xc-H0aK81iV74c\_r6xkK1c\_Tr4VTSK3QneTdak6GCsb5c9wjBQztKe6IFNY-k26mtLnv6dIJNCs1T1V2ha7vJRiSq1ww)
 
 At this point, what you have is an as-is store of all of the items in the dataset, from as far back as they are available. Whilst this tutorial has not covered any processing of the data, so you will need to be mindful of getting it into a sensible state for your needs.
 
-## **Deleted items** <a href="deleted-items" id="deleted-items"></a>
+## **Deleted items** <a href="#deleted-items" id="deleted-items"></a>
 
 Whilst we’ve captured all of the items, what we also haven’t done is given any consideration to their state.
 
@@ -118,15 +118,15 @@ For our initial download of data, for now (we’ll revisit this in the next sect
 | <ul><li><p>If the response contains a success HTTP status code</p><ul><li><p>If there are data items</p><ul><li><p>Where items do not possess the state "deleted"</p><ul><li>Retrieve (and store) all data items contained within the page</li></ul></li><li>Request the URL in the next property</li></ul></li><li><p>Else</p><ul><li><p>If the URL in the next property is equal to the current URL being harvested</p><ul><li>End harvesting</li></ul></li><li>Else request the URL in the next property</li></ul></li></ul></li><li>Else honour response code and fail gracefully</li></ul> |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-## **Keeping data up to date** <a href="keeping-data-up-to-date" id="keeping-data-up-to-date"></a>
+## **Keeping data up to date** <a href="#keeping-data-up-to-date" id="keeping-data-up-to-date"></a>
 
-### **Handling updates and deletions** <a href="handling-updates-and-deletions" id="handling-updates-and-deletions"></a>
+### **Handling updates and deletions** <a href="#handling-updates-and-deletions" id="handling-updates-and-deletions"></a>
 
 Even with a small initial import, we run the risk of an item that we harvest early on actually being updated or deleted in the publisher’s system at the same time. As we’ve seen, this will lead to that item moving through the queue and being added to the end, so it could show up one to many times before our overall harvest is finished.
 
 In the below diagram we may encounter item A on our first page, receive a modified version on our second page, and finally a deleted version of it in our third page. Unless our consuming application needs to track state over time, we want to ensure that we don’t create a duplicate for the modification, and don’t ignore the deletion.
 
-![](https://docs.google.com/drawings/d/srS9\_4v_YXwNHF1vNWMmvaw/image?w=665\&h=226\&rev=144\&ac=1\&parent=1JW4GXXWOfJIFhAhzaCh-VU2AQm-O8Mk1NU4fZiuHZTA)
+![](https://docs.google.com/drawings/d/srS9\_4v\_YXwNHF1vNWMmvaw/image?w=665\&h=226\&rev=144\&ac=1\&parent=1JW4GXXWOfJIFhAhzaCh-VU2AQm-O8Mk1NU4fZiuHZTA)
 
 Our pseudocode therefore becomes a little bit more detailed:
 
@@ -147,11 +147,11 @@ As mentioned at the start of this tutorial, once you’ve mastered harvesting fr
 
 Whilst this is beyond the scope of this tutorial, we’ve included some pointers for areas that you will need to consider:
 
-* Maintaining a list of the datasets - there is a file available from the [status dashboard](https://status.openactive.io) to help with this.
+* Maintaining a list of the datasets - there is a file available from the [status dashboard](https://status.openactive.io/) to help with this.
 * Whether or not you wish to re-harvest the full set of data every time.
 * Whether or not you plan to harvest datasets sequentially, or in parallel.
 
-## **Resources** <a href="resources" id="resources"></a>
+## **Resources** <a href="#resources" id="resources"></a>
 
 The specification that covers the Realtime Pages Data Exchange format in more detail can be found here: [https://www.openactive.io/realtime-paged-data-exchange/](https://www.openactive.io/realtime-paged-data-exchange/)​
 

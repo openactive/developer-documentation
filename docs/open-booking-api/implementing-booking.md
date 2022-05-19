@@ -1,7 +1,7 @@
 # Implementing booking
 
 {% hint style="warning" %}
-Implementations of the Open Booking API are currently being developed through collaboration within the OpenActive technical community. This is especially important so that the current development work on the [OpenActive Test Suite](test-suite.md) can take into account feedback from real implementations. Please see the [#openactive-test-suite slack channel for more information](https://slack.openactive.io).
+Implementations of the Open Booking API are currently being developed through collaboration within the OpenActive technical community. This is especially important so that the current development work on the [OpenActive Test Suite](test-suite.md) can take into account feedback from real implementations. Please see the [#openactive-test-suite slack channel for more information](https://slack.openactive.io/).
 
 If you’re interested in implementing the Open Booking API, then please [get in touch](https://bookwhen.com/openactive) with the OpenActive technical team at the ODI.
 {% endhint %}
@@ -14,7 +14,7 @@ In order to build the Open Booking API, you must first have built both [Open Opp
 
 For .NET, a full implementation tutorial is available: [https://tutorials.openactive.io/open-booking-sdk/](https://tutorials.openactive.io/open-booking-sdk/).
 
-For other languages, it is best to use the [Open Booking API CR](https://openactive.io/open-booking-api/EditorsDraft)3 specification as an implementation reference.
+For other languages, it is best to use the [Open Booking API CR3](https://openactive.io/open-booking-api/EditorsDraft/1.0CR3/) specification as an implementation reference.
 
 ### .NET, PHP and Ruby Libraries
 
