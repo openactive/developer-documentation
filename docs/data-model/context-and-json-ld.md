@@ -126,7 +126,7 @@ In the example below the `"britishcycling:gpxFile"` field is defined by an exten
 {
   "@context": [
     "https://openactive.io/",
-    "http://data.goskyride.com/opendata/britishcycling.jsonld"
+    "https://data.letsride.co.uk/opendata/britishcycling.jsonld"
   ],
   "@type": "Event",
   "name": "Wheel Do It! - Blindside loop (with Betty-Ann)",
