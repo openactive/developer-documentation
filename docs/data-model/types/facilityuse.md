@@ -292,6 +292,15 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>beta:facilityAttribute</b></td>
+      <td style="text-align:left">
+        Array of <a href="http://www.w3.org/2004/02/skos/core#Concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>Attributes associated with the facility in use. See <a href="https://openactive.io/facility-attribute-list/">https://openactive.io/facility-attribute-list/</a>.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>beta:facilitySetting</b></td>
       <td style="text-align:left">
         <a href="https://openactive.io/ns-beta#FacilitySettingType"><code>FacilitySettingType</code></a>
