@@ -339,7 +339,7 @@ The `openactive-integration-tests` writes log files into the `./output/` directo
 
 To understand the requests and responses, please see the [explanation](https://www.openactive.io/open-booking-api/EditorsDraft/#high-level-api-flow) in the Open Booking API specification, along with the more detailed [sequence diagram](https://www.openactive.io/open-booking-api/EditorsDraft/#step-by-step-process-description) and example [requests and responses](https://www.openactive.io/open-booking-api/EditorsDraft/#paths-and-verbs).
 
-If you don't have an IDE that supports Markdown natively, use a [Google Chrome extension](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#reading-test-results) to read the output Markdown files, as described [here](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#reading-test-results).
+If you don't have an IDE that supports Markdown natively, use a Google Chrome extension to read the output Markdown files, as described [here](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests#reading-test-results).
 
 A reference version of passing test results is also available for comparison, complete with full model requests and responses for each test:
 

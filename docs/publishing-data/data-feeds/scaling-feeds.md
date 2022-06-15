@@ -100,7 +100,7 @@ The settings in the CDN Configuration section will create the behaviour describe
 
 * In this scenario, 200 data consumers are tracking the RPDE feed by polling at the end of the list (the last `next` URL).
 * Although each data consumer can choose a polling frequency arbitrarily, that frequency is not relevant to the calculations here, as it is the settings of the cache header that dictate the load on the origin server. It should also be noted that during normal operation the number of data consumers also does not impact the load on the origin server, and that 200 is used illustratively.
-* When the last page is requested, the first consumer would request the live page (creating one hit on the origin server), and the subsiquent 199 data consumers would receive a cached version.&#x20;
+* When the last page is requested, the first consumer would request the live page (creating one hit on the origin server), and the subsiquent 199 data consumers would receive a cached version.
 
 #### **"Sleep" mode**
 
@@ -112,7 +112,7 @@ The settings in the CDN Configuration section will create the behaviour describe
 * When an update to source data occurs, one of the 8-second interval requests will render a list of items and a new `next` URL.
 * The `items` list is rendered once by the origin server, and the subsiquent 199 data consumers would receive a cached version.
 * All 200 data consumers will follow the same next URL, and again the first request will be cached for the other 199 data consumers.
-* Hence the maximum load during "Live" mode is bounded by the response time of the "last" page, as the CDN will queue the requests from other data consumers waiting for this page. If the origin server is under high general load from other services, and the response time of the last page is increased,  then the queue waits. This avoids a large number of data consumers adversely affecting the origin server performance during times of peak general load.
+* Hence the maximum load during "Live" mode is bounded by the response time of the "last" page, as the CDN will queue the requests from other data consumers waiting for this page. If the origin server is under high general load from other services, and the response time of the last page is increased, then the queue waits. This avoids a large number of data consumers adversely affecting the origin server performance during times of peak general load.
 
 #### Resyncs and rate limits
 
@@ -146,7 +146,7 @@ On the Caching configuration page, ensure that following is set:
 
 * **Browser Cache Expiration:** Respect Existing Headers
 
-![](<../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35-1 (2) (1) (3).png>)
+![](<../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35-1 (2) (1) (1) (2) (4).png>)
 
 #### 4) Ensure that your feed does not inadvertently set any cookies
 
