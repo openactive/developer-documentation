@@ -84,7 +84,7 @@ If your booking system is restricted to a small number of different activities (
 
 To find the **`@id`** simply [find the relevant activity in the OpenActive Activity List](https://activity-list.openactive.io/en/basic\_find.html), then scroll down to the bottom the page to view a full example JSON-LD snippet for that specific activity, such as the screenshot below. This can be included in your open data feed.
 
-![Screenshot of full example JSON-LD snippet from OpenActive Activity List website](../.gitbook/assets/screenshot-2020-04-25-at-17.19.22.png)
+![Screenshot of full example JSON-LD snippet from OpenActive Activity List website](<../.gitbook/assets/screenshot-2020-04-25-at-17.19.22 (1).png>)
 
 ## Rendering the OpenActive Activity List with SKOS.js
 
@@ -94,7 +94,7 @@ Maintaining the hierarchy and providing a typeahead search is important as with 
 
 ### Rendering a hierarchy from the JSON-LD definition of the OpenActive Activity List
 
-Although the use of [SKOS.js](https://www.npmjs.com/package/@openactive/skos) is recommended when reading the JSON-LD definition of the OpenActive Activity List in JavaScript, for other languages the JSON-LD may also be parsed directly.&#x20;
+Although the use of [SKOS.js](https://www.npmjs.com/package/@openactive/skos) is recommended when reading the JSON-LD definition of the OpenActive Activity List in JavaScript, for other languages the JSON-LD may also be parsed directly.
 
 The [JSON-LD definition](https://openactive.io/activity-list/activity-list.jsonld) of the OpenActive Activity List includes the following key properties:
 
@@ -156,4 +156,4 @@ Example: [Contribute](https://openactive.io/activity-list#72d19892-5f55-4e9c-87b
 
 An example of "Contribute" links within the Gladstone leisure management system is shown below.
 
-![Screenshot of the "Contribute" links within the Gladstone system](../.gitbook/assets/screenshot-2020-04-25-at-13.59.09.png)
+![Screenshot of the "Contribute" links within the Gladstone system](<../.gitbook/assets/screenshot-2020-04-25-at-13.59.09 (1).png>)

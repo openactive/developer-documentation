@@ -354,4 +354,4 @@ This always overrides the configuration option `"waitForHarvestCompletion": true
 
 A [sample CI script](https://github.com/openactive/openactive-test-suite/blob/master/simple-ci.sh) is available, and more details can be found [here](https://github.com/openactive/openactive-test-suite#continuous-integration).
 
-You can [see CI in action](https://github.com/openactive/openactive-test-suite/actions?query=workflow%3A%22Reference+Implementation%22) within the test suite itself, which [runs CI](https://github.com/openactive/openactive-test-suite/blob/master/.github/workflows/reference-implementation.yml) against the reference implementation.
+You can see CI in action within the test suite itself, which [runs CI](https://github.com/openactive/OpenActive.Server.NET/blob/8f9e5a8e7714f97a98ca650dda198ac183ca02ab/.github/workflows/openactive-test-suite.yml#L58-L80) against the reference implementation.

@@ -146,7 +146,7 @@ On the Caching configuration page, ensure that following is set:
 
 * **Browser Cache Expiration:** Respect Existing Headers
 
-![](<../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35-1 (2) (1) (1) (2) (1) (4).png>)
+![](<../../.gitbook/assets/screenshot-2019-01-29-at-23.03.35-1 (2) (1) (1) (1) (4).png>)
 
 #### 4) Ensure that your feed does not inadvertently set any cookies
 
