@@ -348,7 +348,7 @@ A reference version of passing test results is also available for comparison, co
 
 ## Continuous Integration
 
-For continuous integration environments run `npm start` in the root`openactive-test-suite` directory. This will automatically start the microservice, run the integration tests, then kill the microservice.
+For continuous integration environments, `"ci": true` must be included in the supplied config JSON to ensure correct console logging output. Then simply run `npm start` in the root`openactive-test-suite` directory. This will automatically start the microservice, run the integration tests, then kill the microservice.
 
 This always overrides the configuration option `"waitForHarvestCompletion": true` , to ensure the harvester is up-to-date with the feeds before the tests begin.
 
