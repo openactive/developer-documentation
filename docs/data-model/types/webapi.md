@@ -51,12 +51,12 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>endpointURL</b></td>
+      <td style="text-align:left"><b>endpointUrl</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>The base URL of the Open Booking API</p><p></br><b>Example</b></p><p><code>"endpointURL": "https://example.bookingsystem.com/api/openbooking"</code></p>
+        <p>The base URL of the Open Booking API</p><p></br><b>Example</b></p><p><code>"endpointUrl": "https://example.bookingsystem.com/api/openbooking"</code></p>
       </td>
     </tr>
     <tr>
