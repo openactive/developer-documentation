@@ -29,6 +29,15 @@ description: This page describes the BookingService type.
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>hasCredential</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A human and machine-readable certification file that asserts the service's conformance to established standards. The value of this property should be a URL that resolves to a valid and up-to-date OpenActive Test Suite Conformance Certificate for this implementation. Note this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://openactive.io/dataset-api-discovery/EditorsDraft/">Dataset API Discovery specification</a> evolves.</p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>name</b></td>
       <td style="text-align:left">
         <a href="https://schema.org/Text"><code>Text</code></a>
