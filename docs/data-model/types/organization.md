@@ -133,7 +133,7 @@ This type is derived from [https://schema.org/Organization](https://schema.org/O
     <tr>
       <td style="text-align:left"><b>hasAccount</b></td>
       <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/customeraccount"><code>CustomerAccount</code></a>
+        <a href="https://developer.openactive.io/data-model/types/customeraccount"><code>CustomerAccount</code></a><br/> - or - <br/><code>@id</code> reference
       </td>
       <td style="text-align:left">
         <p>Reference to the CustomerAccount associated with this Customer, for use within the Open Booking API flow.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p>

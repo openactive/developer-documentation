@@ -35,7 +35,7 @@ IT IS STILL SUBJECT TO CHANGE, as the [Customer Accounts proposal](https://githu
     <tr>
       <td style="text-align:left"><b>entitlementType</b></td>
       <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
+        <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a><br/> - or - <br/><code>@id</code> reference
       </td>
       <td style="text-align:left">
         <p>For the request, this is the value of the @id of the Concept being referenced. For the response, this the full Concept object including the @id and prefLabel.</p><p></br><b>Example</b></p><p><code>"entitlementType": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://data.mcractive.com/openactive/entitlement-list#5e78bcbe-36db-425a-9064-bf96d09cc351&quot;,<br/>&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;MCRactive&nbsp;Adult&nbsp;Resident&quot;,<br/>&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://data.mcractive.com/openactive/entitlement-list&quot;<br/>}</code></p>

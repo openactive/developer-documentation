@@ -40,7 +40,7 @@ This type is derived from [https://schema.org/OrderItem](https://schema.org/Orde
     <tr>
       <td style="text-align:left"><b>acceptedOffer</b></td>
       <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/offer"><code>Offer</code></a>
+        <a href="https://developer.openactive.io/data-model/types/offer"><code>Offer</code></a><br/> - or - <br/><code>@id</code> reference
       </td>
       <td style="text-align:left">
         <p>The offer from the associated orderedItem that has been selected by the Customer. The price of this includes or excludes tax depending on the taxMode of the Order.</p>
@@ -148,7 +148,7 @@ This type is derived from [https://schema.org/OrderItem](https://schema.org/Orde
     <tr>
       <td style="text-align:left"><b>orderedItem</b></td>
       <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/event"><code>Event</code></a>
+        <a href="https://developer.openactive.io/data-model/types/event"><code>Event</code></a><br/> - or - <br/><code>@id</code> reference
       </td>
       <td style="text-align:left">
         <p>The specific bookable Thing that has been selected by the Customer. See the [Modelling-Opportunity-Data] for more information on these types. Note that the Broker Request and Orders feed only require id within these objects to be included; in these contexts, all other properties are ignored.</p>

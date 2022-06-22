@@ -130,7 +130,7 @@ This type is derived from [https://schema.org/Order](https://schema.org/Order), 
     <tr>
       <td style="text-align:left"><b>seller</b></td>
       <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
+        <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a><br/> - or - <br/><code>@id</code> reference
       </td>
       <td style="text-align:left">
         <p>The organisation (schema:Organization) or person (schema:Person) providing access to events or facilities via a Booking System. e.g. a leisure provider or independent instructor running a yoga classes.</p>

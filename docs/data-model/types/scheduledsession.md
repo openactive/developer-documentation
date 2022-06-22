@@ -376,7 +376,7 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>superEvent</b></td>
       <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/event"><code>Event</code></a>
+        <a href="https://developer.openactive.io/data-model/types/event"><code>Event</code></a><br/> - or - <br/><code>@id</code> reference
       </td>
       <td style="text-align:left">
         <p>Relates a child event to a parent event. Properties describing the parent event can be assumed to apply to the child, unless otherwise specified. A parent event might specify a recurring schedule, of which the child event is one specific instance</p>

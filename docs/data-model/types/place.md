@@ -168,7 +168,7 @@ While these properties are marked as recommended in the specification, a data pu
     <tr>
       <td style="text-align:left"><b>containedInPlace</b></td>
       <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/place"><code>Place</code></a>
+        <a href="https://developer.openactive.io/data-model/types/place"><code>Place</code></a><br/> - or - <br/><code>@id</code> reference
       </td>
       <td style="text-align:left">
         <p>The place within which this Place exists</p><p></br><b>Example</b></p><p><code>"containedInPlace": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Place&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://www.everyoneactive.com/centres/Middlesbrough-Sports-Village&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Middlesbrough&nbsp;Sports&nbsp;Village&quot;<br/>}</code></p>

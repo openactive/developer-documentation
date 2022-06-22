@@ -76,7 +76,7 @@ This type is derived from [https://schema.org/Course](https://schema.org/Course)
     <tr>
       <td style="text-align:left"><b>author</b></td>
       <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a>
+        <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/person"><code>Person</code></a><br/> - or - <br/><code>@id</code> reference
       </td>
       <td style="text-align:left">
         <p>The person or organization who designed the Course. An author might be an schema:Organization or a schema:Person.</p><p>This property may reference the <code>@id</code> of the <code>organizer</code> of the <code>CourseInstance</code> within which this <code>Course</code> is embedded, to reduce data duplication.</p><p></br><b>Example</b></p><p><code>"author": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://id.bookingsystem.example.com/organizers/1&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
