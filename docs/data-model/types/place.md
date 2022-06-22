@@ -246,6 +246,15 @@ These properties are defined in the [OpenActive Beta Extension](https://openacti
         <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>A related video object.</p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:virtualTour</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/3DModel"><code>3DModel</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/306">Proposal #306</a></p><p>A related virtual tour.</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
