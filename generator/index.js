@@ -317,7 +317,9 @@ function createTypeString(field) {
   if (field.model) types.push(field.model);
   if (field.alternativeModels) types = types.concat(field.alternativeModels);
   if (field.alternativeTypes) types = types.concat(field.alternativeTypes);
-  return types.map(type => createLinkFromFullyQualifiedProperty(type)).join("<br/> - or - <br/>");
+  var formattedTypes = types.map(type => createLinkFromFullyQualifiedProperty(type));
+  if (field.allowReferencing) formattedTypes.push('<code>@id</code> reference');
+  return formattedTypes.join("<br/> - or - <br/>");
 }
 
 function createLinkFromFullyQualifiedProperty(prop) {
