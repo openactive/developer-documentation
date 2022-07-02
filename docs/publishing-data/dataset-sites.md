@@ -42,25 +42,25 @@ Several libraries are available that make it really easy to render the dataset s
 
 The table below lists the available OpenActive libraries:
 
-| Language                | Open Opportunity Data Feeds                                                  | Dataset Site                                                                             |
-| ----------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| .NET                    | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/)             | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/) |
-| PHP                     | [openactive/models](https://packagist.org/packages/openactive/models)        | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site)        |
-| Ruby                    | [openactive](https://rubygems.org/gems/openactive)                           | [openactive-dataset\_site](https://rubygems.org/gems/openactive-dataset\_site)           |
-| JavaScript / TypeScript | [@openactive/models-ts](https://www.npmjs.com/package/@openactive/models-ts) | -                                                                                        |
+| Language                | Open Opportunity Data Feeds                                                  | Dataset Site                                                                                         |
+| ----------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| .NET                    | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/)             | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/)             |
+| PHP                     | [openactive/models](https://packagist.org/packages/openactive/models)        | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site)                    |
+| Ruby                    | [openactive](https://rubygems.org/gems/openactive)                           | [openactive-dataset\_site](https://rubygems.org/gems/openactive-dataset\_site)                       |
+| JavaScript / TypeScript | [@openactive/models-ts](https://www.npmjs.com/package/@openactive/models-ts) | [@openactive/dataset-site-template](https://www.npmjs.com/package/@openactive/dataset-site-template) |
 
 ### Other Languages
 
 A basic example of following the below render steps can be found [here](https://github.com/openactive/dataset-site-template-example-dotnet/blob/master/DatasetSiteTemplateExample/Program.cs), and can be readily ported into other languages. An explanation of how this works is included below.
 
-The [Dataset Site Template](https://github.com/openactive/dataset-site-template/) is a single self-contained mustache template of an HTML page that contains embedded CSS, an embedded encoded image, and references to CDNs of [Font Awesome](https://fontawesome.com/) and [Google Fonts](https://fonts.google.com/). It works across all browsers, and includes fully compliant DCAT and schema.org machine-readable metadata to ensure it is compatible with [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
+The [Dataset Site Template](https://github.com/openactive/dataset-site-template/) is a single self-contained mustache template of an HTML page that contains embedded CSS, two embedded encoded images, and references to CDNs of [Font Awesome](https://fontawesome.com/) and [Google Fonts](https://fonts.google.com/). It works across all browsers, and includes fully compliant DCAT and schema.org machine-readable metadata to ensure it is compatible with [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
 
 Steps to render the template:
 
-1. Construct the JSON-LD to match the format found in [this example](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json\&version=2.x\&validationMode=DatasetSite), following [this documentation](../data-model/types/dataset.md).
+1. Construct the JSON-LD to match the format found in [this example](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdataset-site-template%2Fexample.jsonld\&version=2.x\&validationMode=DatasetSite), following [this documentation](../data-model/types/dataset.md).
 2. Find a [mustache library](https://mustache.github.io/) for your platform or language.
 3. Write code to do the following:
-   * Stringify the input JSON, and place the contents of the string within the "json" property at the root of the JSON itself (i.e. serialised JSON embedded in the original deserialised object). This is important as it is used to populate the machine-readable `<script type="application/ld+json">` tag within the generated HTML - view the source of [this page](https://reference-implementation.openactive.io/OpenActive) to see an example.
+   * Stringify the input JSON, and place the contents of the string within the `"jsonld"` property at the root of the JSON itself (i.e. serialised JSON embedded in the original deserialised object). This is important as it is used to populate the machine-readable `<script type="application/ld+json">` tag within the generated HTML - view the source of [this page](https://reference-implementation.openactive.io/OpenActive) to see an example.
    * Use the resulting JSON with the [mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) to render the dataset site.
    * Keep in mind that OpenActive will be providing updates to the mustache template in the future, so it is best to write code that anticipates this.
 
@@ -69,7 +69,7 @@ Steps to render the template:
 The [JSFiddle](https://jsfiddle.net/nickevansuk/msby0vqg/) below **simply demonstrates** the Dataset Site Template render steps outlined above using plain JavaScript - it is **not intended for protection use**.
 
 {% hint style="danger" %}
-Please note **this is only an example to demonstrate the logic and is not intended for production use**. The mustache template **must** be **copied locally** and **rendered server-side** for production use, for security (to prevent XSS attacks) and as one of its primary purposes is SEO.
+Please note **this is only an example to demonstrate the logic and is not intended for production use**. The mustache template **must** be **copied locally** and **rendered server-side** for production use, for security (to prevent XSS attacks), and as its primary purposes are SEO and machine readability.
 {% endhint %}
 
 Click the **Result** tab below to see the result of a template render.
@@ -82,7 +82,7 @@ The Dataset Site Template is designed to carry the customer's brand with minimal
 
 ### Single database
 
-For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a **single Dataset Site** is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template (see [documentation](../data-model/types/dataset.md) and [example](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdataset-site-template%2Fexample.json\&version=2.x\&validationMode=DatasetSite)), or hard-coding the settings passed to the library (see the [relevant library documentation](dataset-sites.md#net-php-and-ruby-libraries)).
+For booking systems or bespoke websites with a **single database** and one set of OpenActive data feeds, a **single Dataset Site** is likely to be sufficient for your organisation. This can be achieved by simply hard-coding the JSON passed into the mustache template (see [documentation](../data-model/types/dataset.md) and [example](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdataset-site-template%2Fexample.jsonld\&version=2.x\&validationMode=DatasetSite)), or hard-coding the settings passed to the library (see the [relevant library documentation](dataset-sites.md#net-php-and-ruby-libraries)).
 
 Note a single Dataset Site must only be used when all feeds it includes are part of the same dataset - for example a SessionSeries feed and ScheduledSession feed that together constitute the dataset of all providers in the booking system. Where multiple feeds exist that represent distinct datasets (e.g. SessionSeries feed for Provider A, SessionSeries feed for Provider B), they must be referenced from distinct Dataset Sites, which can be constructed as per the instructions in [Multiple databases](dataset-sites.md#multiple-databases) below.
 
@@ -153,9 +153,9 @@ The GitHub API provides a mechanism to [automatically create GitHub repositories
 
 ## Step 4: Validating your Dataset Site
 
-Use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json\&version=2.x\&validationMode=DatasetSite) to check that the JSON-LD within your Dataset Site is conformant, by using the **Load URL** feature in the menu to load your **Dataset Site URL**, while in the "Dataset Sites" mode. The validator will automatically extract the JSON-LD from your Dataset Site's HTML and validate it.
+Use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdataset-site-template%2Fexample.jsonld\&version=2.x\&validationMode=DatasetSite) to check that the JSON-LD within your Dataset Site is conformant, by using the **Load URL** feature in the menu to load your **Dataset Site URL**, while in the "Dataset Sites" mode. The validator will automatically extract the JSON-LD from your Dataset Site's HTML and validate it.
 
-{% embed url="https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdataset-site-template%2Fexample.json&version=2.x&validationMode=DatasetSite" %}
+{% embed url="https://validator.openactive.io/?url=https://openactive.io/dataset-site-template/example.jsonld&validationMode=DatasetSite&version=2.x" %}
 
 ## Step 5: Providing a Data Catalog (multiple databases only)
 

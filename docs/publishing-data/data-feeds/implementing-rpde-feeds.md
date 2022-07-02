@@ -10,12 +10,12 @@ Several libraries are available that make it really easy to create open opportun
 
 The table below lists the available OpenActive libraries:
 
-| Language                | Open Opportunity Data Feeds                                                  | Dataset Site                                                                             |
-| ----------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| .NET                    | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/)             | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/) |
-| PHP                     | [openactive/models](https://packagist.org/packages/openactive/models)        | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site)        |
-| Ruby                    | [openactive](https://rubygems.org/gems/openactive)                           | [openactive-dataset_site](https://rubygems.org/gems/openactive-dataset_site)             |
-| JavaScript / TypeScript | [@openactive/models-ts](https://www.npmjs.com/package/@openactive/models-ts) | -                                                                                        |
+| Language                | Open Opportunity Data Feeds                                                  | Dataset Site                                                                                         |
+| ----------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| .NET                    | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/)             | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/)             |
+| PHP                     | [openactive/models](https://packagist.org/packages/openactive/models)        | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site)                    |
+| Ruby                    | [openactive](https://rubygems.org/gems/openactive)                           | [openactive-dataset\_site](https://rubygems.org/gems/openactive-dataset\_site)                       |
+| JavaScript / TypeScript | [@openactive/models-ts](https://www.npmjs.com/package/@openactive/models-ts) | [@openactive/dataset-site-template](https://www.npmjs.com/package/@openactive/dataset-site-template) |
 
 ## Transactions: Preventing delayed item interleaving
 
@@ -127,7 +127,7 @@ We highly recommend using the [OpenActive PHP Models Library](https://packagist.
 
 ### Manual Implementation
 
-The specification requires that no null or empty strings are present in the OpenActive feed. To achieve this, define the RPDE response structure as nested arrays, and recursively unset empty properties before using [json_encode](http://php.net/manual/en/function.json-encode.php) to generate the response.
+The specification requires that no null or empty strings are present in the OpenActive feed. To achieve this, define the RPDE response structure as nested arrays, and recursively unset empty properties before using [json\_encode](http://php.net/manual/en/function.json-encode.php) to generate the response.
 
 Run the example below [here](https://www.tehplayground.com/yq8X04VLEF9ypc8Y) to see the result.
 
