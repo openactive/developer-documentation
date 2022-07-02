@@ -32,13 +32,36 @@ To minimise any uplift work required to conform to the formal specification when
 
 ## Step 1: Build Dataset Sites into your system
 
-The Dataset Site Template is very easy to use and quick to apply - it's essentially a single mustache template and associated JSON structure. It is designed to work with minimal effort with an extremely [wide range of platforms and languages](https://mustache.github.io/).
+The Dataset Site Template is very easy to use and quick to apply - it's essentially one of two mustache templates and an associated JSON structure. It is designed to work with minimal effort with an extremely [wide range of platforms and languages](https://mustache.github.io/).
 
-The[ dataset site template repository](https://github.com/openactive/dataset-site-template) contains a [mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) for creating an OpenActive dataset site.
+It works across all browsers, and includes fully compliant DCAT and schema.org machine-readable metadata to ensure it is compatible with [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
+
+The[ dataset site template repository](https://github.com/openactive/dataset-site-template) contains two mustache template options for creating an OpenActive dataset site.
+
+### Template hosting options
+
+There are two templates available, depending on your use case.
+
+#### Option 1: Single-file template
+
+The [Dataset Site Single-file Template](https://openactive.io/dataset-site-template/datasetsite.mustache) is a self-contained mustache template of an HTML page that contains embedded CSS, two embedded encoded images, and references to CDNs of [Font Awesome](https://fontawesome.com/) and [Google Fonts](https://fonts.google.com/).
+
+It is useful for implementations where hosting static files is problematic.
+
+1. Use one of the options below to dynamically render the 'single-file template'.
+2. Output the result at an endpoint, for example `https://example.com/openactive/`.
+
+#### Option 2: CSP compatible template with self-hosted static files
+
+The [Dataset Site CSP Compatible Template](https://openactive.io/dataset-site-template/datasetsite-csp.mustache) is a mustache template of an HTML page that references [self-hosted static assets](https://openactive.io/dataset-site-template/datasetsite-csp.static.zip).  This template must be rendered using a reference to its stylesheet at its self-hosted location. This is useful for implementations that have a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) in place.
+
+1. Host the [CSP compatible static assets](https://openactive.io/dataset-site-template/datasetsite-csp.static.zip) somewhere on the same domain as your dataset site.
+2. Use one of the options below to dynamically render the 'CSP compatible template' ensuring that the "`stylesheetUrl`" references the location of your self-hosted `datasetsite.styles.css` file (this can be a relative or absolute URL).
+3. Output the result at an endpoint, for example `https://example.com/openactive/`.
 
 ### .NET, PHP, Ruby and JavaScript/TypeScript Libraries
 
-Several libraries are available that make it really easy to render the dataset site template, accepting basic settings to configure your dataset site automatically.
+Several libraries are available that make it really easy to render either dataset site template, accepting basic settings to configure your dataset site automatically.
 
 The table below lists the available OpenActive libraries:
 
@@ -53,7 +76,7 @@ The table below lists the available OpenActive libraries:
 
 A basic example of following the below render steps can be found [here](https://github.com/openactive/dataset-site-template-example-dotnet/blob/master/DatasetSiteTemplateExample/Program.cs), and can be readily ported into other languages. An explanation of how this works is included below.
 
-The [Dataset Site Template](https://github.com/openactive/dataset-site-template/) is a single self-contained mustache template of an HTML page that contains embedded CSS, two embedded encoded images, and references to CDNs of [Font Awesome](https://fontawesome.com/) and [Google Fonts](https://fonts.google.com/). It works across all browsers, and includes fully compliant DCAT and schema.org machine-readable metadata to ensure it is compatible with [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
+The [Dataset Site Template](https://github.com/openactive/dataset-site-template/) is one of two mustache templates of an HTML page. It works across all browsers, and includes fully compliant DCAT and schema.org machine-readable metadata to ensure it is compatible with [Google Dataset Search](https://toolbox.google.com/datasetsearch/search?query=openactive).
 
 Steps to render the template:
 
@@ -61,8 +84,9 @@ Steps to render the template:
 2. Find a [mustache library](https://mustache.github.io/) for your platform or language.
 3. Write code to do the following:
    * Stringify the input JSON, and place the contents of the string within the `"jsonld"` property at the root of the JSON itself (i.e. serialised JSON embedded in the original deserialised object). This is important as it is used to populate the machine-readable `<script type="application/ld+json">` tag within the generated HTML - view the source of [this page](https://reference-implementation.openactive.io/OpenActive) to see an example.
-   * Use the resulting JSON with the [mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) to render the dataset site.
-   * Keep in mind that OpenActive will be providing updates to the mustache template in the future, so it is best to write code that anticipates this.
+   * If using the [CSP compatible mustache template](dataset-sites.md#option-2-csp-compatible-template-with-separate-static-files), set the `"stylesheetUrl"` property at the root of the JSON to the relative URL of your self-hosted `datasetsite.styles.css` file. Note this must take place **after** the `"jsonld"` property is set above so that this property is not included in the machine-readable JSON-LD.
+   * Render the resulting JSON with the [single file mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) or [CSP compatible mustache template](dataset-sites.md#option-2-csp-compatible-template-with-separate-static-files), to output the HTML of the dataset site.
+   * Keep in mind that OpenActive will be providing updates to the mustache templates in the future, so it is best to write code that anticipates this.
 
 #### JavaScript Prototype
 
