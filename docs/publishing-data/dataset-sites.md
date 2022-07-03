@@ -56,7 +56,7 @@ It is useful for implementations where hosting static files is problematic.
 The [Dataset Site CSP Compatible Template](https://openactive.io/dataset-site-template/datasetsite-csp.mustache) is a mustache template of an HTML page that references [self-hosted static assets](https://openactive.io/dataset-site-template/datasetsite-csp.static.zip).  This template must be rendered using a reference to its stylesheet at its self-hosted location. This is useful for implementations that have a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) in place.
 
 1. Host the [CSP compatible static assets](https://openactive.io/dataset-site-template/datasetsite-csp.static.zip) somewhere on the same domain as your dataset site.
-2. Use one of the options below to dynamically render the 'CSP compatible template' ensuring that the "`stylesheetUrl`" references the location of your self-hosted `datasetsite.styles.css` file (this can be a relative or absolute URL).
+2. Use one of the options below to dynamically render the 'CSP compatible template' ensuring that the `"staticAssetsPathUrl"` references the location of your self-hosted assets, without a trailing slash (`/`) (this can be a relative or absolute URL).
 3. Output the result at an endpoint, for example `https://example.com/openactive/`.
 
 ### .NET, PHP, Ruby and JavaScript/TypeScript Libraries
@@ -84,7 +84,7 @@ Steps to render the template:
 2. Find a [mustache library](https://mustache.github.io/) for your platform or language.
 3. Write code to do the following:
    * Stringify the input JSON, and place the contents of the string within the `"jsonld"` property at the root of the JSON itself (i.e. serialised JSON embedded in the original deserialised object). This is important as it is used to populate the machine-readable `<script type="application/ld+json">` tag within the generated HTML - view the source of [this page](https://reference-implementation.openactive.io/OpenActive) to see an example.
-   * If using the [CSP compatible mustache template](dataset-sites.md#option-2-csp-compatible-template-with-separate-static-files), set the `"stylesheetUrl"` property at the root of the JSON to the relative URL of your self-hosted `datasetsite.styles.css` file. Note this must take place **after** the `"jsonld"` property is set above so that this property is not included in the machine-readable JSON-LD.
+   * If using the [CSP compatible mustache template](dataset-sites.md#option-2-csp-compatible-template-with-separate-static-files), set the `"staticAssetsPathUrl"` property at the root of the JSON to the relative URL of the directory containing your self-hosted assets, without a trailing slash (`/`). Note this must take place **after** the `"jsonld"` property is set above so that this property is not included in the machine-readable JSON-LD.
    * Render the resulting JSON with the [single file mustache template](https://openactive.io/dataset-site-template/datasetsite.mustache) or [CSP compatible mustache template](dataset-sites.md#option-2-csp-compatible-template-with-separate-static-files), to output the HTML of the dataset site.
    * Keep in mind that OpenActive will be providing updates to the mustache templates in the future, so it is best to write code that anticipates this.
 
