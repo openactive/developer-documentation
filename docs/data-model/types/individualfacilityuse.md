@@ -4,66 +4,371 @@ description: This page describes the IndividualFacilityUse type.
 
 # IndividualFacilityUse
 
+
+
 ## **Properties**
 
 ### **Required properties**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>@type</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        Must always be present and set to <code>"@type": "IndividualFacilityUse"</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>@id</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A unique URI-based identifier for the record.</p><p><code>@id</code> properties are used as identifiers for compatibility with JSON-LD. The value of such a property must always be an absolute URI that provides a stable globally unique identifier for the resource, as described in <a href="https://tools.ietf.org/html/rfc3986">RFC3986</a>.</p><p>The primary purpose of the URI format in this context is to provide natural namespacing for the identifier. Hence, the URI itself may not resolve to a valid endpoint, but must use a domain name controlled by the resource owner (the organisation responsible for the OpenActive open data feed).</p><p></br><b>Example</b></p><p><code>"@id": "https://api.example.com/individual-facility-uses/12345"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>location</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/place"><code>Place</code></a><br/> - or - <br/><code>@id</code> reference
+      </td>
+      <td style="text-align:left">
+        <p>The location at which the facility use will take place.</p><p></br><b>Example</b></p><p><code>"location": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Place&quot;,<br/>&nbsp;&nbsp;&quot;address&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;PostalAddress&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;description&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&nbsp;in&nbsp;London&quot;,<br/>&nbsp;&nbsp;&quot;geo&quot;:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://example.com/locations/1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;&quot;1234ABCD&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School&quot;,<br/>&nbsp;&nbsp;&quot;telephone&quot;:&nbsp;&quot;01253&nbsp;473934&quot;<br/>}</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The name of the facility use</p><p></br><b>Example</b></p><p><code>"name": "Speedball"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>provider</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/organization"><code>Organization</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The organisation responsible for providing the facility</p><p></br><b>Example</b></p><p><code>"provider": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Organization&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Central&nbsp;Speedball&nbsp;Association&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://www.speedball-world.com&quot;<br/>}</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>url</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A URL to a web page (or section of a page) that describes the facility use.</p><p></br><b>Example</b></p><p><code>"url": "https://example.com/facility-use/1234"</code></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property     | Expected Type                                                                                                                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **@type**    | [`Text`](https://schema.org/Text)                                                                                                      | Must always be present and set to `"@type": "IndividualFacilityUse"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **@id**      | [`URL`](https://schema.org/URL)                                                                                                        | <p>A unique URI-based identifier for the record.</p><p><code>@id</code> properties are used as identifiers for compatibility with JSON-LD. The value of such a property must always be an absolute URI that provides a stable globally unique identifier for the resource, as described in <a href="https://tools.ietf.org/html/rfc3986">RFC3986</a>.</p><p>The primary purpose of the URI format in this context is to provide natural namespacing for the identifier. Hence, the URI itself may not resolve to a valid endpoint, but must use a domain name controlled by the resource owner (the organisation responsible for the OpenActive open data feed).</p><p><br><strong>Example</strong></p><p><code>"@id": "https://api.example.com/individual-facility-uses/12345"</code></p>                                                                                                                                                                                                                                     |
-| **location** | <p><a href="https://developer.openactive.io/data-model/types/place"><code>Place</code></a><br>- or -<br><code>@id</code> reference</p> | <p>The location at which the facility use will take place.</p><p><br><strong>Example</strong></p><p><code>"location": {</code><br>  <code>"@type": "Place",</code><br>  <code>"address": {</code><br>    <code>"addressLocality": "New Malden",</code><br>    <code>"addressRegion": "London",</code><br>    <code>"postalCode": "NW5 3DU",</code><br>    <code>"streetAddress": "Raynes Park High School, 46A West Barnes Lane",</code><br>    <code>"@type": "PostalAddress"</code><br>  <code>},</code><br>  <code>"description": "Raynes Park High School in London",</code><br>  <code>"geo": {</code><br>    <code>"latitude": 51.4034423828125,</code><br>    <code>"longitude": -0.2369088977575302,</code><br>    <code>"@type": "GeoCoordinates"</code><br>  <code>},</code><br>  <code>"@id": "https://example.com/locations/1234ABCD",</code><br>  <code>"identifier": "1234ABCD",</code><br>  <code>"name": "Raynes Park High School",</code><br>  <code>"telephone": "01253 473934"</code><br><code>}</code></p> |
-| **name**     | [`Text`](https://schema.org/Text)                                                                                                      | <p>The name of the facility use</p><p><br><strong>Example</strong></p><p><code>"name": "Speedball"</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **provider** | [`Organization`](https://developer.openactive.io/data-model/types/organization)                                                        | <p>The organisation responsible for providing the facility</p><p><br><strong>Example</strong></p><p><code>"provider": {</code><br>  <code>"@type": "Organization",</code><br>  <code>"name": "Central Speedball Association",</code><br>  <code>"url": "http://www.speedball-world.com"</code><br><code>}</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **url**      | [`URL`](https://schema.org/URL)                                                                                                        | <p>A URL to a web page (or section of a page) that describes the facility use.</p><p><br><strong>Example</strong></p><p><code>"url": "https://example.com/facility-use/1234"</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ### **Required options**
 
 Support for the `facilityType` property has been added to tooling and documentation ahead of inclusion in the next point release of the OpenActive Modelling Opportunity Data specification, as agreed on [the W3C call 2021-06-02](https://github.com/openactive/facility-types/issues/1#issuecomment-853759213). On this basis of this discussion, following the next point release, only `facilityType` will be required.
 
-| Property         | Expected Type                                                                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ---------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **facilityType** | Array of [`Concept`](https://developer.openactive.io/data-model/types/concept) | <p>Specifies the types of facility being described.</p><p>NOTE: this property has been added to tooling and documentation ahead of inclusion in the next point release of the OpenActive Modelling Opportunity Data specification, as agreed on <a href="https://github.com/openactive/facility-types/issues/1#issuecomment-853759213">the W3C call 2021-06-02</a>.</p><p><br><strong>Example</strong></p><p><code>"facilityType": [</code><br>  <code>{</code><br>    <code>"@type": "Concept",</code><br>    <code>"@id": "https://openactive.io/facility-types#bba8ae59-d152-40bc-85cc-88c5375696d4",</code><br>    <code>"prefLabel": "Tennis Court",</code><br>    <code>"inScheme": "https://openactive.io/facility-types"</code><br>  <code>}</code><br><code>]</code></p> |
-| **activity**     | Array of [`Concept`](https://developer.openactive.io/data-model/types/concept) | <p><strong>DEPRECATED</strong>: Use <code>facilityType</code> instead of <code>activity</code> within <code>FacilityUse</code> and <code>IndividualFacilityUse</code>, as the <code>facilityType</code> controlled vocabulary has been designed specifically for facilities.</p><p>Specifies the physical activity or activities that will take place during a facility use.</p><p><br><strong>Example</strong></p><p><code>"activity": [</code><br>  <code>{</code><br>    <code>"@type": "Concept",</code><br>    <code>"@id": "https://openactive.io/activity-list#c0360db0-a817-4bae-9167-40f89b49fc9e",</code><br>    <code>"prefLabel": "Badminton",</code><br>    <code>"inScheme": "https://openactive.io/activity-list"</code><br>  <code>}</code><br><code>]</code></p> |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>facilityType</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Specifies the types of facility being described.</p><p>NOTE: this property has been added to tooling and documentation ahead of inclusion in the next point release of the OpenActive Modelling Opportunity Data specification, as agreed on <a href="https://github.com/openactive/facility-types/issues/1#issuecomment-853759213">the W3C call 2021-06-02</a>.</p><p></br><b>Example</b></p><p><code>"facilityType": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://openactive.io/facility-types#bba8ae59-d152-40bc-85cc-88c5375696d4&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Tennis&nbsp;Court&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://openactive.io/facility-types&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>activity</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><strong>DEPRECATED</strong>: Use <code>facilityType</code> instead of <code>activity</code> within <code>FacilityUse</code> and <code>IndividualFacilityUse</code>, as the <code>facilityType</code> controlled vocabulary has been designed specifically for facilities.</p><p>Specifies the physical activity or activities that will take place during a facility use.</p><p></br><b>Example</b></p><p><code>"activity": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://openactive.io/activity-list#c0360db0-a817-4bae-9167-40f89b49fc9e&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Badminton&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://openactive.io/activity-list&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### **Recommended properties**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>description</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A plain text description of the facility use, which must not include HTML or other markup.</p><p></br><b>Example</b></p><p><code>"description": "An fast paced game that incorporates netball, handball and football."</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>hoursAvailable</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/openinghoursspecification"><code>OpeningHoursSpecification</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The times the facility use is available</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>image</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>An image or photo that depicts the facility use, e.g. a photo taken at a previous event.</p><p></br><b>Example</b></p><p><code>"image": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;thumbnail&quot;:&nbsp;&quot;http://example.com/static/image/speedball_thumbnail.jpg&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property           | Expected Type                                                                                                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **description**    | [`Text`](https://schema.org/Text)                                                                                  | <p>A plain text description of the facility use, which must not include HTML or other markup.</p><p><br><strong>Example</strong></p><p><code>"description": "An fast paced game that incorporates netball, handball and football."</code></p>                                                                                                                                                                                                       |
-| **hoursAvailable** | Array of [`OpeningHoursSpecification`](https://developer.openactive.io/data-model/types/openinghoursspecification) | The times the facility use is available                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **image**          | Array of [`ImageObject`](https://developer.openactive.io/data-model/types/imageobject)                             | <p>An image or photo that depicts the facility use, e.g. a photo taken at a previous event.</p><p><br><strong>Example</strong></p><p><code>"image": [</code><br>  <code>{</code><br>    <code>"thumbnail": "http://example.com/static/image/speedball_thumbnail.jpg",</code><br>    <code>"@type": "ImageObject",</code><br>    <code>"url": "http://example.com/static/image/speedball_large.jpg"</code><br>  <code>}</code><br><code>]</code></p> |
 
 ### **Optional properties**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>accessibilityInformation</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Provide additional, specific documentation for participants about how disabilities are, or can be supported at the Event.</p><p></br><b>Example</b></p><p><code>"accessibilityInformation": "This route has been British Cycling assessed as an accessible route, meaning it is suitable for the majority of adaptive bikes. The route will have no or low levels of traffic, there will be plenty of space and will have a good surface throughout. If you have any questions about using this route on an adaptive bike on this ride, please use visit https://www.letsride.co.uk/accessibility or call 0123 456 7000 and ask for the Recreation team."</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>accessibilitySupport</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Used to specify the types of disabilities or impairments that are supported at an event.</p><p></br><b>Example</b></p><p><code>"accessibilitySupport": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://openactive.io/accessibility-support#1393f2dc-3fcc-4be9-a99f-f1e51f5ad277&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Visual&nbsp;impairment&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://openactive.io/accessibility-support&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>additionalAdmissionRestriction</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Free text restrictions that must be displayed prominently to the user before booking. This property must only contain restrictions not described by <code>oa:ageRestriction</code> or <code>oa:genderRestriction</code>.</p><p></br><b>Example</b></p><p><code>"additionalAdmissionRestriction": [<br/>&nbsp;&nbsp;&quot;Participants&nbsp;younger&nbsp;than&nbsp;12&nbsp;must&nbsp;be&nbsp;accompanied&nbsp;by&nbsp;an&nbsp;adult&quot;,<br/>&nbsp;&nbsp;&quot;Participants&nbsp;must&nbsp;be&nbsp;comfortable&nbsp;standing&nbsp;for&nbsp;long&nbsp;periods&nbsp;of&nbsp;time&quot;<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>aggregateFacilityUse</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/facilityuse"><code>FacilityUse</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Inverse of the oa:individualFacilityUse property. Relates an oa:IndividualFacilityUse (e.g. an opportunity to play tennis on a specific court) to a oa:FacilityUse (e.g. an opportunity to play tennis at a specific location).</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>attendeeInstructions</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Provides additional notes and instructions for users of a facility, for example more information on how to find it, what to bring, etc. The value of this property must not include HTML or other markup.</p><p></br><b>Example</b></p><p><code>"attendeeInstructions": "The tennis court is locked with a keycode, so please ensure you book online in advance to gain access."</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>category</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a><br/> - or - <br/>Array of <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Provides a set of tags that help categorise and describe a facility.</p><p></br><b>Example</b></p><p><code>"category": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Concept&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;https://example.com/reference/categories#Top%20Club%20Level&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;inScheme&quot;:&nbsp;&quot;https://example.com/reference/categories&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;prefLabel&quot;:&nbsp;&quot;Top&nbsp;Club&nbsp;Level&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>customerAccountBookingRestriction</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Free text restrictions to display to the Customer at the browse stage, that may apply when using a Customer Account to make the booking.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p></br><b>Example</b></p><p><code>"customerAccountBookingRestriction": [<br/>&nbsp;&nbsp;&quot;Gold&nbsp;members&nbsp;only&quot;,<br/>&nbsp;&nbsp;&quot;Gym&nbsp;induction&nbsp;required&quot;<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>event</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/slot"><code>Slot</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>An array of slots of availability of this IndividualFacilityUse.</p><p></br><b>Example</b></p><p><code>"event": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Slot&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@id&quot;:&nbsp;&quot;http://www.example.org/api/individual-facility-uses/432#/event/2018-03-01T10:00:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;startDate&quot;:&nbsp;&quot;2018-03-01T11:00:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;endDate&quot;:&nbsp;&quot;2018-03-01T11:30:00Z&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;duration&quot;:&nbsp;&quot;PT30M&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;remainingUses&quot;:&nbsp;0,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;maximumUses&quot;:&nbsp;1<br/>&nbsp;&nbsp;}<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>identifier</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>isOpenBookingWithCustomerAccountAllowed</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Indicates that a Customer Account may be used to book that opportunity.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p></br><b>Example</b></p><p><code>"isOpenBookingWithCustomerAccountAllowed": "true"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>offers</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://developer.openactive.io/data-model/types/offer"><code>Offer</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>An array of schema:Offer that include the price of booking.</p><p></br><b>Example</b></p><p><code>"offers": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Offer&quot;,<br/>&nbsp;&nbsp;&quot;identifier&quot;:&nbsp;&quot;OX-AD&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Adult&quot;,<br/>&nbsp;&nbsp;&quot;price&quot;:&nbsp;7.5,<br/>&nbsp;&nbsp;&quot;priceCurrency&quot;:&nbsp;&quot;GBP&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://profile.everyoneactive.com/booking?Site=0140&Activities=1402CBP20150217&Culture=en-GB&quot;<br/>}</code></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property                                    | Expected Type                                                                                                                                                                                                                                                                                                                                                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **accessibilityInformation**                | [`Text`](https://schema.org/Text)                                                                                                                                                                                                                                                                                                                                                            | <p>Provide additional, specific documentation for participants about how disabilities are, or can be supported at the Event.</p><p><br><strong>Example</strong></p><p><code>"accessibilityInformation": "This route has been British Cycling assessed as an accessible route, meaning it is suitable for the majority of adaptive bikes. The route will have no or low levels of traffic, there will be plenty of space and will have a good surface throughout. If you have any questions about using this route on an adaptive bike on this ride, please use visit https://www.letsride.co.uk/accessibility or call 0123 456 7000 and ask for the Recreation team."</code></p> |
-| **accessibilitySupport**                    | Array of [`Concept`](https://developer.openactive.io/data-model/types/concept)                                                                                                                                                                                                                                                                                                               | <p>Used to specify the types of disabilities or impairments that are supported at an event.</p><p><br><strong>Example</strong></p><p><code>"accessibilitySupport": [</code><br>  <code>{</code><br>    <code>"@type": "Concept",</code><br>    <code>"@id": "https://openactive.io/accessibility-support#1393f2dc-3fcc-4be9-a99f-f1e51f5ad277",</code><br>    <code>"prefLabel": "Visual impairment",</code><br>    <code>"inScheme": "https://openactive.io/accessibility-support"</code><br>  <code>}</code><br><code>]</code></p>                                                                                                                                             |
-| **additionalAdmissionRestriction**          | Array of [`Text`](https://schema.org/Text)                                                                                                                                                                                                                                                                                                                                                   | <p>Free text restrictions that must be displayed prominently to the user before booking. This property must only contain restrictions not described by <code>oa:ageRestriction</code> or <code>oa:genderRestriction</code>.</p><p><br><strong>Example</strong></p><p><code>"additionalAdmissionRestriction": [</code><br>  <code>"Participants younger than 12 must be accompanied by an adult",</code><br>  <code>"Participants must be comfortable standing for long periods of time"</code><br><code>]</code></p>                                                                                                                                                             |
-| **aggregateFacilityUse**                    | [`FacilityUse`](https://developer.openactive.io/data-model/types/facilityuse)                                                                                                                                                                                                                                                                                                                | Inverse of the oa:individualFacilityUse property. Relates an oa:IndividualFacilityUse (e.g. an opportunity to play tennis on a specific court) to a oa:FacilityUse (e.g. an opportunity to play tennis at a specific location).                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **attendeeInstructions**                    | [`Text`](https://schema.org/Text)                                                                                                                                                                                                                                                                                                                                                            | <p>Provides additional notes and instructions for users of a facility, for example more information on how to find it, what to bring, etc. The value of this property must not include HTML or other markup.</p><p><br><strong>Example</strong></p><p><code>"attendeeInstructions": "The tennis court is locked with a keycode, so please ensure you book online in advance to gain access."</code></p>                                                                                                                                                                                                                                                                          |
-| **category**                                | <p>Array of <a href="https://developer.openactive.io/data-model/types/concept"><code>Concept</code></a><br>- or -<br>Array of <a href="https://schema.org/Text"><code>Text</code></a></p>                                                                                                                                                                                                    | <p>Provides a set of tags that help categorise and describe a facility.</p><p><br><strong>Example</strong></p><p><code>"category": [</code><br>  <code>{</code><br>    <code>"@type": "Concept",</code><br>    <code>"@id": "https://example.com/reference/categories#Top%20Club%20Level",</code><br>    <code>"inScheme": "https://example.com/reference/categories",</code><br>    <code>"prefLabel": "Top Club Level"</code><br>  <code>}</code><br><code>]</code></p>                                                                                                                                                                                                        |
-| **customerAccountBookingRestriction**       | Array of [`Text`](https://schema.org/Text)                                                                                                                                                                                                                                                                                                                                                   | <p>Free text restrictions to display to the Customer at the browse stage, that may apply when using a Customer Account to make the booking.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p><br><strong>Example</strong></p><p><code>"customerAccountBookingRestriction": [</code><br>  <code>"Gold members only",</code><br>  <code>"Gym induction required"</code><br><code>]</code></p>                                                                                                                                            |
-| **event**                                   | Array of [`Slot`](https://developer.openactive.io/data-model/types/slot)                                                                                                                                                                                                                                                                                                                     | <p>An array of slots of availability of this IndividualFacilityUse.</p><p><br><strong>Example</strong></p><p><code>"event": [</code><br>  <code>{</code><br>    <code>"@type": "Slot",</code><br>    <code>"@id": "http://www.example.org/api/individual-facility-uses/432#/event/2018-03-01T10:00:00Z",</code><br>    <code>"startDate": "2018-03-01T11:00:00Z",</code><br>    <code>"endDate": "2018-03-01T11:30:00Z",</code><br>    <code>"duration": "PT30M",</code><br>    <code>"remainingUses": 0,</code><br>    <code>"maximumUses": 1</code><br>  <code>}</code><br><code>]</code></p>                                                                                  |
-| **identifier**                              | <p><a href="https://schema.org/Text"><code>Text</code></a><br>- or -<br><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br>- or -<br>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br>- or -<br><a href="https://schema.org/Integer"><code>Integer</code></a></p> | <p>A local non-URI identifier for the resource</p><p><br><strong>Example</strong></p><p><code>"identifier": "SB1234"</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **isOpenBookingWithCustomerAccountAllowed** | [`Boolean`](https://schema.org/Boolean)                                                                                                                                                                                                                                                                                                                                                      | <p>Indicates that a Customer Account may be used to book that opportunity.</p><p>Note that this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE, as the <a href="https://github.com/openactive/customer-accounts">Customer Accounts proposal</a> evolves.</p><p><br><strong>Example</strong></p><p><code>"isOpenBookingWithCustomerAccountAllowed": "true"</code></p>                                                                                                                                                                                                                                                                                                      |
-| **offers**                                  | Array of [`Offer`](https://developer.openactive.io/data-model/types/offer)                                                                                                                                                                                                                                                                                                                   | <p>An array of schema:Offer that include the price of booking.</p><p><br><strong>Example</strong></p><p><code>"offers": {</code><br>  <code>"@type": "Offer",</code><br>  <code>"identifier": "OX-AD",</code><br>  <code>"name": "Adult",</code><br>  <code>"price": 7.5,</code><br>  <code>"priceCurrency": "GBP",</code><br>  <code>"url": "https://profile.everyoneactive.com/booking?Site=0140&#x26;Activities=1402CBP20150217&#x26;Culture=en-GB"</code><br><code>}</code></p>                                                                                                                                                                                              |
 
 ### **Beta Extension properties**
-
+    
 These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
 
-| Property                        | Expected Type                                                                     | Description                                                                                                                                                                                                                                                                                               |
-| ------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **beta:bookingChannel**         | Array of [`BookingChannelType`](https://openactive.io/ns-beta#BookingChannelType) | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/161">Proposal #161</a></p><p>The channels through which a booking can be made.</p>                                                                                                                                            |
-| **beta:facilityAttribute**      | Array of [`Concept`](http://www.w3.org/2004/02/skos/core#Concept)                 | <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>Attributes associated with the facility in use. See <a href="https://openactive.io/facility-attribute-list/">https://openactive.io/facility-attribute-list/</a>.</p>                                             |
-| **beta:facilitySetting**        | [`FacilitySettingType`](https://openactive.io/ns-beta#FacilitySettingType)        | <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>Whether the event or facility is indoor or outdoor.</p>                                                                                                                                                          |
-| **beta:facilityType**           | Array of [`Concept`](http://www.w3.org/2004/02/skos/core#Concept)                 | <p><strong>DEPRECATED</strong>: Please use <code>facilityType</code> instead.</p><p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>The type of facility in use. See <a href="https://openactive.io/facility-types/">https://openactive.io/facility-types/</a>.</p> |
-| **beta:formattedDescription**   | [`Text`](https://schema.org/Text)                                                 | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/276">Proposal #276</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers. This property must contain HTML.</p>    |
-| **beta:isWheelchairAccessible** | [`Boolean`](https://schema.org/Boolean)                                           | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/166">Proposal #166</a></p><p>A property that details whether the event is suitable for wheelchair access. Placed on Event as this field could be used to detail whether the Event is suitable, as well as the Place.</p>      |
-| **beta:offerValidityPeriod**    | [`Duration`](https://schema.org/Duration)                                         | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/204">Proposal #204</a></p><p>Duration before the event for which the associated Offers are valid</p>                                                                                                                          |
-| **beta:sportsActivityLocation** | Array of [`SportsActivityLocation`](https://schema.org/SportsActivityLocation)    | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/110">Proposal #110</a></p><p>Internal location of the event, e.g. Court 1</p>                                                                                                                                                 |
-| **beta:video**                  | Array of [`VideoObject`](https://schema.org/VideoObject)                          | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>A related video object.</p>                                                                                                                                                                        |
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>beta:bookingChannel</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://openactive.io/ns-beta#BookingChannelType"><code>BookingChannelType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/161">Proposal #161</a></p><p>The channels through which a booking can be made.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:facilityAttribute</b></td>
+      <td style="text-align:left">
+        Array of <a href="http://www.w3.org/2004/02/skos/core#Concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>Attributes associated with the facility in use. See <a href="https://openactive.io/facility-attribute-list/">https://openactive.io/facility-attribute-list/</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:facilitySetting</b></td>
+      <td style="text-align:left">
+        <a href="https://openactive.io/ns-beta#FacilitySettingType"><code>FacilitySettingType</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>Whether the event or facility is indoor or outdoor.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:facilityType</b></td>
+      <td style="text-align:left">
+        Array of <a href="http://www.w3.org/2004/02/skos/core#Concept"><code>Concept</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><strong>DEPRECATED</strong>: Please use <code>facilityType</code> instead.</p><p><a href="https://github.com/openactive/facility-types/issues/1">Proposal #1</a></p><p>The type of facility in use. See <a href="https://openactive.io/facility-types/">https://openactive.io/facility-types/</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:formattedDescription</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/276">Proposal #276</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers. This property must contain HTML.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:isWheelchairAccessible</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/166">Proposal #166</a></p><p>A property that details whether the event is suitable for wheelchair access. Placed on Event as this field could be used to detail whether the Event is suitable, as well as the Place.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:offerValidityPeriod</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Duration"><code>Duration</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/204">Proposal #204</a></p><p>Duration before the event for which the associated Offers are valid</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:sportsActivityLocation</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/SportsActivityLocation"><code>SportsActivityLocation</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/110">Proposal #110</a></p><p>Internal location of the event, e.g. Court 1</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>beta:video</b></td>
+      <td style="text-align:left">
+        Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
+      </td>
+      <td style="text-align:left">
+        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>A related video object.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
