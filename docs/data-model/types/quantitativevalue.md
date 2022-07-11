@@ -49,7 +49,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>The maximum value.</p><p></br><b>Example</b></p><p><code>"maxValue": 60</code></p>
+        <p>The maximum value, inclusive.</p><p></br><b>Example</b></p><p><code>"maxValue": 60</code></p>
       </td>
     </tr>
     <tr>
@@ -58,7 +58,7 @@ This type is derived from [https://schema.org/QuantitativeValue](https://schema.
         <a href="https://schema.org/Integer"><code>Integer</code></a>
       </td>
       <td style="text-align:left">
-        <p>The minimum value.</p><p></br><b>Example</b></p><p><code>"minValue": 16</code></p>
+        <p>The minimum value, inclusive.</p><p></br><b>Example</b></p><p><code>"minValue": 16</code></p>
       </td>
     </tr>
   </tbody>
