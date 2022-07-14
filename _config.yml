@@ -1,7 +1,11 @@
+source:
+  - permalinks/
+
 exclude:
   - docs/
   - generator/
-  - *
+  - LICENSE
+  - README.md
 
 plugins:
   - jekyll-redirect-from
