@@ -113,19 +113,25 @@ Note a single Dataset Site must only be used when all feeds it includes are part
 
 ### Multiple databases
 
-For large booking systems with **multiple databases**, usually a separate database for each customer, a **separate Dataset Site** may be created for each database. The list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/OpenActive.Server.NET/tree/master/OpenActive.DatasetSite.NET#model-level-customisation) for how these map into the JSON data structure, for your reference - in practice the [libraries](dataset-sites.md#net-php-and-ruby-libraries) supplied above [take care of this mapping for you](https://github.com/openactive/OpenActive.DatasetSite.NET#simple-implementation).
+For large booking systems with **multiple databases**, usually a separate database for each customer, a **separate Dataset Site** may be created for each database. The list below illustrates the minimal number of configurable properties that can be used to generate the whole dataset site in a way that is personalised to each customer. See the example [here](https://github.com/openactive/OpenActive.DatasetSite.NET#model-level-customisation) for how these map into the JSON data structure, for your reference - in practice the [libraries](dataset-sites.md#net-php-and-ruby-libraries) supplied above [take care of this mapping for you](https://github.com/openactive/OpenActive.DatasetSite.NET#simple-implementation).
 
 * `organisationName` e.g. "Better",
 * `datasetSiteUrl` e.g. "[https://halo-odi.legendonlineservices.co.uk/openactive/](https://halo-odi.legendonlineservices.co.uk/openactive/)",
 * `datasetDiscussionUrl` e.g. "[https://github.com/gll-better/opendata](https://github.com/gll-better/opendata)",
-* `datasetDocumentationUrl` e.g. "[https://docs.acmebooker.example.com/](https://docs.acmebooker.example.com/)",
-* `organisationLegalEntity` e.g. "GLL",
-* `organisationPlainTextDescription` e.g. "Established in 1993, GLL is the largest UK-based charitable social enterprise delivering leisure, health and community services. Under the consumer facing brand Better, we operate 258 public Sports and Leisure facilities, 88 libraries, 10 children’s centres and 5 adventure playgrounds in partnership with 50 local councils, public agencies and sporting organisations. Better leisure facilities enjoy 46 million visitors a year and have more than 650,000 members.",
-* `organisationEmail` e.g. "info@better.org.uk",
+* `datasetDocumentationUrl` e.g. "[https://permalink.openactive.io/dataset-site/open-data-documentation](https://permalink.openactive.io/dataset-site/open-data-documentation)"  (which should be used if no system-specific documentation is available)
+* `organisationLegalEntity` e.g. "GLL"
+* `organisationPlainTextDescription` e.g. "Established in 1993, GLL is the largest UK-based charitable social enterprise delivering leisure, health and community services. Under the consumer facing brand Better, we operate 258 public Sports and Leisure facilities, 88 libraries, 10 children’s centres and 5 adventure playgrounds in partnership with 50 local councils, public agencies and sporting organisations. Better leisure facilities enjoy 46 million visitors a year and have more than 650,000 members."
+* `organisationEmail` e.g. "info@better.org.uk"
 * `organisationUrl` e.g. "[https://www.better.org.uk/](https://www.better.org.uk/)",
-* `organisationLogoUrl` e.g. "[http://data.better.org.uk/images/logo.png](http://data.better.org.uk/images/logo.png)",
-* `backgroundImageUrl` e.g. "[https://data.better.org.uk/images/bg.jpg](https://data.better.org.uk/images/bg.jpg)",
+* `organisationLogoUrl` e.g. "[http://data.better.org.uk/images/logo.png](http://data.better.org.uk/images/logo.png)"
+* `backgroundImageUrl` e.g. "[https://data.better.org.uk/images/bg.jpg](https://data.better.org.uk/images/bg.jpg)"
 * `openDataFeedBaseUrl` e.g. "[https://halo-odi.legendonlineservices.co.uk/api/](https://halo-odi.legendonlineservices.co.uk/api/)"
+* `openBookingAPIBaseUrl` e.g. "[https://reference-implementation.openactive.io/api/openbooking](https://reference-implementation.openactive.io/api/openbooking)"&#x20;
+* `openBookingAPIAuthenticationAuthorityUrl` e.g. "[https://auth.reference-implementation.openactive.io](https://auth.reference-implementation.openactive.io)"
+* `openBookingAPIDocumentationUrl` e.g. "[https://permalink.openactive.io/dataset-site/open-booking-api-documentation](https://permalink.openactive.io/dataset-site/open-booking-api-documentation)" (which should be used if no system-specific documentation is available)
+* `openBookingAPITermsOfServiceUrl` e.g. "[https://example.com/api-terms](https://example.com/api-terms)"
+* `openBookingAPIRegistrationUrl` e.g. "[https://example.com/api-landing-page](https://example.com/api-landing-page)"
+* `testSuiteCertificateUrl` e.g. "[https://certificates.reference-implementation.openactive.io/examples/all-features/controlled/](https://certificates.reference-implementation.openactive.io/examples/all-features/controlled/)"
 
 We suggest if you can provide the customer with a means of customising the logo and background image (e.g. via uploading an image to the [cloudinary.com](https://cloudinary.com) CDN, using [their widget](https://jsfiddle.net/nickevansuk/ugpnxmby/), which is free at low volume), these have the largest effect on the brand feel of the page.
 
