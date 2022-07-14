@@ -1,4 +1,8 @@
 source: ./permalinks
 
+exclude:
+  - ./docs
+  - ./generator
+
 plugins:
   - jekyll-redirect-from
