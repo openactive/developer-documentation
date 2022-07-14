@@ -1,8 +1,7 @@
-source: permalinks
-
 exclude:
-  - docs
-  - generator
+  - docs/
+  - generator/
+  - *
 
 plugins:
   - jekyll-redirect-from
