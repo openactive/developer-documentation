@@ -1,2 +1,4 @@
+source: ./permalinks/
+
 plugins:
   - jekyll-redirect-from
