@@ -74,7 +74,7 @@ This type is derived from [https://schema.org/Dataset](https://schema.org/Datase
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>A link to documentation related to the <code>Dataset</code>, or a link to the OpenActive developer documentation if no Dataset-specific documentation is available.</p><p></br><b>Example</b></p><p><code>"documentation": "https://developer.openactive.io"</code></p>
+        <p>A link to documentation related to the <code>Dataset</code>, or a link to the OpenActive developer documentation using <code>https://permalink.openactive.io/dataset-site/open-data-documentation</code> if no Dataset-specific documentation is available.</p><p></br><b>Example</b></p><p><code>"documentation": "https://permalink.openactive.io/dataset-site/open-data-documentation"</code></p>
       </td>
     </tr>
     <tr>

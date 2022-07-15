@@ -56,7 +56,7 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>The base URL of the Open Booking API</p><p></br><b>Example</b></p><p><code>"endpointUrl": "https://example.bookingsystem.com/api/openbooking"</code></p>
+        <p>The Base URI of this implementation of the Open Booking API</p><p></br><b>Example</b></p><p><code>"endpointUrl": "https://example.bookingsystem.com/api/openbooking"</code></p>
       </td>
     </tr>
     <tr>
@@ -65,7 +65,7 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>The web page the broker uses to obtain access to the API, e.g. via a web form.</p><p></br><b>Example</b></p><p><code>"landingPage": "https://exampleforms.com/get-me-an-api-access-key"</code></p>
+        <p>The URL of a web page that the Broker may use to obtain access to the API, e.g. via a web form.</p><p></br><b>Example</b></p><p><code>"landingPage": "https://exampleforms.com/get-me-an-api-access-key"</code></p>
       </td>
     </tr>
     <tr>
@@ -98,7 +98,7 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>A link to documentation related to the Dataset, or a link to the OpenActive developer documentation if no Dataset-specific documentation is available.</p><p></br><b>Example</b></p><p><code>"documentation": "https://developer.openactive.io"</code></p>
+        <p>A link to documentation related to how to use the Open Booking API, or a link to the OpenActive developer documentation using <code>https://permalink.openactive.io/dataset-site/open-booking-api-documentation</code> if no system-specific documentation is available.</p><p></br><b>Example</b></p><p><code>"documentation": "https://permalink.openactive.io/dataset-site/open-booking-api-documentation"</code></p>
       </td>
     </tr>
     <tr>
@@ -131,7 +131,7 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
         <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
-        <p>The location of the OpenID Provider or other relevant authentication authority that must be used to access the API.</p><p></br><b>Example</b></p><p><code>"authenticationAuthority": "https://auth.bookingsystem.com"</code></p>
+        <p>The location of the OpenID Provider that must be used to access the API.</p><p></br><b>Example</b></p><p><code>"authenticationAuthority": "https://auth.bookingsystem.com"</code></p>
       </td>
     </tr>
     <tr>
