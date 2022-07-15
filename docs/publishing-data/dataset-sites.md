@@ -44,13 +44,11 @@ There are two templates available, depending on your use case.
 
 #### Option 1: Single-file template
 
-The [Dataset Site Single-file Template](https://openactive.io/dataset-site-template/datasetsite.mustache) is a self-contained mustache template of an HTML page that contains embedded CSS, two embedded encoded images, and references the [cdnjs](https://cdnjs.com/libraries/font-awesome/4.7.0) and [Google Fonts](https://fonts.google.com/specimen/Source+Sans+Pro) CDNs.
+The [Dataset Site Single-file Template](https://openactive.io/dataset-site-template/datasetsite.mustache) is a self-contained mustache template of an HTML page that contains embedded CSS, two embedded images, and fonts loaded via the CDNs of [Google Fonts](https://fonts.google.com/specimen/Source+Sans+Pro) and [cdnjs (powered by Cloudflare)](https://cdnjs.com/libraries/font-awesome/4.7.0).
 
-Use one of the options below to dynamically render the 'single-file template'.
+1. Use one of the options below to dynamically render the 'single-file template' and output the result at an endpoint, for example `https://example.com/openactive/`.
 
-1. Output the result at an endpoint, for example `https://example.com/openactive/`.
-
-#### Option 2: CSP compatible template with self-hosted static files
+#### Option 2: CSP compatible template with separate self-hosted static assets
 
 The [Dataset Site CSP Compatible Template](https://openactive.io/dataset-site-template/datasetsite-csp.mustache) is a mustache template of an HTML page that references [self-hosted static assets](https://openactive.io/dataset-site-template/datasetsite-csp.static.zip).  This template must be rendered using a reference to its stylesheet at its self-hosted location. This is useful for implementations that have a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) in place.
 
