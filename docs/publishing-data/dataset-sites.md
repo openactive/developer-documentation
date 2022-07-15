@@ -44,7 +44,7 @@ There are two templates available, depending on your use case.
 
 #### Option 1: Single-file template
 
-The [Dataset Site Single-file Template](https://openactive.io/dataset-site-template/datasetsite.mustache) is a self-contained mustache template of an HTML page that contains embedded CSS, two embedded encoded images, and references to CDNs of [Font Awesome](https://fontawesome.com/) and [Google Fonts](https://fonts.google.com/).
+The [Dataset Site Single-file Template](https://openactive.io/dataset-site-template/datasetsite.mustache) is a self-contained mustache template of an HTML page that contains embedded CSS, two embedded encoded images, and references the [cdnjs](https://cdnjs.com/libraries/font-awesome/4.7.0) and [Google Fonts](https://fonts.google.com/specimen/Source+Sans+Pro) CDNs.
 
 Use one of the options below to dynamically render the 'single-file template'.
 
