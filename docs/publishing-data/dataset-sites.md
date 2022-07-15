@@ -46,10 +46,9 @@ There are two templates available, depending on your use case.
 
 The [Dataset Site Single-file Template](https://openactive.io/dataset-site-template/datasetsite.mustache) is a self-contained mustache template of an HTML page that contains embedded CSS, two embedded encoded images, and references to CDNs of [Font Awesome](https://fontawesome.com/) and [Google Fonts](https://fonts.google.com/).
 
-It is useful for implementations where hosting static files is problematic.
+Use one of the options below to dynamically render the 'single-file template'.
 
-1. Use one of the options below to dynamically render the 'single-file template'.
-2. Output the result at an endpoint, for example `https://example.com/openactive/`.
+1. Output the result at an endpoint, for example `https://example.com/openactive/`.
 
 #### Option 2: CSP compatible template with self-hosted static files
 
