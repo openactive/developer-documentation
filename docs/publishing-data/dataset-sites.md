@@ -128,7 +128,6 @@ For large booking systems with **multiple databases**, usually a separate databa
 * `openBookingAPIDocumentationUrl` e.g. "[https://permalink.openactive.io/dataset-site/open-booking-api-documentation](https://permalink.openactive.io/dataset-site/open-booking-api-documentation)" (which should be used if no system-specific documentation is available)
 * `openBookingAPITermsOfServiceUrl` e.g. "[https://example.com/api-terms](https://example.com/api-terms)"
 * `openBookingAPIRegistrationUrl` e.g. "[https://example.com/api-landing-page](https://example.com/api-landing-page)"
-* `testSuiteCertificateUrl` e.g. "[https://certificates.reference-implementation.openactive.io/examples/all-features/controlled/](https://certificates.reference-implementation.openactive.io/examples/all-features/controlled/)"
 
 We suggest if you can provide the customer with a means of customising the logo and background image (e.g. via uploading an image to the [cloudinary.com](https://cloudinary.com) CDN, using [their widget](https://jsfiddle.net/nickevansuk/ugpnxmby/), which is free at low volume), these have the largest effect on the brand feel of the page.
 
@@ -137,7 +136,85 @@ Although the customer will likely be able to fill in most properties specific to
 * `datasetDiscussionUrl` - the URL of the [GitHub issues board](dataset-sites.md#step-2-github-issues-board-creation) for the dataset. If your customers are sufficiently large, you will need to create a GitHub issues board for each customer, either [manually](dataset-sites.md#manual-issues-board-creation) or [automatically](dataset-sites.md#automatic-issues-board-creation). See [here](https://github.com/gladstonemrm) for an example of Gladstone's GitHub organization containing a GitHub issues board for each customer.
 * `datasetDocumentationUrl` - as a booking system you should provide at least a single page on your website that explains the OpenActive feeds. Each customer may have the option of providing their own documentation for their dataset site that links to this, or just linking to your documentation direct. If you do not have your own documentation page, you can just link to "[https://developer.openactive.io/](https://developer.openactive.io/)".
 
-## Step 3: GitHub Issues Board creation
+## Step 3: Open Booking API configuration
+
+For Open Booking API implementations the following settings warrant additional consideration.
+
+### Registration Landing Page
+
+{% hint style="info" %}
+This is set by `openBookingAPIRegistrationUrl` (in library settings) or `accessService.landingPage` (in raw Dataset JSON-LD) &#x20;
+{% endhint %}
+
+This must link to a page where developers can request access to your Open Booking API, both to a sandbox and live environment.
+
+{% hint style="info" %}
+In addition to access to your live environment, this page should also include a means of accessing a sandbox to support testing of your Open Booking APIs, to ensure that developers have the freedom to test their code in a safe environment. Such a sandbox should include its own Dataset Site akin to that of the live environment.
+{% endhint %}
+
+Where the dataset site represents data from multiple Sellers ("multi-seller systems"), the Booking System must offer a mechanism for Broker to provision a new Client ID and Client Secret (see [multi-seller authentication](https://openactive.io/open-booking-api/EditorsDraft/1.0CR3/#openid-connect-booking-partner-authentication-for-multiple-seller-systems)). It is recommended that such a process is automated, with a form similar to the below:
+
+> **Open Booking API Access Request Form (Multi-seller systems)**
+>
+> Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> Email: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> Organisation name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> ☑️ I understand our data protection obligations, and our technical obligations as a Broker as specified in the [Open Booking API](https://openactive.io/open-booking-api/EditorsDraft/1.0CR3) specification
+>
+> ☑️ Our organisation holds a valid [Cyber Essentials](https://www.gov.uk/government/publications/cyber-essentials-scheme-overview) (or equivalent) certification and we understand our information security obligations
+>
+> ☑️ Our organisation has already successfully integrated with the [OpenActive Reference Implementation](https://reference-implementation.openactive.io/), and understands how an OpenActive integration works
+>
+> ☑️ I agree to integrate with Sellers only with their explicit consent as granted via OpenID Connect, and understand that access to the Booking System does not guarantee access to Sellers, which is at their own individual discretion.
+>
+> ☑️ I understand that payment reconciliation must be agreed with each seller individually.
+
+Where the dataset site represents data from only a single Seller ("single-seller systems"), the Seller must offer a mechanism for Broker to request a new API key. This could be as simple as a Google Form or TypeForm, or could also be automated, with a form similar to the below:
+
+> **Open Booking API Access Request Form (Single-seller systems)**
+>
+> Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> Email: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> Phone number: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> Organisation name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> Use case and business case for integration: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+>
+> ☑️ I understand our data protection obligations, and our technical obligations as a Broker as specified in the [Open Booking API](https://openactive.io/open-booking-api/EditorsDraft/1.0CR3) specification
+>
+> ☑️ Our organisation holds a valid [Cyber Essentials](https://www.gov.uk/government/publications/cyber-essentials-scheme-overview) (or equivalent) certification and we understand our information security obligations
+>
+> ☑️ Our organisation has already successfully integrated with the [OpenActive Reference Implementation](https://reference-implementation.openactive.io/), and understands how an OpenActive integration works
+
+### Terms of Service
+
+{% hint style="info" %}
+This is set by `openBookingAPITermsOfServiceUrl` (in library settings) or `accessService.termsOfService` (in raw Dataset JSON-LD)
+{% endhint %}
+
+It is important that the terms and conditions and usage restrictions that apply to use of your Open Booking API are well documented so that third-party developers can easily integrate with your platform and understand their rights and responsibilities.
+
+If you have any standard terms of service or usage restrictions that apply to your API, ensure that these are easily accessible from the URL referenced by this property. If not, ensure that this property is omitted entirely.
+
+### Test Suite Certificate
+
+{% hint style="info" %}
+This is set by `testSuiteCertificateUrl` (in library settings) or `bookingService.hasCredential` (in raw Dataset JSON-LD)
+{% endhint %}
+
+This must be a link to a self-hosted OpenActive Test Suite Certificate that has been generated for the **specific software version** of the Booking System to which the dataset site is associated.
+
+For cloud-based SaaS systems that operate a single version, this should be achieved by running the [OpenActive Test Suite as part of any continuous integration process](../open-booking-api/test-suite.md#continuous-integration), and deploying the resulting certificate as part of any existing deployment process. `platformSoftwareVersion` in library settings, or `bookingService.softwareVersion` in raw Dataset JSON-LD should be omitted in this case.
+
+For on-premise systems or systems with separately installed instances, this can be achieved by generating and hosting a new certificate for each version released, with the certificate's path based on the software version. The correct version of the certificate can then be referenced within the dataset site based on the software version of the instance. In this case, the version number should also be included in `platformSoftwareVersion` in library settings, or `bookingService.softwareVersion` in Dataset JSON.
+
+## Step 4: GitHub Issues Board creation
 
 The `discussionUrl` is the url of the GitHub issues board for that specific dataset site.
 
@@ -179,13 +256,13 @@ The GitHub API provides a mechanism to [automatically create GitHub repositories
 }
 ```
 
-## Step 4: Validating your Dataset Site
+## Step 5: Validating your Dataset Site
 
 Use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdataset-site-template%2Fexample.jsonld\&version=2.x\&validationMode=DatasetSite) to check that the JSON-LD within your Dataset Site is conformant, by using the **Load URL** feature in the menu to load your **Dataset Site URL**, while in the "Dataset Sites" mode. The validator will automatically extract the JSON-LD from your Dataset Site's HTML and validate it.
 
 {% embed url="https://validator.openactive.io/?url=https://openactive.io/dataset-site-template/example.jsonld&validationMode=DatasetSite&version=2.x" %}
 
-## Step 5: Providing a Data Catalog (multiple databases only)
+## Step 6: Providing a Data Catalog (multiple databases only)
 
 For booking systems with **multiple databases**, a Data Catalog must also be provided to allow the many Dataset Sites that are created to be easily indexed by the [OpenActive Status Page](https://status.openactive.io) and other data users.
 
@@ -193,7 +270,7 @@ A Data Catalog is very simply an array of the URLs of all your Dataset Sites (th
 
 Please use the [validator](https://validator.openactive.io/?url=https%3A%2F%2Fopenactive.io%2Fdata-catalogs%2Fsingular.jsonld\&version=2.x\&validationMode=DataCatalog) to check that your `DataCatalog` is conformant, using the "Data Catalog" mode.
 
-## Step 6: Adding your Dataset Site or Data Catalog to the OpenActive Data Catalog Collection
+## Step 7: Adding your Dataset Site or Data Catalog to the OpenActive Data Catalog Collection
 
 OpenActive Data Catalogs provide a mechanism for registering OpenActive Datasite Sites so that they can be [discovered and harvested](https://www.openactive.io/data-catalogs/) by data users.
 
