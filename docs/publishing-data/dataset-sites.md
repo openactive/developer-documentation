@@ -146,7 +146,7 @@ For Open Booking API implementations the following settings warrant additional c
 This is set by `openBookingAPIRegistrationUrl` (in library settings) or `accessService.landingPage` (in raw Dataset JSON-LD) &#x20;
 {% endhint %}
 
-This must link to a page where developers can request access to your Open Booking API, both to a sandbox and live environment.
+This must link to a page where developers can request access to your Open Booking API, ideally both to a sandbox and live environment.
 
 {% hint style="info" %}
 In addition to access to your live environment, this page should also include a means of accessing a sandbox to support testing of your Open Booking APIs, to ensure that developers have the freedom to test their code in a safe environment. Such a sandbox should include its own Dataset Site akin to that of the live environment.
@@ -210,7 +210,7 @@ This is set by `testSuiteCertificateUrl` (in library settings) or `bookingServic
 
 This must be a link to a self-hosted OpenActive Test Suite Certificate that has been generated for the **specific software version** of the Booking System to which the dataset site is associated.
 
-For cloud-based SaaS systems that operate a single version, this should be achieved by running the [OpenActive Test Suite as part of any continuous integration process](../open-booking-api/test-suite.md#continuous-integration), and deploying the resulting certificate as part of any existing deployment process. `platformSoftwareVersion` in library settings, or `bookingService.softwareVersion` in raw Dataset JSON-LD should be omitted in this case.
+For cloud-based SaaS systems that operate a single version, this best achieved by running the [OpenActive Test Suite as part of any continuous integration process](../open-booking-api/test-suite.md#continuous-integration), and deploying the resulting certificate as part of any existing deployment process. `platformSoftwareVersion` in library settings, or `bookingService.softwareVersion` in raw Dataset JSON-LD should be omitted in this case.
 
 For on-premise systems or systems with separately installed instances, this can be achieved by generating and hosting a new certificate for each version released, with the certificate's path based on the software version. The correct version of the certificate can then be referenced within the dataset site based on the software version of the instance. In this case, the version number should also be included in `platformSoftwareVersion` in library settings, or `bookingService.softwareVersion` in Dataset JSON.
 

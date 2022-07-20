@@ -9,267 +9,52 @@ This type is derived from [https://schema.org/Place](https://schema.org/Place), 
 ## **Properties**
 
 ### **Required properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>@type</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        Must always be present and set to <code>"@type": "Place"</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>name</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The name of the Place</p><p></br><b>Example</b></p><p><code>"name": "Raynes Park High School"</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property  | Expected Type                     | Description                                                                                                          |
+| --------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **@type** | [`Text`](https://schema.org/Text) | Must always be present and set to `"@type": "Place"`                                                                 |
+| **name**  | [`Text`](https://schema.org/Text) | <p>The name of the Place</p><p><br><strong>Example</strong></p><p><code>"name": "Raynes Park High School"</code></p> |
 
 ### **Required options**
 
 While these properties are marked as recommended in the specification, a data publisher must provide as much detail in both `address` and `geo` for an event as possible.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>address</b></td>
-      <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/postaladdress"><code>PostalAddress</code></a><br/> - or - <br/><a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A structured PostalAddress object for the Place.</p><p>Ideally the address should be provided using the PostalAddress structured format. Google Reserve requires <a href="https://schema.org/PostalAddress">https://schema.org/PostalAddress</a> and will not accept plain text addresses.</p><p></br><b>Example</b></p><p><code>"address": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;PostalAddress&quot;,<br/>&nbsp;&nbsp;&quot;streetAddress&quot;:&nbsp;&quot;Raynes&nbsp;Park&nbsp;High&nbsp;School,&nbsp;46A&nbsp;West&nbsp;Barnes&nbsp;Lane&quot;,<br/>&nbsp;&nbsp;&quot;addressLocality&quot;:&nbsp;&quot;New&nbsp;Malden&quot;,<br/>&nbsp;&nbsp;&quot;addressRegion&quot;:&nbsp;&quot;London&quot;,<br/>&nbsp;&nbsp;&quot;postalCode&quot;:&nbsp;&quot;NW5&nbsp;3DU&quot;,<br/>&nbsp;&nbsp;&quot;addressCountry&quot;:&nbsp;&quot;GB&quot;<br/>}</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>geo</b></td>
-      <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/geocoordinates"><code>GeoCoordinates</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The geo coordinates of the Place.</p><p></br><b>Example</b></p><p><code>"geo": {<br/>&nbsp;&nbsp;&quot;latitude&quot;:&nbsp;51.4034423828125,<br/>&nbsp;&nbsp;&quot;longitude&quot;:&nbsp;-0.2369088977575302,<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;GeoCoordinates&quot;<br/>}</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+| Property    | Expected Type                                                                                                                                                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **address** | <p><a href="https://developer.openactive.io/data-model/types/postaladdress"><code>PostalAddress</code></a><br>- or -<br><a href="https://schema.org/Text"><code>Text</code></a></p> | <p>A structured PostalAddress object for the Place.</p><p>Ideally the address should be provided using the PostalAddress structured format. Google Reserve requires <a href="https://schema.org/PostalAddress">https://schema.org/PostalAddress</a> and will not accept plain text addresses.</p><p><br><strong>Example</strong></p><p><code>"address": {</code><br>  <code>"@type": "PostalAddress",</code><br>  <code>"streetAddress": "Raynes Park High School, 46A West Barnes Lane",</code><br>  <code>"addressLocality": "New Malden",</code><br>  <code>"addressRegion": "London",</code><br>  <code>"postalCode": "NW5 3DU",</code><br>  <code>"addressCountry": "GB"</code><br><code>}</code></p> |
+| **geo**     | [`GeoCoordinates`](https://developer.openactive.io/data-model/types/geocoordinates)                                                                                                 | <p>The geo coordinates of the Place.</p><p><br><strong>Example</strong></p><p><code>"geo": {</code><br>  <code>"latitude": 51.4034423828125,</code><br>  <code>"longitude": -0.2369088977575302,</code><br>  <code>"@type": "GeoCoordinates"</code><br><code>}</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ### **Recommended properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>@id</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A unique URI-based identifier for the record.</p><p><code>@id</code> properties are used as identifiers for compatibility with JSON-LD. The value of such a property must always be an absolute URI that provides a stable globally unique identifier for the resource, as described in <a href="https://tools.ietf.org/html/rfc3986">RFC3986</a>.</p><p>The primary purpose of the URI format in this context is to provide natural namespacing for the identifier. Hence, the URI itself may not resolve to a valid endpoint, but must use a domain name controlled by the resource owner (the organisation responsible for the OpenActive open data feed).</p><p></br><b>Example</b></p><p><code>"@id": "https://id.bookingsystem.example.com/places/12345"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>amenityFeature</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/locationfeaturespecification"><code>LocationFeatureSpecification</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>An array listing the Amenities of the Place.</p><p></br><b>Example</b></p><p><code>"amenityFeature": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Changing&nbsp;Facilities&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;ChangingFacilities&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Showers&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Showers&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Lockers&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Lockers&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Towels&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Towels&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Creche&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;false,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Creche&quot;<br/>&nbsp;&nbsp;},<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Parking&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;value&quot;:&nbsp;true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Parking&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>description</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A plain text description of the Place, which must not include HTML or other markup.</p><p></br><b>Example</b></p><p><code>"description": "Raynes Park High School in London"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>image</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>An image or photo that depicts the place, e.g. a photo taken at a previous event.</p><p></br><b>Example</b></p><p><code>"image": [<br/>&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;thumbnail&quot;:&nbsp;&quot;http://example.com/static/image/speedball_thumbnail.jpg&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>&nbsp;&nbsp;}<br/>]</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>openingHoursSpecification</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/openinghoursspecification"><code>OpeningHoursSpecification</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The times the Place is open</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>telephone</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The telephone number for the Place</p><p></br><b>Example</b></p><p><code>"telephone": "01253 473934"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>url</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The website for the Place</p><p></br><b>Example</b></p><p><code>"url": "http://www.rphs.org.uk/"</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property                      | Expected Type                                                                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **@id**                       | [`URL`](https://schema.org/URL)                                                                                          | <p>A unique URI-based identifier for the record.</p><p><code>@id</code> properties are used as identifiers for compatibility with JSON-LD. The value of such a property must always be an absolute URI that provides a stable globally unique identifier for the resource, as described in <a href="https://tools.ietf.org/html/rfc3986">RFC3986</a>.</p><p>The primary purpose of the URI format in this context is to provide natural namespacing for the identifier. Hence, the URI itself may not resolve to a valid endpoint, but must use a domain name controlled by the resource owner (the organisation responsible for the OpenActive open data feed).</p><p><br><strong>Example</strong></p><p><code>"@id": "https://id.bookingsystem.example.com/places/12345"</code></p>                                                                                                                                                                                                                                                                                                                                            |
+| **amenityFeature**            | Array of [`LocationFeatureSpecification`](https://developer.openactive.io/data-model/types/locationfeaturespecification) | <p>An array listing the Amenities of the Place.</p><p><br><strong>Example</strong></p><p><code>"amenityFeature": [</code><br>  <code>{</code><br>    <code>"name": "Changing Facilities",</code><br>    <code>"value": true,</code><br>    <code>"@type": "ChangingFacilities"</code><br>  <code>},</code><br>  <code>{</code><br>    <code>"name": "Showers",</code><br>    <code>"value": false,</code><br>    <code>"@type": "Showers"</code><br>  <code>},</code><br>  <code>{</code><br>    <code>"name": "Lockers",</code><br>    <code>"value": true,</code><br>    <code>"@type": "Lockers"</code><br>  <code>},</code><br>  <code>{</code><br>    <code>"name": "Towels",</code><br>    <code>"value": false,</code><br>    <code>"@type": "Towels"</code><br>  <code>},</code><br>  <code>{</code><br>    <code>"name": "Creche",</code><br>    <code>"value": false,</code><br>    <code>"@type": "Creche"</code><br>  <code>},</code><br>  <code>{</code><br>    <code>"name": "Parking",</code><br>    <code>"value": true,</code><br>    <code>"@type": "Parking"</code><br>  <code>}</code><br><code>]</code></p> |
+| **description**               | [`Text`](https://schema.org/Text)                                                                                        | <p>A plain text description of the Place, which must not include HTML or other markup.</p><p><br><strong>Example</strong></p><p><code>"description": "Raynes Park High School in London"</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **image**                     | Array of [`ImageObject`](https://developer.openactive.io/data-model/types/imageobject)                                   | <p>An image or photo that depicts the place, e.g. a photo taken at a previous event.</p><p><br><strong>Example</strong></p><p><code>"image": [</code><br>  <code>{</code><br>    <code>"thumbnail": "http://example.com/static/image/speedball_thumbnail.jpg",</code><br>    <code>"@type": "ImageObject",</code><br>    <code>"url": "http://example.com/static/image/speedball_large.jpg"</code><br>  <code>}</code><br><code>]</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **openingHoursSpecification** | Array of [`OpeningHoursSpecification`](https://developer.openactive.io/data-model/types/openinghoursspecification)       | The times the Place is open                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **telephone**                 | [`Text`](https://schema.org/Text)                                                                                        | <p>The telephone number for the Place</p><p><br><strong>Example</strong></p><p><code>"telephone": "01253 473934"</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **url**                       | [`URL`](https://schema.org/URL)                                                                                          | <p>The website for the Place</p><p><br><strong>Example</strong></p><p><code>"url": "http://www.rphs.org.uk/"</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ### **Optional properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>containedInPlace</b></td>
-      <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/place"><code>Place</code></a><br/> - or - <br/><code>@id</code> reference
-      </td>
-      <td style="text-align:left">
-        <p>The place within which this Place exists</p><p></br><b>Example</b></p><p><code>"containedInPlace": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Place&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://www.everyoneactive.com/centres/Middlesbrough-Sports-Village&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Middlesbrough&nbsp;Sports&nbsp;Village&quot;<br/>}</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>containsPlace</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/place"><code>Place</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Places that exist within this place</p><p></br><b>Example</b></p><p><code>"containsPlace": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;Place&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;https://www.everyoneactive.com/centres/Center-Parcs-Sports-Plaza&quot;,<br/>&nbsp;&nbsp;&quot;name&quot;:&nbsp;&quot;Center&nbsp;Parcs&nbsp;Sports&nbsp;Plaza&quot;<br/>}</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>email</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>General enquiries e-mail address for the Place.</p><p></br><b>Example</b></p><p><code>"email": "info@example.com"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>identifier</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a><br/> - or - <br/><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br/> - or - <br/><a href="https://schema.org/Integer"><code>Integer</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A local non-URI identifier for the resource</p><p></br><b>Example</b></p><p><code>"identifier": "SB1234"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>specialOpeningHoursSpecification</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://developer.openactive.io/data-model/types/openinghoursspecification"><code>OpeningHoursSpecification</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Explicitly override general opening hours brought in scope by <code>schema:openingHoursSpecification</code>.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
+| Property                             | Expected Type                                                                                                                                                                                                                                                                                                                                                                                | Description                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **containedInPlace**                 | <p><a href="https://developer.openactive.io/data-model/types/place"><code>Place</code></a><br>- or -<br><code>@id</code> reference</p>                                                                                                                                                                                                                                                       | <p>The place within which this Place exists</p><p><br><strong>Example</strong></p><p><code>"containedInPlace": {</code><br>  <code>"@type": "Place",</code><br>  <code>"url": "https://www.everyoneactive.com/centres/Middlesbrough-Sports-Village",</code><br>  <code>"name": "Middlesbrough Sports Village"</code><br><code>}</code></p> |
+| **containsPlace**                    | Array of [`Place`](https://developer.openactive.io/data-model/types/place)                                                                                                                                                                                                                                                                                                                   | <p>Places that exist within this place</p><p><br><strong>Example</strong></p><p><code>"containsPlace": {</code><br>  <code>"@type": "Place",</code><br>  <code>"url": "https://www.everyoneactive.com/centres/Center-Parcs-Sports-Plaza",</code><br>  <code>"name": "Center Parcs Sports Plaza"</code><br><code>}</code></p>               |
+| **email**                            | [`Text`](https://schema.org/Text)                                                                                                                                                                                                                                                                                                                                                            | <p>General enquiries e-mail address for the Place.</p><p><br><strong>Example</strong></p><p><code>"email": "info@example.com"</code></p>                                                                                                                                                                                                   |
+| **identifier**                       | <p><a href="https://schema.org/Text"><code>Text</code></a><br>- or -<br><a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br>- or -<br>Array of <a href="https://developer.openactive.io/data-model/types/propertyvalue"><code>PropertyValue</code></a><br>- or -<br><a href="https://schema.org/Integer"><code>Integer</code></a></p> | <p>A local non-URI identifier for the resource</p><p><br><strong>Example</strong></p><p><code>"identifier": "SB1234"</code></p>                                                                                                                                                                                                            |
+| **specialOpeningHoursSpecification** | Array of [`OpeningHoursSpecification`](https://developer.openactive.io/data-model/types/openinghoursspecification)                                                                                                                                                                                                                                                                           | Explicitly override general opening hours brought in scope by `schema:openingHoursSpecification`.                                                                                                                                                                                                                                          |
 
 ### **Beta Extension properties**
-    
+
 These properties are defined in the [OpenActive Beta Extension](https://openactive.io/ns-beta). The OpenActive Beta Extension is defined as a convenience to help document properties that are in active testing and review by the community. Publishers should not assume that properties in the beta namespace will either be added to the core specification or be included in the namespace over the long term.
 
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>beta:formattedDescription</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/276">Proposal #276</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers. This property must contain HTML.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>beta:placeType</b></td>
-      <td style="text-align:left">
-        Array of <a href="http://www.w3.org/2004/02/skos/core#Concept"><code>Concept</code></a>
-      </td>
-      <td style="text-align:left">
-        <p><a href="https://github.com/openactive/place-types/issues/1">Proposal #1</a></p><p>The type of Place. See <a href="https://openactive.io/place-types/">https://openactive.io/place-types/</a>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>beta:serviceOperator</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Organization"><code>Organization</code></a>
-      </td>
-      <td style="text-align:left">
-        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/307">Proposal #307</a></p><p>The organization responsible for the operation of the <code>Place</code>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>beta:video</b></td>
-      <td style="text-align:left">
-        Array of <a href="https://schema.org/VideoObject"><code>VideoObject</code></a>
-      </td>
-      <td style="text-align:left">
-        <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>A related video object.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-
-
+| Property                      | Expected Type                                                     | Description                                                                                                                                                                                                                                                                                            |
+| ----------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **beta:formattedDescription** | [`Text`](https://schema.org/Text)                                 | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/276">Proposal #276</a></p><p>Sometimes a description is stored with formatting (e.g. href, bold, italics, embedded YouTube videos). This formatting can be useful for data consumers. This property must contain HTML.</p> |
+| **beta:placeType**            | Array of [`Concept`](http://www.w3.org/2004/02/skos/core#Concept) | <p><a href="https://github.com/openactive/place-types/issues/1">Proposal #1</a></p><p>The type of Place. See <a href="https://openactive.io/place-types/">https://openactive.io/place-types/</a>.</p>                                                                                                  |
+| **beta:serviceOperator**      | [`Organization`](https://schema.org/Organization)                 | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/307">Proposal #307</a></p><p>The organization responsible for the operation of the <code>Place</code>.</p>                                                                                                                 |
+| **beta:video**                | Array of [`VideoObject`](https://schema.org/VideoObject)          | <p><a href="https://github.com/openactive/modelling-opportunity-data/issues/88">Proposal #88</a></p><p>A related video object.</p>                                                                                                                                                                     |
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
