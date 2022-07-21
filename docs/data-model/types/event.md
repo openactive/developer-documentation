@@ -85,10 +85,10 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>startDate</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
       </td>
       <td style="text-align:left">
-        <p>The start date and time of the event. Can be specified as a schema:Date or schema:DateTime.</p><p></br><b>Example</b></p><p><code>"startDate": "2018-01-27T12:00:00Z"</code></p>
+        <p>The start date and time of the event. Can be specified as a schema:DateTime.</p><p></br><b>Example</b></p><p><code>"startDate": "2018-01-27T12:00:00Z"</code></p>
       </td>
     </tr>
     <tr>
@@ -136,10 +136,10 @@ This type is derived from [https://schema.org/Event](https://schema.org/Event), 
     <tr>
       <td style="text-align:left"><b>endDate</b></td>
       <td style="text-align:left">
-        <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
       </td>
       <td style="text-align:left">
-        <p>The end date and time of the event. Can be specified as a schema:Date or  schema:DateTime</p><p>It is recommended that publishers provide either an schema:endDate or a schema:duration for an event.</p><p></br><b>Example</b></p><p><code>"endDate": "2018-01-27T12:00:00Z"</code></p>
+        <p>The end date and time of the event. Can be specified as a schema:DateTime</p><p>It is recommended that publishers provide either an schema:endDate or a schema:duration for an event.</p><p></br><b>Example</b></p><p><code>"endDate": "2018-01-27T12:00:00Z"</code></p>
       </td>
     </tr>
     <tr>
