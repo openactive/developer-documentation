@@ -355,3 +355,5 @@ This always overrides the configuration option `"waitForHarvestCompletion": true
 A [sample CI script](https://github.com/openactive/openactive-test-suite/blob/master/simple-ci.sh) is available, and more details can be found [here](https://github.com/openactive/openactive-test-suite#continuous-integration).
 
 You can see CI in action within the test suite itself, which [runs CI](https://github.com/openactive/OpenActive.Server.NET/blob/8f9e5a8e7714f97a98ca650dda198ac183ca02ab/.github/workflows/openactive-test-suite.yml#L58-L80) against the reference implementation.
+
+The conformance certificate generated from test suite running in CI should be deployed to the relevant location (e.g. [via GitHub CI](https://github.com/openactive/OpenActive.Server.NET/blob/b66ba4172f4d839866729808ada30d8b9bafce54/.github/workflows/openactive-test-suite.yml#L105-L112)) and referenced from the production Dataset Site. See [here](../publishing-data/dataset-sites.md#test-suite-certificate) for more information.
