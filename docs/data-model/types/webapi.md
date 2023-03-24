@@ -12,7 +12,7 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
 
 ## **Properties**
 
-### **Required properties**
+### **Optional properties**
     
 <table>
   <thead>
@@ -33,12 +33,39 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>authenticationAuthority</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The location of the OpenID Provider that must be used to access the API.</p><p></br><b>Example</b></p><p><code>"authenticationAuthority": "https://auth.bookingsystem.com"</code></p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>conformsTo</b></td>
       <td style="text-align:left">
         Array of <a href="https://schema.org/URL"><code>URL</code></a>
       </td>
       <td style="text-align:left">
         <p>Indicates the version and profiles of OpenActive Open Booking Specification with which this WebAPI conforms, by specifying these as URLs.</p><p></br><b>Example</b></p><p><code>"conformsTo": [<br/>&nbsp;&nbsp;&quot;https://openactive.io/open-booking-api/1.0/#core&quot;<br/>]</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>description</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A plain text description of the Dataset, which must not include HTML or other markup.</p><p></br><b>Example</b></p><p><code>"description": "Near real-time availability and rich descriptions relating to the sessions and facilities available from {OrganisationName}, published using the OpenActive Modelling Specification 2.0."</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>documentation</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A link to documentation related to how to use the Open Booking API, or a link to the OpenActive developer documentation using <code>https://permalink.openactive.io/dataset-site/open-booking-api-documentation</code> if no system-specific documentation is available.</p><p></br><b>Example</b></p><p><code>"documentation": "https://permalink.openactive.io/dataset-site/open-booking-api-documentation"</code></p>
       </td>
     </tr>
     <tr>
@@ -77,30 +104,6 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
         <p>The name of the WebAPI</p><p></br><b>Example</b></p><p><code>"name": "Acme Leisure Sessions and Facilities"</code></p>
       </td>
     </tr>
-  </tbody>
-</table>
-
-
-### **Recommended properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>documentation</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A link to documentation related to how to use the Open Booking API, or a link to the OpenActive developer documentation using <code>https://permalink.openactive.io/dataset-site/open-booking-api-documentation</code> if no system-specific documentation is available.</p><p></br><b>Example</b></p><p><code>"documentation": "https://permalink.openactive.io/dataset-site/open-booking-api-documentation"</code></p>
-      </td>
-    </tr>
     <tr>
       <td style="text-align:left"><b>termsOfService</b></td>
       <td style="text-align:left">
@@ -108,39 +111,6 @@ This type is derived from [https://pending.schema.org/WebAPI](https://pending.sc
       </td>
       <td style="text-align:left">
         <p>A link to terms of service related to the use of this API.</p><p></br><b>Example</b></p><p><code>"termsOfService": "https://example.bookingsystem.com/terms"</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-### **Optional properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>authenticationAuthority</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/URL"><code>URL</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The location of the OpenID Provider that must be used to access the API.</p><p></br><b>Example</b></p><p><code>"authenticationAuthority": "https://auth.bookingsystem.com"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>description</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/Text"><code>Text</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A plain text description of the Dataset, which must not include HTML or other markup.</p><p></br><b>Example</b></p><p><code>"description": "Near real-time availability and rich descriptions relating to the sessions and facilities available from {OrganisationName}, published using the OpenActive Modelling Specification 2.0."</code></p>
       </td>
     </tr>
   </tbody>

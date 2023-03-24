@@ -12,7 +12,7 @@ This type is derived from [https://schema.org/Dataset](https://schema.org/Datase
 
 ## **Properties**
 
-### **Required properties**
+### **Optional properties**
     
 <table>
   <thead>
@@ -39,6 +39,51 @@ This type is derived from [https://schema.org/Dataset](https://schema.org/Datase
       </td>
       <td style="text-align:left">
         <p>A unique URI-based identifier for the record.</p><p><code>@id</code> properties are used as identifiers for compatibility with JSON-LD. The value of such a property must always be an absolute URI that provides a stable globally unique identifier for the resource, as described in <a href="https://tools.ietf.org/html/rfc3986">RFC3986</a>.</p><p>The primary purpose of the URI format in this context is to provide natural namespacing for the identifier. Hence, the URI itself may not resolve to a valid endpoint, but must use a domain name controlled by the resource owner (the organisation responsible for the OpenActive open data feed).</p><p></br><b>Example</b></p><p><code>"@id": "https://opendata.fusion-lifestyle.com/OpenActive/"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>accessService</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/webapi"><code>WebAPI</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Information about the Open Booking API. Note this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>backgroundImage</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>A background image for the <code>Dataset</code>.</p><p></br><b>Example</b></p><p><code>"backgroundImage": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>bookingService</b></td>
+      <td style="text-align:left">
+        <a href="https://developer.openactive.io/data-model/types/bookingservice"><code>BookingService</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>Information about the Booking System or publishing platform</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>dateModified</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The date this <code>Dataset</code> was last updated. For RPDE feeds this may simply be the date and time that the Dataset Site was rendered, which may be cached.</p><p></br><b>Example</b></p><p><code>"dateModified": "2018-01-27T12:00:00Z"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>datePublished</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The date this <code>Dataset</code> was first published. Can be specified as a schema:Date or schema:DateTime.</p><p></br><b>Example</b></p><p><code>"datePublished": "2018-01-27T12:00:00Z"</code></p>
       </td>
     </tr>
     <tr>
@@ -138,81 +183,6 @@ This type is derived from [https://schema.org/Dataset](https://schema.org/Datase
       </td>
       <td style="text-align:left">
         <p>The URL of the dataset site.</p><p></br><b>Example</b></p><p><code>"url": "https://opendata.fusion-lifestyle.com/OpenActive/"</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-### **Recommended properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>backgroundImage</b></td>
-      <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/imageobject"><code>ImageObject</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>A background image for the <code>Dataset</code>.</p><p></br><b>Example</b></p><p><code>"backgroundImage": {<br/>&nbsp;&nbsp;&quot;@type&quot;:&nbsp;&quot;ImageObject&quot;,<br/>&nbsp;&nbsp;&quot;url&quot;:&nbsp;&quot;http://example.com/static/image/speedball_large.jpg&quot;<br/>}</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>dateModified</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The date this <code>Dataset</code> was last updated. For RPDE feeds this may simply be the date and time that the Dataset Site was rendered, which may be cached.</p><p></br><b>Example</b></p><p><code>"dateModified": "2018-01-27T12:00:00Z"</code></p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>datePublished</b></td>
-      <td style="text-align:left">
-        <a href="https://schema.org/DateTime"><code>DateTime</code></a><br/> - or - <br/><a href="https://schema.org/Date"><code>Date</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>The date this <code>Dataset</code> was first published. Can be specified as a schema:Date or schema:DateTime.</p><p></br><b>Example</b></p><p><code>"datePublished": "2018-01-27T12:00:00Z"</code></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-### **Optional properties**
-    
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Property</th>
-      <th style="text-align:left">Expected Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>accessService</b></td>
-      <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/webapi"><code>WebAPI</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Information about the Open Booking API. Note this property is in EARLY RELEASE AND IS SUBJECT TO CHANGE.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>bookingService</b></td>
-      <td style="text-align:left">
-        <a href="https://developer.openactive.io/data-model/types/bookingservice"><code>BookingService</code></a>
-      </td>
-      <td style="text-align:left">
-        <p>Information about the Booking System or publishing platform</p>
       </td>
     </tr>
   </tbody>
