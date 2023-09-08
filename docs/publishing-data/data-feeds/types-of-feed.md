@@ -66,7 +66,7 @@ Listings data feed examples:
 
 When referencing data across feeds (such as between [SessionSeries](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fsessionseries-split\_example\_1.json\&version=2.0) and [ScheduledSession](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fscheduledsession-split\_example\_1.json\&version=2.0)), the value of the **`@id`** must be used.
 
-An **`@id` ** is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
+An **`@id`** is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
 
 So for a minimal implementation simply invent a URL pattern that includes your domain for use as your **`@id`**, such as:
 
@@ -156,7 +156,7 @@ Note that the above examples publish `Slot` availability at the `IndividualFacil
 
 When referencing data across feeds (such as between [FacilityUse](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Ffacilityuse\_example\_1.json\&version=2.x) and [Slot](https://validator.openactive.io/?url=https%3A%2F%2Fwww.openactive.io%2Fdata-models%2Fversions%2F2.x%2Fexamples%2Fslot\_example\_1.json\&version=2.x)), the value of the **`@id`** must be used.
 
-An **`@id` ** is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
+An **`@id`** is a globally unique identifier which must be in URL format for the purposes of namespacing. The **`@id`** does not need to resolve to a functional endpoint, but must use a domain name controlled by the organization or system publishing the data. See [here](../../data-model/context-and-json-ld.md#contexts-properties-and-types) for more information.
 
 So for a minimal implementation simply invent a URL pattern that includes your domain for use as your **`@id`**, such as:
 

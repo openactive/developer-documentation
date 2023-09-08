@@ -8,8 +8,8 @@ description: A guide for setting up the OpenActive Test Suite for the Open Booki
 
 The [OpenActive Test Suite](https://github.com/openactive/openactive-test-suite/) consists of two key components:
 
-* ****[**openactive-broker-microservice**](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-broker-microservice) - harvests feeds and provides an interface to extract specific items from the feeds.
-* ****[**openactive-integration-tests**](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests) - a suite of Jest integration tests that exercise an Open Booking API implementation.
+* [**openactive-broker-microservice**](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-broker-microservice) - harvests feeds and provides an interface to extract specific items from the feeds.
+* [**openactive-integration-tests**](https://github.com/openactive/openactive-test-suite/tree/master/packages/openactive-integration-tests) - a suite of Jest integration tests that exercise an Open Booking API implementation.
 
 ## Step 1: Install the test suite
 

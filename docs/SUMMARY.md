@@ -21,6 +21,8 @@
 ## Using data
 
 * [Harvesting opportunity data](using-data/harvesting-opportunity-data.md)
+* [Tutorial: Consuming an RPDE feed](using-data/harvesting-opportunity-data-1.md)
+* [Attribution](using-data/attribution.md)
 
 ## Open Booking API
 
@@ -115,7 +117,7 @@
 * [Dataset Dashboard](http://status.openactive.io)
 * [Non-technical Guidance](https://www.openactive.io/getting-started/)
 
-## OpenActive on GitHub <a id="guide-to-openactive-on-github"></a>
+## OpenActive on GitHub <a href="#guide-to-openactive-on-github" id="guide-to-openactive-on-github"></a>
 
 * [Overview](guide-to-openactive-on-github/overview.md)
 * [Activity List](guide-to-openactive-on-github/activity-list.md)
@@ -129,4 +131,3 @@
 * [SKOS](guide-to-openactive-on-github/skos.md)
 * [Specifications](guide-to-openactive-on-github/specifications.md)
 * [Validators](guide-to-openactive-on-github/validators.md)
-

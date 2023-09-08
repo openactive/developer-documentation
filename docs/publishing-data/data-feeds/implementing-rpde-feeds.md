@@ -10,12 +10,7 @@ Several libraries are available that make it really easy to create open opportun
 
 The table below lists the available OpenActive libraries:
 
-| Language                | Open Opportunity Data Feeds                                                  | Dataset Site                                                                                         |
-| ----------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| .NET                    | [OpenActive.NET](https://www.nuget.org/packages/OpenActive.NET/)             | [OpenActive.DatasetSite.NET](https://www.nuget.org/packages/OpenActive.DatasetSite.NET/)             |
-| PHP                     | [openactive/models](https://packagist.org/packages/openactive/models)        | [openactive/dataset-site](https://packagist.org/packages/openactive/dataset-site)                    |
-| Ruby                    | [openactive](https://rubygems.org/gems/openactive)                           | [openactive-dataset\_site](https://rubygems.org/gems/openactive-dataset\_site)                       |
-| JavaScript / TypeScript | [@openactive/models-ts](https://www.npmjs.com/package/@openactive/models-ts) | [@openactive/dataset-site-template](https://www.npmjs.com/package/@openactive/dataset-site-template) |
+<table data-header-hidden><thead><tr><th width="405.3333333333333">Language</th><th>Open Opportunity Data Feeds</th><th>Dataset Site</th></tr></thead><tbody><tr><td>Language</td><td>Open Opportunity Data Feeds</td><td>Dataset Site</td></tr><tr><td>.NET</td><td><a href="https://www.nuget.org/packages/OpenActive.NET/">OpenActive.NET</a></td><td><a href="https://www.nuget.org/packages/OpenActive.DatasetSite.NET/">OpenActive.DatasetSite.NET</a></td></tr><tr><td>PHP</td><td><a href="https://packagist.org/packages/openactive/models">openactive/models</a></td><td><a href="https://packagist.org/packages/openactive/dataset-site">openactive/dataset-site</a></td></tr><tr><td>Ruby</td><td><a href="https://rubygems.org/gems/openactive">openactive</a></td><td><a href="https://rubygems.org/gems/openactive-dataset_site">openactive-dataset_site</a></td></tr><tr><td>JavaScript / TypeScript</td><td><a href="https://www.npmjs.com/package/@openactive/models-ts">@openactive/models-ts</a></td><td><a href="https://www.npmjs.com/package/@openactive/dataset-site-template">@openactive/dataset-site-template</a></td></tr></tbody></table>
 
 ## Transactions: Preventing delayed item interleaving
 
