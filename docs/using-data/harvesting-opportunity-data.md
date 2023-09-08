@@ -12,7 +12,7 @@ The table below lists these libraries:
 
 ## Dataset discovery
 
-As described in the data catalogue [processing guidance](https://github.com/openactive/data-catalogs#processing-guidance), OpenActive can be discovered automatically by "spidering" links within the canonical [OpenActive Data Catalog Collection JSON-LD](https://openactive.io/data-catalogs/data-catalog-collection.jsonld) file.
+As described in the data catalogue [processing guidance](https://github.com/openactive/data-catalogs#processing-guidance), OpenActive datasets can be discovered automatically by "spidering" links within the canonical [OpenActive Data Catalog Collection JSON-LD](https://openactive.io/data-catalogs/data-catalog-collection.jsonld) file.
 
 ```mermaid
 flowchart LR
