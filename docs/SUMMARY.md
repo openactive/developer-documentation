@@ -17,6 +17,7 @@
 * [Virtual Events](publishing-data/virtual-events.md)
 * [On-Demand Events](publishing-data/on-demand-events.md)
 * [Opening Hours](publishing-data/opening-hours.md)
+* [Data Quality](publishing-data/data-quality.md)
 
 ## Using data
 
@@ -113,6 +114,7 @@
 
 ## Useful links
 
+* [Data Visualiser](https://visualiser.openactive.io/)
 * [Data Validator](https://validator.openactive.io)
 * [Dataset Dashboard](http://status.openactive.io)
 * [Non-technical Guidance](https://www.openactive.io/getting-started/)
