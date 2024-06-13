@@ -4,26 +4,72 @@ description: This page describes the Terms type.
 
 # Terms
 
+
+
 ## **Properties**
 
 ### **Optional properties**
+    
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Property</th>
+      <th style="text-align:left">Expected Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>@type</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        Must always be present and set to <code>"@type": "Terms"</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>dateModified</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/DateTime"><code>DateTime</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The date and time at which the webpage containing the contents of the terms, located at the <code>url</code>, was last updated.</p><p></br><b>Example</b></p><p><code>"dateModified": "2018-01-27T12:00:00Z"</code></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>name</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Text"><code>Text</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The name of the terms. The name must distinguish this from other terms fields provided, e.g. 'Terms and Conditions' or 'Privacy Policy'.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>requiresExplicitConsent</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/Boolean"><code>Boolean</code></a>
+      </td>
+      <td style="text-align:left">
+        
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>url</b></td>
+      <td style="text-align:left">
+        <a href="https://schema.org/URL"><code>URL</code></a>
+      </td>
+      <td style="text-align:left">
+        <p>The URL of the webpage containing the contents of the terms.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Property                | Expected Type                             | Description                                                                                                                                                                                                                                                                                                                                                                                               |
-| ----------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| @type                   | [`Text`](https://schema.org/Text)         | Must always be present and set to `"@type": "Terms"`                                                                                                                                                                                                                                                                                                                                                      |
-| dateModified            | [`DateTime`](https://schema.org/DateTime) | <p>The date and time at which the webpage containing the contents of the terms, located at the <code>url</code>, was last updated.</p><p><br>Example</p><p><code>"dateModified": "2018-01-27T12:00:00Z"</code></p>                                                                                                                                                                                        |
-| name                    | [`Text`](https://schema.org/Text)         | The name of the terms. The name must distinguish this from other terms fields provided, e.g. 'Terms and Conditions' or 'Privacy Policy'.                                                                                                                                                                                                                                                                  |
-| requiresExplicitConsent | [`Boolean`](https://schema.org/Boolean)   | <pre><code>  &#x3C;/td>
-&#x3C;/tr>
-&#x3C;tr>
-  &#x3C;td style="text-align:left">&#x3C;b>url&#x3C;/b>&#x3C;/td>
-  &#x3C;td style="text-align:left">
-    &#x3C;a href="https://schema.org/URL">&#x3C;code>URL&#x3C;/code>&#x3C;/a>
-  &#x3C;/td>
-  &#x3C;td style="text-align:left">
-    &#x3C;p>The URL of the webpage containing the contents of the terms.&#x3C;/p>
-  &#x3C;/td>
-&#x3C;/tr>
-</code></pre> |
+
+
+
+
 
 Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution License (CC-BY V4.0)](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [MIT License](https://opensource.org/licenses/MIT), for anyone to access, use and share; using attribution "[OpenActive](https://www.openactive.io/)".
