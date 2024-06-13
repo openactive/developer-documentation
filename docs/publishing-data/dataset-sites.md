@@ -210,7 +210,7 @@ This is set by `testSuiteCertificateUrl` (in library settings) or `bookingServic
 
 This must be a link to a self-hosted OpenActive Test Suite Certificate that has been generated for the **specific software version** of the Booking System to which the dataset site is associated.
 
-For cloud-based SaaS systems that operate a single version, this is best achieved by running the [OpenActive Test Suite as part of any continuous integration process](../open-booking-api/test-suite.md#continuous-integration), and deploying the resulting certificate as part of any existing deployment process (e.g. via [GitHub CI](https://github.com/openactive/OpenActive.Server.NET/blob/b66ba4172f4d839866729808ada30d8b9bafce54/.github/workflows/openactive-test-suite.yml#L105-L112)). `platformSoftwareVersion` in library settings, or `bookingService.softwareVersion` in raw Dataset JSON-LD should be omitted in this case.
+For cloud-based SaaS systems that operate a single version, this is best achieved by running the [OpenActive Test Suite as part of any continuous integration process](../open-booking-api/test-suite/#continuous-integration), and deploying the resulting certificate as part of any existing deployment process (e.g. via [GitHub CI](https://github.com/openactive/OpenActive.Server.NET/blob/b66ba4172f4d839866729808ada30d8b9bafce54/.github/workflows/openactive-test-suite.yml#L105-L112)). `platformSoftwareVersion` in library settings, or `bookingService.softwareVersion` in raw Dataset JSON-LD should be omitted in this case.
 
 For on-premise systems or systems with separately installed instances, this can be achieved by generating and hosting a new certificate for each version released, with the certificate's path based on the software version. The correct version of the certificate can then be referenced within the dataset site based on the software version of the instance. In this case, the version number should also be included in `platformSoftwareVersion` in library settings, or `bookingService.softwareVersion` in Dataset JSON.
 
@@ -220,7 +220,10 @@ The `discussionUrl` is the url of the GitHub issues board for that specific data
 
 We recommend that you create each GitHub repository (that will include a GitHub Issues Board) within your own GitHub organisation either [manually](dataset-sites.md#manually) or via an [API call](dataset-sites.md#automatically).
 
-If you have multiple databases and customers with large data volumes, you should create one GitHub repository (that will include a GitHub Issues Board) for each customer. Single database systems need only create one GitHub repository (that will include a GitHub Issues Board).
+If you have:
+
+* **A Single database**, you need only create one GitHub Repository (that will include a "GitHub Issues Board") within your GitHub Organisation. It is recommended that this GitHub repository is named `openactive`.
+* **Multiple databases**, you should create one GitHub Repository (that will include a "GitHub Issues Board") _for each customer_. It is recommended that the names of these repositories correspond with the names of the customers.
 
 ### Helpdesk integration
 
@@ -233,13 +236,13 @@ You must first [create a parent GitHub organisation](https://help.github.com/en/
 * For booking systems we recommend naming the parent GitHub organisation after your own organisation
 * For agencies or in-house tech teams we recommend naming parent GitHub organisation after your data publishing organisation.
 
-### Manual Issues Board Creation
+### Manual GitHub Repository / Issues Board Creation
 
 A guide for creating a new GitHub repository for each customer can be found below.
 
 {% embed url="https://docs.google.com/document/d/1GO4HLYgrwpXH_qxVuaAWXw_HIr2Hn4KB7cl973Q1M4M/edit" %}
 
-### Automatic Issues Board Creation
+### Automatic GitHub Repository / Issues Board Creation
 
 The GitHub API provides a mechanism to [automatically create GitHub repositories](https://developer.github.com/v3/repos/#create). The recommended properties for a new repository are included below:
 

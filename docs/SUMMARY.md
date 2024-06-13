@@ -21,14 +21,23 @@
 
 ## Using data
 
-* [Harvesting opportunity data](using-data/harvesting-opportunity-data.md)
+* [Harvesting opportunity data](using-data/harvesting-opportunity-data/README.md)
+  * [Large Integers in JavaScript](using-data/harvesting-opportunity-data/large-integers-in-javascript.md)
 * [Tutorial: Consuming an RPDE feed](using-data/harvesting-opportunity-data-1.md)
 * [Attribution](using-data/attribution.md)
 
 ## Open Booking API
 
+* [Key Decisions](open-booking-api/key-decisions.md)
 * [Implementing booking](open-booking-api/implementing-booking.md)
-* [Testing booking](open-booking-api/test-suite.md)
+* [Testing booking](open-booking-api/test-suite/README.md)
+  * [Configuring Test Suite](open-booking-api/test-suite/configuring-test-suite.md)
+  * [Implementing the Test Interface](open-booking-api/test-suite/implementing-the-test-interface/README.md)
+    * [Test Interface Actions](open-booking-api/test-suite/implementing-the-test-interface/test-interface-actions.md)
+    * [Create Opportunity Endpoint](open-booking-api/test-suite/implementing-the-test-interface/create-opportunity-endpoint.md)
+  * [Random Mode: Generating Test Opportunity Data](open-booking-api/test-suite/random-mode-generating-test-opportunity-data.md)
+  * [Running Test Suite](open-booking-api/test-suite/running-test-suite.md)
+  * [Generating the Conformance Certificate](open-booking-api/test-suite/generating-the-conformance-certificate.md)
 
 ## Data Model
 

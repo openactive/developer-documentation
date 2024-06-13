@@ -4,7 +4,7 @@
 
 OpenActive is an initiative that promotes the use of open data to help people become more active. It aims to make opportunities to be active as discoverable as possible, similar to how one might find a hotel room or flight online.
 
-OpenActive is primarily concerned with feeds of "opportunity data" – that is, information about when, where and what activities are taking place.
+OpenActive is primarily concerned with feeds of "opportunity data" – that is, information about when, where and what activities are taking place. To take advantage of the OpenActive ecosystem of data users, data must be published via such open data feeds.
 
 These feeds must be published using the [OpenActive Real-time Paged Data Exchange (RPDE) specification](https://openactive.io/realtime-paged-data-exchange/), which provides a mechanism to allow systems to synchronise database state in near-realtime.
 
