@@ -6,7 +6,7 @@ Although the logic to harvest and use OpenActive data is straightforward, there 
 
 The table below lists these libraries:
 
-<table><thead><tr><th width="248">Language</th><th width="244.33333333333331">Dataset Discovery</th><th>Harvesting Feeds</th></tr></thead><tbody><tr><td>JavaScript / TypeScript</td><td><a href="https://github.com/openactive/dataset-utils">@openactive/dataset-utils</a></td><td>N/A</td></tr><tr><td>Python</td><td>Coming soon</td><td>Coming soon</td></tr><tr><td>Ruby</td><td><a href="https://github.com/openactive/openactive.rb">openactive.rb</a> *</td><td><a href="https://github.com/openactive/openactive.rb">openactive.rb</a></td></tr></tbody></table>
+<table><thead><tr><th width="248">Language</th><th width="244.33333333333331">Dataset Discovery</th><th>Harvesting Feeds</th></tr></thead><tbody><tr><td>JavaScript / TypeScript</td><td><a href="https://github.com/openactive/dataset-utils">@openactive/dataset-utils</a></td><td>N/A</td></tr><tr><td>Python</td><td><a href="https://github.com/openactive/openactive-python">openactive-python</a></td><td><a href="https://github.com/openactive/openactive-python">openactive-python</a></td></tr><tr><td>Ruby</td><td><a href="https://github.com/openactive/openactive.rb">openactive.rb</a> *</td><td><a href="https://github.com/openactive/openactive.rb">openactive.rb</a></td></tr></tbody></table>
 
 &#x20;\* Note that the Ruby library [requires updating](https://github.com/openactive/openactive.rb/issues/13) before it can be used for dataset discovery
 
