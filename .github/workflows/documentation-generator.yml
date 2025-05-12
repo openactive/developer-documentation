@@ -16,15 +16,15 @@ jobs:
 
     steps:
     - name: Checkout master branch
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
         
     - name: Identify
       run: |
-        git config user.name OpenActive Bot
-        git config user.email hello@openactive.io
-    
+        git config --global user.name "openactive[bot]"
+        git config --global user.email 207210293+openactive[bot]@users.noreply.github.com
+
     - name: Use Node.js 14.x
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: 14.x
         
